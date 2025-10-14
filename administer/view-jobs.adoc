@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: administer/view-jobs.html 
+keywords: afx, afx system, view jobs 
+summary: AFX incluye una plataforma interna para ejecutar trabajos en segundo plano según su configuración y acciones administrativas.  Estos trabajos pueden ser componentes AFX de ejecución prolongada o procesos de corta duración ejecutados en respuesta a tareas administrativas o solicitudes de API REST.  Puede visualizar y supervisar los trabajos según sea necesario. 
+---
+= Ver trabajos del sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX incluye una plataforma interna para ejecutar trabajos en segundo plano según su configuración y acciones administrativas.  Estos trabajos pueden ser componentes AFX de ejecución larga o procesos de corta duración ejecutados en respuesta a tareas administrativas o solicitudes de API REST.  Puede visualizar y supervisar los trabajos según sea necesario.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Eventos y trabajos* y luego *Trabajos*.
+. Personalice la visualización, así como la búsqueda y descarga de información del trabajo según sea necesario.
+

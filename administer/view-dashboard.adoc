@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: administer/view-dashboard.html 
+keywords: afx, afx system, dashboard, view dashboard, cluster status 
+summary: Puede iniciar sesión en el Administrador del sistema para acceder al panel de AFX y mostrar el estado del clúster.  Este es un buen primer paso antes de comenzar con sus tareas administrativas de AFX o si sospecha que hay un problema operativo. 
+---
+= Ver el panel de control del sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede iniciar sesión en el Administrador del sistema para acceder al panel de AFX y mostrar el estado del clúster.  Este es un buen primer paso antes de comenzar con sus tareas administrativas de AFX o si sospecha que hay un problema operativo.
+
+.Antes de empezar
+Necesitarás lo siguiente:
+
+* Dirección IP o nombre de dominio del LIF de gestión del clúster
+* Credenciales de la cuenta de administrador
+
+
+.Pasos
+. Conéctese al Administrador del sistema mediante un navegador y la dirección IP de administración del clúster:
++
+`\https://$FQDN_IPADDR/`
+
++
+*Ejemplo*
+
++
+`\https://10.61.25.33/`
+
+. Proporcione el nombre de usuario y la contraseña para la cuenta de administrador y seleccione * Sign in*.
+. Seleccione *Panel de control* en el panel de navegación izquierdo y revise los mosaicos de la página, incluido el estado del clúster *Salud*.
+. En el panel de navegación, seleccione *Clúster* y luego *Descripción general*.
+. Revise el nombre del clúster, la versión, la personalidad de ONTAP y otros detalles.
+. En la parte superior de la página de descripción general, seleccione *Cableado* para obtener una visualización del hardware y las conexiones del clúster.
+. En el panel de navegación, seleccione *Eventos y trabajos* y luego *Alertas del sistema* para mostrar y revisar las alertas del sistema.
+

@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: protect-data/create-consistency-group.html 
+keywords: afx, afx system, consistency group, create consistency group 
+summary: Puede crear grupos de consistencia para simplificar la administración del almacenamiento y la protección de datos para las cargas de trabajo de las aplicaciones.  Un grupo de consistencia puede basarse en volúmenes existentes o nuevos. 
+---
+= Crear un grupo de consistencia en un sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear grupos de consistencia para simplificar la administración del almacenamiento y la protección de datos para las cargas de trabajo de las aplicaciones.  Un grupo de consistencia puede basarse en volúmenes existentes o nuevos.
+
+.Antes de empezar
+Si planea crear uno o más volúmenes nuevos, debe consultar las opciones de configuración al crear un nuevo volumen.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Protección* y luego *Grupos de consistencia*.
+. Seleccionarimage:icon_add_blue_bg.png["Rectángulo azul que contiene un signo más seguido de la palabra añadir en letras blancas"] y elige uno de:
++
+** Uso de volúmenes existentes
+** Uso de nuevos volúmenes NAS
+
+
+. Proporcione los detalles de configuración, incluido el nombre, los volúmenes, el tipo de aplicación y la protección.
+. Seleccione *Agregar*.
+
+
+.Información relacionada
+* link:../protect-data/manage-consistency-groups.html["Administrar grupos de consistencia"]
+* link:../manage-data/create-configure-volume.html["Crear y configurar un volumen AFX"]
+

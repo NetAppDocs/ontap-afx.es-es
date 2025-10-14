@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: administer/manage-users-roles.html 
+keywords: afx, afx system, users, roles 
+summary: Puede definir cuentas de usuario y roles según los servicios de autenticación y autorización disponibles con AFX. 
+---
+= Administrar usuarios y roles del clúster del sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede definir cuentas de usuario y roles según los servicios de autenticación y autorización disponibles con AFX.
+
+
+NOTE: Cada usuario de ONTAP debe tener un rol asignado.  Un rol incluye privilegios y determina qué acciones puede realizar el usuario.
+
+
+
+== Crear un rol de cuenta
+
+Los roles para administradores de clúster y administradores de máquinas virtuales de almacenamiento se crean automáticamente cuando se configura e inicializa su clúster AFX.  Puede crear roles de cuenta de usuario adicionales para definir funciones específicas que los usuarios asignados a los roles pueden realizar en su clúster.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster* y luego *Configuración*.
+. En la sección *Seguridad*, junto a *Usuarios y roles*, seleccioneimage:icon_arrow.gif["flecha azul que apunta hacia la derecha"] .
+. En *Roles*, seleccioneimage:icon_add_blue_bg.png["Rectángulo azul que contiene un signo más seguido de la palabra añadir en letras blancas"] .
+. Proporcione el nombre del rol y los atributos.
+. Seleccione *Guardar*.
+
+
+
+
+== Crear una cuenta de clúster
+
+Puede crear una cuenta a nivel de clúster para usarla al realizar la administración del clúster o de SVM.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster* y luego *Configuración*.
+. En la sección *Seguridad*, seleccioneimage:icon_arrow.gif["flecha azul que apunta hacia la derecha"] junto a *Usuarios y roles*.
+. Seleccionarimage:icon_add_blue_bg.png["Rectángulo azul que contiene un signo más seguido de la palabra añadir en letras blancas"] . en *Usuarios*.
+. Ingrese un nombre de usuario y luego seleccione el rol para el usuario.
++
+El rol debe ser apropiado para el usuario.  Por ejemplo, el rol *admin* puede realizar la gama completa de tareas de configuración en su clúster.
+
+. Seleccione el método de inicio de sesión del usuario y el método de autenticación; normalmente será *Contraseña*.
+. Introduzca una contraseña para el usuario.
+. Seleccione *Guardar*.
+
+
+.Resultado
+Se crea una nueva cuenta y está disponible para usarla con su clúster AFX.
+
+
+
+== Información relacionada
+
+* link:../administer/prepare-authentication.html["Preparar servicios de autenticación"]
+* link:../administer/additional-ontap-svm.html["Administración adicional de AFX SVM"]
+

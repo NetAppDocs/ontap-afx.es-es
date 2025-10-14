@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: install-setup/prepare-hardware.html 
+keywords: prepare, hardware installation, afx, afx 1k 
+summary: Prepárese para instalar el sistema de almacenamiento AFX 1K en su entorno ONTAP y registre el hardware para acceder a los beneficios de soporte. 
+---
+= Prepárese para instalar su sistema de almacenamiento AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepárese para instalar su sistema de almacenamiento AFX 1K preparando el sitio, desempacando las cajas y comparando el contenido de las cajas con el comprobante de embalaje y registrando el sistema para acceder a los beneficios de soporte.
+
+
+
+== Paso 1: Preparar el sitio
+
+Para instalar su sistema de almacenamiento AFX 1K, asegúrese de que el sitio y el gabinete o rack que planea utilizar cumplan con las especificaciones para su configuración.
+
+.Pasos
+. Usar https://hwu.netapp.com["NetApp Hardware Universe"^] para confirmar que su sitio cumple con los requisitos ambientales y eléctricos para su sistema de almacenamiento.
+. Asegúrese de tener suficiente espacio en el gabinete o rack para su sistema de almacenamiento, estantes e interruptores:
++
+** 2U para cada nodo controlador AFX y estante NX224
+** 1U o 2U por conmutador, según el modelo del conmutador.
+
+
+
+
+
+
+== Paso 2: Desempaquetar las cajas
+
+Después de asegurarse de que el sitio y el gabinete cumplen con las especificaciones, desempaque las cajas y compare el contenido con el comprobante de embalaje.
+
+.Pasos
+. Abra con cuidado todas las cajas y coloque el contenido de manera organizada.
+. Compare el contenido que ha desempaquetado con la lista que figura en el albarán.  Si encuentra alguna discrepancia, regístrela para tomar las medidas necesarias.
++
+Puede obtener su lista de embalaje escaneando el código QR en el costado de la caja de envío.
+
++
+Los siguientes elementos son algunos de los contenidos que podría ver en las cajas.
+
++
+[cols="12,9,4"]
+|===
+
+
+| *Hardware* | *Cables* |  
+
+
+ a| 
+** Bisel
+** Sistema de almacenamiento
+** Kits de rieles con instrucciones
+** Estante de almacenamiento
+** Conmutador Cisco Nexus 9332D-GX2B o 9364D-GX2A
+
+ a| 
+** Cables Ethernet de gestión (cables RJ-45)
+** Cables de red
+** Cables de alimentación
+** Cables de almacenamiento
+** Cable de puerto serie USB-C
+
+|  
+|===
+
+
+
+
+== Paso 3: Registre su sistema de almacenamiento
+
+Después de asegurarse de que su sitio cumple con los requisitos de las especificaciones de su sistema de almacenamiento AFX 1K y verificar que tiene todas las piezas que solicitó, registre su sistema de almacenamiento.
+
+.Pasos
+. Localice los números de serie de su sistema de almacenamiento.
++
+Puede encontrar los números de serie en las siguientes ubicaciones:
+
++
+** En el albarán de embalaje
+** En su correo electrónico de confirmación
+** En cada controlador o, para algunos sistemas, en el módulo de gestión del sistema de cada controlador
++
+image::../media/drw_ssn_label.svg[Ejemplo de número de serie del sistema]
+
+
+
+. Ir a la http://mysupport.netapp.com/["Sitio de soporte de NetApp"^] .
+. Decide si necesitas registrar tu sistema de almacenamiento:
++
+[cols="1a,2a"]
+|===
+| Si eres un... | Siga estos pasos... 
+
+
+ a| 
+Cliente existente de NetApp
+ a| 
+.. Sign in con su nombre de usuario y contraseña.
+.. Seleccione *Sistemas* > *Mis sistemas*.
+.. Confirme que el nuevo número de serie aparece en la lista.
+.. Si el número de serie no aparece, siga las instrucciones para nuevos clientes de NetApp .
+
+
+
+
+ a| 
+Nuevo cliente de NetApp
+ a| 
+.. Haga clic en *Registrarse ahora* y cree una cuenta.
+.. Seleccione *Sistemas* > *Registrar sistemas*.
+.. Ingrese el número de serie del sistema de almacenamiento y los detalles solicitados.
+
+
+Una vez que NetApp apruebe su registro, podrá descargar el software requerido.  La aprobación tarda hasta 24 horas.
+
+|===
+
+
+.¿Que sigue?
+Una vez que se haya preparado para instalar el hardware AFX 1K,link:install-switches.html["Instale los conmutadores para su sistema de almacenamiento AFX 1K"] .

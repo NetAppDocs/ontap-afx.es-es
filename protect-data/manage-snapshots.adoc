@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: protect-data/manage-snapshots.html 
+keywords: afx, afx system, snapshots, manage snapshots 
+summary: Puede administrar instantáneas en su sistema AFX.  Consulte la documentación de Unified ONTAP para obtener más detalles. 
+---
+= Administrar instantáneas en un sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede administrar instantáneas en su sistema AFX.  Consulte la documentación de Unified ONTAP para obtener más detalles.
+
+.Información relacionada
+* https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["Crear una política de instantáneas de ONTAP"^]
+* https://docs.netapp.com/us-en/ontap/flexgroup/protect-snapshot-copies-task.html["Proteger los volúmenes de ONTAP FlexGroup mediante instantáneas"^]
+

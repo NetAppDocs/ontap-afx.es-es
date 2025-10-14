@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: rest/learn-rest-api.html 
+keywords: afx, afx system, rest api, rest, automation 
+summary: La API REST proporcionada con AFX se basa en la API REST de Unified ONTAP .  Hay una serie de cambios que lo adaptan a las características y capacidades únicas de la personalidad AFX. 
+---
+= Obtenga más información sobre la API REST del sistema de almacenamiento AFX
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+La API REST proporcionada con AFX se basa en la API REST de Unified ONTAP .  Hay una serie de cambios que lo adaptan a las características y capacidades únicas de la personalidad AFX.
+
+
+
+== Funciones no compatibles
+
+AFX es un sistema de almacenamiento NAS y S3 de alto rendimiento.  Permite a los clientes acceder a datos mediante NFS, SMB/CIFS y S3.  Debido a esta especialización, hay varias funciones no compatibles, entre ellas:
+
+* Metrocluster
+* Redes de área de almacenamiento (SAN)
+* Agregados de disco
+
+
+
+
+== Puntos finales de API eliminados
+
+Se han eliminado varios puntos finales de la API REST correspondientes a las funciones no compatibles.
+
+.Lista de puntos finales no compatibles
+[%collapsible]
+====
+[source, text]
+----
+/cluster/counter/tables
+/cluster/metrocluster
+/cluster/metrocluster/diagnostics
+/cluster/metrocluster/dr-groups
+/cluster/metrocluster/interconnects
+/cluster/metrocluster/nodes
+/cluster/metrocluster/operations
+/cluster/metrocluster/svms
+/network/fc/fabrics
+/network/fc/interfaces
+/network/fc/logins
+/network/fc/ports
+/network/fc/wwpn-aliases
+/protocols/nvme/interfaces
+/protocols/nvme/services
+/protocols/nvme/subsystem-controllers
+/protocols/nvme/subsystem-maps
+/protocols/nvme/subsystems
+/protocols/san/fcp/services
+/protocols/san/igroups
+/protocols/san/initiators
+/protocols/san/iscsi/credentials
+/protocols/san/iscsi/services
+/protocols/san/iscsi/sessions
+/protocols/san/lun-maps
+/protocols/san/portsets
+/protocols/san/vvol-bindings
+/storage/luns
+/storage/namespaces
+----
+====
+
+
+== Información relacionada
+
+* https://docs.netapp.com/us-en/ontap-automation["Automatización de ONTAP"^]
+* https://docs.netapp.com/us-en/asa-r2/learn-more/rest-api-support.html["Compatibilidad de API REST con ASA r2"^]
+

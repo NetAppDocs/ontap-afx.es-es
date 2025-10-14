@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: administer/upgrade-ontap.html 
+keywords: afx, afx system, upgrade, upgrade ontap 
+summary: Al actualizar el software ONTAP en su sistema AFX, puede aprovechar las características nuevas y mejoradas de ONTAP que pueden ayudarlo a reducir costos, acelerar cargas de trabajo críticas, mejorar la seguridad y ampliar el alcance de la protección de datos disponible para su organización. 
+---
+= Actualizar ONTAP en un sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Al actualizar el software ONTAP en su sistema AFX, puede aprovechar las características nuevas y mejoradas de ONTAP que pueden ayudarlo a reducir costos, acelerar cargas de trabajo críticas, mejorar la seguridad y ampliar el alcance de la protección de datos disponible para su organización.
+
+Las actualizaciones de software ONTAP para los sistemas de almacenamiento AFX siguen el mismo proceso que las actualizaciones para otros sistemas ONTAP .  Si tiene un contrato activo de SupportEdge para Active IQ Digital Advisor (también conocido como Digital Advisor), debelink:https://docs.netapp.com/us-en/ontap/upgrade/create-upgrade-plan.html["Prepárese para actualizar con Upgrade Advisor"^] .  Upgrade Advisor proporciona inteligencia que le ayuda a minimizar la incertidumbre y el riesgo al evaluar su clúster y crear un plan de actualización específico para su configuración.  Si no tiene un contrato activo de SupportEdge para Active IQ Digital Advisor, deberíalink:https://docs.netapp.com/us-en/ontap/upgrade/prepare.html["Prepárese para actualizar sin Upgrade Advisor"^] .
+
+Después de prepararse para la actualización, se recomienda que realice las actualizaciones utilizandolink:https://docs.netapp.com/us-en/ontap/upgrade/task_upgrade_andu_sm.html["Actualización automatizada sin interrupciones (ANDU) desde System Manager"] .  ANDU aprovecha la tecnología de conmutación por error de alta disponibilidad (HA) de ONTAP para garantizar que los clústeres continúen brindando servicios de datos sin interrupciones durante la actualización.
+
+.Información relacionada
+* https://docs.netapp.com/us-en/ontap/upgrade/index.html["Obtenga más información sobre la actualización de ONTAP"^] .
+

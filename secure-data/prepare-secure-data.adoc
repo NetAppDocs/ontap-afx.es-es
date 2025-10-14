@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: secure-data/prepare-secure-data.html 
+keywords: afx, afx system, prepare, prepare secure, prepare secure data 
+summary: Antes de administrar sus datos AFX, debe familiarizarse con los principales conceptos y capacidades. 
+---
+= Prepárese para proteger los datos de su sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de administrar sus datos AFX, debe familiarizarse con los principales conceptos y capacidades.
+
+
+TIP: Dado que muchos de los conceptos y procedimientos de administración disponibles en los sistemas AFF y FAS son los mismos que los de los sistemas de almacenamiento AFX, revisar la documentación de Unified ONTAP puede resultar útil.
+
+
+
+== Terminología y opciones
+
+Hay varios términos relacionados con la seguridad de datos de AFX con los que debe estar familiarizado.
+
+Ransomware:: El ransomware es un software malicioso que cifra los archivos y los hace inaccesibles para el usuario.  Generalmente se exige algún tipo de pago para descifrar los datos.  NetApp ONTAP ofrece soluciones de protección contra ransomware a través de funciones como Autonomous Ransomware Protection (ARP).
+Cifrado:: El cifrado es el proceso de convertir datos a un formato seguro que no se puede leer fácilmente sin la autorización adecuada.  ONTAP ofrece tecnologías de cifrado basadas en software y hardware para proteger los datos en reposo.  Esto garantiza que no se pueda leer si el medio de almacenamiento se reutiliza, se devuelve, se extravía o se roba.  Estas soluciones de cifrado se pueden gestionar mediante un servidor de administración de claves externo o mediante el administrador de claves integrado proporcionado por ONTAP.
+Certificados digitales y PKI:: Un certificado digital es un documento electrónico que se utiliza para demostrar la propiedad de una clave pública.  La clave pública y la clave privada asociada se pueden utilizar de diversas maneras, incluso para establecer la identidad, generalmente como parte de un marco de seguridad más amplio, como TLS e IPsec.  Estas claves, así como los protocolos de soporte y los estándares de formato, forman la base de la infraestructura de clave pública (PKI).
+
+
+
+
+== Información relacionada
+
+* link:../administer/additional-ontap-svm.html["Administración adicional de AFX SVM"]
+* link:../get-started/prepare-cluster-admin.html["Prepárese para administrar su sistema AFX"]
+

@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: administer/additional-ontap-svm.html 
+keywords: afx, afx system, additional administration, advanced administration 
+summary: Además de la administración típica de AFX SVM, es posible que haya otras tareas que deba realizar según su entorno.  La mayoría de las tareas adicionales se pueden realizar mediante el Administrador del sistema, aunque en algunos casos es posible que sea necesario utilizar la CLI. 
+---
+= Administración adicional para un sistema de almacenamiento AFX SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Además de la administración típica de AFX SVM, es posible que haya otras tareas que deba realizar según su entorno.  La mayoría de las tareas adicionales se pueden realizar mediante el Administrador del sistema, aunque en algunos casos es posible que sea necesario utilizar la CLI.
+
+
+NOTE: Las características y la administración de ONTAP descritas son comunes a los sistemas de almacenamiento AFX y a los sistemas AFF o FAS que ejecutan Unified ONTAP.  Se incluyen enlaces a la documentación relevante de Unified ONTAP según corresponda.
+
+
+
+== Gestión y rendimiento del almacenamiento
+
+Hay varias funciones opcionales de administración y rendimiento de almacenamiento que puede configurar y usar con su implementación de AFX.
+
+
+
+=== Gestión de almacenamiento NAS de ONTAP
+
+El almacenamiento conectado a red (NAS) proporciona almacenamiento de archivos dedicado al que pueden acceder varios clientes en la red.  ONTAP admite varios protocolos NAS. Referirse a https://docs.netapp.com/us-en/ontap/nas-management/index.html["Gestión de almacenamiento NAS"^] Para más información.
+
+
+
+=== Volúmenes ONTAP FlexCache
+
+FlexCache es una función de almacenamiento en caché remoto de ONTAP .  Acerca los datos a los clientes lo que mejora el rendimiento del acceso y reduce costes.  La creación de un volumen FlexCache , que inicialmente copia solo los metadatos del sistema de archivos de origen, simplifica la distribución de archivos y reduce el tráfico WAN. Referirse a https://docs.netapp.com/us-en/ontap/flexcache/index.html["Obtenga más información sobre los volúmenes ONTAP FlexCache"^] Para más información.
+
+
+
+=== Volúmenes de ONTAP FlexGroup
+
+Un volumen FlexGroup consta de varios volúmenes miembros que comparten el tráfico de forma automática y transparente.  Los volúmenes FlexGroup ofrecen varios beneficios, incluido alto rendimiento y gestión simplificada. Referirse a https://docs.netapp.com/us-en/ontap/flexgroup/creation-workflow-task.html["Configuración del volumen de FlexGroup"^] Para más información.
+
+
+
+== Protección de datos
+
+Hay varias funciones de protección de datos opcionales que puede configurar y utilizar con su implementación de AFX.
+
+
+
+=== Grupos de consistencia
+
+Un grupo de consistencia es una colección de volúmenes que se administran como una sola unidad. Referirse a https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["Obtenga más información sobre los grupos de consistencia de ONTAP"^] Para más información.
+
+
+
+=== SnapLock
+
+Puede proteger sus archivos convirtiéndolos a un estado de escritura única y lectura múltiple (WORM) a nivel de volumen.  SnapLock admite dos modos.  El modo de cumplimiento garantiza que los archivos no se puedan eliminar hasta que expire su período de retención, lo que atiende mandatos gubernamentales o específicos de la industria.  El modo empresarial permite a los usuarios privilegiados eliminar archivos antes de que expire su período de retención. Referirse a https://docs.netapp.com/us-en/ontap/snaplock/index.html["Obtenga más información sobre ONTAP SnapLock"^] Para más información.
+
+
+
+== Monitoreo de eventos y rendimiento de ONTAP
+
+Puede supervisar la salud y el rendimiento de un clúster.  Esto incluye la configuración de alertas para eventos y la gestión de notificaciones para alertas de salud del sistema.  Referirse a https://docs.netapp.com/us-en/ontap/event-performance-monitoring/index.html["Monitoreo de eventos, rendimiento y salud"^] Para más información
+
+
+
+== Información relacionada
+
+* link:../faq-ontap-afx.html["Preguntas frecuentes sobre los sistemas de almacenamiento AFX"]
+* link:../administer/additional-ontap-cluster.html["Administración adicional para clústeres AFX"]
+

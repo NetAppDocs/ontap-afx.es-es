@@ -1,0 +1,136 @@
+---
+sidebar: sidebar 
+permalink: administer/manage-certificates.html 
+keywords: afx, afx system, certificates, pki 
+summary: Dependiendo de su entorno, necesitará crear y administrar certificados digitales como parte de la administración de AFX.  Hay varias tareas relacionadas que puedes realizar. 
+---
+= Administrar certificados en un sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dependiendo de su entorno, necesitará crear y administrar certificados digitales como parte de la administración de AFX.  Hay varias tareas relacionadas que puedes realizar.
+
+
+
+== Generar una solicitud de firma de certificado
+
+Para comenzar a utilizar un certificado digital, debe generar una solicitud de firma de certificado (CSR).  Una CSR se utiliza para solicitar un certificado firmado a una autoridad de certificación (CA). Como parte de esto, ONTAP crea un par de claves pública/privada e incluye la clave pública en la CSR.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster* y luego *Configuración*.
+. En *Seguridad* y junto a *Certificados*, seleccioneimage:icon_arrow.gif["flecha azul que apunta hacia la derecha"]
+. Seleccionarimage:icon_generate_csr.png["Rectángulo azul que contiene un signo más seguido de las palabras generar csr"] .
+. Proporcione el nombre común del sujeto y el país; opcionalmente, proporcione la organización y la unidad organizativa.
+. Para cambiar los valores predeterminados que definirán el certificado, seleccioneimage:icon_more_options.png["Dos flechas que apuntan en direcciones diagonalmente opuestas seguidas de las palabras más opciones"] y realizar las actualizaciones deseadas.
+. Seleccione *Generar*.
+
+
+.Resultado
+Ha generado una CSR que puede utilizarse para solicitar un certificado de clave pública.
+
+
+
+== Agregar una autoridad de certificación de confianza
+
+ONTAP proporciona un conjunto predeterminado de certificados raíz confiables para usar con Seguridad de la capa de transporte (TLS) y otros protocolos.  Puede agregar autoridades de certificación confiables adicionales según sea necesario.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster* y luego *Configuración*.
+. En *Seguridad* y junto a *Certificados*, seleccioneimage:icon_arrow.gif["flecha azul que apunta hacia la derecha"] .
+. Seleccione la pestaña *Autoridades de certificación de confianza* y luego seleccioneimage:icon_add_blue_bg.png["Rectángulo azul que contiene un signo más seguido de la palabra añadir en letras blancas"] .
+. Proporcione la información de configuración, incluido el nombre, el alcance, el nombre común, el tipo y los detalles del certificado; puede importar el certificado seleccionando *Importar*.
+. Seleccione *Agregar*.
+
+
+.Resultado
+Ha agregado una autoridad de certificación confiable a su sistema AFX.
+
+
+
+== Renovar o eliminar una autoridad de certificación de confianza
+
+Las autoridades de certificación de confianza deben renovarse anualmente.  Si no desea renovar un certificado vencido, debe eliminarlo.
+
+.Pasos
+. Seleccione *Clúster* y luego *Configuración*.
+. En *Seguridad* y junto a *Certificados*, seleccioneimage:icon_arrow.gif["flecha azul que apunta hacia la derecha"] .
+. Seleccione la pestaña *Autoridades de certificación de confianza*.
+. Seleccione la autoridad de certificación de confianza que desea renovar o eliminar.
+. Renovar o eliminar la autoridad de certificación.
++
+[cols="2"]
+|===
+| Para renovar la autoridad certificadora, haga lo siguiente: | Para eliminar la autoridad de certificación, haga lo siguiente: 
+
+
+ a| 
+.. Seleccionarimage:icon_kabob.gif["tres puntos azules verticales"] y luego seleccione *Renovar*.
+.. Ingrese o importe la información del certificado y seleccione *Renovar*.
+
+ a| 
+.. Seleccionarimage:icon_kabob.gif["tres puntos azules verticales"] y luego seleccione *Eliminar*.
+.. Confirme que desea eliminar y seleccione *Eliminar*.
+
+
+|===
+
+
+.Resultado
+Ha renovado o eliminado una autoridad de certificación de confianza existente en su sistema AFX.
+
+
+
+== Agregar un certificado de cliente/servidor o una autoridad de certificación local
+
+Puede agregar un certificado de cliente/servidor o una autoridad de certificación local como parte de la habilitación de servicios web seguros.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster* y luego *Configuración*.
+. En *Seguridad* y junto a *Certificados*, seleccioneimage:icon_arrow.gif["flecha azul que apunta hacia la derecha"] .
+. Seleccione *Certificados de cliente/servidor* o *Autoridades de certificación locales* según sea necesario.
+. Agregue la información del certificado y seleccione *Guardar*.
+
+
+.Resultado
+Ha agregado un nuevo certificado de cliente/servidor o autoridades locales a su sistema AFX.
+
+
+
+== Renovar o eliminar un certificado de cliente/servidor o autoridades de certificación locales
+
+Los certificados de cliente/servidor y las autoridades de certificación locales deben renovarse anualmente.  Si no desea renovar un certificado vencido o las autoridades de certificación locales, debe eliminarlos.
+
+.Pasos
+. Seleccione *Clúster* y luego *Configuración*.
+. En *Seguridad* y junto a Certificados, seleccioneimage:icon_arrow.gif["flecha azul que apunta hacia la derecha"] .
+. Seleccione *Certificados de cliente/servidor* o *Autoridades de certificación locales* según sea necesario.
+. Seleccione el certificado que desea renovar o eliminar.
+. Renovar o eliminar la autoridad de certificación.
++
+[cols="2"]
+|===
+| Para renovar la autoridad certificadora, haga lo siguiente: | Para eliminar la autoridad de certificación, haga lo siguiente: 
+
+
+ a| 
+.. Seleccionarimage:icon_kabob.gif["tres puntos azules verticales"] y luego seleccione *Renovar*.
+.. Ingrese o importe la información del certificado y seleccione *Renovar*.
+
+ a| 
+Seleccionarimage:icon_kabob.gif["tres puntos azules verticales"] y luego seleccione *Eliminar*.
+
+|===
+
+
+.Resultado
+Ha renovado o eliminado un certificado de cliente/servidor o una autoridad de certificación local existente en su sistema AFX.
+
+
+
+== Información relacionada
+
+* https://docs.netapp.com/us-en/ontap/authentication/manage-certificates-sm-task.html["Administrar certificados ONTAP con el Administrador del sistema"^]
+

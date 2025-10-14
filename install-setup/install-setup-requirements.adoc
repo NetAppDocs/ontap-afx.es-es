@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: install-setup/install-setup-requirements.html 
+keywords: afx, afx 1k, install, setup, requirements, cautions 
+summary: Revise el equipo necesario y las precauciones de elevación para sus controladores de almacenamiento AFX 1K y estantes de almacenamiento. 
+---
+= Requisitos de instalación para sistemas de almacenamiento AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Revise el equipo necesario y las precauciones de elevación para su controlador de almacenamiento AFX 1K y los estantes de almacenamiento.
+
+
+
+== Equipo necesario para la instalación
+
+Para instalar su sistema de almacenamiento AFX 1K, necesita el siguiente equipo y herramientas.
+
+* Acceso a un navegador web para configurar su sistema de almacenamiento
+* Correa de descarga electrostática (ESD)
+* Flash
+* Portátil o consola con conexión USB/serie
+* Clip o bolígrafo de punta estrecha para fijar la identificación de los estantes de almacenamiento
+* Destornillador Phillips n.° 2
+
+
+
+
+== Precauciones al levantar objetos
+
+El controlador de almacenamiento AFX y los estantes de almacenamiento son pesados.  Tenga cuidado al levantar y mover estos artículos.
+
+
+
+=== Pesos del controlador de almacenamiento
+
+Tome las precauciones necesarias al mover o levantar su controlador de almacenamiento AFX 1K.
+
+Un controlador de almacenamiento AFX 1K puede pesar hasta 62,83 libras (28,5 kg).  Para levantar el controlador de almacenamiento, utilice dos personas o un elevador hidráulico.
+
+image::../media/drw_a1k_weight_caution_ieops-1698.svg[Icono de precaución de elevación de ASA A1K]
+
+
+
+=== Pesas para estantes de almacenamiento
+
+Tome las precauciones necesarias al mover o levantar su estante.
+
+.Estante NX224
+--
+Un estante NX224 puede pesar hasta 60,1 libras (27,3 kg).  Para levantar el estante se utilizan dos personas o un elevador hidráulico.  Mantenga todos los componentes en el estante (tanto delantero como trasero) para evitar desequilibrar el peso del estante.
+
+image::../media/drw_nx224_lifting_weight_ieops-2437.svg[Precaución al levantar el NX224 NSM100]
+
+.Información relacionada
+* https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Información de seguridad y avisos reglamentarios"^]
+
+
+.¿Que sigue?
+Después de revisar los requisitos de hardware,link:prepare-hardware.html["Prepárese para instalar su sistema de almacenamiento AFX 1K"] .
+
+--

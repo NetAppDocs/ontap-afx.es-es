@@ -1,0 +1,174 @@
+---
+sidebar: sidebar 
+permalink: install-setup/install-switches.html 
+keywords: afx, afx 1k, install, setup, switches, cisco 9332, cisco 9336, switches, 
+summary: Aprenda a instalar los interruptores para el sistema de almacenamiento AFX 1K y los estantes de almacenamiento. 
+---
+= Instale los conmutadores para su sistema de almacenamiento AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de completar la preparación para la instalación del sistema de almacenamiento AFX 1K, debe instalar los conmutadores en el gabinete o rack de telecomunicaciones.
+
+Instale los conmutadores Cisco Nexus 9332D-GX2B o 9364D-GX2A en el gabinete o rack.  Instale un kit de panel de paso si utiliza el conmutador Cisco Nexus 9364D-GX2A.
+
+.Antes de empezar
+Asegúrese de tener los siguientes componentes disponibles:
+
+* El kit de panel de paso, que está disponible en NetApp (número de pieza X8784-R6).
++
+El kit de panel de paso de NetApp contiene el siguiente hardware:
+
++
+** Un panel ciego pasante
+** Cuatro tornillos 10-32 x .75
+** Cuatro tuercas de clip 10-32
+
+
+* Para cada interruptor, ocho tornillos 10-32 o 12-24 y tuercas de clip para montar los soportes y rieles deslizantes en los postes delanteros y traseros del gabinete.
+* El kit de riel estándar de Cisco para instalar el conmutador en un gabinete NetApp .
+
+
+
+NOTE: Los cables puente no están incluidos con el kit de paso.  Comuníquese con NetApp para solicitar los cables puente adecuados si no se envían con sus conmutadores.
+
+
+NOTE: Los Cisco 9332D-GX2B y 9364D-GX2A son conmutadores de admisión del lado del puerto.  Los puertos de red de los conmutadores deben instalarse mirando hacia el frente del gabinete y los ventiladores de extracción deben mirar hacia la parte trasera del gabinete.  Con esta configuración, debe asegurarse de utilizar cables lo suficientemente largos para ir desde los puertos de red en la parte frontal del gabinete hasta los puertos de almacenamiento en la parte posterior del gabinete.  + Para obtener información más detallada sobre estos conmutadores, visite el sitio web de Cisco : https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide.html["Guía de instalación del hardware del conmutador de modo NX-OS Cisco Nexus 9332D-GX2B"^] y https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide.html["Guía de instalación del hardware del conmutador de modo NX-OS Cisco Nexus 9364D-GX2A"^] .
+
+.Pasos
+. Instalar el panel ciego pasante.
++
+.. Determine la ubicación vertical de los interruptores y el panel de obturación en el gabinete o rack.
+.. Instale dos tuercas de clip en cada lado en los orificios cuadrados correspondientes para los rieles del gabinete frontal.
+.. Centre el panel verticalmente para evitar la intrusión en el espacio del rack adyacente y luego apriete los tornillos.
+.. Inserte los conectores hembra de ambos cables puente desde la parte trasera del panel y a través del conjunto de escobillas.
++
+image::../media/cisco_9148_jumper_cords.gif[Conectores hembra del cable puente]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Conector hembra del cable puente.
+
+|===
+
+
+. Instale los soportes de montaje en rack en el chasis del conmutador.
++
+.. Coloque un soporte de montaje en rack frontal en un lado del chasis del conmutador de modo que la oreja de montaje esté alineada con la placa frontal del chasis (en el lado de la fuente de alimentación o del ventilador) y luego use cuatro tornillos M4 para fijar el soporte al chasis.
++
+image::../media/3132q_front_bracket.gif[soporte delantero]
+
+.. Repita el paso 2a con el otro soporte de montaje en rack frontal en el otro lado del conmutador.
+.. Instale el soporte de montaje en rack trasero en el chasis del conmutador.
+.. Repita el paso 2c con el otro soporte de montaje en rack trasero en el otro lado del conmutador.
+
+
+. Instale las tuercas de clip en las ubicaciones de los orificios cuadrados para los cuatro postes IEA.
++
+image::../media/ru_locations_for_3132q_v.gif[Ubicación de las tuercas de clip]
+
++
+Monte los dos interruptores 9332D-GX2B en ubicaciones del gabinete que proporcionen acceso eficiente a los controladores y estantes, como las filas centrales.
+
+. Instale los rieles deslizantes en el gabinete o rack.
++
+.. Coloque el primer riel deslizante en la ubicación deseada en la parte trasera del poste trasero izquierdo, inserte tornillos con el tipo de rosca correspondiente y luego apriete los tornillos con los dedos.
++
+image::../media/drw_3132q_v_slider_rails_ieops-2494.svg[Instalación de riel deslizante]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Mientras desliza suavemente el riel deslizante, alinéelo con los orificios de los tornillos en el estante.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 2]
+ a| 
+Apriete los tornillos de los rieles deslizantes a los postes del gabinete.
+
+|===
+.. Repita el paso 4a para el poste trasero del lado derecho.
+.. Repita los pasos 4a y 4b en las ubicaciones deseadas en el gabinete.
+
+
+. Instale el interruptor en el gabinete o rack.
++
+
+NOTE: Este paso requiere dos personas: una persona para sostener el interruptor desde el frente y otra para guiar el interruptor hacia los rieles deslizantes traseros.
+
++
+.. Coloque la parte posterior del interruptor en la ubicación deseada en el gabinete.
++
+image::../media/drw_switch_cabinet_position_generic_ieops-2348.svg[Posicionamiento del 3232C en U39-40]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+A medida que se empuja el chasis hacia los postes traseros, alinee las dos guías de montaje del bastidor trasero con los rieles deslizantes
+
+
+
+ a| 
+image::../media/icon_round_2.png[Llamada número 2]
+ a| 
+Deslice suavemente el interruptor hasta que los soportes de montaje en rack frontales queden al ras con los postes frontales.
+
+|===
+.. Conecte el interruptor al gabinete o al rack.
++
+image::../media/3132q_attaching.gif[Accesorio de interruptor]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Mientras una persona sostiene la parte delantera del chasis nivelado, la otra persona debe apretar completamente los cuatro tornillos traseros a los postes del gabinete.
+
+|===
+.. Con el chasis ahora apoyado sin ayuda, apriete completamente los tornillos delanteros a los postes.
+.. Repita los pasos 5a a 5c para el segundo interruptor en la ubicación deseada en el gabinete.
++
+
+NOTE: Al utilizar el interruptor completamente instalado como soporte, no es necesario sujetar la parte delantera del segundo interruptor durante el proceso de instalación.
+
+
+
+. Cuando los interruptores estén instalados, conecte los cables puente a las entradas de alimentación del interruptor.
+. Conecte los enchufes macho de ambos cables puente a las tomas de corriente PDU más cercanas disponibles.
++
+
+NOTE: Para mantener la redundancia, los dos cables deben estar conectados a diferentes PDU.
+
+. Conecte el puerto de administración de cada conmutador a cualquiera de los conmutadores de administración (si se solicitaron) o conéctelos directamente a su red de administración.
++
+El puerto de red de administración es el puerto RJ-45 inferior cerca de la fuente de alimentación derecha.  Pase el cable CAT6 de cada conmutador a través del panel de paso después de instalar los conmutadores para conectarlos a los conmutadores de administración o a la red.
+
+
+
+.¿Que sigue?
+Después de instalar los conmutadores en el gabinete o rack,link:deploy-hardware.html["Instale el sistema de almacenamiento AFX 1K y los estantes en el gabinete o rack"] .

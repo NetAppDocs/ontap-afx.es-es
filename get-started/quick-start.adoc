@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: get-started/quick-start.html 
+keywords: afx, afx system, quick start 
+summary: Para comenzar a utilizar su sistema AFX, debe instalar los componentes de hardware, configurar su clúster y prepararse para administrar su clúster y sus SVM. 
+---
+= Inicio rápido para configurar un sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para comenzar a utilizar su sistema AFX, debe instalar los componentes de hardware, configurar su clúster y prepararse para administrar su clúster y sus SVM.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]Instalar y configurar su hardware
+[role="quick-margin-para"]
+link:../install-setup/install-setup-workflow.html["Instalar"]su sistema de almacenamiento AFX y prepárese para configurar el clúster.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]Configurar su clúster
+[role="quick-margin-para"]
+Siga el proceso rápido y sencillo paralink:../install-setup/cluster-setup.html["configuración"] su clúster ONTAP mediante el Administrador del sistema.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"]Prepárese para administrar su clúster
+[role="quick-margin-para"]
+Antes de implementar AFX en un entorno de producción, es esenciallink:../get-started/prepare-cluster-admin.html["preparar"] Al comprender la estructura administrativa, incluidas las máquinas virtuales de almacenamiento (SVM), los usuarios, los roles y las interfaces de administración, para garantizar una administración de clúster segura, eficiente y eficaz.

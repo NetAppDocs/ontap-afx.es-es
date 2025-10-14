@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: protect-data/policies-schedules.html 
+keywords: afx, afx system, data protection, protection policies, protection schedules 
+summary: Puede utilizar políticas de instantáneas para proteger los datos en sus grupos de consistencia según una programación automatizada.  Los programas de políticas dentro de las políticas de instantáneas determinan la frecuencia con la que se toman instantáneas. 
+---
+= Administrar las políticas y los cronogramas de protección de datos del sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar políticas de instantáneas para proteger los datos en sus grupos de consistencia según una programación automatizada.  Los programas de políticas dentro de las políticas de instantáneas determinan la frecuencia con la que se toman instantáneas.
+
+
+
+== Crear un nuevo programa de políticas de protección
+
+Una programación de política de protección define la frecuencia con la que se ejecuta una política de instantáneas.  Puede crear programaciones para que se ejecuten en intervalos regulares según una cantidad de días, horas o minutos.  Por ejemplo, puede crear un programa para que se ejecute cada hora o para que se ejecute solo una vez al día.  También puedes crear programaciones para que se ejecuten en momentos específicos en días específicos de la semana o del mes.  Por ejemplo, puedes crear un cronograma para que se ejecute a las 12:15 a. m. el día 20 de cada mes.
+
+Definir varios programas de políticas de protección le brinda la flexibilidad de aumentar o disminuir la frecuencia de las instantáneas para diferentes aplicaciones.  Esto le permite proporcionar un mayor nivel de protección y un menor riesgo de pérdida de datos para sus cargas de trabajo críticas que lo que podría ser necesario para cargas de trabajo menos críticas.
+
+.Pasos
+. Seleccione *Protección* y luego *Políticas*; luego seleccione *Programación*.
+. Seleccionarimage:icon_add_blue_bg.png["un rectángulo azul que contiene un signo más seguido de la palabra añadir en letras blancas"] .
+. Ingrese un nombre para la programación; luego seleccione los parámetros de la programación.
+. Seleccione *Guardar*.
+
+
+.¿Que sigue?
+Ahora que ha creado un nuevo programa de políticas, puede utilizar el programa recién creado dentro de sus políticas para definir cuándo se toman las instantáneas.
+
+
+
+== Crear una política de instantáneas
+
+Una política de instantáneas define la frecuencia con la que se toman instantáneas, la cantidad máxima de instantáneas permitidas y durante cuánto tiempo se conservan las instantáneas.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Protección* y luego *Políticas*; luego seleccione *Políticas de instantáneas*.
+. Seleccionarimage:icon_add_blue_bg.png["Rectángulo azul que contiene un signo más seguido de la palabra añadir en letras blancas"] .
+. Introduzca un nombre para la política de instantáneas.
+. Seleccione *Clúster* para aplicar la política a todo el clúster.  Seleccione *VM de almacenamiento* para aplicar la política a una VM de almacenamiento individual.
+. Seleccione *Agregar una programación*; luego ingrese la programación de la política de instantáneas.
+. Seleccione *Agregar política*.
+
+
+.¿Que sigue?
+Ahora que ha creado una política de instantáneas, puede aplicarla a un grupo de consistencia.  Se tomarán instantáneas del grupo de consistencia según los parámetros que configure en su política de instantáneas.
+
+
+
+== Aplicar una política de instantáneas a un grupo de consistencia
+
+Aplique una política de instantáneas a un grupo de consistencia para crear, conservar y etiquetar automáticamente instantáneas del grupo de consistencia.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Protección* y luego *Políticas*; luego seleccione *Políticas de instantáneas*.
+. Coloque el cursor sobre el nombre de la política de instantáneas que desea aplicar.
+. Seleccionarimage:icon_kabob.gif["tres puntos azules verticales"] ; luego seleccione *Aplicar*.
+. Seleccione los grupos de consistencia a los que desea aplicar la política de instantáneas; luego seleccione *Aplicar*.
+
+
+.¿Que sigue?
+Ahora que sus datos están protegidos con instantáneas, deberíalink:snapshot-replication.html#step-3-create-a-replication-relationship["establecer una relación de replicación"] para copiar sus grupos de consistencia a una ubicación geográficamente remota para realizar copias de seguridad y recuperación ante desastres.
+
+
+
+== Editar, eliminar o deshabilitar una política de instantáneas
+
+Edite una política de instantáneas para modificar el nombre de la política, la cantidad máxima de instantáneas o la etiqueta SnapMirror .  Elimine una política para eliminarla y sus datos de respaldo asociados de su clúster.  Deshabilite una política para detener temporalmente la creación o transferencia de instantáneas especificadas por la política.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Protección* y luego *Políticas*; luego seleccione *Políticas de instantáneas*.
+. Coloque el cursor sobre el nombre de la política de instantáneas que desea editar.
+. Seleccionarimage:icon_kabob.gif["tres puntos azules verticales"] ; luego seleccione *Editar*, *Eliminar* o *Deshabilitar*.
+
+
+.Resultado
+Ha modificado, eliminado o deshabilitado la política de instantáneas.
+
+
+
+== Editar una política de replicación
+
+Edite una política de replicación para modificar la descripción de la política, el programa de transferencia y las reglas.  También puede editar la política para habilitar o deshabilitar la compresión de red.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Protección* y luego *Políticas*.
+. Seleccione *Políticas de replicación*.
+. Coloque el cursor sobre la política de replicación que desea editar; luego seleccioneimage:icon_kabob.gif["tres puntos azules verticales"] .
+. Seleccione *Editar*.
+. Actualice la política; luego seleccione *Guardar*.
+

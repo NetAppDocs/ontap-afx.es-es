@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: install-setup/install-setup-workflow.html 
+keywords: afx, afx 1k, install, setup, workflow 
+summary: Comience con la instalación y configuración del sistema de almacenamiento AFX 1K e impleméntelo en su entorno ONTAP . 
+---
+= Flujo de trabajo de instalación y configuración para sistemas de almacenamiento AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para instalar y configurar su sistema de almacenamiento AFX 1K, revise los requisitos de hardware, prepare su sitio, instale los conmutadores, instale y cablee los componentes de hardware, encienda el sistema y configure su clúster ONTAP AFX.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]link:install-setup-requirements.html["Revise los requisitos de instalación del hardware"]
+[role="quick-margin-para"]
+Revise los requisitos de hardware para instalar su sistema de almacenamiento AFX 1K.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]link:prepare-hardware.html["Prepárese para instalar su sistema de almacenamiento AFX 1K"]
+[role="quick-margin-para"]
+Prepárese para instalar su sistema de almacenamiento AFX 1K preparando el sitio, verificando los requisitos ambientales y eléctricos, asegurando suficiente espacio en el rack, desembalando el equipo, verificando el contenido según el comprobante de embalaje y registrando el hardware para obtener soporte.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"]link:install-switches.html["Instale los conmutadores para su sistema de almacenamiento AFX 1K"]
+[role="quick-margin-para"]
+Instale los conmutadores Cisco Nexus 9332D-GX2B o 9364D-GX2A en el gabinete o rack.  Instale un kit de panel de paso si utiliza el conmutador Cisco Nexus 9364D-GX2A.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Cuatro"]link:deploy-hardware.html["Instale el hardware para su sistema de almacenamiento AFX 1K"]
+[role="quick-margin-para"]
+Instale los kits de rieles para su sistema de almacenamiento y estantes.  Asegure su sistema de almacenamiento en el gabinete o rack de telecomunicaciones.  A continuación, deslice los estantes sobre los rieles instalados.  Por último, coloque dispositivos de gestión de cables en la parte trasera del sistema de almacenamiento para organizar los cables.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:cable-hardware.html["Conecte los controladores y los estantes para su sistema de almacenamiento AFX 1K"]
+[role="quick-margin-para"]
+Para cablear el hardware, primero conecte los nodos del controlador de almacenamiento a su red, luego conecte los nodos del controlador y los estantes de almacenamiento a los conmutadores del clúster.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]link:power-on-configure-switch.html["Encienda y configure los conmutadores para su sistema de almacenamiento AFX 1K"]
+[role="quick-margin-para"]
+Conecte el hardware, luego encienda y configure los conmutadores para su sistema de almacenamiento AFX 1K.  Consulte las instrucciones de configuración de los conmutadores Cisco Nexus 9332D-GX2B y 9364D-GX2A.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Siete"]link:power-on-hardware.html["Encienda su sistema de almacenamiento AFX 1K"]
+[role="quick-margin-para"]
+Encienda cada estante de almacenamiento y asígnele una identificación de estante única antes de encender los nodos del controlador para identificar claramente cada estante en la configuración.

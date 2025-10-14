@@ -1,0 +1,155 @@
+---
+sidebar: sidebar 
+permalink: protect-data/create-snapshot.html 
+keywords: afx, afx system, snapshots, create snapshot 
+summary: Para realizar una copia de seguridad de los datos de su sistema AFX, debe crear una instantánea.  Puede crear una instantánea manualmente o programarla para que se cree automáticamente mediante un grupo de consistencia. 
+---
+= Crear una instantánea en un sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para realizar una copia de seguridad de los datos de su sistema AFX, debe crear una instantánea.  Puede crear una instantánea manualmente o programarla para que se cree automáticamente mediante un grupo de consistencia.
+
+
+
+== Antes de empezar
+
+Una instantánea es una copia local, de solo lectura, de sus datos que puede usar para restaurar volúmenes a puntos específicos en el tiempo.  Las instantáneas se pueden crear manualmente a pedido o automáticamente a intervalos regulares según unlink:policies-schedules.html["Política y programación de instantáneas"] .
+
+La política y la programación de instantáneas especifican los detalles, incluido cuándo crear las instantáneas, cuántas copias conservar, cómo nombrarlas y cómo etiquetarlas para la replicación.  Por ejemplo, un sistema podría crear una instantánea todos los días a las 12:10 a. m., conservar las dos copias más recientes, nombrarlas “diarias” (con una marca de tiempo adjunta) y etiquetarlas como “diarias” para su replicación.
+
+.Tipos de instantáneas
+Puede crear una instantánea a pedido de un solo volumen o de un grupo de consistencia.  También puede crear instantáneas automatizadas de un grupo de consistencia que contenga varios volúmenes.  Sin embargo, no es posible crear instantáneas automatizadas de un solo volumen.
+
+* Instantáneas a pedido
++
+Puede crear una instantánea a pedido de un volumen en cualquier momento.  No es necesario que el volumen sea miembro de un grupo de consistencia para estar protegido por una instantánea a pedido.  Si crea una instantánea de un volumen que es miembro de un grupo de consistencia, los demás volúmenes del grupo de consistencia no se incluyen en la instantánea.  Cuando se crea una instantánea a pedido de un grupo de consistencia, se incluyen todos los volúmenes del grupo de consistencia.
+
+* Instantáneas automatizadas
++
+Se crean instantáneas automatizadas según las definiciones de políticas de instantáneas.  Para aplicar una política de instantáneas a un volumen para la creación automática de instantáneas, los volúmenes deben ser miembros del mismo grupo de consistencia.  Si aplica una política de instantáneas a un grupo de consistencia, todos los volúmenes del grupo de consistencia estarán protegidos.
+
+
+
+
+
+== Crear una instantánea
+
+Crear una instantánea de un volumen o grupo de consistencia.
+
+[role="tabbed-block"]
+====
+.Instantánea de un grupo de consistencia
+--
+.Pasos
+. En el Administrador del sistema, seleccione *Protección* y luego *Grupos de consistencia*.
+. Coloque el cursor sobre el nombre del grupo de consistencia que desea proteger.
+. Seleccionarimage:icon_kabob.gif["tres puntos azules verticales"] ; luego seleccione *Proteger*.
+. Si desea crear una instantánea inmediata a pedido, en *Protección local*, seleccione *Agregar una instantánea ahora*.
++
+La protección local crea la instantánea en el mismo clúster que contiene el volumen.
+
++
+.. Ingrese un nombre para la instantánea o acepte el nombre predeterminado; luego, opcionalmente, ingrese una etiqueta SnapMirror .
++
+La etiqueta SnapMirror es utilizada por el destino remoto.
+
+
+
+. Si desea crear instantáneas automatizadas utilizando una política de instantáneas, seleccione *Programar instantáneas*.
++
+.. Seleccione una política de instantáneas.
++
+Acepte la política de instantáneas predeterminada, seleccione una política existente o cree una nueva.
+
++
+[cols="2,6a"]
+|===
+| Opción | Pasos 
+
+
+| Seleccionar una política de instantáneas existente  a| 
+Seleccionarimage:icon_dropdown_arrow.gif["flecha azul que apunta hacia abajo"] junto a la política predeterminada; luego seleccione la política existente que desea utilizar.
+
+
+
+| Crear una nueva política de instantáneas  a| 
+... Seleccionarimage:icon_add.gif["Signo más azul seguido de la palabra añadir"] ; luego ingrese los parámetros de la política de instantáneas.
+... Seleccione *Agregar política*.
+
+
+|===
+
+
+. Si desea replicar sus instantáneas en un clúster remoto, en *Protección remota*, seleccione *Replicar en un clúster remoto*.
++
+.. Seleccione el clúster de origen y la máquina virtual de almacenamiento; luego, seleccione la política de replicación.
++
+La transferencia de datos inicial para la replicación comienza inmediatamente de forma predeterminada.
+
+
+
+. Seleccione *Guardar*.
+
+
+--
+.Instantánea de un volumen
+--
+.Pasos
+. En el Administrador del sistema, seleccione *Almacenamiento* y luego *Volúmenes*.
+. Coloque el cursor sobre el nombre del volumen que desea proteger.
+. Seleccionarimage:icon_kabob.gif["tres puntos azules verticales"] ; luego seleccione *Proteger*.  Si desea crear una instantánea inmediata a pedido, en *Protección local*, seleccione *Agregar una instantánea ahora*.
++
+La protección local crea la instantánea en el mismo clúster que contiene el volumen.
+
+. Ingrese un nombre para la instantánea o acepte el nombre predeterminado; luego, opcionalmente, ingrese una etiqueta SnapMirror .
++
+La etiqueta SnapMirror es utilizada por el destino remoto.
+
+. Si desea crear instantáneas automatizadas utilizando una política de instantáneas, seleccione *Programar instantáneas*.
++
+.. Seleccione una política de instantáneas.
++
+Acepte la política de instantáneas predeterminada, seleccione una política existente o cree una nueva.
+
++
+[cols="2,6a"]
+|===
+| Opción | Pasos 
+
+
+| Seleccionar una política de instantáneas existente  a| 
+Seleccionarimage:icon_dropdown_arrow.gif["flecha azul que apunta hacia abajo"] junto a la política predeterminada; luego seleccione la política existente que desea utilizar.
+
+
+
+| Crear una nueva política de instantáneas  a| 
+... Seleccionarimage:icon_add.gif["Signo más azul seguido de la palabra añadir"] ; luego ingrese los parámetros de la política de instantáneas.
+... Seleccione *Agregar política*.
+
+
+|===
+
+
+. Si desea replicar sus instantáneas en un clúster remoto, en *Protección remota*, seleccione *Replicar en un clúster remoto*.
++
+.. Seleccione el clúster de origen y la máquina virtual de almacenamiento; luego, seleccione la política de replicación.
++
+La transferencia de datos inicial para la replicación comienza inmediatamente de forma predeterminada.
+
+
+
+. Seleccione *Guardar*.
+
+
+--
+====
+
+
+== Información relacionada
+
+* https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["Crear una política de instantáneas de ONTAP"^]
+

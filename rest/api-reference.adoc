@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: rest/api-reference.html 
+keywords: afx, afx system, rest api, rest api reference, swagger 
+summary: La referencia de la API REST de AFX contiene detalles sobre todas las llamadas a la API.  Esta documentación es útil al desarrollar aplicaciones de automatización. 
+---
+= Referencia de API REST para el sistema de almacenamiento AFX
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+La referencia de la API REST de AFX contiene detalles sobre todas las llamadas a la API.  Esta documentación es útil al desarrollar aplicaciones de automatización.
+
+.Antes de empezar
+Necesitarás lo siguiente:
+
+* Dirección IP o FQDN del LIF de administración del clúster AFX
+* Credenciales para una cuenta de administrador de clúster
+
+
+.Pasos
+. Conecte su navegador web a la dirección IP o al nombre de dominio de administración del clúster:
++
+`\https://$FQDN_IP_PORT/docs/api`
+
++
+*Ejemplo*
+
++
+`\https://10.61.25.33/docs/api`
+
+. Proporcione el nombre de usuario y la contraseña si se le solicita.
+. Desplácese hacia abajo hasta la categoría *Cluster* y seleccione *GET* junto al punto final `/cluster` para un ejemplo de una llamada API individual.
+
+
+.Información relacionada
+* https://docs.netapp.com/us-en/ontap-restapi/index.html["Referencia de la API REST de ONTAP"^]
+

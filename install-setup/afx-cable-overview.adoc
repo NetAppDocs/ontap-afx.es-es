@@ -1,0 +1,62 @@
+---
+permalink: install-setup/afx-cable-overview.html 
+sidebar: sidebar 
+keywords: afx, afx 1k, cable, overview, cisco 9332, cisco 9364, cabling, hardware, switches, storage shelves, disk shelves, controller nodes 
+summary: Aprenda a cablear los nodos de su controlador a la red, los conmutadores y los estantes de almacenamiento. 
+---
+= Configuraciones compatibles con su sistema de almacenamiento AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Obtenga información sobre los componentes de hardware compatibles y las opciones de cableado para el sistema de almacenamiento AFX 1K, incluidos los estantes de discos de almacenamiento compatibles, los conmutadores y los tipos de cables necesarios para la configuración adecuada del sistema.
+
+
+
+== Configuración de cableado AFX 1K compatible
+
+La configuración inicial del sistema de almacenamiento AFX 1K admite un mínimo de cuatro nodos de controlador conectados a través de conmutadores duales a los estantes de discos de almacenamiento.
+
+Los nodos de controlador adicionales y los estantes de discos amplían la configuración inicial del sistema de almacenamiento AFX 1K.  Las configuraciones AFX 1K ampliadas siguen la misma metodología de cableado basada en conmutadores que el esquema que se muestra a continuación.
+
+image:../media/drw_afx_cable_overview_half_node_ieops-2358.svg["Ejemplo de cableado del sistema de almacenamiento AFK 1K"]
+
+
+
+== Componentes de hardware compatibles
+
+Revise los estantes de discos de almacenamiento, conmutadores y tipos de cables compatibles con el sistema de almacenamiento AFX 1K.
+
+[cols="2,2,3,6"]
+|===
+| *Estante del controlador* | *Estante de discos* | *Interruptores compatibles* | *Cables compatibles* 
+
+
+ a| 
+AFX 1K
+ a| 
+NX224
+ a| 
+* Cisco Nexus 9332D-GX2B (400 GbE)
+* Cisco Nexus 9364D-GX2A (400 GbE)
+
+ a| 
+* Cable de conexión QSFP-DD de 400 GbE a 4 cables de conexión QSFP de 100 GbE
++
+
+NOTE: Los cables de conexión se utilizan para conexiones de 100 GbE entre conmutadores, controladores y estantes de discos.
+
++
+** Cables de 100 GbE al clúster del controlador y a los puertos HA
+** Cables de 100 GbE a estantes de discos
+
+
+* 2 cables de 400 GbE para conexiones ISL entre el conmutador A y el conmutador B
+* Cables RJ-45 para conexiones de gestión
+
+
+|===
+.¿Que sigue?
+Después de revisar la configuración del sistema compatible y los componentes de hardware,link:install-network-reqs.html["Revise los requisitos de red para su sistema de almacenamiento AFX 1K"] .

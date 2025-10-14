@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: protect-data/manage-consistency-groups.html 
+keywords: afx, afx system, consistency group, manage consistency group 
+summary: Puede administrar los grupos de consistencia en un sistema AFX.  Esto puede simplificar la administración de su almacenamiento. 
+---
+= Administrar grupos de consistencia en un sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede administrar los grupos de consistencia en un sistema AFX.  Esto puede simplificar la administración de su almacenamiento.
+
+
+
+== Agregar protección de datos de instantáneas a un grupo de consistencia
+
+Cuando agrega protección de datos de instantáneas a un grupo de consistencia, se pueden tomar instantáneas locales del grupo de consistencia a intervalos regulares según un cronograma predefinido.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Protección* y luego *Grupos de consistencia*.
+. Coloque el cursor sobre el grupo de consistencia que desea proteger.
+. Seleccionarimage:icon_kabob.gif["tres puntos azules verticales"] ; luego seleccione *Editar*.
+. En *Protección local*, seleccione *Programar instantáneas*.
+. Seleccione una política de instantáneas.
++
+Acepte la política de instantáneas predeterminada, seleccione una política existente o cree una nueva.
+
++
+[cols="2,6a"]
+|===
+| Opción | Pasos 
+
+
+| Seleccionar una política de instantáneas existente  a| 
+Seleccionarimage:icon_dropdown_arrow.gif["flecha azul que apunta hacia abajo"] junto a la política predeterminada; luego seleccione la política existente que desea utilizar.
+
+
+
+| Crear una nueva política de instantáneas  a| 
+.. Seleccionarimage:icon_add.gif["Signo más azul seguido de la palabra añadir"] ; luego ingrese el nombre de la nueva política.
+.. Seleccione el alcance de la política.
+.. En *Horarios* seleccioneimage:icon_add.gif["Signo más azul seguido de la palabra añadir"] .
+.. Seleccione el nombre que aparece debajo de *Nombre del programa*;
++
+luego seleccioneimage:icon_dropdown_arrow.gif["flecha azul apuntando hacia abajo"] .
+
+.. Seleccione el cronograma de políticas.
+.. En *Máximo de instantáneas*, ingrese la cantidad máxima de instantáneas que desea conservar del grupo de consistencia.
+.. Opcionalmente, en *Etiqueta SnapMirror * ingrese una etiqueta SnapMirror .
+.. Seleccione *Guardar*.
+
+
+|===
+. Seleccione *Editar*.
+
+
+
+
+== Información relacionada
+
+* https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["Obtenga más información sobre los grupos de consistencia de ONTAP"^]
+

@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: administer/manage-cluster-networking.html 
+keywords: afx, afx system, networking, cluster networking, broadcast domain, ipsace, subnet, network interface 
+summary: Necesita configurar la red de su sistema de almacenamiento AFX.  El entorno de red admite varios escenarios de conexión, incluidos clientes que acceden a datos en las SVM y comunicación entre clústeres. 
+---
+= Administrar la red del clúster del sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Necesita configurar la red de su sistema de almacenamiento AFX.  El entorno de red admite varios escenarios, incluidos clientes que acceden a datos en las SVM y comunicación entre clústeres.
+
+
+NOTE: Crear un recurso de red es un primer paso importante.  También deberá realizar acciones administrativas adicionales, como editar o eliminar definiciones de red, según sea necesario.
+
+
+
+== Crear un dominio de difusión
+
+Un dominio de difusión simplifica la administración de su red de clúster al agrupar los puertos que forman parte de la misma red de capa dos.  Luego, a las máquinas virtuales de almacenamiento (SVM) se les pueden asignar puertos en el grupo para el tráfico de datos o de administración.
+
+Hay varios dominios de difusión creados durante la configuración del clúster, incluidos:
+
+Por defecto:: Este dominio de difusión contiene puertos en el espacio IP “Predeterminado”.  Estos puertos se utilizan principalmente para servir datos.  También se incluyen puertos de gestión de clústeres y de gestión de nodos.
+Grupo:: Este dominio de difusión contiene puertos en el espacio IP del “Cluster”.  Estos puertos se utilizan para la comunicación del clúster e incluyen todos los puertos del clúster de todos los nodos del clúster.
+
+
+Puede crear dominios de transmisión adicionales después de que se haya inicializado su clúster.  Cuando se crea un dominio de difusión, se crea automáticamente un grupo de conmutación por error que contiene los mismos puertos.
+
+.Acerca de esta tarea
+El valor de la unidad máxima de transmisión (MTU) de los puertos definidos para un dominio de difusión se actualiza al valor de MTU establecido en el dominio de difusión.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Red* y luego *Descripción general*.
+. En *Dominios de difusión*, seleccioneimage:icon_add_blue_bg.png["Rectángulo azul que contiene un signo más seguido de la palabra añadir en letras blancas"] .
+. Proporcione el nombre del dominio de transmisión o acepte el valor predeterminado.
++
+Todos los nombres de dominio de difusión deben ser únicos dentro de un espacio IP.
+
+. Proporcionar la unidad máxima de transmisión (MTU).
++
+La MTU es el paquete de datos más grande que se puede aceptar en el dominio de transmisión.
+
+. Seleccione los puertos deseados y seleccione *Guardar*.
+
+
+
+
+== Crear un espacio IP
+
+Un espacio IP es un dominio administrativo para direcciones IP y configuración de red relacionada.  Estos espacios se pueden utilizar para respaldar sus SVM a través de enrutamiento y administración aislados.  Por ejemplo, son útiles cuando los clientes tienen direcciones IP superpuestas del mismo rango de dirección IP y subred.
+
+
+TIP: Debe tener un espacio IP antes de poder crear una subred.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Red* y luego *Descripción general*.
+. En *IPspaces*, seleccioneimage:icon_add_blue_bg.png["Rectángulo azul que contiene un signo más seguido de la palabra añadir en letras blancas"] .
+. Proporcione el nombre del espacio IP o acepte el valor predeterminado.
++
+Todos los nombres de IPspace deben ser únicos dentro de un clúster.
+
+. Seleccione *Guardar*.
+
+
+.¿Qué sigue?
+Puede utilizar el espacio IP para crear una subred.
+
+
+
+== Crear una subred
+
+Una subred o subred impone una división lógica del espacio de direcciones IP en su red.  Permite asignar bloques dedicados de direcciones IP para la creación de una interfaz de red (LIF).  Las subredes simplifican la creación de LIF al permitirle utilizar el nombre de la subred en lugar de una combinación específica de dirección IP y máscara de red.
+
+.Antes de empezar
+Debe tener un dominio de difusión y un espacio IP donde se definirá la subred.  Tenga en cuenta también:
+
+* Todos los nombres de subred deben ser únicos dentro de un espacio IP específico.
+* El rango de direcciones IP utilizado para una subred no puede superponerse con las direcciones IP de otras subredes.
+
+
+.Pasos
+. En el Administrador del sistema, seleccione *Red* y luego *Descripción general*.
+. En la pestaña *Subredes*, seleccioneimage:icon_add_blue_bg.png["Rectángulo azul que contiene un signo más seguido de la palabra añadir en letras blancas"] .
+. Proporcione los detalles de configuración, incluido el nombre de la subred, los detalles de la dirección IP y el dominio de transmisión.
+. Seleccione *Guardar*.
+
+
+.¿Qué sigue?
+La nueva subred simplificará la creación de sus interfaces de red.
+
+
+
+== Crear una interfaz de red
+
+Una interfaz de red lógica (LIF) consta de una dirección IP y parámetros de configuración de red relacionados.  Puede asociarse a un puerto físico o lógico y normalmente lo utilizan los clientes para acceder a los datos proporcionados por una SVM.  Los LIF proporcionan resiliencia en caso de falla y pueden migrar entre los puertos del nodo para que la comunicación no se interrumpa.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Red* y luego *Descripción general*.
+. En la pestaña *Interfaces de red*, seleccioneimage:icon_add_blue_bg.png["Rectángulo azul que contiene un signo más seguido de la palabra añadir en letras blancas"] .
+. Proporcione los detalles de configuración, incluido el nombre de la interfaz, el tipo de interfaz, los protocolos permitidos y los detalles de la dirección IP.
+. Seleccione *Guardar*.
+
+
+
+
+== Información relacionada
+
+* link:../administer/manage-ethernet-ports.html["Administrar puertos Ethernet AFX"]
+* https://docs.netapp.com/us-en/ontap/networking/configure_broadcast_domains_cluster_administrators_only_overview.html["Obtenga más información sobre los dominios de difusión de ONTAP"^]
+* https://docs.netapp.com/us-en/ontap/networking/configure_ipspaces_cluster_administrators_only_overview.html["Obtenga más información sobre la configuración de IPspace de ONTAP"^]
+* https://docs.netapp.com/us-en/ontap/networking/configure_subnets_cluster_administrators_only_overview.html["Obtenga información sobre las subredes de la red ONTAP"^]
+* https://docs.netapp.com/us-en/ontap/concepts/network-connectivity-concept.html["Descripción general de la arquitectura de red"^]
+

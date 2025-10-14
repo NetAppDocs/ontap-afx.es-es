@@ -1,0 +1,56 @@
+---
+section: administer
+title: Administrar su clúster
+entries:
+- title: Supervisar los procesos del clúster
+  entries:
+  - title: Ver el panel de control y el estado del clúster
+    url: "/administer/view-dashboard.html"
+  - title: Ver información
+    url: "/administer/view-insights.html"
+  - title: Monitorizar el rendimiento
+    url: "/administer/monitor-cluster-performance.html"
+  - title: Ver eventos y registro
+    url: "/administer/view-events-log.html"
+  - title: Ver trabajos
+    url: "/administer/view-jobs.html"
+- title: Administrar redes y seguridad
+  entries:
+  - title: Administrar redes de clústeres
+    url: "/administer/manage-cluster-networking.html"
+  - title: Administrar puertos Ethernet
+    url: "/administer/manage-ethernet-ports.html"
+  - title: Preparar servicios de autenticación
+    url: "/administer/prepare-authentication.html"
+  - title: Administrar usuarios y roles
+    url: "/administer/manage-users-roles.html"
+  - title: Administrar certificados
+    url: "/administer/manage-certificates.html"
+- title: Administrar máquinas virtuales de almacenamiento
+  entries:
+  - title: Muestra tus SVM
+    url: "/administer/display-svms.html"
+  - title: Crear un SVM de datos
+    url: "/administer/create-svm.html"
+  - title: Configurar un SVM de datos
+    url: "/administer/configure-svm.html"
+  - title: Migrar una SVM
+    url: "/administer/migrate-svm.html"
+- title: Apoyar el cluster
+  entries:
+  - title: Administrar AutoSupport
+    url: "/administer/manage-autosupport.html"
+  - title: Ver y enviar casos de soporte
+    url: "/administer/submit-view-case.html"
+- title: Actualizar y mantener el clúster
+  entries:
+  - title: Expandir clúster
+    url: "/administer/expand-cluster.html"
+  - title: Actualizar ONTAP
+    url: "/administer/upgrade-ontap.html"
+  - title: Actualizar el firmware
+    url: "/administer/update-firmware.html"
+  - title: Mantener el hardware
+    url: "/administer/maintain-hardware.html"
+- title: Administración adicional
+  url: "/administer/additional-ontap-cluster.html"

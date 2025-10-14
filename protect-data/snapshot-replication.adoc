@@ -1,0 +1,183 @@
+---
+sidebar: sidebar 
+permalink: protect-data/snapshot-replication.html 
+keywords: afx, afx system, manage replication, manage snapshot replication 
+summary: La replicación de instantáneas es un proceso en el que los grupos de consistencia de su sistema AFX se copian a una ubicación geográficamente remota.  Después de la replicación inicial, los cambios en los grupos de consistencia se copian a la ubicación remota según una política de replicación.  Los grupos de consistencia replicados se pueden utilizar para la recuperación ante desastres o la migración de datos. 
+---
+= Administrar la replicación de instantáneas en un sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La replicación de instantáneas es un proceso en el que los grupos de consistencia de su sistema AFX se copian a una ubicación geográficamente remota.  Después de la replicación inicial, los cambios en los grupos de consistencia se copian a la ubicación remota según una política de replicación.  Los grupos de consistencia replicados se pueden utilizar para la recuperación ante desastres o la migración de datos.
+
+Para configurar la replicación de instantáneas, debe establecer una relación de replicación entre su sistema de almacenamiento AFX y la ubicación remota.  La relación de replicación está gobernada por una política de replicación.  Durante la configuración del clúster se crea una política predeterminada para replicar todas las instantáneas.  Puede utilizar la política predeterminada o, opcionalmente, crear una nueva política.
+
+
+
+== Paso 1: Crear una relación de pares de clúster
+
+Antes de poder proteger sus datos replicándolos en un clúster remoto, debe crear una relación de pares de clúster entre el clúster local y el remoto.
+
+.Antes de empezar
+Los requisitos previos para el peering de clústeres son los mismos para los sistemas AFX que para otros sistemas ONTAP . link:https://docs.netapp.com/us-en/ontap/peering/prerequisites-cluster-peering-reference.html["Revise los requisitos previos para el peering de clústeres"^] .
+
+.Pasos
+. En el clúster local, en el Administrador del sistema, seleccione *Clúster > Configuración*.
+. En *Configuración entre clústeres*, junto a *Pares de clúster*, seleccioneimage:icon_kabob.gif["tres puntos azules verticales"] , luego seleccione *Agregar un par del clúster*.
+. Seleccione *Iniciar clúster remoto*; esto genera una frase de contraseña que utilizará para autenticarse con el clúster remoto.
+. Después de generar la frase de contraseña para el clúster remoto, péguela en *Frase de contraseña* en el clúster local.
+. Seleccionarimage:icon_add.gif["Signo más azul seguido de la palabra añadir en letras azules"] ; luego ingrese la dirección IP de la interfaz de red entre clústeres.
+. Seleccione *Iniciar peering de clúster*.
+
+
+.¿Que sigue?
+Ha emparejado un clúster AFX local con un clúster remoto.  Ahora puede crear una relación de replicación.
+
+
+
+== Paso 2: Opcionalmente, cree una política de replicación
+
+La política de replicación de instantáneas define cuándo se replican en el sitio remoto las actualizaciones realizadas en el clúster AFX.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Protección > Políticas*; luego seleccione *Políticas de replicación*.
+. Seleccionarimage:icon_add_blue_bg.png["Rectángulo azul que contiene un signo más seguido de la palabra añadir en letras blancas"] .
+. Ingrese un nombre para la política de replicación o acepte el nombre predeterminado; luego ingrese una descripción.
+. Seleccione el *Alcance de la política*.
++
+Si desea aplicar la política de replicación a todo el clúster, seleccione *Clúster*.  Si desea que la política de replicación se aplique solo al volumen en una máquina virtual de almacenamiento específica, seleccione *Máquina virtual de almacenamiento*.
+
+. Seleccione el *Tipo de política*.
++
+[cols="2,6a"]
+|===
+| Opción | Pasos 
+
+
+| Copiar datos al sitio remoto después de escribirlos en la fuente.  a| 
+.. Seleccione *Asincrónico*.
+.. En *Transferir instantáneas desde la fuente*, acepte el programa de transferencia predeterminado o seleccione uno diferente.
+.. Seleccione para transferir todas las instantáneas o crear reglas para determinar qué instantáneas transferir.
+.. Opcionalmente, habilite la compresión de red.
+
+
+
+
+| Escribir datos en los sitios de origen y remotos simultáneamente.  a| 
+.. Seleccione *Sincrónico*.
+
+
+|===
+. Seleccione *Guardar*.
+
+
+.¿Que sigue?
+Ha creado una política de replicación y ahora está listo para crear una relación de replicación entre su sistema AFX y su ubicación remota.
+
+
+
+== Paso 3: Crear una relación de replicación
+
+Una relación de replicación de instantáneas establece una conexión entre su sistema AFX y una ubicación remota para que pueda replicar grupos de consistencia en un clúster remoto.  Los grupos de consistencia replicados se pueden utilizar para la recuperación ante desastres o para la migración de datos.
+
+Para protegerse contra ataques de ransomware, cuando configura su relación de replicación, puede seleccionar bloquear las instantáneas de destino.  Las instantáneas bloqueadas no se pueden eliminar de forma accidental o maliciosa.  Puede utilizar instantáneas bloqueadas para recuperar datos si un volumen se ve comprometido por un ataque de ransomware.
+
+.Antes de empezar
+Si desea bloquear sus instantáneas de destino, debelink:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock["inicializar el reloj de cumplimiento de Snapshot"] antes de crear la relación de replicación.
+
+Cree una relación de replicación con o sin instantáneas de destino bloqueadas.
+
+[role="tabbed-block"]
+====
+.Con instantáneas bloqueadas
+--
+.Pasos
+. En el Administrador del sistema, seleccione *Protección > Grupos de consistencia*.
+. Seleccione un grupo de consistencia.
+. Seleccionarimage:icon_kabob.gif["tres puntos azules verticales"] ; luego seleccione *Proteger*.
+. En *Protección remota*, seleccione *Replicar a un clúster remoto*.
+. Seleccione la *Política de replicación*.
++
+Debe seleccionar una política de replicación _vault_.
+
+. Seleccione *Configuración de destino*.
+. Seleccione *Bloquear instantáneas de destino para evitar su eliminación*
+. Introduzca el período máximo y mínimo de retención de datos.
+. Para retrasar el inicio de la transferencia de datos, desmarque *Iniciar transferencia inmediatamente*.
++
+La transferencia de datos inicial comienza inmediatamente de forma predeterminada.
+
+. Opcionalmente, para anular el programa de transferencia predeterminado, seleccione *Configuración de destino* y, a continuación, seleccione *Anular programa de transferencia*.
++
+Su horario de traslado debe ser de un mínimo de 30 minutos para ser compatible.
+
+. Seleccione *Guardar*.
+
+
+--
+.Sin instantáneas bloqueadas
+--
+.Pasos
+. En el Administrador del sistema, seleccione *Protección > Replicación*.
+. Seleccione para crear la relación de replicación con el destino local o la fuente local.
++
+[cols="2,2"]
+|===
+| Opción | Pasos 
+
+
+| Destinos locales  a| 
+.. Seleccione *Destinos locales*, luego seleccioneimage:icon_replicate_blue_bg.png["rectángulo con fondo azul y la palabra replicar en letras blancas"] .
+.. Busque y seleccione el grupo de consistencia de origen.
++
+El grupo de consistencia _source_ hace referencia al grupo de consistencia en el clúster local que desea replicar.
+
+
+
+
+
+| Fuentes locales  a| 
+.. Seleccione *Fuentes locales* y luego seleccioneimage:icon_replicate_blue_bg.png["rectángulo con fondo azul y la palabra replicar en letras blancas"] .
+.. Busque y seleccione el grupo de consistencia de origen.
++
+El grupo de consistencia _source_ hace referencia al grupo de consistencia en el clúster local que desea replicar.
+
+.. En *Destino de replicación*, seleccione el clúster al que se replicará; luego, seleccione la máquina virtual de almacenamiento.
+
+
+|===
+. Seleccione una política de replicación.
+. Para retrasar el inicio de la transferencia de datos, seleccione *Configuración de destino*; luego desmarque *Iniciar transferencia inmediatamente*.
++
+La transferencia de datos inicial comienza inmediatamente de forma predeterminada.
+
+. Opcionalmente, para anular el programa de transferencia predeterminado, seleccione *Configuración de destino* y, a continuación, seleccione *Anular programa de transferencia*.
++
+Su horario de traslado debe ser de un mínimo de 30 minutos para ser compatible.
+
+. Seleccione *Guardar*.
+
+
+--
+====
+.¿Que sigue?
+Ahora que ha creado una política y una relación de replicación, su transferencia de datos inicial comienza según lo definido en su política de replicación.  Opcionalmente, puede probar su conmutación por error de replicación para verificar que pueda ocurrir una conmutación por error exitosa si su sistema AFX se desconecta.
+
+
+
+== Paso 4: Pruebe la conmutación por error de replicación
+
+De manera opcional, valide que pueda servir con éxito datos desde volúmenes replicados en un clúster remoto si el clúster de origen está fuera de línea.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Protección > Replicación*.
+. Coloque el cursor sobre la relación de replicación que desea probar y luego seleccioneimage:icon_kabob.gif["tres puntos azules verticales"] .
+. Seleccione *Prueba de conmutación por error*.
+. Ingrese la información de conmutación por error y luego seleccione *Probar conmutación por error*.
+
+
+.¿Que sigue?
+Ahora que sus datos están protegidos con la replicación de instantáneas para la recuperación ante desastres, deberíalink:../secure-data/encrypt-data-at-rest.html["Cifre sus datos en reposo"] para que no se pueda leer si un disco en su sistema AFX se reutiliza, se devuelve, se extravía o se lo roban.

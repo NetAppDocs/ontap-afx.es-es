@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: administer/additional-ontap-cluster.html 
+keywords: afx, afx system, additional administration, advanced administration 
+summary: Además de la administración típica del clúster AFX, es posible que haya otras tareas que deba realizar según su entorno.  La mayoría de las tareas adicionales se pueden realizar mediante el Administrador del sistema, aunque en algunos casos es posible que sea necesario utilizar la CLI. 
+---
+= Administración adicional para un clúster de sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Además de la administración típica del clúster AFX, es posible que haya otras tareas que deba realizar según su entorno.  La mayoría de las tareas adicionales se pueden realizar mediante el Administrador del sistema, aunque en algunos casos es posible que sea necesario utilizar la CLI.
+
+
+NOTE: Las características y la administración de ONTAP descritas son comunes a los sistemas de almacenamiento AFX y a los sistemas AFF o FAS que ejecutan Unified ONTAP.  Se incluyen enlaces a la documentación relevante de Unified ONTAP según corresponda.
+
+
+
+== Licencias
+
+Los sistemas AFX tienen licencia de manera similar a los sistemas Unified ONTAP AFF y FAS .  Un clúster AFX incluye la mayoría de las funciones de forma predeterminada para los protocolos compatibles.
+
+
+
+=== Gestión de licencias de ONTAP
+
+Una licencia ONTAP es un registro de uno o más derechos de software.  Todas las licencias se definen y proporcionan mediante un archivo de licencia de NetApp (NLF). Referirse a https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["Descripción general de las licencias de ONTAP"^] Para más información.
+
+
+
+=== Instalar una licencia en un sistema AFX
+
+Puede instalar archivos de licencia para activar funciones adicionales según sea necesario para su sistema de almacenamiento AFX.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster* y luego *Configuración*.
+. Junto a *Licencias*, seleccioneimage:icon_arrow.gif["flecha azul que apunta hacia la derecha"] .
+. Seleccione la pestaña *Funciones* para mostrar las funciones de ONTAP disponibles.
+. Para instalar opcionalmente una licencia, seleccione la pestaña *Licencias instaladas*.
+. Seleccionarimage:icon_add_blue_bg.png["Rectángulo azul que contiene un signo más seguido de la palabra añadir en letras blancas"] .
+. Seleccione un archivo de licencia local y seleccione *Agregar*.
+
+
+
+
+== Seguridad
+
+Hay varias funciones de seguridad opcionales que puede configurar y usar con su implementación de AFX.
+
+
+
+=== Seguridad y cifrado de datos de ONTAP
+
+Es importante proteger la seguridad y la privacidad de su sistema de almacenamiento AFX. Consulte  https://docs.netapp.com/us-en/ontap/security-encryption/index.html["Seguridad y cifrado de datos"^]
+
+
+
+=== Autenticación y control de acceso ONTAP
+
+El sistema de almacenamiento AFX ofrece varias opciones para configurar servicios de autenticación y control de acceso. Referirse a https://docs.netapp.com/us-en/ontap/authentication-access-control/index.html["Autenticación y control de acceso"^] Para más información.
+
+
+
+=== Administrar OAuth 2.0 en un sistema AFX
+
+OAuth 2.0 es el marco de autorización estándar de la industria que se utiliza para restringir y controlar el acceso a recursos protegidos mediante tokens de acceso firmados.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster* y luego *Configuración*.
+. En la sección *Seguridad*, junto a *Autorización OAuth 2.0*, seleccioneimage:icon_arrow.gif["flecha azul que apunta hacia la derecha"] .
+. Habilitar OAuth 2.0
+. Seleccione *Agregar configuración* y proporcione los detalles de configuración.
+. Seleccione *Guardar*.
+
+
+
+
+== Información relacionada
+
+* link:../faq-ontap-afx.html["Preguntas frecuentes sobre los sistemas de almacenamiento AFX"]
+* https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["Descripción general de la implementación de ONTAP OAuth 2.0"^]
+* link:../administer/additional-ontap-svm.html["Administración adicional para SVM AFX"]
+

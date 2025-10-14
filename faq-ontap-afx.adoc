@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: faq-ontap-afx.html 
+keywords: afx, afx system, faq, frequently asked questions 
+summary: Esta lista de preguntas frecuentes proporciona respuestas a las preguntas que los clientes suelen tener sobre su sistema de almacenamiento AFX.  Incluye conceptos y terminología que pueden resultar útiles al explorar AFX con más detalle o realizar tareas de administración avanzadas. 
+---
+= Preguntas frecuentes sobre los sistemas de almacenamiento AFX
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esta lista de preguntas frecuentes proporciona respuestas a las preguntas que pueda tener sobre su sistema de almacenamiento AFX.  Incluye conceptos y terminología que pueden resultar útiles al explorar AFX con más detalle o realizar tareas de administración avanzadas.
+
+
+
+== General
+
+.¿Qué es una personalidad ONTAP ?
+ONTAP es una plataforma de almacenamiento robusta y versátil, conocida por su completo conjunto de características y su adaptabilidad a una amplia gama de requisitos de almacenamiento.  Si bien esta flexibilidad lo convierte en una excelente opción para organizaciones con diversas cargas de trabajo, algunos clientes pueden beneficiarse de una solución de almacenamiento más personalizada y optimizada para las necesidades de su entorno específico.
+
+Para abordar estas necesidades especializadas, algunos sistemas de almacenamiento de NetApp ofrecen personalidades ONTAP distintas, cada una de las cuales incluye un conjunto de características diseñado para soportar los requisitos únicos del cliente.  Una personalidad de ONTAP normalmente es una combinación de capacidades de hardware y software, diseñada específicamente para brindar una experiencia optimizada para casos de uso específicos.  NetApp ofrece tres personalidades ONTAP :
+
+ONTAP unificado:: La personalidad Unified ONTAP ofrece un amplio conjunto de funciones de gestión de datos y admite los protocolos NAS, SAN y S3 para lograr la máxima flexibilidad.  Esta es la oferta insignia de NetApp , disponible en sistemas AFF y FAS , así como en implementaciones virtualizadas como ONTAP Select y Cloud Volumes ONTAP.
+AFX:: La personalidad de AFX ONTAP proporciona una solución desagregada diseñada para cumplir con los rigurosos requisitos de las cargas de trabajo NAS y S3 de alto rendimiento, incluidas las aplicaciones de IA/ML.  Los sistemas AFX ofrecen capacidades especializadas para clientes que requieren almacenamiento de archivos y objetos escalable y de alto rendimiento.
+ASA r2:: La personalidad ASA r2 ONTAP proporciona una solución desagregada diseñada específicamente para entornos exclusivamente SAN. https://docs.netapp.com/us-en/asa-r2/["Sistemas ASA r2"^]   agilice la experiencia de almacenamiento para cargas de trabajo en bloque, proporcionando una gestión simplificada y un rendimiento optimizado para los clientes de SAN.
+
+
+Al ofrecer estas personalidades distintivas de ONTAP , NetApp permite a las organizaciones seleccionar una solución de almacenamiento alineada con sus requisitos operativos y cargas de trabajo de aplicaciones.
+
+.¿Puedo cambiar la personalidad ONTAP de mi sistema de almacenamiento NetApp ?
+No. La personalidad de su sistema de almacenamiento ONTAP es inmutable y no se puede cambiar.  Por ejemplo, no es posible convertir ni actualizar un sistema de almacenamiento FAS o AFF (que ejecutan la personalidad Unified ONTAP ) a un sistema de almacenamiento AFX.
+
+.Las interfaces del Administrador del sistema para las diferentes personalidades de ONTAP son todas muy similares.  ¿Cómo puedo determinar la personalidad de un sistema específico?
+En el Administrador del sistema, seleccione *Clúster* en el panel de navegación izquierdo y luego *Descripción general*.  Verás la personalidad mostrada en la página.  Como alternativa, puede ejecutar el comando "system node show" en la CLI.  También puede determinar la personalidad de un clúster ONTAP utilizando la API REST; consultelink:./rest/first-call.html["Su primera llamada a la API REST del sistema AFX"] Para más detalles.
+
+.¿Qué significa "desagregado" en el contexto de los sistemas de almacenamiento AFX?
+El término "desagregado" puede tener dos significados diferentes, aunque relacionados con AFX, dependiendo del contexto.
+
+Un concepto importante para comenzar es el desacoplamiento de la capacidad computacional en los nodos del controlador de los estantes de almacenamiento.  Con AFX, los componentes de almacenamiento y cómputo del clúster ya no están estrechamente acoplados como lo están con los sistemas FAS y AFF , que ejecutan la personalidad Unified ONTAP .  En lugar de ello, están conectados a través de conmutadores de clúster.  Cada controlador de nodo AFX tiene una vista completa de todo el grupo de almacenamiento del clúster.
+
+El segundo concepto relacionado con el almacenamiento desagregado es que los agregados y la gestión RAID se eliminan como entidades administrables.  Una capa de abstracción de almacenamiento dentro de AFX configura y administra automáticamente los aspectos de bajo nivel del almacenamiento, incluidos los discos físicos y los grupos RAID.  Esto permite que el administrador de AFX se centre en la configuración de almacenamiento de alto nivel en función de los volúmenes y los depósitos.
+
+
+
+== Interoperabilidad
+
+.¿Puedo mezclar nodos del sistema AFX con nodos del sistema AFF, ASA o FAS en el mismo clúster ONTAP ?
+No. Cada personalidad de ONTAP es diferente.  Por ejemplo, no puede mezclar nodos AFX y Unified ONTAP en el mismo clúster.
+
+.Si quiero utilizar sistemas que ejecutan Unified ONTAP (FAS, AFF, ASA) con sistemas AFX para SnapMirror o FlexCache, ¿qué versión de ONTAP necesitaré?
+Las reglas de la versión de SnapMirror para AFX son idénticas a las de Unified ONTAP.  Esto significa que para replicar desde Unified ONTAP, el sistema de origen debe estar dentro del rango de versiones compatible.  Para replicar desde AFX, el sistema Unified ONTAP debe tener la ONTAP 9.16.1 o posterior (la versión más antigua admite la función de equilibrio de capacidad avanzado).  Para FlexCache, se aplican las mismas reglas para los sistemas de origen y destino que se describen en https://www.netapp.com/pdf.html?item=/media/7336-tr4743.pdf["TR-4743"^] .
+
+Existen algunas diferencias en el soporte para volúmenes FlexGroup .  Un volumen FlexGroup en AFX no puede ser un volumen de origen para un volumen FlexCache que utilice el modo de escritura diferida.
+
+.¿Puedo realizar llamadas a la API ONTAPI (ZAPI) a un clúster AFX?
+No. Solo la API REST de ONTAP es compatible con AFX.  Cualquier código de automatización que utilice ZAPI debe convertirse a la API REST para su uso con AFX.
+
+
+
+== Conceptos avanzados
+
+.¿Cuáles son los protocolos de datos compatibles con un sistema de almacenamiento AFX?
+Los protocolos de datos compatibles con AFX incluyen los siguientes:
+
+* NFSv3, NFSv4.0, NFSv4.1, NFSv4.2
+* SMB2.x, SMB3.x
+* S3
+* NDMP
+
+
+.¿Los protocolos de datos funcionan de manera diferente en AFX?
+No. Los protocolos de datos en AFX funcionan de la misma manera que con los sistemas AFF y FAS .
+
+.¿Se utiliza Particionamiento de disco avanzado (ADP) en AFX?
+No. ADP no se utiliza con AFX.  Debido a que no hay agregados raíz con AFX, no se necesita la función ADP para maximizar la eficiencia del espacio en disco.
+
+.¿Puedo utilizar diferentes tipos de conmutadores para la red back-end de mi sistema de almacenamiento AFX?
+No. Solo los conmutadores específicamente aprobados y provistos con la plataforma de almacenamiento AFX son compatibles con la red back-end.
+
+.¿Cómo se organiza el almacenamiento en un clúster AFX?
+Todos los discos y estantes de almacenamiento conectados a un clúster AFX son parte de una zona de disponibilidad de almacenamiento (SAZ).  Cada clúster AFX admite solo una SAZ que no se puede compartir entre clústeres AFX (excepto para la replicación de SnapMirror y las operaciones FlexCache ).
+
+Cada nodo tiene visibilidad de todo el almacenamiento en la SAZ.  Cuando se agregan estantes de almacenamiento a un clúster, ONTAP agrega automáticamente los discos.
+
+.¿Cómo funciona una operación de movimiento de volumen en Unified ONTAP en comparación con AFX?
+Con Unified ONTAP, es posible reubicar un volumen sin interrupciones de un nodo o agregado a otro en el clúster.  Esto se realiza mediante una operación de copia en segundo plano con tecnología SnapMirror , donde se crea un nuevo volumen de destino en la nueva ubicación.  Según el tamaño del volumen y la utilización de los recursos del clúster, el tiempo que lleva completar el traslado de un volumen puede variar.
+
+Con AFX no hay agregados.  Todo el almacenamiento está contenido dentro de una única zona de disponibilidad de almacenamiento a la que puede acceder cada nodo del clúster.  Como resultado, los movimientos de volumen nunca necesitan copiar los datos.  En cambio, todos los movimientos de volumen se realizan con actualizaciones de puntero entre nodos.  Esto se conoce como movimiento de volumen de copia cero (ZCVM) y sucede instantáneamente porque en realidad no se copia ni se mueve ningún dato.  Este es esencialmente el mismo proceso de movimiento de volumen utilizado con Unified ONTAP sin la copia de SnapMirror .
+
+Tenga en cuenta que en la versión inicial, los volúmenes se moverán solo en escenarios de conmutación por error de almacenamiento y cuando se agreguen o eliminen nodos del clúster.  Estos movimientos se controlan únicamente a través de ONTAP.
+
+.¿Cómo determina AFX dónde colocar los datos en la SAZ?
+AFX incluye una función conocida como Gestión de topología automatizada (ATM) que responde a los desequilibrios del sistema y de los objetos del usuario.  El objetivo principal de ATM es equilibrar los volúmenes en todo el clúster AFX.  Cuando se detecta un desequilibrio, se activa un trabajo interno para distribuir uniformemente los datos entre los nodos activos.  Los datos se reasignan mediante ZCVM, que solo necesita copiar y actualizar los metadatos del objeto.

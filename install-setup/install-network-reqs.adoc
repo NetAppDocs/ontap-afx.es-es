@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: install-setup/install-network-reqs.html 
+keywords: shared storage cluster switch 
+summary: A partir de ONTAP 9.9.1, puede utilizar los conmutadores Cisco Nexus 9364d-gx2a para combinar la funcionalidad de almacenamiento y clúster en un escenario de conmutador compartido. 
+---
+= Requisitos de red para su sistema de almacenamiento AFX 1K
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Registre la información requerida para cada red que conecte a su sistema de almacenamiento AFX 1K.
+
+
+
+== Recopilar información de la red
+
+Antes de comenzar la instalación de su sistema de almacenamiento AFX 1K, recopile la información de red necesaria
+
+* Nombres de host y direcciones IP para cada uno de los controladores del sistema de almacenamiento y todos los conmutadores aplicables.
++
+La mayoría de los controladores del sistema de almacenamiento se administran a través de la interfaz e0M conectándose al puerto de servicio Ethernet (ícono de llave inglesa).
+
++
+Consulte la https://hwu.netapp.com["Hardware Universe"^] Para obtener la información más reciente.
+
+* Dirección IP de administración del clúster
++
+La dirección IP de administración del clúster es una dirección IP única para la interfaz de administración del clúster utilizada por el administrador del clúster para acceder a la máquina virtual de almacenamiento de administración y administrar el clúster.  Puede obtener esta dirección IP del administrador responsable de asignar direcciones IP en su organización.
+
+* Máscara de subred de red
++
+Durante la configuración del clúster, ONTAP recomienda un conjunto de interfaces de red adecuadas para su configuración.  Puede ajustar la recomendación si es necesario.
+
+* Dirección IP de la puerta de enlace de red
+* Direcciones IP de gestión de nodos (una por nodo)
+* Nombres de dominio DNS
+* Direcciones IP del servidor de nombres DNS
+* Direcciones IP del servidor NTP
+* Máscara de subred de datos
+* Subred IP para la gestión del tráfico de red.
+
+
+
+
+== Requisitos de red para conmutadores Cisco
+
+Para la instalación y el mantenimiento de los conmutadores Cisco Nexus 9332D-GX2B y 9364D-GX2A, asegúrese de revisar los requisitos de cableado y red.
+
+
+
+=== Requisitos de red
+
+Necesita la siguiente información de red para todas las configuraciones del conmutador.
+
+* Subred IP para la gestión del tráfico de red
+* Nombres de host y direcciones IP para cada uno de los controladores del sistema de almacenamiento y todos los conmutadores aplicables
+* Consulte la https://hwu.netapp.com["Hardware Universe"^] Para obtener la información más reciente.
+
+
+
+
+=== Requisitos de cableado
+
+* Tiene la cantidad y el tipo de cables y conectores de cables adecuados para sus conmutadores. Ver el https://hwu.netapp.com["Hardware Universe"^] .
+* Dependiendo del tipo de conmutador que esté configurando inicialmente, deberá conectarse al puerto de consola del conmutador con el cable de consola incluido.
+
+
+.¿Que sigue?
+Después de revisar los requisitos de la red,link:cable-hardware.html["Conecte los controladores y los estantes de almacenamiento para su sistema de almacenamiento AFX 1K"] .

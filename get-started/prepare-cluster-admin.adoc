@@ -1,0 +1,194 @@
+---
+sidebar: sidebar 
+permalink: get-started/prepare-cluster-admin.html 
+keywords: afx, afx system, prepare, administration 
+summary: Antes de implementar AFX en un entorno de producción, es esencial comprender la estructura administrativa y las opciones de configuración.  Esto garantiza una gestión segura, eficiente y eficaz de su clúster AFX. 
+---
+= Prepárese para administrar su sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de implementar AFX en un entorno de producción, es esencial comprender la estructura administrativa y las opciones de configuración.  Esto garantiza una gestión segura, eficiente y eficaz de su clúster AFX.
+
+
+
+== Comprender las máquinas virtuales de almacenamiento
+
+Una máquina virtual de almacenamiento (SVM) es un servidor aislado o un entorno de inquilino dentro de un clúster ONTAP .  Puede configurar una SVM para servir datos a los clientes conectados.  Debe estar familiarizado con las capacidades y características de las SVM AFX.
+
+
+NOTE: Se crea un SVM de datos cuando se configura e implementa inicialmente un clúster AFX.  Puede crear SVM de datos adicionales si es necesario.
+
+Control administrativo:: Las SVM de datos se pueden utilizar para establecer y aplicar el aislamiento de sus datos y aplicaciones.  Esto puede ser útil cuando hay muchos grupos diferentes con una organización más grande.  El control administrativo se puede delegar a las SVM para establecer políticas relacionadas con el acceso, la seguridad y la protección de los datos.
+Cuentas y roles RBAC:: Hay dos niveles de autenticación y autorización con AFX: nivel de clúster y nivel de SVM.  Además de las cuentas del clúster, cada SVM tiene su propio conjunto de usuarios y roles.  En la mayoría de las situaciones, utilizar las cuentas de nivel de clúster es adecuado.  Pero dependiendo de su entorno, es posible que también necesite configurar y usar las cuentas y roles de SVM más restrictivos. Ver link:../administer/additional-ontap-svm.html["Administración adicional de AFX SVM"] Para más información.
+Recursos con alcance SVM:: Los recursos AFX y las entidades configurables están asociados con el clúster o con un SVM específico.  Hay muchos recursos con un alcance SVM, incluidos volúmenes y depósitos, así como cuentas de usuario SVM y roles RBAC.
+Interfaces de red dedicadas:: Cada SVM tiene su propio conjunto dedicado de interfaces de red.  Por ejemplo, se asignan LIF separados a una SVM para la gestión y el acceso a los datos del cliente.
+
+
+
+
+== Dos niveles administrativos de AFX
+
+Las tareas administrativas de ONTAP que realiza con AFX generalmente se dividen en dos categorías diferentes.  Algunas tareas se aplican al clúster ONTAP en su totalidad, mientras que otras se aplican a una SVM específica.  Esto da como resultado un modelo administrativo de dos niveles.
+
+Es importante tener en cuenta que estos niveles describen cómo se organizan y asignan las tareas administrativas, y no necesariamente cómo se configura la seguridad asociada.  Por ejemplo, si bien se necesita una cuenta de administrador de clúster para realizar la administración a nivel de clúster, también se puede utilizar para la administración de SVM.
+
+Administrador de clúster:: El administrador del clúster tiene control completo del clúster AFX, incluidas todas las SVM de datos.  El nivel administrativo del clúster AFX incluye solo las tareas que un administrador del clúster puede realizar y no ninguna de las tareas de administración específicas de SVM. Ver link:../administer/view-dashboard.html["Administrar su clúster"] Para más información.
+Administrador de SVM:: Un rol de administrador de SVM tiene control de un SVM de datos específico y, por lo tanto, está más restringido en comparación con el administrador de clúster.  La administración de SVM implica realizar tareas con objetos y recursos que tienen un alcance SVM, como la creación de un volumen. Ver link:../manage-data/prepare-manage-data.html["Administre sus máquinas virtuales y datos de almacenamiento"] Para más información.
+
+
+
+
+== Tres interfaces administrativas
+
+Al igual que los sistemas AFF y FAS , AFX tiene tres interfaces administrativas.  La LIF (o dirección IP) que necesita utilizar varía según la interfaz administrativa y su entorno.
+
+
+NOTE: La interfaz de usuario del Administrador del sistema es la preferida para la mayoría de las tareas administrativas.  Debe utilizar una cuenta de administrador a menos que se indique lo contrario.
+
+[cols="25,75"]
+|===
+| Interfaz | Descripción 
+
+
+| System Manager | Esta es una interfaz gráfica de usuario disponible a través de un navegador web.  Es fácil de usar y proporciona acceso a la mayoría de las capacidades que necesitan los clientes.  Acceder a AFX a través del Administrador del sistema proporciona la experiencia más sencilla para la mayoría de las necesidades de administración de clústeres ONTAP y SVM. 
+
+
+| Interfaz de línea de comandos | Se puede acceder a la CLI de ONTAP mediante SSH.  Dependiendo de su cuenta, puede acceder al LIF de administración del clúster o al LIF de administración de SVM.  La CLI es más difícil de usar pero es más robusta.  Se prefiere, y a veces se requiere, para tareas de administración avanzadas. 
+
+
+| API REST | AFX incluye una API REST que puedes usar para automatizar la administración de tu clúster AFX.  La API comparte muchas de las mismas llamadas disponibles con la API REST de personalidad Unified ONTAP con modificaciones para admitir las características únicas de AFX. 
+|===
+
+
+== Aprenda a buscar, filtrar y ordenar información en el Administrador del sistema
+
+La interfaz de usuario del Administrador del sistema incluye un sólido conjunto de funciones que le permiten acceder y mostrar la información que necesita.  Aprender a utilizar estas capacidades le ayudará a administrar mejor el sistema de almacenamiento AFX. Ver https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html["Buscar, filtrar y ordenar información en el Administrador del sistema"^] Para más información.
+
+
+
+== Acceder a la CLI de ONTAP
+
+Si bien puede utilizar el Administrador del sistema para la mayor parte de la administración de AFX, hay algunas tareas que solo puede realizar mediante la interfaz de línea de comandos de ONTAP .
+
+.Acerca de esta tarea
+Puede acceder a la CLI de ONTAP a través del shell seguro (SSH).  La CLI tiene múltiples niveles de privilegios que determinan los comandos y los parámetros de comando disponibles para usted.  El `admin` El nivel es el menos privilegiado y el predeterminado cuando inicia sesión. Puede elevar el privilegio de su sesión a `advanced` Si es necesario, utilice el `set` dominio.
+
+.Antes de empezar
+Necesitarás lo siguiente:
+
+* Dirección IP o nombre de dominio del LIF de administración del clúster o SVM
+* Credenciales de la cuenta
+* Cliente SSH en su estación de trabajo local
+
+
+.Pasos
+. Utilice SSH para conectarse a su clúster AFX, por ejemplo:
++
+`ssh admin@10.69.117.24`
+
+. Proporcione la contraseña de la cuenta.
+. Mostrar los directorios de comandos en la parte superior de la jerarquía:
++
+`?`
+
+. Eleve el nivel de privilegio de su sesión desde `admin` a `advanced` :
++
+`set -privilege advanced`
+
+
+
+
+
+== Trabajar con pares ONTAP HA
+
+Al igual que con Unified ONTAP, los nodos del clúster AFX están configurados en pares de alta disponibilidad (HA) para tolerancia a fallas y operaciones sin interrupciones.  El emparejamiento de alta disponibilidad proporciona la capacidad de que las operaciones de almacenamiento permanezcan en línea en caso de una falla del nodo, como una conmutación por error de almacenamiento.  Cada nodo se asocia con otro nodo para formar un solo par.  Generalmente, esto se hace mediante una conexión directa entre los módulos NVRAM de los dos nodos.
+
+Con AFX, se agrega una nueva VLAN HA a los conmutadores del clúster backend para permitir que los módulos NVRAM permanezcan conectados entre los nodos socios de HA.  Los pares HA todavía se utilizan con el sistema AFX, pero ya no es necesario que los nodos asociados estén conectados directamente.
+
+
+
+== Limitaciones de implementación del sistema AFX
+
+Existen varias limitaciones, incluidos mínimos y máximos, impuestas por AFX al configurar y usar su clúster.  Estos límites se dividen en varias categorías diferentes, entre ellas:
+
+Nodos controladores por clúster:: Cada clúster AFX debe tener al menos cuatro nodos.  La cantidad máxima de nodos varía según la versión de ONTAP .
+Capacidad de almacenamiento:: Esta es la capacidad total de todos los discos SSD en la zona de disponibilidad de almacenamiento (SAZ) del clúster.  La capacidad máxima de almacenamiento varía según la versión de ONTAP .  Debe revisar la información disponible en la Herramienta Matriz de Interoperabilidad (IMT) para determinar las capacidades de su clúster.
+
+
+
+
+== Confirmar el estado del sistema AFX
+
+Antes de realizar cualquier tarea de administración de AFX, debe verificar el estado del clúster.
+
+
+TIP: Puede verificar el estado de su clúster AFX en cualquier momento, incluso cuando sospeche que hay un problema operativo o de rendimiento.
+
+.Antes de empezar
+Necesitarás lo siguiente:
+
+* Dirección IP o FQDN de administración del clúster
+* Cuenta de administrador del clúster (nombre de usuario y contraseña)
+
+
+.Pasos
+. Conéctese al Administrador del sistema mediante un navegador:
++
+`\https://$FQDN_IPADDR/`
+
++
+*Ejemplo*
+
++
+`\https://10.61.25.33/`
+
+. Proporcione el nombre de usuario y la contraseña del administrador y seleccione * Sign in*.
+. Revise el tablero del sistema y el estado del clúster, incluido el cableado.  Observe también el _panel de navegación_ a la izquierda.
++
+link:../administer/view-dashboard.html["Ver el panel de control y el estado del clúster"]
+
+. Muestra los eventos del sistema y los mensajes del registro de auditoría.
++
+link:../administer/view-events-log.html["Ver eventos AFX y registro de auditoría"]
+
+. Muestra y anota todas las recomendaciones de *Insight*.
++
+link:../administer/view-insights.html["Utilice Insights para optimizar el rendimiento y la seguridad del clúster AFX"]
+
+
+
+
+
+== Inicio rápido para crear y utilizar un SVM de datos
+
+Después de instalar y configurar el clúster AFX, puede comenzar a realizar las tareas de administración típicas de la mayoría de las implementaciones de AFX.  Estos son los pasos de alto nivel necesarios para comenzar a compartir datos con los clientes.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]Mostrar los datos SVM disponibles
+[role="quick-margin-para"]
+link:../administer/display-svms.html["Mostrar"]la lista de SVM de datos y determinar si hay alguno que pueda usar.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]Opcionalmente, crear un SVM de datos
+[role="quick-margin-para"]
+link:../administer/create-svm.html["Crear"]una SVM para aislar y proteger las cargas de trabajo y los datos de su aplicación si no hay una SVM existente disponible.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"]Configurar su SVM
+[role="quick-margin-para"]
+link:../administer/configure-svm.html["Configurar"]su SVM y prepárese para el acceso del cliente.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Cuatro"]Prepárese para aprovisionar almacenamiento
+[role="quick-margin-para"]
+link:../manage-data/prepare-manage-data.html["Preparar"]para asignar y gestionar sus datos.
+
+
+
+== Información relacionada
+
+* https://docs.netapp.com/us-en/ontap/concepts/introducing-ontap-interfaces-concept.html["Interfaces de usuario de ONTAP"^]
+* https://docs.netapp.com/us-en/ontap/system-admin/set-privilege-level-task.html["Establecer el nivel de privilegio en la CLI de ONTAP"^]
+* https://docs.netapp.com/us-en/ontap/system-admin/index.html["Obtenga información sobre la administración de clústeres con la CLI de ONTAP"^]
+* link:../faq-ontap-afx.html["Preguntas frecuentes sobre los sistemas de almacenamiento AFX"]
+

@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: protect-data/prepare-protect-data.html 
+keywords: afx, afx system, prepare, prepare protect, prepare protect data 
+summary: Antes de proteger sus datos de AFX, debe familiarizarse con algunos de los conceptos clave y el estado actual de su almacenamiento. 
+---
+= Prepárese para proteger los datos de su sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de proteger sus datos de AFX, debe familiarizarse con algunos de los conceptos y capacidades clave.
+
+
+TIP: Dado que muchos de los conceptos y procedimientos de administración disponibles en los sistemas AFF y FAS son los mismos que los de los sistemas de almacenamiento AFX, revisar la documentación de Unified ONTAP puede resultar útil.
+
+
+
+== Terminología y opciones
+
+Hay varios términos relacionados con la protección de datos de AFX que debe conocer.
+
+Snapshot:: Una instantánea es una imagen de un volumen, de solo lectura y en un punto determinado del tiempo.  Es una tecnología fundamental para los servicios de replicación y protección de datos de ONTAP.
+Grupo de consistencia:: Un grupo de consistencia es una colección de volúmenes que se administran como una sola unidad.  Puede crear grupos de consistencia para simplificar la administración del almacenamiento y la protección de datos para las cargas de trabajo de las aplicaciones.  Por ejemplo, puede tomar instantáneas de varios volúmenes en una operación utilizando el grupo de consistencia en lugar de los volúmenes individuales.
+Grupo de consistencia jerárquica:: Los grupos de consistencia jerárquica se introdujeron con ONTAP 9.16.1 y están disponibles con AFX.  Con una estructura jerárquica, uno o más grupos de consistencia se pueden configurar como hijos de un padre.  Estos grupos jerárquicos le permiten aplicar políticas de instantáneas individuales a grupos de consistencia secundarios y replicar las instantáneas de todos los secundarios en un clúster remoto como una sola unidad replicando al primario.
+SnapLock:: SnapLock es una función de ONTAP que le permite proteger sus archivos moviéndolos a un estado de escritura única y lectura múltiple (WORM).  Esto evita la modificación o eliminación durante un período de retención específico.  Los volúmenes SnapLock creados no se pueden convertir a partir de volúmenes que no sean SnapLock después de la creación en función de la retención.
+
+
+
+
+== Información relacionada
+
+* link:../administer/additional-ontap-svm.html["Administración adicional de AFX SVM"]
+* link:../get-started/prepare-cluster-admin.html["Prepárese para administrar su sistema AFX"]
+

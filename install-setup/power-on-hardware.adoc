@@ -1,0 +1,162 @@
+---
+sidebar: sidebar 
+permalink: install-setup/power-on-hardware.html 
+keywords: afx, afx 1k, power on 
+summary: Encienda cada estante para asignarle una identificación de estante única, encienda los nodos del controlador AFX y asegure los cables de alimentación. 
+---
+= Encienda su sistema de almacenamiento AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de instalar el hardware del rack para su sistema de almacenamiento AFX 1K e instalar los cables para los nodos del controlador y los estantes de almacenamiento, debe encender los estantes de almacenamiento y los nodos del controlador.
+
+
+
+== Paso 1: Encienda el estante y asígnele un ID
+
+Cada estante tiene un ID de estante único, lo que garantiza su distinción en la configuración de su sistema de almacenamiento.
+
+.Acerca de esta tarea
+* Un ID de estante válido es del 01 al 99.
+* Debe apagar y encender nuevamente un estante (desenchufar ambos cables de alimentación, esperar un mínimo de 10 segundos y luego volver a enchufarlos) para que la identificación del estante tenga efecto.
+
+
+.Pasos
+. Encienda el estante conectando primero los cables de alimentación al estante, asegurándolos en su lugar con el retenedor del cable de alimentación y luego conectando los cables de alimentación a fuentes de energía en diferentes circuitos.
++
+El estante se enciende y arranca automáticamente cuando se enchufa.
+
+. Retire la tapa del extremo izquierdo para acceder al botón de identificación del estante detrás de la placa frontal.
++
+image::../media/drw_tp_change_shelf_id_ieops-2381.svg[Cambiar el ID del estante NX224]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Llamada número 1]
+ a| 
+Tapa del extremo del estante
+
+
+
+ a| 
+image::../media/icon_round_2.png[[Número de llamada 2]
+ a| 
+Placa frontal del estante
+
+
+
+ a| 
+image::../media/icon_round_3.png[[Número de llamada 3]
+ a| 
+Número de identificación del estante
+
+
+
+ a| 
+image::../media/icon_round_4.png[[Número de llamada 4]
+ a| 
+Botón de identificación de estante
+
+|===
+. Cambiar el primer número del ID del estante:
++
+.. Inserte el extremo recto de un clip o un bolígrafo de punta estrecha en el orificio pequeño para presionar suavemente el botón de identificación del estante.
+.. Presione suavemente y mantenga presionado el botón de identificación del estante hasta que el primer número en la pantalla digital parpadee y luego suelte el botón.
++
+El número parpadea durante 15 segundos, activando el modo de programación de identificación del estante.
+
++
+
+NOTE: Si el ID tarda más de 15 segundos en parpadear, presione y mantenga presionado nuevamente el botón de ID del estante, asegurándose de presionarlo hasta el fondo.
+
+.. Presione y suelte el botón de identificación del estante para avanzar el número hasta llegar al número deseado del 0 al 9.
++
+La duración de cada pulsación y liberación puede ser tan corta como un segundo.
+
++
+El primer número continúa parpadeando.
+
+
+
+. Cambiar el segundo número del ID del estante:
++
+.. Mantenga presionado el botón hasta que el segundo número en la pantalla digital parpadee.
++
+El número puede tardar hasta tres segundos en parpadear.
+
++
+El primer número en la pantalla digital deja de parpadear.
+
+.. Presione y suelte el botón de identificación del estante para avanzar el número hasta llegar al número deseado del 0 al 9.
++
+El segundo número continúa parpadeando.
+
+
+
+. Bloquee el número deseado y salga del modo de programación presionando y manteniendo presionado el botón de identificación del estante hasta que el segundo número deje de parpadear.
++
+El número puede tardar hasta tres segundos en dejar de parpadear.
+
++
+Ambos números en la pantalla digital comienzan a parpadear y el LED ámbar se ilumina después de aproximadamente cinco segundos, alertándole que la identificación del estante pendiente aún no ha tenido efecto.
+
+. Apague y encienda el estante durante al menos 10 segundos para que la identificación del estante tenga efecto.
++
+.. Desconecte el cable de alimentación de ambas fuentes de alimentación en el estante.
+.. Espere 10 segundos.
+.. Vuelva a enchufar los cables de alimentación a las fuentes de alimentación del estante para completar el ciclo de energía.
++
+La fuente de alimentación se enciende tan pronto como se conecta el cable de alimentación.  Su LED bicolor debe iluminarse en verde.
+
+
+
+. Vuelva a colocar la tapa del extremo izquierdo.
+
+
+
+
+== Paso 2: Encienda los nodos del controlador
+
+Después de haber encendido los estantes de almacenamiento y haberles asignado identificaciones únicas, encienda los nodos del controlador de almacenamiento.
+
+.Pasos
+. Conecte su computadora portátil al puerto de consola serie.  Esto le permite monitorear la secuencia de arranque cuando se encienden los controladores.
++
+.. Configure el puerto de consola serie de la computadora portátil a 115,200 baudios con N-8-1.
++
+Consulte la ayuda en línea de su computadora portátil para obtener instrucciones sobre cómo configurar el puerto de consola serie.
+
+.. Conecte el cable de la consola a la computadora portátil y conecte el puerto de consola serial en el controlador usando el cable de consola que viene con su sistema de almacenamiento.
+.. Conecte la computadora portátil al conmutador en la subred de administración.
++
+image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Conexiones de consola]
+
+
+
+
+
+. Asigne una dirección TCP/IP a la computadora portátil, utilizando una que esté en la subred de administración.
+. Conecte los cables de alimentación a las fuentes de alimentación del controlador y luego conéctelos a fuentes de alimentación en diferentes circuitos.
++
+image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[Diagrama de conexión de alimentación del sistema de almacenamiento A1K y A70 o A90]
+
++
+** El sistema comienza a arrancar.  El arranque inicial puede tardar hasta ocho minutos.
+** Los LED parpadean y los ventiladores se ponen en marcha, lo que indica que los controladores se están encendiendo.
+** Los ventiladores pueden hacer ruido al arrancar, lo cual es normal.
+
+
+
+
+. Asegure los cables de alimentación utilizando el dispositivo de fijación en cada fuente de alimentación.
+
+
+.¿Que sigue?
+Después de encender su sistema de almacenamiento AFX 1K,link:../install-setup/cluster-setup.html["configurar un clúster AFX"] .

@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: administer/migrate-svm.html 
+keywords: afx, afx system, svm, migrate svm 
+summary: Puede migrar un SVM de datos de un clúster de ONTAP a otro.  La migración de SVM con AFX funciona de la misma manera que con Unified ONTAP, aunque hay varias consideraciones de interoperabilidad.  Consulte la documentación de Unified ONTAP para obtener detalles sobre cómo realizar una migración de SVM. 
+---
+= Migrar un sistema de almacenamiento AFX SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede migrar un SVM de datos de un clúster de ONTAP a otro.  La migración de SVM con AFX funciona de la misma manera que con Unified ONTAP, aunque hay varias consideraciones de interoperabilidad.  Consulte la documentación de Unified ONTAP proporcionada para obtener detalles sobre cómo realizar una migración de SVM.
+
+
+
+== Consideraciones de interoperabilidad
+
+Antes de planificar y realizar una migración de SVM, debe tener en cuenta las consideraciones de interoperabilidad, incluidas las capacidades y limitaciones.
+
+
+
+=== Casos de uso
+
+Los administradores de clúster pueden reubicar una SVM desde un clúster de origen a un clúster de destino.  Puede hacer esto como parte de la gestión de la capacidad y el equilibrio de carga, o para permitir actualizaciones de equipos o consolidaciones de centros de datos.
+
+Y debido a que el sistema de almacenamiento AFX no admite actualizaciones locales desde Unified ONTAP, la migración de SVM es un caso de uso importante.  Puede mover las cargas de trabajo de sus aplicaciones desde clústeres Unified ONTAP9 a clústeres AFX sin interrupciones.  Además, las SVM se pueden migrar de otras maneras, incluso desde un clúster AFX a un clúster Unified ONTAP , así como entre clústeres AFX.
+
+
+
+=== Interoperabilidad de versiones
+
+La siguiente tabla describe las migraciones de SVM permitidas según la personalidad de ONTAP y la versión del clúster de origen y destino.
+
+[cols="40,30,30"]
+|===
+| Dirección | Versión fuente | Versión de destino 
+
+
+| Unificado a AFX | 9.15.1 - 9.17.1 | 9.17.1 
+
+
+| AFX a Unificado | 9.17.1 | 9.17.1 
+
+
+| AFX a AFX | 9.17.1 | 9.17.1 
+|===
+
+
+=== Comprobaciones previas
+
+Unified ONTAP incluye varias comprobaciones previas que también se implementan con AFX.  Además, se agregan varias comprobaciones previas nuevas para marcar funciones que no son compatibles con AFX, entre ellas:
+
+* FabricPool (volúmenes que residen en agregados compuestos)
+* Volúmenes aprovisionados gruesos
+
+
+
+
+=== Aprovisionamiento de volumen
+
+Los volúmenes AFX se aprovisionan para equilibrar su ubicación en la zona de disponibilidad de almacenamiento (SAZ) del clúster.
+
+Garantía de espacio:: AFX no admite aprovisionamiento grueso.  Se utiliza una comprobación previa para hacer fallar una migración si algún volumen en la SVM que se está migrando tiene aprovisionamiento grueso.
+Cifrado:: Un sistema AFX admite el cifrado de volumen de NetApp (NVE) pero no el cifrado agregado de NetApp (NAE).  Debido a esto, cualquier volumen NAE en un clúster de Unified ONTAP se convierte en volúmenes NVE cuando se migra a AFX.  La siguiente tabla resume la compatibilidad y conversión.
+
+
+[cols="50,50"]
+|===
+| Volumen de origen | Volumen de destino 
+
+
+| Texto sin formato | Texto sin formato 
+
+
+| NVE | NVE 
+
+
+| NAE | NVE 
+|===
+
+
+== Información relacionada
+
+* https://docs.netapp.com/us-en/ontap/svm-migrate/index.html["Movilidad de datos de ONTAP SVM"^]
+* link:../faq-ontap-afx.html["Preguntas frecuentes sobre los sistemas de almacenamiento AFX"]
+

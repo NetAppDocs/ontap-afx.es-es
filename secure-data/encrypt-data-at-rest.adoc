@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: secure-data/encrypt-data-at-rest.html 
+keywords: afx, afx system, encryption, encrypt data 
+summary: Puede cifrar sus datos a nivel de hardware y software para obtener protección de doble capa.  Cuando se cifran datos en reposo, no se pueden leer si el medio de almacenamiento se reutiliza, se devuelve, se extravía o se roba. 
+---
+= Cifrar datos en reposo en un sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede cifrar sus datos a nivel de hardware y software para obtener protección de doble capa.  Cuando se cifran datos en reposo, no se pueden leer si el medio de almacenamiento se reutiliza, se devuelve, se extravía o se roba.
+
+NetApp Storage Encryption (NSE) admite el cifrado de hardware mediante unidades de autocifrado (SED).  Los SED cifran los datos a medida que se escriben.  Cada SED contiene una clave de cifrado única.  Los datos cifrados almacenados en la SED no se pueden leer sin la clave de cifrado de la SED.  Los nodos que intentan leer desde un SED deben estar autenticados para acceder a la clave de cifrado del SED.  Los nodos se autentican obteniendo una clave de autenticación de un administrador de claves y luego presentando dicha clave al SED.  Si la clave de autenticación es válida, el SED le dará al nodo su clave de cifrado para acceder a los datos que contiene.
+
+.Antes de empezar
+Utilice el administrador de claves integrado de AFX o un administrador de claves externo para entregar claves de autenticación a sus nodos.  Además de NSE, también puedes habilitar el cifrado de software para agregar otra capa de seguridad a tus datos.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster* y luego *Configuración*.
+. En la sección *Seguridad*, en *Cifrado*, seleccione *Configurar*.
+. Configurar el administrador de claves.
++
+[cols="2"]
+|===
+| Opción | Pasos 
+
+
+| Configurar el administrador de claves integrado  a| 
+.. Seleccione *Administrador de claves integrado* para agregar los servidores de claves.
+.. Introduzca una frase de contraseña.
+
+
+
+
+| Configurar un administrador de claves externo  a| 
+.. Seleccione *Administrador de claves externo* para agregar los servidores de claves.
+.. Seleccionarimage:icon_add.gif["un signo más azul seguido de la palabra añadir"] para agregar los servidores clave.
+.. Agregue los certificados CA del servidor KMIP.
+.. Agregue los certificados de cliente KMIP.
+
+
+|===
+. Seleccione *Cifrado de doble capa* para habilitar el cifrado de software.
+. Seleccione *Guardar*.
+

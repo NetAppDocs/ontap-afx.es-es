@@ -1,0 +1,109 @@
+---
+sidebar: sidebar 
+permalink: administer/manage-autosupport.html 
+keywords: afx, afx system, autosupport 
+summary: AutoSupport es una tecnología de NetApp que puede utilizar para supervisar de forma proactiva el estado de sus sistemas de almacenamiento AFX.  Puede enviar mensajes automáticamente al soporte técnico de NetApp , a su organización de soporte interna o a un socio de soporte. 
+---
+= Administrar AutoSupport para un clúster de sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AutoSupport es una tecnología de NetApp que puede utilizar para supervisar de forma proactiva el estado de sus sistemas de almacenamiento AFX.  Puede enviar mensajes automáticamente al soporte técnico de NetApp , a su organización de soporte interna o a un socio de soporte.
+
+AutoSupport está habilitado de forma predeterminada cuando configura un clúster AFX y los mensajes se enviarán al soporte técnico de NetApp .  Para enviar mensajes a su organización de soporte interna, debe configurar correctamente su clúster y proporcionar un host de correo electrónico válido.  AFX comienza a enviar mensajes de AutoSupport 24 horas después de su activación.
+
+
+NOTE: Debe iniciar sesión en el Administrador del sistema utilizando una cuenta de administrador de clúster para administrar AutoSupport.
+
+
+
+== Probar la conectividad de AutoSupport
+
+Después de haber configurado su clúster, debe probar su conectividad de AutoSupport para verificar que el soporte técnico pueda recibir los mensajes generados por AutoSupport.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster* y luego *Configuración*.
+. Junto a * AutoSupport* seleccioneimage:icon_kabob.gif["tres puntos azules verticales"] y luego *Probar conectividad*.
+. Ingrese un asunto para el mensaje de AutoSupport y seleccione *Enviar mensaje de prueba de AutoSupport *.
+
+
+
+
+== Agregar destinatarios de AutoSupport
+
+Opcionalmente, puede agregar miembros de su organización de soporte interno a la lista de direcciones de correo electrónico que reciben mensajes de AutoSupport .
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster* y luego *Configuración*.
+. Junto a * AutoSupport* seleccioneimage:icon_kabob.gif["tres puntos azules verticales"] y luego *Más opciones*.
+. Junto a *Correo electrónico*, seleccioneimage:icon_edit_pencil_blue_outline.png["icono de lápiz"] y luegoimage:icon_add.gif["signo más azul seguido de la palabra Agregar"] .
+. Proporcione la dirección de correo electrónico del destinatario; para la categoría de destinatario, seleccione:
++
+** *Socio* para tus socios
+** *General* para los miembros de su organización de soporte interna
+
+
+. Seleccione *Guardar*.
+
+
+.Resultado
+Las direcciones de correo electrónico que haya agregado recibirán nuevos mensajes de AutoSupport para su categoría de destinatario específica.
+
+
+
+== Enviar datos de AutoSupport
+
+Si ocurre un problema con su sistema AFX, deberá enviar manualmente los datos de AutoSupport .  Esto puede reducir significativamente la cantidad de tiempo que lleva identificar y resolver el problema.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster* y luego *Configuración*.
+. Junto a * AutoSupport* seleccioneimage:icon_kabob.gif["tres puntos azules verticales"] y luego *Generar y enviar*.
+. Proporcione un asunto para el mensaje de AutoSupport .
+. Seleccione *Enviar*.
+
+
+.Resultado
+Sus datos de AutoSupport se envían al soporte técnico.
+
+
+
+== Suprimir la generación de casos de soporte
+
+Si está realizando una actualización o mantenimiento en su sistema AFX, es posible que desee suprimir la generación de casos de soporte de AutoSupport hasta que se complete la actualización o el mantenimiento.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster* y luego *Configuración*.
+. Junto a * AutoSupport* seleccioneimage:icon_kabob.gif["tres puntos azules verticales"] y luego *Suprimir la generación de casos de soporte*.
+. Especifique la cantidad de horas para suprimir la generación de casos de soporte y los nodos para los que no desea que se generen casos.
+. Seleccione *Enviar*.
+
+
+.Resultado
+Los casos de AutoSupport no se generarán durante el tiempo especificado.  Si completa su actualización o mantenimiento antes de que expire el tiempo especificado, debe reanudar la generación de casos de soporte de inmediato.
+
+
+
+== Generación de casos de soporte de currículum
+
+Si ha suprimido la generación de casos de soporte durante una ventana de actualización o mantenimiento, debe reanudar la generación de casos de soporte inmediatamente después de que se complete la actualización o el mantenimiento.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster* y luego *Configuración*.
+. Junto a * AutoSupport* seleccioneimage:icon_kabob.gif["tres puntos azules verticales"] y luego *Reanudar la generación de casos de soporte*.
+. Seleccione los nodos para los que desea reanudar la generación de casos de AutoSupport .
+. Seleccione *Enviar*.
+
+
+.Resultado
+Los casos de AutoSupport se generarán automáticamente para su sistema AFX según sea necesario.
+
+
+
+== Información relacionada
+
+* https://docs.netapp.com/us-en/ontap/system-admin/manage-autosupport-concept.html["Obtenga más información sobre ONTAP AutoSupport"^]
+* https://docs.netapp.com/us-en/ontap/system-admin/requirements-autosupport-reference.html["Prepárese para usar ONTAP AutoSupport"^]
+

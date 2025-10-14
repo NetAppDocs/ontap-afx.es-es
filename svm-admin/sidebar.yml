@@ -1,0 +1,44 @@
+---
+section: svm-admin
+title: Administre sus máquinas virtuales y datos de almacenamiento
+entries:
+- title: Administrar datos
+  entries:
+  - title: Prepárese para gestionar sus datos
+    url: "/manage-data/prepare-manage-data.html"
+  - title: Crear y configurar un volumen
+    url: "/manage-data/create-configure-volume.html"
+  - title: Administrar volúmenes
+    url: "/manage-data/manage-volumes.html"
+  - title: Crear y configurar un bucket
+    url: "/manage-data/create-configure-bucket.html"
+  - title: Administrar depósitos
+    url: "/manage-data/manage-buckets.html"
+  - title: Supervisar y solucionar problemas de almacenamiento
+    url: "/manage-data/monitor-debug-storage.html"
+- title: Proteger datos
+  entries:
+  - title: Prepárese para proteger sus datos
+    url: "/protect-data/prepare-protect-data.html"
+  - title: Crear un grupo de consistencia
+    url: "/protect-data/create-consistency-group.html"
+  - title: Administrar grupos de consistencia
+    url: "/protect-data/manage-consistency-groups.html"
+  - title: Crear una instantánea
+    url: "/protect-data/create-snapshot.html"
+  - title: Administrar instantáneas
+    url: "/protect-data/manage-snapshots.html"
+  - title: Crear una relación de pares SVM
+    url: "/protect-data/create-peer-relationship.html"
+  - title: Configurar y administrar la replicación de instantáneas
+    url: "/protect-data/snapshot-replication.html"
+  - title: Administrar políticas y cronogramas
+    url: "/protect-data/policies-schedules.html"
+- title: Datos seguros
+  entries:
+  - title: Prepárese para proteger sus datos
+    url: "/secure-data/prepare-secure-data.html"
+  - title: Cifrar datos en reposo
+    url: "/secure-data/encrypt-data-at-rest.html"
+- title: Administración adicional
+  url: "/administer/additional-ontap-svm.html"

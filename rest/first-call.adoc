@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: rest/first-call.html 
+keywords: afx, afx system, rest api, first call, curl 
+summary: Puede emitir un comando curl simple para comenzar a utilizar la API REST de AFX y confirmar su disponibilidad. 
+---
+= Su primera llamada a la API REST del sistema de almacenamiento AFX
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede emitir un comando curl simple para comenzar a utilizar la API REST de AFX y confirmar su disponibilidad.
+
+.Acerca de esta tarea
+AFX es una de las tres personalidades distintas de ONTAP .  Puede utilizar una llamada a la API REST para determinar la personalidad ONTAP de su clúster en función de dos campos incluidos en la respuesta.
+
+.Antes de empezar
+Además de tener la utilidad curl disponible en su estación de trabajo local, necesitará lo siguiente:
+
+* Dirección IP o FQDN del LIF de administración del clúster del sistema AFX
+* Credenciales de ONTAP para una cuenta con autoridad para acceder a la API REST de ONTAP
+
+
+.Pasos
+. Emita el siguiente comando en la CLI de su estación de trabajo local:
++
+[source, curl]
+----
+curl --request GET \
+"https://$FQDN_IP/api/cluster?fields=disaggregated,san_optimized" \
+--user username:password
+----
+. Con base en la respuesta, determine la personalidad de ONTAP de la siguiente manera:
++
+** Si “desagregado” es *verdadero* y:
++
+*** Si “san_optimized” es *falso* la personalidad es AFX
+*** Si “san_optimized” es *verdadero* la personalidad es ASA r2
+
+
+** Si “desagregado” es *falso* la personalidad es Unified ONTAP
+
+
+
+
+.Información relacionada
+* link:../faq-ontap-afx.html["Preguntas frecuentes sobre los sistemas de almacenamiento AFX"]
+

@@ -1,0 +1,73 @@
+---
+indexpage:
+  title: Documentación de AFX
+  summary: El sistema de almacenamiento NetApp ONTAP AFX es una solución de hardware
+    y software desagregada enfocada en las necesidades únicas de los clientes de NAS
+    y S3 de alto rendimiento.  El rendimiento y la escalabilidad están diseñados específicamente
+    para satisfacer los requisitos de las cargas de trabajo de IA y ML.  AFX ofrece
+    una experiencia de usuario simplificada que permite que sea administrado tanto
+    por especialistas en almacenamiento como por no especialistas.
+  keywords: afx, afx system, afx docs
+  lead: El sistema de almacenamiento NetApp AFX es una solución de hardware y software
+    desagregada enfocada en las necesidades únicas de los clientes de NAS y S3 de
+    alto rendimiento.  El rendimiento y la escalabilidad están diseñados específicamente
+    para satisfacer los requisitos de las cargas de trabajo de IA y ML.  AFX ofrece
+    una experiencia de usuario simplificada que permite que sea administrado tanto
+    por especialistas en almacenamiento como por no especialistas.
+  tiles:
+  - title: Empezar
+    links:
+    - title: Obtenga más información sobre AFX
+      url: "/get-started/ontap-afx-storage.html"
+    - title: Inicio rápido
+      url: "/get-started/quick-start.html"
+    - title: Instalar hardware AFX
+      url: "/install-setup/install-setup-workflow.html"
+    - title: Configurar el clúster AFX
+      url: "/install-setup/cluster-setup.html"
+  - title: Administración de clústeres
+    links:
+    - title: Prepárese para administrar AFX
+      url: "/get-started/prepare-cluster-admin.html"
+    - title: Administrar máquinas virtuales de almacenamiento
+      url: "/administer/display-svms.html"
+    - title: Actualizar y mantener el clúster
+      url: "/administer/expand-cluster.html"
+    - title: Administración adicional
+      url: "/administer/additional-ontap-cluster.html"
+  - title: Gestionar datos y acceso
+    links:
+    - title: Prepárese para gestionar datos
+      url: "/manage-data/prepare-manage-data.html"
+    - title: Crear y configurar un volumen
+      url: "/manage-data/create-configure-volume.html"
+    - title: Crear y configurar un bucket
+      url: "/manage-data/create-configure-bucket.html"
+  - title: Proteger datos
+    links:
+    - title: Prepárese para proteger los datos
+      url: "/protect-data/prepare-protect-data.html"
+    - title: Crear una instantánea
+      url: "/protect-data/create-snapshot.html"
+  - title: Datos seguros
+    links:
+    - title: Prepárese para proteger los datos
+      url: "/secure-data/prepare-secure-data.html"
+    - title: Cifrar datos en reposo
+      url: "/secure-data/encrypt-data-at-rest.html"
+  - title: API REST
+    links:
+    - title: Obtenga más información sobre la API REST
+      url: "/rest/learn-rest-api.html"
+    - title: Su primera llamada a la API
+      url: "/rest/first-call.html"
+    - title: Referencia de la API REST
+      url: "/rest/api-reference.html"
+  - title: Obtenga más información
+    links:
+    - title: Preguntas frecuentes sobre los sistemas AFX
+      url: "/faq-ontap-afx.html"
+    - title: Documentación para otros sistemas ONTAP
+      url: https://docs.netapp.com/us-en/ontap-family/
+    - title: Recursos adicionales
+      url: "/learn-more/additional-resources.html"

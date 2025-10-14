@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: manage-data/manage-volumes.html 
+keywords: afx, afx system, manage volumes 
+summary: Hay varias tareas administrativas que puede realizar como parte de la administración de los volúmenes definidos en su clúster AFX. 
+---
+= Administrar los volúmenes del sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Hay varias tareas administrativas que puede realizar como parte de la administración de los volúmenes definidos en su clúster AFX.
+
+
+
+== Crear un qtree
+
+Un qtree es una subdivisión lógica dentro de un volumen que puede crear para organizar y administrar datos.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Almacenamiento* y luego *Qtrees*.
+. Seleccionarimage:icon_add_blue_bg.png["Añadir con fondo azul"] y proporcionar la configuración básica, incluido el nombre, el volumen y el estilo de seguridad; opcionalmente, configurar una cuota.
+. Seleccione *Guardar* para agregar el qtree.
+
+
+
+
+== Crear una cuota
+
+Una cuota es un límite establecido en la cantidad de espacio de almacenamiento o número de archivos que puede usar un usuario, grupo o qtree.  Las cuotas se utilizan para administrar y controlar el uso de recursos dentro de un sistema AFX.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Almacenamiento* y luego *Cuotas*.
+. Seleccione la pestaña *Uso* para mostrar una lista de las cuotas activas en todos los volúmenes.
+. Seleccione la pestaña *Volúmenes* para mostrar una lista de los volúmenes definidos en el clúster AFX; seleccione un volumen específico para mostrar información adicional.
+. Para definir una cuota, seleccione la pestaña *Reglas*.
+. Proporcione los detalles de configuración, incluido el objetivo de cuota, el tipo y los límites.
+. Seleccione *Guardar* para agregar la cuota.
+

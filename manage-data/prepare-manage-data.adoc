@@ -1,0 +1,105 @@
+---
+sidebar: sidebar 
+permalink: manage-data/prepare-manage-data.html 
+keywords: afx, afx system, prepare, prepare manage, prepare manage data 
+summary: Antes de administrar sus datos AFX, debe familiarizarse con los conceptos y capacidades básicos. 
+---
+= Prepárese para administrar los datos de su sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de administrar sus datos AFX, debe familiarizarse con los conceptos y capacidades básicos.
+
+
+TIP: Dado que muchos de los conceptos y procedimientos de administración disponibles en los sistemas AFF y FAS son los mismos que los de los sistemas de almacenamiento AFX, revisar la documentación de Unified ONTAP puede resultar útil.
+
+
+
+== Terminología y opciones
+
+Hay varios términos relacionados con el almacenamiento AFX con los que debes estar familiarizado.
+
+Volumen flexible:: Un FlexVol es un tipo de contenedor lógico utilizado en sistemas de almacenamiento AFX.  Los volúmenes FlexVol se pueden expandir, contraer, mover y copiar de manera eficiente.  También se pueden dividir en unidades más manejables usando qtrees y se puede limitar el uso de recursos usando cuotas.
+FlexGroup:: Un volumen FlexGroup es un contenedor NAS escalable que proporciona alto rendimiento y distribución automática de carga.  Cada uno consta de múltiples volúmenes que comparten el tráfico de forma transparente.  Los volúmenes FlexGroup ofrecen varios beneficios, entre ellos mayor escalabilidad y rendimiento, además de una gestión simplificada.
+FlexCache:: FlexCache es una tecnología de almacenamiento en caché de ONTAP que crea réplicas dispersas y escribibles de volúmenes en el mismo clúster de ONTAP o en diferentes.  Está diseñado para mejorar el rendimiento del acceso a los datos al acercarlos a los usuarios, lo que puede generar un rendimiento más rápido con un espacio más pequeño.  FlexCache es particularmente útil para flujos de trabajo de lectura intensiva y ayuda a descargar el tráfico de volúmenes con mucho acceso.
+Cubo S3:: Un bucket S3 es un contenedor de almacenamiento que contiene objetos o datos en la nube.  Con ONTAP, un bucket NAS S3 es una asignación entre un nombre de bucket S3 y una ruta NAS, lo que permite el acceso de S3 a cualquier parte de un espacio de nombres SVM con volúmenes y estructura de directorio existentes.
+contenedor de datos:: En el contexto de un sistema AFX, un contenedor de datos es un término genérico y puede ser un volumen o un depósito S3.
+Árbol Q:: Un qtree es una subdivisión lógica dentro de un volumen que puedes crear para administrar y organizar datos.  Permite especificar sus propiedades y estilo de seguridad (NTFS o UNIX) y puede heredar políticas de exportación de su volumen padre o tener las suyas propias.  Los Qtrees pueden contener archivos y directorios, y a menudo se utilizan para administrar permisos y cuotas de forma más granular dentro de un volumen.
+Cuota:: Una cuota en ONTAP es un límite establecido en la cantidad de espacio de almacenamiento o número de archivos que puede usar un usuario, grupo o qtree.  Las cuotas se utilizan para administrar y controlar el uso de recursos dentro de un sistema de almacenamiento, garantizando que ningún usuario o aplicación pueda consumir una cantidad excesiva de recursos.
+
+
+
+
+== Opciones de migración de datos
+
+Hay varias opciones de migración de datos.  El objetivo es migrar datos externos a un clúster AFX.
+
+
+
+=== Migración de datos desde Unified ONTAP
+
+Está disponible una ruta de migración totalmente integrada de Unified ONTAP a AFX utilizando las siguientes tecnologías:
+
+* SnapMirror
+* Migración de SVM
+* SVM DR
+
+
+Además, los volúmenes FlexCache se pueden conectar entre AFX y Unified ONTAP en cualquier dirección.
+
+
+
+=== Migración de datos desde una fuente que no es ONTAP
+
+La migración de datos desde sistemas que no sean ONTAP se puede realizar mediante operaciones de copia a nivel de archivo.  Se pueden utilizar utilidades de copia rápida como XCP o CloudSync, así como utilidades estándar como RoboCopy (para SMB) y rsync (para NFS), así como herramientas de terceros como DataDobi.
+
+
+
+=== Limitaciones migratorias
+
+Los sistemas Unified ONTAP existentes pueden replicarse en AFX si el volumen de datos no contiene LUN o espacios de nombres NVMe.  Al replicar en un sistema Unified ONTAP , la versión mínima compatible con el sistema Unified ONTAP es 9.16.1.  Esta es la primera versión de Unified ONTAP que admite el equilibrio de capacidad avanzado.
+
+
+
+== Compatibilidad de AFX con enlaces troncales NFS
+
+El enlace troncal NFS es una tecnología que permite a los clientes NFS v4.1 abrir múltiples conexiones a diferentes LIF en el servidor NFS.  Esto aumenta la velocidad de transferencia de datos y proporciona resiliencia a través de múltiples rutas.  El enlace troncal es beneficioso para exportar volúmenes FlexVol a clientes con capacidad para enlaces troncalizados.
+
+Para habilitar el trunking, debe tener un SVM configurado para NFS y NFSv4.1 debe estar habilitado.  También requiere volver a montar todos los clientes NFSv4.x después de un cambio de configuración, lo que puede resultar disruptivo.
+
+
+
+== Análisis del sistema de archivos
+
+File System Analytics (FSA) es una función de ONTAP que proporciona visibilidad en tiempo real del uso de archivos y las tendencias de capacidad de almacenamiento dentro de los volúmenes FlexGroup o FlexVol .
+
+FSA elimina la necesidad de herramientas externas al ofrecer información sobre la utilización del almacenamiento y las oportunidades de optimización.  FSA proporciona vistas detalladas en varios niveles de la jerarquía del sistema de archivos de un volumen, incluidos los niveles de SVM, volumen, directorio y archivo.
+
+
+
+== Muestra una descripción general de tu almacenamiento
+
+Para comenzar a administrar sus datos AFX, debe mostrar una descripción general del almacenamiento.
+
+.Acerca de esta tarea
+Puede acceder a todos los volúmenes y depósitos definidos para el clúster AFX.  Cada uno de ellos se considera un contenedor de datos.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Almacenamiento* y luego *Descripción general*
+. Junto a *Volúmenes*, seleccioneimage:icon_arrow.gif["flecha azul que apunta hacia la derecha"] para mostrar una lista de volúmenes.
+. Junto a *Cubos*, seleccioneimage:icon_arrow.gif["flecha azul que apunta hacia la derecha"] para mostrar una lista de depósitos.
+. Actualice o cree un contenedor de datos según sea necesario.
+
+
+
+
+== Información relacionada
+
+* link:../administer/additional-ontap-svm.html["Administración adicional de AFX SVM"]
+* link:../get-started/prepare-cluster-admin.html["Prepárese para administrar su sistema AFX"]
+* link:../administer/migrate-svm.html["Migrar un SVM del sistema AFX"]
+* https://mysupport.netapp.com/matrix/["Herramienta de matriz de interoperabilidad de NetApp"^]
+

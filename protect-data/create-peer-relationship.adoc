@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: protect-data/create-peer-relationship.html 
+keywords: afx, afx system, peering, peer relationship 
+summary: 'Una relación de pares define las conexiones de red que permiten que los clústeres y las máquinas virtuales (VM) de almacenamiento intercambien datos de forma segura. Puede crear una relación de pares entre máquinas virtuales de almacenamiento en diferentes clústeres para habilitar la protección de datos y la recuperación ante desastres mediante SnapMirror.' 
+---
+= Crear una relación de pares SVM entre clústeres en un sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una relación de pares define las conexiones de red que permiten que los clústeres y las máquinas virtuales (VM) de almacenamiento intercambien datos de forma segura. Puede crear una relación de pares entre máquinas virtuales de almacenamiento en diferentes clústeres para habilitar la protección de datos y la recuperación ante desastres mediante SnapMirror.
+
+.Antes de empezar
+Debe haber establecido una relación de pares de clúster entre los clústeres locales y remotos antes de poder crear una relación de pares de VM de almacenamiento. link:snapshot-replication.html#step-1-create-a-cluster-peer-relationship["Crear una relación de pares de clúster"] Si aún no lo has hecho.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Protección > Descripción general*.
+. En *Pares de máquinas virtuales de almacenamiento*, seleccione *Agregar un par de máquinas virtuales de almacenamiento*.
+. Seleccione la VM de almacenamiento en el clúster local; luego, seleccione la VM de almacenamiento en el clúster remoto.
+. Seleccione *Agregar un par de VM de almacenamiento*.
+
+
+.Información relacionada
+* https://docs.netapp.com/us-en/ontap/peering/peering-basics-concept.html["Aprenda más sobre las relaciones entre pares"^] .
+

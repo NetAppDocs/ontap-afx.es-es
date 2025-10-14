@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: administer/update-firmware.html 
+keywords: afx, afx system, upgrade firmware, firmware 
+summary: ONTAP descarga y actualiza automáticamente el firmware y los archivos del sistema en su sistema de almacenamiento AFX de forma predeterminada.  Si desea ver las actualizaciones recomendadas antes de que se descarguen e instalen, puede desactivar las actualizaciones automáticas.  También puede editar los parámetros de actualización para mostrarle notificaciones de actualizaciones disponibles antes de que se realice cualquier acción. 
+---
+= Actualizar el firmware en un sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP descarga y actualiza automáticamente el firmware y los archivos del sistema en su sistema de almacenamiento AFX de forma predeterminada.  Si desea ver las actualizaciones recomendadas antes de que se descarguen e instalen, puede desactivar las actualizaciones automáticas.  También puede editar los parámetros de actualización para mostrarle notificaciones de actualizaciones disponibles antes de que se realice cualquier acción.
+
+
+
+== Habilitar actualizaciones automáticas
+
+Cuando habilita las actualizaciones automáticas para su clúster AFX, las actualizaciones recomendadas para el firmware de almacenamiento, el firmware SP/ BMC y los archivos del sistema se descargan e instalan automáticamente de manera predeterminada.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster* y luego *Configuración*.
+. En *Actualizaciones de software* seleccione *Habilitar*.
+. Lea el CLUF.
+. Acepte los valores predeterminados para *Mostrar notificación* de actualizaciones recomendadas.  Opcionalmente, seleccione *Actualizar automáticamente* o *Descartar automáticamente* las actualizaciones recomendadas.
+. Seleccione para reconocer que sus modificaciones de actualización se aplicarán a todas las actualizaciones actuales y futuras.
+. Seleccione *Guardar*.
+
+
+.Resultado
+Las actualizaciones recomendadas se descargan e instalan automáticamente en su sistema OTAP AFX según sus selecciones de actualización.
+
+
+
+== Desactivar actualizaciones automáticas
+
+Deshabilite las actualizaciones automáticas si desea tener la flexibilidad de ver las actualizaciones recomendadas antes de que se instalen.  Si deshabilita las actualizaciones automáticas, deberá realizar actualizaciones de firmware y archivos del sistema manualmente.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster > Configuración*.
+. En *Actualizaciones de software*, seleccione *Desactivar*.
+
+
+.Resultado
+Las actualizaciones automáticas están deshabilitadas.  Debes comprobar periódicamente si hay actualizaciones recomendadas y decidir si deseas realizar una instalación manual.
+
+
+
+== Ver actualizaciones automáticas
+
+Vea una lista de actualizaciones de firmware y archivos del sistema que se han descargado en su clúster y están programadas para su instalación automática.  Vea también las actualizaciones que se han instalado previamente de forma automática.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster > Configuración*.
+. Junto a *Actualizaciones de software* seleccioneimage:icon_arrow.gif["flecha azul que apunta hacia la derecha"] , luego seleccione *Ver todas las actualizaciones automáticas*.
+
+
+
+
+== Editar actualizaciones automáticas
+
+Puede seleccionar que las actualizaciones recomendadas para su firmware de almacenamiento, firmware SP/ BMC y sus archivos de sistema se descarguen e instalen automáticamente en su clúster, o puede seleccionar que las actualizaciones recomendadas se descarten automáticamente.  Si desea controlar manualmente la instalación o el rechazo de actualizaciones, seleccione recibir una notificación cuando haya una actualización recomendada disponible; luego podrá seleccionar manualmente instalarla o rechazarla.
+
+.Pasos
+. En el Administrador del sistema, seleccione *Clúster > Configuración*.
+. Junto a *Actualizaciones de software* seleccioneimage:icon_arrow.gif["flecha azul que apunta hacia la derecha"] y luego seleccione *Todas las demás actualizaciones*.
+. Actualice las selecciones para actualizaciones automáticas.
+. Seleccione *Guardar*.
+
+
+.Resultado
+Las actualizaciones automáticas se modifican según sus selecciones.
+
+
+
+== Actualizar el firmware manualmente
+
+Si desea la flexibilidad de ver las actualizaciones recomendadas antes de que se descarguen e instalen, puede desactivar las actualizaciones automáticas y actualizar su firmware manualmente.
+
+.Pasos
+. Descargue el archivo de actualización de firmware a un servidor o cliente local.
+. En el Administrador del sistema, seleccione *Clúster > Descripción general* y, a continuación, seleccione *Todas las demás actualizaciones*.
+. En *Actualizaciones manuales*, seleccione *Agregar archivos de firmware*; luego seleccione *Descargar desde el servidor* o *Cargar desde el cliente local*.
+. Instalar el archivo de actualización de firmware.
+
+
+.Resultado
+Su firmware está actualizado.
