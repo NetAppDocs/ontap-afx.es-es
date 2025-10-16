@@ -14,7 +14,7 @@ summary: Antes de proteger sus datos de AFX, debe familiarizarse con algunos de 
 Antes de proteger sus datos de AFX, debe familiarizarse con algunos de los conceptos y capacidades clave.
 
 
-TIP: Dado que muchos de los conceptos y procedimientos de administración disponibles en los sistemas AFF y FAS son los mismos que los de los sistemas de almacenamiento AFX, revisar la documentación de Unified ONTAP puede resultar útil.
+TIP: Debido a que muchos de los conceptos y procedimientos de administración disponibles en los sistemas AFF y FAS son los mismos que los de los sistemas de almacenamiento AFX, es recomendable revisar la documentación de Unified ONTAP para https://docs.netapp.com/us-en/ontap/data-protection-disaster-recovery/index.html["Protección de datos y recuperación ante desastres"^] Puede ser útil.
 
 
 
@@ -27,6 +27,15 @@ Grupo de consistencia:: Un grupo de consistencia es una colección de volúmenes
 Grupo de consistencia jerárquica:: Los grupos de consistencia jerárquica se introdujeron con ONTAP 9.16.1 y están disponibles con AFX.  Con una estructura jerárquica, uno o más grupos de consistencia se pueden configurar como hijos de un padre.  Estos grupos jerárquicos le permiten aplicar políticas de instantáneas individuales a grupos de consistencia secundarios y replicar las instantáneas de todos los secundarios en un clúster remoto como una sola unidad replicando al primario.
 SnapLock:: SnapLock es una función de ONTAP que le permite proteger sus archivos moviéndolos a un estado de escritura única y lectura múltiple (WORM).  Esto evita la modificación o eliminación durante un período de retención específico.  Los volúmenes SnapLock creados no se pueden convertir a partir de volúmenes que no sean SnapLock después de la creación en función de la retención.
 
+
+
+
+== Limitaciones de la protección de datos de AFX
+
+Debe conocer los límites y restricciones de protección de datos de ONTAP aplicados por el sistema de almacenamiento AFX.
+
+.SnapMirror sincrónico (SM-S)
+Existe una limitación de escala al usar SM-S. Se puede tener un máximo de 400 relaciones en un solo clúster del sistema AFX.
 
 
 

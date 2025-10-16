@@ -50,7 +50,7 @@ El segundo concepto relacionado con el almacenamiento desagregado es que los agr
 == Interoperabilidad
 
 .¿Puedo mezclar nodos del sistema AFX con nodos del sistema AFF, ASA o FAS en el mismo clúster ONTAP ?
-No. Cada personalidad de ONTAP es diferente.  Por ejemplo, no puede mezclar nodos AFX y Unified ONTAP en el mismo clúster.
+No. No se pueden mezclar nodos del sistema que ejecutan diferentes personalidades de ONTAP en el mismo clúster. Por ejemplo, no se pueden mezclar nodos AFX (que ejecutan la personalidad AFX ONTAP ) con nodos AFF o FAS (que ejecutan la personalidad Unified ONTAP ) en el mismo clúster.
 
 .Si quiero utilizar sistemas que ejecutan Unified ONTAP (FAS, AFF, ASA) con sistemas AFX para SnapMirror o FlexCache, ¿qué versión de ONTAP necesitaré?
 Las reglas de la versión de SnapMirror para AFX son idénticas a las de Unified ONTAP.  Esto significa que para replicar desde Unified ONTAP, el sistema de origen debe estar dentro del rango de versiones compatible.  Para replicar desde AFX, el sistema Unified ONTAP debe tener la ONTAP 9.16.1 o posterior (la versión más antigua admite la función de equilibrio de capacidad avanzado).  Para FlexCache, se aplican las mismas reglas para los sistemas de origen y destino que se describen en https://www.netapp.com/pdf.html?item=/media/7336-tr4743.pdf["TR-4743"^] .
@@ -79,20 +79,23 @@ No. Los protocolos de datos en AFX funcionan de la misma manera que con los sist
 .¿Se utiliza Particionamiento de disco avanzado (ADP) en AFX?
 No. ADP no se utiliza con AFX.  Debido a que no hay agregados raíz con AFX, no se necesita la función ADP para maximizar la eficiencia del espacio en disco.
 
-.¿Puedo utilizar diferentes tipos de conmutadores para la red back-end de mi sistema de almacenamiento AFX?
-No. Solo los conmutadores específicamente aprobados y provistos con la plataforma de almacenamiento AFX son compatibles con la red back-end.
+.¿Puedo utilizar cualquier tipo de conmutadores en la red del clúster backend para mi sistema AFX?
+No. Solo los conmutadores específicamente aprobados y provistos con la plataforma de almacenamiento AFX son compatibles con la red de clúster. Además, estos conmutadores backend están dedicados a las operaciones del clúster AFX. Las operaciones de acceso del cliente (mediante NFS, SMB y S3) solo deben realizarse a través de la red de datos del cliente frontend.
+
+.¿Cómo se configuran los conmutadores del clúster?
+Los conmutadores de red del clúster se configuran mediante un archivo de configuración proporcionado por NetApp. No se admiten cambios en el archivo de configuración.
 
 .¿Cómo se organiza el almacenamiento en un clúster AFX?
 Todos los discos y estantes de almacenamiento conectados a un clúster AFX son parte de una zona de disponibilidad de almacenamiento (SAZ).  Cada clúster AFX admite solo una SAZ que no se puede compartir entre clústeres AFX (excepto para la replicación de SnapMirror y las operaciones FlexCache ).
 
 Cada nodo tiene visibilidad de todo el almacenamiento en la SAZ.  Cuando se agregan estantes de almacenamiento a un clúster, ONTAP agrega automáticamente los discos.
 
-.¿Cómo funciona una operación de movimiento de volumen en Unified ONTAP en comparación con AFX?
-Con Unified ONTAP, es posible reubicar un volumen sin interrupciones de un nodo o agregado a otro en el clúster.  Esto se realiza mediante una operación de copia en segundo plano con tecnología SnapMirror , donde se crea un nuevo volumen de destino en la nueva ubicación.  Según el tamaño del volumen y la utilización de los recursos del clúster, el tiempo que lleva completar el traslado de un volumen puede variar.
+.¿En qué se diferencian las operaciones de movimiento de volumen con AFX en comparación con los sistemas AFF o FAS ?
+Con los sistemas AFF y FAS , que ejecutan la personalidad Unified ONTAP , es posible reubicar un volumen sin interrupciones de un nodo o agregado a otro en el clúster. Esto se realiza mediante una operación de copia en segundo plano con tecnología SnapMirror , donde se crea un nuevo volumen de destino en la nueva ubicación. Según el tamaño del volumen y la utilización de los recursos del clúster, el tiempo que lleva completar el traslado de un volumen puede variar.
 
 Con AFX no hay agregados.  Todo el almacenamiento está contenido dentro de una única zona de disponibilidad de almacenamiento a la que puede acceder cada nodo del clúster.  Como resultado, los movimientos de volumen nunca necesitan copiar los datos.  En cambio, todos los movimientos de volumen se realizan con actualizaciones de puntero entre nodos.  Esto se conoce como movimiento de volumen de copia cero (ZCVM) y sucede instantáneamente porque en realidad no se copia ni se mueve ningún dato.  Este es esencialmente el mismo proceso de movimiento de volumen utilizado con Unified ONTAP sin la copia de SnapMirror .
 
-Tenga en cuenta que en la versión inicial, los volúmenes se moverán solo en escenarios de conmutación por error de almacenamiento y cuando se agreguen o eliminen nodos del clúster.  Estos movimientos se controlan únicamente a través de ONTAP.
+En la versión inicial de AFX, los volúmenes se moverán solo en escenarios de conmutación por error de almacenamiento y cuando se agreguen o eliminen nodos del clúster. Estos movimientos se controlan únicamente a través de ONTAP.
 
 .¿Cómo determina AFX dónde colocar los datos en la SAZ?
 AFX incluye una función conocida como Gestión de topología automatizada (ATM) que responde a los desequilibrios del sistema y de los objetos del usuario.  El objetivo principal de ATM es equilibrar los volúmenes en todo el clúster AFX.  Cuando se detecta un desequilibrio, se activa un trabajo interno para distribuir uniformemente los datos entre los nodos activos.  Los datos se reasignan mediante ZCVM, que solo necesita copiar y actualizar los metadatos del objeto.
