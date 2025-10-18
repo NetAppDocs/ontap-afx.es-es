@@ -17,7 +17,7 @@ summary: Puede emitir un comando curl simple para comenzar a utilizar la API RES
 Puede emitir un comando curl simple para comenzar a utilizar la API REST de AFX y confirmar su disponibilidad.
 
 .Acerca de esta tarea
-AFX es una de las tres personalidades distintas de ONTAP .  Puede utilizar una llamada a la API REST para determinar la personalidad ONTAP de su clúster en función de dos campos incluidos en la respuesta.
+AFX es una de las tres personalidades ONTAP disponibles de NetApp.  Puede emitir una llamada a la API REST para determinar la personalidad de su clúster ONTAP .  También puede utilizar el Administrador del sistema o la CLI para determinar la personalidad de ONTAP ; consulte la página de preguntas frecuentes para obtener más detalles.
 
 .Antes de empezar
 Además de tener la utilidad curl disponible en su estación de trabajo local, necesitará lo siguiente:
