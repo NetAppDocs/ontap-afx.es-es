@@ -65,10 +65,8 @@
   <block id="f374f4f413ce58f29a5db8436a4f29ad" category="paragraph">Puede supervisar la salud y el rendimiento de un clúster.  Esto incluye la configuración de alertas para eventos y la gestión de notificaciones para alertas de salud del sistema.  Referirse a<block ref="a6cdc1834b78b8b89ee92bbe49904c07" category="inline-link-rx"></block> Para más información</block>
   <block id="e5037510086003d93a3daf34030bf4c4" category="inline-link-macro">Administración adicional para clústeres AFX</block>
   <block id="cba9c10f96b3122132057453ba39d735" category="list-text"><block ref="cba9c10f96b3122132057453ba39d735" category="inline-link-macro-rx"></block></block>
-  <block id="bbdeadb34080fe84fcd07f7ec44186ec" category="summary">Después de crear un SVM de datos, puede actualizar la configuración según sus requisitos y las necesidades de sus clientes.</block>
   <block id="cca25dd2421f27456e2c8857f143bcc2" category="doc">Configurar un sistema de almacenamiento AFX SVM</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Acerca de esta tarea</block>
-  <block id="d94881bcfe4d50e96c6c145dd72caead" category="paragraph">Hay cuatro rutas de acceso a la configuración de SVM, como se refleja en las pestañas de la página de inicio para un SVM de datos específico.  Estos incluyen:</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="list-text">Descripción general</block>
   <block id="edbe21b71cfdb0ef81d44c4b10f0b4dd" category="paragraph">Esto proporciona una descripción general rápida del panel de control de los detalles de configuración actuales relacionados con las interfaces y servicios de red, protocolos, almacenamiento y protección.</block>
   <block id="f4f70727dc34561dfde1a3c529b6205c" category="list-text">Configuración</block>
@@ -354,9 +352,7 @@
   <block id="226bdb0cdd6382fa3ea10612ab014c8a" category="list-text"><block ref="226bdb0cdd6382fa3ea10612ab014c8a" category="inline-link-macro-rx"></block></block>
   <block id="0528feee79911ff26eb24a5427d6c691" category="inline-link-macro">Administración adicional de AFX SVM</block>
   <block id="22d8bf1361fa729ce722097e36befda5" category="list-text"><block ref="22d8bf1361fa729ce722097e36befda5" category="inline-link-macro-rx"></block></block>
-  <block id="1dd03c00c4e2e3c911f9c5e1ca60a786" category="summary">Puede migrar un SVM de datos de un clúster de ONTAP a otro.  La migración de SVM con AFX funciona de la misma manera que con Unified ONTAP, aunque hay varias consideraciones de interoperabilidad.  Consulte la documentación de Unified ONTAP para obtener detalles sobre cómo realizar una migración de SVM.</block>
   <block id="a820521ec80cdaaa7daf1f44b4d156bb" category="doc">Migrar un sistema de almacenamiento AFX SVM</block>
-  <block id="f32d86a462e8b74e0cbb626b1a9ccacb" category="paragraph">Puede migrar un SVM de datos de un clúster de ONTAP a otro.  La migración de SVM con AFX funciona de la misma manera que con Unified ONTAP, aunque hay varias consideraciones de interoperabilidad.  Consulte la documentación de Unified ONTAP proporcionada para obtener detalles sobre cómo realizar una migración de SVM.</block>
   <block id="d1c1098f48087357ac90227a16c8ce05" category="section-title">Consideraciones de interoperabilidad</block>
   <block id="003431cd9bfaf71ce41b593a52eef029" category="paragraph">Antes de planificar y realizar una migración de SVM, debe tener en cuenta las consideraciones de interoperabilidad, incluidas las capacidades y limitaciones.</block>
   <block id="2a3b399798aa16ecfbc1425cc560bfad" category="section-title">Casos de uso</block>
@@ -577,11 +573,9 @@
   <block id="0dffaaac24629ec57e41901c2c49b5e9" category="paragraph">AFX incluye una función conocida como Gestión de topología automatizada (ATM) que responde a los desequilibrios del sistema y de los objetos del usuario.  El objetivo principal de ATM es equilibrar los volúmenes en todo el clúster AFX.  Cuando se detecta un desequilibrio, se activa un trabajo interno para distribuir uniformemente los datos entre los nodos activos.  Los datos se reasignan mediante ZCVM, que solo necesita copiar y actualizar los metadatos del objeto.</block>
   <block id="1bce74755c5e5305616eddc17873d185" category="summary">Los sistemas AFX de NetApp ejecutan una personalidad personalizada de ONTAP que difiere de la personalidad de ONTAP (conocida como Unified ONTAP) que se ejecuta en el almacenamiento AFF y FAS .  Debe tener en cuenta cómo los sistemas AFX son similares y diferentes a los sistemas FAS y AFF .  Esto proporciona una perspectiva valiosa y puede ser útil al implementar AFX en su entorno.</block>
   <block id="9f2c66d4e6da8c9b288f3ecdc75c974a" category="doc">Compare el sistema de almacenamiento AFX con los sistemas AFF y FAS</block>
-  <block id="12527f37b5a726348a974e1ebe9a0c75" category="admonition">Esta documentación de AFX incluye enlaces a varios temas en el sitio de documentación de Unified ONTAP .  El contenido adicional proporciona más profundidad y una perspectiva diferente que puede resultar útil al administrar su sistema de almacenamiento AFX.</block>
   <block id="99d6ed6b3347c27373da6da2f7b952a7" category="section-title">Diferencias de configuración</block>
   <block id="00ee6ecb3fb7eed883369282913b6d76" category="paragraph">Hay algunas áreas en las que la configuración AFX difiere de los sistemas AFF y FAS .</block>
   <block id="51d20ad0622a1bf32203f0fd69eff8ee" category="list-text">Equilibrio de capacidad avanzado</block>
-  <block id="566c652f2e6af843af67f40ec0204464" category="list-text">La función avanzada de equilibrio de capacidad, controlada mediante el<block ref="7617fb157efcfcd230d531be7d153280" prefix=" " category="inline-code"></block> El parámetro CLI está habilitado de forma predeterminada para todos los volúmenes FlexGroup .</block>
   <block id="9754d771ba2a8ed846d729e396e82783" category="section-title">Capacidades de Unified ONTAP no admitidas o restringidas</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="inline-link-macro">Qué hay de nuevo</block>
   <block id="7b4782deb376294d92e8953f8d14855a" category="paragraph">Si bien los sistemas de almacenamiento AFX, AFF y FAS son muy similares, hay varias características que no son compatibles con AFX.  Debes revisar las actualizaciones y cambios para AFX en el sitio correspondiente.<block ref="e4ac4a7dd877729340e2b0880473ea1b" category="inline-link-macro-rx"></block> Sección basada en tu lanzamiento.</block>
@@ -602,7 +596,6 @@
   <block id="542dbb009e960ad2ab0d38ef4a2c5f99" category="list-text">Gestión de RAID</block>
   <block id="0a9e63106b5735d38d5bf5377346f3ed" category="section-title">Replicación de datos</block>
   <block id="d3e592d24d461a69505c06ca342a0fbd" category="list-text">No se permite la replicación de un volumen de un sistema AFF o FAS que contenga un LUN</block>
-  <block id="52f9bbffe0c0eb37d5f0fee8efec6d05" category="list-text">Los volúmenes AFX FlexGroup solo se pueden replicar en Unified ONTAP 9.16.1 o posterior</block>
   <block id="1ac02e30a31e8e8a271f79d995edae6b" category="section-title">Cambios en la interfaz de la línea de comandos</block>
   <block id="f0fbad4010250530a02ebeee997be99b" category="paragraph">La CLI de ONTAP disponible con AFX generalmente refleja la CLI disponible con los sistemas AFF y FAS .  Pero existen varias diferencias, entre ellas:</block>
   <block id="6ad554038f01b36139932064b15f012f" category="list-text">Nuevos comandos AFX relacionados con:</block>
@@ -618,7 +611,6 @@
   <block id="fc123d34fbcca975f8c6b4bcc69de12b" category="summary">El sistema de almacenamiento AFX de NetApp se basa en una arquitectura de almacenamiento de próxima generación que evoluciona el modelo de almacenamiento ONTAP en una solución NAS desagregada de alto rendimiento.  AFX admite cargas de trabajo de archivos y objetos con tecnologías avanzadas y técnicas de procesamiento que proporcionan un rendimiento extremadamente alto.</block>
   <block id="eb945734dba0e6e93fb79ddc0d55d4bf" category="doc">Conozca los sistemas de almacenamiento AFX</block>
   <block id="b03a11c36ac9c614434dc119668e67f2" category="section-title">Cargas de trabajo de aplicaciones típicas</block>
-  <block id="236c00235f30a5a8d87f94383158d92d" category="paragraph">El almacenamiento AFX satisface las demandas únicas típicas de los entornos de IA/ML y otras aplicaciones centradas en datos relacionadas.  El sistema de almacenamiento AFX es ideal para organizaciones que gestionan varias cargas de trabajo diferentes, entre ellas:</block>
   <block id="3701ed1cc007561983bcf6db678215bd" category="list-text">Entrenamiento y refinamiento iterativo de modelos asociados con el aprendizaje profundo donde se requiere un ancho de banda alto y continuo y acceso a conjuntos de datos masivos.</block>
   <block id="d86fdbf9ebe98514661e8642bcee1f8c" category="list-text">Procesamiento de diversos tipos de datos, incluidos texto, imágenes y vídeos.</block>
   <block id="7c780abd9bdd1f2a63614e10e5038ab8" category="list-text">Aplicaciones de inferencia en tiempo real con baja latencia donde se necesitan ventanas de tiempo de respuesta estrictas.</block>
@@ -633,24 +625,19 @@
   <block id="e4b73aea5fedcc9f4eb9b804ebd249aa" category="summary">Antes de implementar AFX en un entorno de producción, es esencial comprender la estructura administrativa y las opciones de configuración.  Esto garantiza una gestión segura, eficiente y eficaz de su clúster AFX.</block>
   <block id="982e02e3abfea4e77a8d9e6cb357ccc0" category="doc">Prepárese para administrar su sistema de almacenamiento AFX</block>
   <block id="1e793b1e0f039cf758071c91b073a4f1" category="paragraph">Una máquina virtual de almacenamiento (SVM) es un servidor aislado o un entorno de inquilino dentro de un clúster ONTAP .  Puede configurar una SVM para servir datos a los clientes conectados.  Debe estar familiarizado con las capacidades y características de las SVM AFX.</block>
-  <block id="4e7376ecff75f0273e4afa234b99e80b" category="admonition">Se crea un SVM de datos cuando se configura e implementa inicialmente un clúster AFX.  Puede crear SVM de datos adicionales si es necesario.</block>
   <block id="0214ea3e9ff4c3369ca3a5d938ad05f8" category="list-text">Control administrativo</block>
-  <block id="2aa945ebbfea0af7ca1c227cf6663c02" category="list-text">Las SVM de datos se pueden utilizar para establecer y aplicar el aislamiento de sus datos y aplicaciones.  Esto puede ser útil cuando hay muchos grupos diferentes con una organización más grande.  El control administrativo se puede delegar a las SVM para establecer políticas relacionadas con el acceso, la seguridad y la protección de los datos.</block>
   <block id="73b02dba7a7033396cb6431429a56244" category="list-text">Cuentas y roles RBAC</block>
   <block id="704843e96039f91b3b08cfaa04e6080d" category="list-text">Hay dos niveles de autenticación y autorización con AFX: nivel de clúster y nivel de SVM.  Además de las cuentas del clúster, cada SVM tiene su propio conjunto de usuarios y roles.  En la mayoría de las situaciones, utilizar las cuentas de nivel de clúster es adecuado.  Pero dependiendo de su entorno, es posible que también necesite configurar y usar las cuentas y roles de SVM más restrictivos. Ver <block ref="22d8bf1361fa729ce722097e36befda5" category="inline-link-macro-rx"></block> Para más información.</block>
   <block id="555cc37af7c0ac7518efde480ebc56bf" category="list-text">Recursos con alcance SVM</block>
   <block id="5a9ae7f64107703302087b450d59e140" category="list-text">Los recursos AFX y las entidades configurables están asociados con el clúster o con un SVM específico.  Hay muchos recursos con un alcance SVM, incluidos volúmenes y depósitos, así como cuentas de usuario SVM y roles RBAC.</block>
   <block id="77fae90ec5b51b6cfe6791871adf5d26" category="list-text">Interfaces de red dedicadas</block>
-  <block id="43da3632eeafb9b99a3a65623dac7b06" category="list-text">Cada SVM tiene su propio conjunto dedicado de interfaces de red.  Por ejemplo, se asignan LIF separados a una SVM para la gestión y el acceso a los datos del cliente.</block>
   <block id="f7f2bc8f16d6d8ce1388be712d241676" category="section-title">Dos niveles administrativos de AFX</block>
   <block id="2bbd9436630a6f6f1efcfaaea0a91596" category="paragraph">Las tareas administrativas de ONTAP que realiza con AFX generalmente se dividen en dos categorías diferentes.  Algunas tareas se aplican al clúster ONTAP en su totalidad, mientras que otras se aplican a una SVM específica.  Esto da como resultado un modelo administrativo de dos niveles.</block>
   <block id="cceb3e82a6e3f7c69cdc1370590bd84d" category="paragraph">Es importante tener en cuenta que estos niveles describen cómo se organizan y asignan las tareas administrativas, y no necesariamente cómo se configura la seguridad asociada.  Por ejemplo, si bien se necesita una cuenta de administrador de clúster para realizar la administración a nivel de clúster, también se puede utilizar para la administración de SVM.</block>
   <block id="0c495a02b1e7c6804ca0b6bb25a76070" category="list-text">Administrador de clúster</block>
   <block id="90a6e9fb8ccc1124ac3c5f0933e7d6b1" category="inline-link-macro">Administrar su clúster</block>
-  <block id="975be2c51c1b50ce9df0371c891347a9" category="list-text">El administrador del clúster tiene control completo del clúster AFX, incluidas todas las SVM de datos.  El nivel administrativo del clúster AFX incluye solo las tareas que un administrador del clúster puede realizar y no ninguna de las tareas de administración específicas de SVM. Ver <block ref="b7c6f4e89f282d3743609571d8ac253f" category="inline-link-macro-rx"></block> Para más información.</block>
   <block id="689ac3e21fde025488f91fe6b2d49bcc" category="list-text">Administrador de SVM</block>
   <block id="df8f29ef891c5c3d811dd49253e8d408" category="inline-link-macro">Administre sus máquinas virtuales y datos de almacenamiento</block>
-  <block id="569a9ca41985fd85eecbdd04c017c2ec" category="list-text">Un rol de administrador de SVM tiene control de un SVM de datos específico y, por lo tanto, está más restringido en comparación con el administrador de clúster.  La administración de SVM implica realizar tareas con objetos y recursos que tienen un alcance SVM, como la creación de un volumen. Ver <block ref="ebfee1a77bcca45a20260db66aedfa55" category="inline-link-macro-rx"></block> Para más información.</block>
   <block id="bb3210ed29005c8ea476bca6aa6c4223" category="section-title">Tres interfaces administrativas</block>
   <block id="8e3788e1e670292489b1aa44ebe90cf3" category="paragraph">Al igual que los sistemas AFF y FAS , AFX tiene tres interfaces administrativas.  La LIF (o dirección IP) que necesita utilizar varía según la interfaz administrativa y su entorno.</block>
   <block id="dd02da233490bf471fd104c24bc9b3b5" category="admonition">La interfaz de usuario del Administrador del sistema es la preferida para la mayoría de las tareas administrativas.  Debe utilizar una cuenta de administrador a menos que se indique lo contrario.</block>
@@ -699,14 +686,10 @@
   <block id="a9503c68529f59e753c7812cca97590c" category="list-text">Muestra y anota todas las recomendaciones de *Insight*.</block>
   <block id="c19f5b6b588c116922ff371fc32e4d81" category="inline-link-macro">Utilice Insights para optimizar el rendimiento y la seguridad del clúster AFX</block>
   <block id="974140d8603adf73843c167ac7d9cfb7" category="paragraph"><block ref="974140d8603adf73843c167ac7d9cfb7" category="inline-link-macro-rx"></block></block>
-  <block id="2aaf297d31d383472b54739f6376d5ac" category="section-title">Inicio rápido para crear y utilizar un SVM de datos</block>
   <block id="39eac0c34fdfab35e0497a8da8e783c8" category="paragraph">Después de instalar y configurar el clúster AFX, puede comenzar a realizar las tareas de administración típicas de la mayoría de las implementaciones de AFX.  Estos son los pasos de alto nivel necesarios para comenzar a compartir datos con los clientes.</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">1</block>
-  <block id="28cdc83438b53f2b504a5d18cea557f7" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>Mostrar los datos SVM disponibles</block>
   <block id="b9987a246a537f4fe86f1f2e3d10dbdb" category="inline-link-macro">Mostrar</block>
-  <block id="ee6a3e42cdd55c7cc62eafd9a1181292" category="paragraph"><block ref="fc233a35ea84021cc2134d6c4801b6e5" category="inline-link-macro-rx"></block>la lista de SVM de datos y determinar si hay alguno que pueda usar.</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Dos</block>
-  <block id="09f33f46e10efd1bbda8634f9024786f" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>Opcionalmente, crear un SVM de datos</block>
   <block id="686e697538050e4664636337cc3b834f" category="inline-link-macro">Crear</block>
   <block id="c0533f1f19802c560277a0111c780c39" category="paragraph"><block ref="2df885e22cba09efe84582dd2eeab4dc" category="inline-link-macro-rx"></block>una SVM para aislar y proteger las cargas de trabajo y los datos de su aplicación si no hay una SVM existente disponible.</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Tres</block>
@@ -762,8 +745,6 @@
   <block id="7f118dd9288c3fe39cf47e1f8c466b6e" category="paragraph">La siguiente figura ilustra una implementación típica de un clúster AFX.  Los nodos del controlador están desacoplados de los estantes de almacenamiento y conectados a través de una red compartida.</block>
   <block id="54dc0ff6a5d6a080c896de05ec31762c" category="inline-image-macro">Arquitectura del clúster AFX</block>
   <block id="9d406ef56e35fceeceb777198c3bf02c" category="paragraph"><block ref="9d406ef56e35fceeceb777198c3bf02c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9645c20c52f9891775e274f2d93f03b3" category="summary">El sistema de almacenamiento NetApp AFX tiene varias características que le permiten funcionar como una plataforma NAS de alto rendimiento.</block>
-  <block id="f71d632154995b6966d93b074e6b0972" category="doc">Características del sistema de almacenamiento AFX</block>
   <block id="146bce7e5064a390cf7d24e569ded6b6" category="list-text">Desacoplar las capacidades de almacenamiento y computación</block>
   <block id="488ac6d8b0b2f8a57a54112ba3e640c5" category="list-text">A diferencia de los sistemas de almacenamiento AFF y FAS , los elementos de almacenamiento y cómputo AFX del clúster están desacoplados.  Los controladores AFX no están restringidos al acceso a un conjunto limitado de discos locales.</block>
   <block id="3e6ddd52fc2d6199e3bca227606a1e01" category="list-text">Eliminación de la gestión de agregados y RAID</block>
@@ -930,8 +911,6 @@
   <block id="fa0d00eba52004814f9e675e8b363e21" category="list-text">Seleccione *Contenedor de datos* y cree un volumen o un depósito S3.</block>
   <block id="7d4cccfbf4982cf98dfcc8ab84353542" category="inline-link-macro">Prepárese para administrar AFX</block>
   <block id="467c52b97e48b31eaae92b849c44d932" category="paragraph">Debería<block ref="ccf85198082f902f2e1613b287967043" category="inline-link-macro-rx"></block> antes de utilizar su clúster AFX en un entorno de producción.</block>
-  <block id="ba666587c9cf6e1e8d11bc6e10e937a6" category="inline-link-macro">Configurar un SVM de datos AFX</block>
-  <block id="72322876bb564ee9e800d6d21ca838fc" category="list-text"><block ref="72322876bb564ee9e800d6d21ca838fc" category="inline-link-macro-rx"></block></block>
   <block id="ccf85198082f902f2e1613b287967043" category="list-text"><block ref="ccf85198082f902f2e1613b287967043" category="inline-link-macro-rx"></block></block>
   <block id="c38bd8923cd9d703f6afe0fbef452f80" category="summary">Aprenda a instalar los kits de rieles para el sistema de almacenamiento AFX 1K y los estantes de almacenamiento, y a asegurar el hardware AFX en el gabinete o rack de telecomunicaciones.</block>
   <block id="f15992b3ead5729a349b745d488997b1" category="doc">Instale su sistema de almacenamiento AFX 1K</block>
@@ -1228,18 +1207,14 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Código abierto</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Los archivos de aviso proporcionan información sobre derechos de autor y licencias de terceros utilizados en el software de NetApp .</block>
-  <block id="7082fda89054b04f297465b55674c8c3" category="summary">Puede crear un depósito y adjuntarlo a un SVM de datos.  Cada bucket se puede exponer a clientes que utilizan el protocolo de acceso S3 compatible con AFX.</block>
   <block id="5265e6c84f77a7188dc8cd5ff3c641a3" category="doc">Crear y configurar un bucket S3 en un sistema de almacenamiento AFX</block>
-  <block id="648df5a81ff3f4cd88bbe0b3e860f754" category="paragraph">Al crear un depósito, debe proporcionar una cantidad mínima de detalles de configuración.  Se pueden proporcionar detalles adicionales durante la creación o posteriormente editando el depósito.  Debe seleccionar el SVM para el depósito si ha creado SVM de datos adicionales.</block>
   <block id="a5590d86ed283872e0cc7fda42aa3bce" category="paragraph">Debe configurar el servicio S3 para la SVM para que los clientes puedan acceder al depósito.</block>
   <block id="bf52e174f6ac4c5b6733ee2f2e65a8d5" category="list-text">En el Administrador del sistema, seleccione *Almacenamiento* y luego *Depósitos*.</block>
   <block id="394342912380849041084ca6817e0908" category="inline-image-macro">Añadir con fondo azul</block>
   <block id="c271225decbfd89189eb197f3188942f" category="list-text">Seleccionar<block ref="9516e19ff09cda1665b431e9c6bddb77" category="inline-image-macro-rx" type="image"></block> y proporcionar la configuración básica, incluido el nombre y la capacidad.</block>
   <block id="b3f73832919ff203d0655477eb0a71d0" category="list-text">Opcionalmente, seleccione *Más opciones* para realizar configuraciones adicionales relacionadas con la protección de datos, el bloqueo y los permisos.</block>
   <block id="67a0c2052a77821404e56241e4d45c4b" category="list-text">Seleccione *Guardar* para agregar el depósito.</block>
-  <block id="96585b7d26434028471fdf031b5e4b94" category="summary">Puede crear un volumen y adjuntarlo a un SVM de datos.  Cada volumen se puede exponer a los clientes mediante uno de los protocolos de acceso compatibles con AFX.</block>
   <block id="49d5bccae6c50bd251abe0dd4f6c6034" category="doc">Crear y configurar un volumen en un sistema de almacenamiento AFX</block>
-  <block id="3cb60b9646911b23017534f96c6d39c9" category="paragraph">Al crear un volumen, debe proporcionar una cantidad mínima de detalles de configuración.  Se pueden proporcionar detalles adicionales durante la creación o posteriormente editando el volumen.  Debe seleccionar el SVM para el volumen si ha creado SVM de datos adicionales.</block>
   <block id="ba1585e4781d7032cd012b5e13d7ad9d" category="list-text">En el Administrador del sistema, seleccione *Almacenamiento* y luego *Volúmenes*.</block>
   <block id="49eb259f6822bfd3981a55650426e8a6" category="list-text">Seleccionar<block ref="9516e19ff09cda1665b431e9c6bddb77" category="inline-image-macro-rx" type="image"></block> y proporcionar la configuración básica incluyendo nombre, capacidad y optimización.</block>
   <block id="c0ad6ca34d6a77f33624e2424a78336e" category="list-text">Opcionalmente, seleccione *Más opciones* para obtener una configuración adicional relacionada con la protección de datos, SnapLock y el acceso NFS.</block>
@@ -1622,8 +1597,6 @@
   <block id="015653ee347fd187160fa2a4e0cc0018" category="sidebar">Administrar usuarios y roles</block>
   <block id="951d3fc54a28f9f46798897467d96a5b" category="sidebar">Administrar certificados</block>
   <block id="8ae55b420db4fe91916550e9abce16c2" category="sidebar">Muestra tus SVM</block>
-  <block id="a5a2f836dbc422c5264f743d742e50d1" category="sidebar">Crear un SVM de datos</block>
-  <block id="eb39e169e736ca6f2bbb00a0bab975b0" category="sidebar">Configurar un SVM de datos</block>
   <block id="91c934efd58347658e522d414f201107" category="sidebar">Migrar una SVM</block>
   <block id="9ecee3d5a1fbbf2427a10b60a5bf0cbe" category="sidebar">Apoyar el cluster</block>
   <block id="e8d169e6dc7b218b05fe89333590b11e" category="sidebar">Administrar AutoSupport</block>
@@ -1634,7 +1607,6 @@
   <block id="88fff44862def4168ac79c5db562ef39" category="sidebar">Mantener el hardware</block>
   <block id="3e3ccd70e170fe5490433b8d5cf56bf3" category="sidebar">Conozca su sistema AFX</block>
   <block id="dbe4d9ee9509101eab810b6d20824b87" category="sidebar">Obtenga más información sobre NetApp AFX</block>
-  <block id="0a8322c611c6b2eb2c9ecb053a2bc62d" category="sidebar">Características del sistema</block>
   <block id="ee3eaeb6a7cd31167c2dd23547b16511" category="sidebar">Detalles de la arquitectura</block>
   <block id="a7f68b037da8611dede6ae3b3bb41081" category="sidebar">Comparar AFX con AFF y FAS</block>
   <block id="debbbcd57ac6bcfce5c192665fccf3db" category="sidebar">Instale su sistema AFX</block>
@@ -1669,7 +1641,6 @@
   <block id="97c10fb55bed7fe33c55683647d9105a" category="sidebar">Prepárese para proteger sus datos</block>
   <block id="8423e0b0f9e240bb2fb2285caef15ef6" category="section-title">Volúmenes ONTAP FlexCache</block>
   <block id="93dbc5e0658220e9d45165593a50018b" category="paragraph">No. No se pueden mezclar nodos del sistema que ejecutan diferentes personalidades de ONTAP en el mismo clúster. Por ejemplo, no se pueden mezclar nodos AFX (que ejecutan la personalidad AFX ONTAP ) con nodos AFF o FAS (que ejecutan la personalidad Unified ONTAP ) en el mismo clúster.</block>
-  <block id="51164cc9a2dc5e5fd1bc8b7caf4ff2de" category="paragraph-title">¿Puedo utilizar cualquier tipo de conmutadores en la red del clúster backend para mi sistema AFX?</block>
   <block id="3cb557749455bb6c14d62ef66bdf31f6" category="paragraph">No. Solo los conmutadores específicamente aprobados y provistos con la plataforma de almacenamiento AFX son compatibles con la red de clúster. Además, estos conmutadores backend están dedicados a las operaciones del clúster AFX. Las operaciones de acceso del cliente (mediante NFS, SMB y S3) solo deben realizarse a través de la red de datos del cliente frontend.</block>
   <block id="9cdb0f273ab22003628192e697981917" category="paragraph-title">¿Cómo se configuran los conmutadores del clúster?</block>
   <block id="105f13233e6f74d02fd41159a532f770" category="paragraph">Los conmutadores de red del clúster se configuran mediante un archivo de configuración proporcionado por NetApp. No se admiten cambios en el archivo de configuración.</block>
@@ -1699,7 +1670,6 @@
   <block id="523837832bb488119118889ecba260ea" category="section-title">Limitaciones de implementación del clúster AFX</block>
   <block id="6a304cee8eaf01d4c0221bb8185c36ae" category="paragraph">Existen varias limitaciones, incluidos mínimos y máximos, impuestas por AFX al configurar y usar su clúster. Estos límites se dividen en varias categorías, entre ellas:</block>
   <block id="fb2af5c08b54884bae80e5f29c0d24f3" category="list-text">Esta es la capacidad total de todos los discos SSD en la zona de disponibilidad de almacenamiento (SAZ) del clúster. La capacidad máxima de almacenamiento varía según la versión de ONTAP .</block>
-  <block id="04f1bd4b5783cf5250b6f11f5f3c45bd" category="paragraph">Debe revisar la información disponible en NetApp Hardware Universe y Interoperability Matrix Tool para determinar las capacidades de su clúster.</block>
   <block id="4c1c93397a0ad82f0b80502a6c7c0799" category="list-text"><block ref="4c1c93397a0ad82f0b80502a6c7c0799" category="inline-link-rx"></block></block>
   <block id="f6735f5b05187d612456240f1b4e15a9" category="list-text"><block ref="f6735f5b05187d612456240f1b4e15a9" category="inline-link-rx"></block></block>
   <block id="158b0cd8e98337e4dafd6291bed45568" category="inline-link">Descripción general de la herramienta Matriz de interoperabilidad</block>
@@ -1710,7 +1680,40 @@
   <block id="3c9f430479263b3b25ec8e84988d27be" category="paragraph-title">¿Puedo utilizar FlexCache con un clúster de sistema AFX?</block>
   <block id="d53231824f8827127654628ac3883d6c" category="paragraph">Sí. Los sistemas de almacenamiento AFX admiten FlexCache tanto hacia como desde un sistema AFF o FAS que ejecuta la personalidad Unified ONTAP . La única restricción es que FlexCache con modo de escritura diferida no es compatible con AFX.</block>
   <block id="f580013220a8ab44a2f9b864e7f6425a" category="paragraph-title">Si quiero utilizar un sistema AFF o FAS (que ejecuta la personalidad Unified ONTAP ) con un sistema AFX para SnapMirror o FlexCache, ¿qué versión de ONTAP necesito?</block>
-  <block id="05669daf6632b75bf0f439e5c851177a" category="section-title">Marketing y soporte de NetApp</block>
   <block id="4d4bcd00dec0ee009c6a6c831d33fda4" category="inline-link">AFX de NetApp</block>
   <block id="7eee2dae65b99dd9a2020ea7343b8b68" category="list-text"><block ref="7eee2dae65b99dd9a2020ea7343b8b68" category="inline-link-rx"></block></block>
+  <block id="228a97428b2aeec69210739af416feeb" category="summary">Después de crear una SVM, puede actualizar la configuración según sus requisitos y las necesidades de sus clientes.</block>
+  <block id="c1eb2ef19412fc8a729ccabaa304e64b" category="paragraph">Hay cuatro rutas de acceso a la configuración de SVM, como se refleja en las pestañas de la página de inicio de un SVM específico. Estos incluyen:</block>
+  <block id="feb5d82aa83ef8e2c0f2897980886042" category="summary">Puede migrar una SVM de un clúster ONTAP a otro. La migración de SVM con AFX funciona de la misma manera que con Unified ONTAP, aunque hay varias consideraciones de interoperabilidad. Consulte la documentación de Unified ONTAP para obtener detalles sobre cómo realizar una migración de SVM.</block>
+  <block id="de588dc77b66037715d1febfdf7f9ae7" category="paragraph">Puede migrar una SVM de un clúster ONTAP a otro. La migración de SVM con AFX funciona de la misma manera que con Unified ONTAP, aunque hay varias consideraciones de interoperabilidad. Consulte la documentación de Unified ONTAP proporcionada para obtener detalles sobre cómo realizar una migración de SVM.</block>
+  <block id="4c2e600ea7c53e0c32af10f2e4850cd6" category="paragraph-title">¿Puedo utilizar cualquier tipo de conmutadores en la red del clúster backend para mi sistema de almacenamiento AFX?</block>
+  <block id="42ed7ea439950fed1039106f87d3419f" category="admonition">La documentación de AFX incluye enlaces a varios temas en el sitio de documentación de Unified ONTAP para obtener detalles sobre las características que se comportan de la misma manera independientemente de la personalidad de ONTAP .  El contenido adicional proporciona más profundidad que puede resultar útil al administrar su sistema de almacenamiento AFX.</block>
+  <block id="765b47efc6becfafc2dfb93543aab395" category="list-text">La función avanzada de equilibrio de capacidad, controlada mediante el<block ref="7617fb157efcfcd230d531be7d153280" prefix=" " category="inline-code"></block> El parámetro CLI está habilitado de forma predeterminada para todos los volúmenes FlexGroup .</block>
+  <block id="80fdcbf5318cc8c8b782fe1e7d993261" category="list-text">Los volúmenes FlexGroup solo se pueden replicar en Unified ONTAP 9.16.1 o posterior</block>
+  <block id="1803226ae8ecf68b259a8b81dd429f18" category="paragraph">El sistema de almacenamiento AFX de NetApp satisface las demandas únicas típicas de los entornos de IA/ML y otras aplicaciones centradas en datos relacionadas. El sistema de almacenamiento AFX es ideal para organizaciones que gestionan varias cargas de trabajo diferentes, entre ellas:</block>
+  <block id="5da4db9a83f67785c558d8ef8930983d" category="section-title">Características del diseño del sistema</block>
+  <block id="662e223dde993ac9a5f94e9df73c6020" category="paragraph">El sistema AFX tiene varias características de diseño que le permiten funcionar como una plataforma NAS de alto rendimiento.</block>
+  <block id="1a305bb61d773e7c7f5ad044dfc05c1d" category="list-text">Tipos de SVM</block>
+  <block id="902282c75e6affab91bbdb31485cdf7e" category="list-text">Un clúster de sistema AFX aloja varios tipos diferentes de SVM.  Un *SVM de datos* se utiliza para servir datos a los clientes y es el único tipo al que un administrador de AFX puede acceder y configurar directamente.  Hay un SVM de datos que se crea de manera predeterminada cuando configura e implementa inicialmente un clúster AFX, pero puede crear SVM de datos adicionales si es necesario.  Cuando se hace referencia a un SVM en esta documentación, se implica un SVM de datos a menos que se indique lo contrario.</block>
+  <block id="7bec62bffdc897ef7663099481e0f9f5" category="list-text">Las SVM se pueden utilizar para establecer y aplicar el aislamiento de sus datos y aplicaciones. Esto puede ser útil cuando hay muchos grupos diferentes con una organización más grande. El control administrativo se puede delegar a las SVM para establecer políticas relacionadas con el acceso, la seguridad y la protección de los datos.</block>
+  <block id="e8bc1a75864c7a9374e67c0bd33006ce" category="list-text">Cada SVM tiene su propio conjunto dedicado de interfaces de red. Por ejemplo, se asignan LIF separados a una SVM para administración y acceso de clientes.</block>
+  <block id="809ced36d61a966c3c67e773781e8212" category="list-text">El administrador del clúster tiene control completo del clúster AFX, incluidas todas las SVM. El nivel administrativo del clúster AFX incluye solo las tareas que un administrador del clúster puede realizar y no ninguna de las tareas de administración específicas de SVM. Ver<block ref="b7c6f4e89f282d3743609571d8ac253f" category="inline-link-macro-rx"></block> Para más información.</block>
+  <block id="1d82ecf6b3e30f8f3261b09fc7460cc8" category="list-text">Un rol de administrador de SVM tiene control de una SVM específica y, por lo tanto, está más restringido en comparación con el administrador de clúster. La administración de SVM implica realizar tareas con objetos y recursos que tienen un alcance SVM, como la creación de un volumen. Ver<block ref="ebfee1a77bcca45a20260db66aedfa55" category="inline-link-macro-rx"></block> Para más información.</block>
+  <block id="e7cc598931ecb05f201eccb80edc35c0" category="paragraph">Debe revisar la información disponible en NetApp Hardware Universe y Interoperability Matrix Tool para determinar las capacidades de su clúster AFX.</block>
+  <block id="0471cd90a0f200d2ea4dc6668e82834e" category="section-title">Inicio rápido para crear y utilizar una SVM</block>
+  <block id="5874dae1e3f2cc499f13dd22399c0cdc" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>Mostrar los SVM disponibles</block>
+  <block id="928443d797f5bfbe15e0c62ea304137b" category="paragraph"><block ref="fc233a35ea84021cc2134d6c4801b6e5" category="inline-link-macro-rx"></block>la lista de SVM y determinar si hay alguno que pueda usar.</block>
+  <block id="4cd360631f281d125f455f70ac3527bb" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>Opcionalmente crear un SVM</block>
+  <block id="4519e96c84aba4c336601823ddb844ab" category="inline-link">Tipos de SVM en un clúster ONTAP</block>
+  <block id="1ad42be2bb7dc3e7472a52084bc95d1b" category="list-text"><block ref="1ad42be2bb7dc3e7472a52084bc95d1b" category="inline-link-rx"></block></block>
+  <block id="3dccf72fe610d6922e392e93335fdb6d" category="list-text">Máscara de subred</block>
+  <block id="b252ca5bc5d465dbb9f73964ff30983f" category="inline-link-macro">Configurar un AFX SVM</block>
+  <block id="3b69a0402bdc83907f6c34509f9f49ff" category="list-text"><block ref="3b69a0402bdc83907f6c34509f9f49ff" category="inline-link-macro-rx"></block></block>
+  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="section-title">Soporte de NetApp</block>
+  <block id="37ac2a878ab8e3292778f647c0c9f361" category="summary">Puede crear un depósito y adjuntarlo a una SVM. Cada bucket se puede exponer a clientes que utilizan el protocolo de acceso S3 compatible con AFX.</block>
+  <block id="1603f56fade4f1081349b74f936be80b" category="paragraph">Al crear un depósito, debe proporcionar una cantidad mínima de detalles de configuración. Se pueden proporcionar detalles adicionales durante la creación o posteriormente editando el depósito. Debe seleccionar la SVM para el depósito si ha creado SVM adicionales.</block>
+  <block id="6bdcdb8ea3424dafa80e11dfcad6c534" category="summary">Puede crear un volumen y adjuntarlo a una SVM. Cada volumen se puede exponer a los clientes mediante uno de los protocolos de acceso compatibles con AFX.</block>
+  <block id="679eb87712080343e0bc37dbc08451df" category="paragraph">Al crear un volumen, debe proporcionar una cantidad mínima de detalles de configuración. Se pueden proporcionar detalles adicionales durante la creación o posteriormente editando el volumen. Debe seleccionar la SVM para el volumen si ha creado SVM adicionales.</block>
+  <block id="93b1520005778e826c33efa7132d61c9" category="sidebar">Crear un SVM</block>
+  <block id="b4f82cc57b777a6dc79376d19998c912" category="sidebar">Configurar una SVM</block>
 </blocks>

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-data/create-configure-bucket.html 
 keywords: afx, afx system, create bucket 
-summary: Puede crear un depósito y adjuntarlo a un SVM de datos.  Cada bucket se puede exponer a clientes que utilizan el protocolo de acceso S3 compatible con AFX. 
+summary: Puede crear un depósito y adjuntarlo a una SVM. Cada bucket se puede exponer a clientes que utilizan el protocolo de acceso S3 compatible con AFX. 
 ---
 = Crear y configurar un bucket S3 en un sistema de almacenamiento AFX
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: Puede crear un depósito y adjuntarlo a un SVM de datos.  Cada bucket s
 
 
 [role="lead"]
-Puede crear un depósito y adjuntarlo a un SVM de datos.  Cada bucket se puede exponer a clientes que utilizan el protocolo de acceso S3 compatible con AFX.
+Puede crear un depósito y adjuntarlo a una SVM. Cada bucket se puede exponer a clientes que utilizan el protocolo de acceso S3 compatible con AFX.
 
 .Acerca de esta tarea
-Al crear un depósito, debe proporcionar una cantidad mínima de detalles de configuración.  Se pueden proporcionar detalles adicionales durante la creación o posteriormente editando el depósito.  Debe seleccionar el SVM para el depósito si ha creado SVM de datos adicionales.
+Al crear un depósito, debe proporcionar una cantidad mínima de detalles de configuración. Se pueden proporcionar detalles adicionales durante la creación o posteriormente editando el depósito. Debe seleccionar la SVM para el depósito si ha creado SVM adicionales.
 
 .Antes de empezar
 Debe configurar el servicio S3 para la SVM para que los clientes puedan acceder al depósito.

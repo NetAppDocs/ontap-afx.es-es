@@ -19,13 +19,11 @@ Antes de implementar AFX en un entorno de producción, es esencial comprender la
 
 Una máquina virtual de almacenamiento (SVM) es un servidor aislado o un entorno de inquilino dentro de un clúster ONTAP .  Puede configurar una SVM para servir datos a los clientes conectados.  Debe estar familiarizado con las capacidades y características de las SVM AFX.
 
-
-NOTE: Se crea un SVM de datos cuando se configura e implementa inicialmente un clúster AFX.  Puede crear SVM de datos adicionales si es necesario.
-
-Control administrativo:: Las SVM de datos se pueden utilizar para establecer y aplicar el aislamiento de sus datos y aplicaciones.  Esto puede ser útil cuando hay muchos grupos diferentes con una organización más grande.  El control administrativo se puede delegar a las SVM para establecer políticas relacionadas con el acceso, la seguridad y la protección de los datos.
+Tipos de SVM:: Un clúster de sistema AFX aloja varios tipos diferentes de SVM.  Un *SVM de datos* se utiliza para servir datos a los clientes y es el único tipo al que un administrador de AFX puede acceder y configurar directamente.  Hay un SVM de datos que se crea de manera predeterminada cuando configura e implementa inicialmente un clúster AFX, pero puede crear SVM de datos adicionales si es necesario.  Cuando se hace referencia a un SVM en esta documentación, se implica un SVM de datos a menos que se indique lo contrario.
+Control administrativo:: Las SVM se pueden utilizar para establecer y aplicar el aislamiento de sus datos y aplicaciones. Esto puede ser útil cuando hay muchos grupos diferentes con una organización más grande. El control administrativo se puede delegar a las SVM para establecer políticas relacionadas con el acceso, la seguridad y la protección de los datos.
 Cuentas y roles RBAC:: Hay dos niveles de autenticación y autorización con AFX: nivel de clúster y nivel de SVM.  Además de las cuentas del clúster, cada SVM tiene su propio conjunto de usuarios y roles.  En la mayoría de las situaciones, utilizar las cuentas de nivel de clúster es adecuado.  Pero dependiendo de su entorno, es posible que también necesite configurar y usar las cuentas y roles de SVM más restrictivos. Ver link:../administer/additional-ontap-svm.html["Administración adicional de AFX SVM"] Para más información.
 Recursos con alcance SVM:: Los recursos AFX y las entidades configurables están asociados con el clúster o con un SVM específico.  Hay muchos recursos con un alcance SVM, incluidos volúmenes y depósitos, así como cuentas de usuario SVM y roles RBAC.
-Interfaces de red dedicadas:: Cada SVM tiene su propio conjunto dedicado de interfaces de red.  Por ejemplo, se asignan LIF separados a una SVM para la gestión y el acceso a los datos del cliente.
+Interfaces de red dedicadas:: Cada SVM tiene su propio conjunto dedicado de interfaces de red. Por ejemplo, se asignan LIF separados a una SVM para administración y acceso de clientes.
 
 
 
@@ -36,8 +34,8 @@ Las tareas administrativas de ONTAP que realiza con AFX generalmente se dividen 
 
 Es importante tener en cuenta que estos niveles describen cómo se organizan y asignan las tareas administrativas, y no necesariamente cómo se configura la seguridad asociada.  Por ejemplo, si bien se necesita una cuenta de administrador de clúster para realizar la administración a nivel de clúster, también se puede utilizar para la administración de SVM.
 
-Administrador de clúster:: El administrador del clúster tiene control completo del clúster AFX, incluidas todas las SVM de datos.  El nivel administrativo del clúster AFX incluye solo las tareas que un administrador del clúster puede realizar y no ninguna de las tareas de administración específicas de SVM. Ver link:../administer/view-dashboard.html["Administrar su clúster"] Para más información.
-Administrador de SVM:: Un rol de administrador de SVM tiene control de un SVM de datos específico y, por lo tanto, está más restringido en comparación con el administrador de clúster.  La administración de SVM implica realizar tareas con objetos y recursos que tienen un alcance SVM, como la creación de un volumen. Ver link:../manage-data/prepare-manage-data.html["Administre sus máquinas virtuales y datos de almacenamiento"] Para más información.
+Administrador de clúster:: El administrador del clúster tiene control completo del clúster AFX, incluidas todas las SVM. El nivel administrativo del clúster AFX incluye solo las tareas que un administrador del clúster puede realizar y no ninguna de las tareas de administración específicas de SVM. Verlink:../administer/view-dashboard.html["Administrar su clúster"] Para más información.
+Administrador de SVM:: Un rol de administrador de SVM tiene control de una SVM específica y, por lo tanto, está más restringido en comparación con el administrador de clúster. La administración de SVM implica realizar tareas con objetos y recursos que tienen un alcance SVM, como la creación de un volumen. Verlink:../manage-data/prepare-manage-data.html["Administre sus máquinas virtuales y datos de almacenamiento"] Para más información.
 
 
 
@@ -119,7 +117,7 @@ Nodos controladores por clúster:: Cada clúster AFX debe tener al menos cuatro 
 Capacidad de almacenamiento:: Esta es la capacidad total de todos los discos SSD en la zona de disponibilidad de almacenamiento (SAZ) del clúster. La capacidad máxima de almacenamiento varía según la versión de ONTAP .
 
 
-Debe revisar la información disponible en NetApp Hardware Universe y Interoperability Matrix Tool para determinar las capacidades de su clúster.
+Debe revisar la información disponible en NetApp Hardware Universe y Interoperability Matrix Tool para determinar las capacidades de su clúster AFX.
 
 
 
@@ -165,15 +163,15 @@ link:../administer/view-insights.html["Utilice Insights para optimizar el rendim
 
 
 
-== Inicio rápido para crear y utilizar un SVM de datos
+== Inicio rápido para crear y utilizar una SVM
 
 Después de instalar y configurar el clúster AFX, puede comenzar a realizar las tareas de administración típicas de la mayoría de las implementaciones de AFX.  Estos son los pasos de alto nivel necesarios para comenzar a compartir datos con los clientes.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]Mostrar los datos SVM disponibles
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]Mostrar los SVM disponibles
 [role="quick-margin-para"]
-link:../administer/display-svms.html["Mostrar"]la lista de SVM de datos y determinar si hay alguno que pueda usar.
+link:../administer/display-svms.html["Mostrar"]la lista de SVM y determinar si hay alguno que pueda usar.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]Opcionalmente, crear un SVM de datos
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]Opcionalmente crear un SVM
 [role="quick-margin-para"]
 link:../administer/create-svm.html["Crear"]una SVM para aislar y proteger las cargas de trabajo y los datos de su aplicación si no hay una SVM existente disponible.
 
@@ -192,6 +190,7 @@ link:../manage-data/prepare-manage-data.html["Preparar"]para asignar y gestionar
 * https://docs.netapp.com/us-en/ontap/concepts/introducing-ontap-interfaces-concept.html["Interfaces de usuario de ONTAP"^]
 * https://docs.netapp.com/us-en/ontap/system-admin/set-privilege-level-task.html["Establecer el nivel de privilegio en la CLI de ONTAP"^]
 * https://docs.netapp.com/us-en/ontap/system-admin/index.html["Obtenga información sobre la administración de clústeres con la CLI de ONTAP"^]
+* https://docs.netapp.com/us-en/ontap/system-admin/types-svms-concept.html["Tipos de SVM en un clúster ONTAP"^]
 * https://hwu.netapp.com/["NetApp Hardware Universe"^]
 * https://imt.netapp.com/["Herramienta de matriz de interoperabilidad de NetApp"^]
 * https://docs.netapp.com/us-en/interoperability-matrix-tool/["Descripción general de la herramienta Matriz de interoperabilidad"^]

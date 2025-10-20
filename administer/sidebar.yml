@@ -30,9 +30,9 @@ entries:
   entries:
   - title: Muestra tus SVM
     url: "/administer/display-svms.html"
-  - title: Crear un SVM de datos
+  - title: Crear un SVM
     url: "/administer/create-svm.html"
-  - title: Configurar un SVM de datos
+  - title: Configurar una SVM
     url: "/administer/configure-svm.html"
   - title: Migrar una SVM
     url: "/administer/migrate-svm.html"

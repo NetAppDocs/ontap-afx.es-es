@@ -85,7 +85,7 @@ No. Los protocolos de datos en AFX funcionan de la misma manera que con los sist
 .¿Se utiliza Particionamiento de disco avanzado (ADP) en AFX?
 No. ADP no se utiliza con AFX.  Debido a que no hay agregados raíz con AFX, no se necesita la función ADP para maximizar la eficiencia del espacio en disco.
 
-.¿Puedo utilizar cualquier tipo de conmutadores en la red del clúster backend para mi sistema AFX?
+.¿Puedo utilizar cualquier tipo de conmutadores en la red del clúster backend para mi sistema de almacenamiento AFX?
 No. Solo los conmutadores específicamente aprobados y provistos con la plataforma de almacenamiento AFX son compatibles con la red de clúster. Además, estos conmutadores backend están dedicados a las operaciones del clúster AFX. Las operaciones de acceso del cliente (mediante NFS, SMB y S3) solo deben realizarse a través de la red de datos del cliente frontend.
 
 .¿Cómo se configuran los conmutadores del clúster?

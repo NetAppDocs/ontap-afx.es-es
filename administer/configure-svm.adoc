@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: administer/configure-svm.html 
 keywords: afx, afx system, configure svm 
-summary: Después de crear un SVM de datos, puede actualizar la configuración según sus requisitos y las necesidades de sus clientes. 
+summary: Después de crear una SVM, puede actualizar la configuración según sus requisitos y las necesidades de sus clientes. 
 ---
 = Configurar un sistema de almacenamiento AFX SVM
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: Después de crear un SVM de datos, puede actualizar la configuración s
 
 
 [role="lead"]
-Después de crear un SVM de datos, puede actualizar la configuración según sus requisitos y las necesidades de sus clientes.
+Después de crear una SVM, puede actualizar la configuración según sus requisitos y las necesidades de sus clientes.
 
 .Acerca de esta tarea
-Hay cuatro rutas de acceso a la configuración de SVM, como se refleja en las pestañas de la página de inicio para un SVM de datos específico.  Estos incluyen:
+Hay cuatro rutas de acceso a la configuración de SVM, como se refleja en las pestañas de la página de inicio de un SVM específico. Estos incluyen:
 
 * Descripción general
 +
