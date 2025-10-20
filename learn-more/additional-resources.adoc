@@ -24,8 +24,11 @@ Hay recursos adicionales a los que puede acceder para ayudar a administrar y res
 
 
 
-== Soporte de NetApp
+== Marketing y soporte de NetApp
 
+* https://www.netapp.com/afx/["AFX de NetApp"^]
 * https://mysupport.netapp.com/["Sitio de soporte de NetApp"^]
+* https://hwu.netapp.com/["NetApp Hardware Universe"^]
+* https://imt.netapp.com/["Herramienta de matriz de interoperabilidad de NetApp"^]
 * https://kb.netapp.com/["Base de conocimientos de NetApp"^]
 
