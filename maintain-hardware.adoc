@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: administer/maintain-hardware.html 
+permalink: maintain-hardware.html 
 keywords: afx, afx system, maintain hardware, hardware 
 summary: Navegue a la documentación de mantenimiento de AFX para aprender cómo realizar procedimientos de mantenimiento en su sistema de almacenamiento AFX. 
 ---

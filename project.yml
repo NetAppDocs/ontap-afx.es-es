@@ -15,6 +15,8 @@ sidebar:
   - section: get-started
   - section: administer
   - section: svm-admin
+  - title: Mantenimiento de hardware
+    url: "/maintain-hardware.html"
   - section: rest
   - section: learn-more
   - title: Preguntas frecuentes
