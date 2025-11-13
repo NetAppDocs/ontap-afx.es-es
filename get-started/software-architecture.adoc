@@ -59,13 +59,13 @@ Hay varios componentes lógicos incluidos con AFX.  Se implementan en software j
 
 === Fondo de almacenamiento común
 
-La zona de disponibilidad de almacenamiento (SAZ) es un grupo común de almacenamiento para todo el clúster.  Es una colección de discos en los estantes de almacenamiento que proporciona un único espacio de nombres unificado a todos los nodos del controlador.  La SAZ ofrece un modelo de aprovisionamiento sin restricciones fijas respecto a qué estantes de almacenamiento utilizan los nodos.  Los clientes pueden ver el espacio libre y el uso del almacenamiento como propiedades de todo el clúster AFX.
+La zona de disponibilidad de almacenamiento (SAZ) es un grupo común de almacenamiento para todo el clúster. Se trata de una colección de discos en los estantes de almacenamiento a los que todos los nodos controladores tienen acceso de lectura y escritura.  La SAZ ofrece un modelo de aprovisionamiento sin restricciones fijas respecto a qué estantes de almacenamiento pueden utilizar los nodos; la ubicación de los volúmenes en los nodos la gestiona automáticamente ONTAP. Los clientes pueden ver el espacio libre y el uso del almacenamiento como propiedades de todo el clúster AFX.
 
 
 
 === FlexVolumes, FlexGroups y buckets
 
-FlexVolumes, FlexGroups y los buckets S3 son los _contenedores de datos_ expuestos a los administradores de AFX según los protocolos de acceso del cliente.  Estos contenedores escalables están diseñados para abstraer muchos de los detalles complejos del almacenamiento interno.
+FlexVolumes, FlexGroups y los buckets S3 son los _contenedores de datos_ expuestos a los administradores de AFX según los protocolos de acceso del cliente. Funcionan de forma idéntica a Unified ONTAP.  Estos contenedores escalables están diseñados para abstraer muchos de los detalles complejos del almacenamiento interno, como la ubicación de los datos y el equilibrio de la capacidad.
 
 
 
@@ -77,12 +77,12 @@ El diseño y el acceso a los datos están ajustados para un acceso fluido y una 
 
 === SVM y multi-tenencia
 
-AFX proporciona un modelo de inquilino que se basa en el modelo SVM disponible con los sistemas AFF y FAS .  El modelo de inquilino de AFX se ha optimizado para simplificar la administración.
+AFX proporciona un modelo de inquilino que se basa en el modelo SVM disponible con los sistemas AFF y FAS . El modelo de inquilino de AFX es el mismo que el de Unified ONTAP , pero se ha simplificado para facilitar la administración en un entorno de objetos NAS y S3.  Por ejemplo, se han eliminado las opciones de configuración para SAN, así como para agregados y grupos RAID.
 
 
 
 == Implementación del clúster AFX
 
-La siguiente figura ilustra una implementación típica de un clúster AFX.  Los nodos del controlador están desacoplados de los estantes de almacenamiento y conectados a través de una red compartida.
+La siguiente figura ilustra una implementación típica de un clúster AFX. El clúster AFX incluye nodos de control que están desacoplados de los estantes de almacenamiento y conectados a través de una red interna compartida.  Fuera del límite del clúster AFX, los clientes acceden al clúster a través de una red de clientes independiente.
 
 image:afx-cluster.png["Arquitectura del clúster AFX"]

@@ -29,7 +29,7 @@ Cubo S3:: Un bucket S3 es un contenedor de almacenamiento que contiene objetos o
 contenedor de datos:: En el contexto de un sistema AFX, un contenedor de datos es un término genérico y puede ser un volumen o un depósito S3.
 Árbol Q:: Un qtree es una subdivisión lógica dentro de un volumen que puedes crear para administrar y organizar datos.  Permite especificar sus propiedades y estilo de seguridad (NTFS o UNIX) y puede heredar políticas de exportación de su volumen padre o tener las suyas propias.  Los Qtrees pueden contener archivos y directorios, y a menudo se utilizan para administrar permisos y cuotas de forma más granular dentro de un volumen.
 Cuota:: Una cuota en ONTAP es un límite establecido en la cantidad de espacio de almacenamiento o número de archivos que puede usar un usuario, grupo o qtree.  Las cuotas se utilizan para administrar y controlar el uso de recursos dentro de un sistema de almacenamiento, garantizando que ningún usuario o aplicación pueda consumir una cantidad excesiva de recursos.
-Troncalización NFS:: El enlace troncal NFS es una tecnología que permite a los clientes NFS v4.1 abrir múltiples conexiones a diferentes LIF en el servidor NFS. Esto aumenta la velocidad de transferencia de datos y proporciona resiliencia a través de múltiples rutas al exportar volúmenes FlexVol a clientes con capacidad de enlace troncal.
+Enlace troncal de sesión NFS:: El enlace troncal NFS es una tecnología que permite a los clientes NFS v4.1 abrir múltiples conexiones a diferentes LIF en el servidor NFS. Esto aumenta la velocidad de transferencia de datos y proporciona resiliencia a través de múltiples rutas al exportar volúmenes a clientes con capacidad de enlace troncal.  Las LIF deben estar en el mismo nodo para participar en el enlace troncal.
 +
 --
 Para habilitar el trunking, debe tener un SVM configurado para NFS y NFSv4.1 debe estar habilitado. También requiere volver a montar todos los clientes NFSv4.x después de un cambio de configuración, lo que puede resultar disruptivo. Los procedimientos de soporte y configuración para enlaces troncales NFS son los mismos para todos los sistemas ONTAP . Obtenga más información sobre https://docs.netapp.com/us-en/ontap/nfs-trunking/index.html["Troncalización NFS"^]
@@ -61,7 +61,7 @@ Además, los volúmenes FlexCache se pueden conectar entre sistemas AFX y AFF o 
 
 === Migración de datos desde una fuente que no es ONTAP
 
-La migración de datos desde sistemas que no sean ONTAP se puede realizar mediante operaciones de copia a nivel de archivo. Utilidades de copia rápida como https://docs.netapp.com/us-en/xcp/["XCP"^] Se pueden utilizar tanto utilidades estándar como RoboCopy (para SMB) y rsync (para NFS), como herramientas de terceros como DataDobi.
+La migración de datos desde sistemas que no sean ONTAP se puede realizar mediante operaciones de copia a nivel de archivo. utilidades de copia rápida como https://docs.netapp.com/us-en/xcp/["XCP"^] o https://docs.netapp.com/us-en/data-services-copy-sync/["Copiar y sincronizar"^] Puede utilizarse junto con utilidades estándar como RoboCopy (para SMB) y rsync (para NFS), así como con herramientas de terceros como DataDobi.
 
 
 

@@ -115,9 +115,10 @@ Existen varias limitaciones, incluidos mínimos y máximos, impuestas por AFX al
 
 Nodos controladores por clúster:: Cada clúster AFX debe tener al menos cuatro nodos.  La cantidad máxima de nodos varía según la versión de ONTAP .
 Capacidad de almacenamiento:: Esta es la capacidad total de todos los discos SSD en la zona de disponibilidad de almacenamiento (SAZ) del clúster. La capacidad máxima de almacenamiento varía según la versión de ONTAP .
+Conmutadores de clúster:: Necesitas al menos dos conmutadores en tu red de almacenamiento de clúster.  El valor máximo permitido se determina en función del número total de nodos de control en el clúster.
 
 
-Debe revisar la información disponible en NetApp Hardware Universe y Interoperability Matrix Tool para determinar las capacidades de su clúster AFX.
+Debe revisar los detalles disponibles en la herramienta NetApp Hardware Universe and Interoperability Matrix para determinar las capacidades de su clúster AFX.
 
 
 
@@ -187,12 +188,12 @@ link:../manage-data/prepare-manage-data.html["Preparar"]para asignar y gestionar
 
 == Información relacionada
 
+* https://hwu.netapp.com/["NetApp Hardware Universe"^]
+* https://imt.netapp.com/["Herramienta de matriz de interoperabilidad de NetApp"^]
+* https://docs.netapp.com/us-en/interoperability-matrix-tool/["Descripción general de la herramienta Matriz de interoperabilidad"^]
 * https://docs.netapp.com/us-en/ontap/concepts/introducing-ontap-interfaces-concept.html["Interfaces de usuario de ONTAP"^]
 * https://docs.netapp.com/us-en/ontap/system-admin/set-privilege-level-task.html["Establecer el nivel de privilegio en la CLI de ONTAP"^]
 * https://docs.netapp.com/us-en/ontap/system-admin/index.html["Obtenga información sobre la administración de clústeres con la CLI de ONTAP"^]
 * https://docs.netapp.com/us-en/ontap/system-admin/types-svms-concept.html["Tipos de SVM en un clúster ONTAP"^]
-* https://hwu.netapp.com/["NetApp Hardware Universe"^]
-* https://imt.netapp.com/["Herramienta de matriz de interoperabilidad de NetApp"^]
-* https://docs.netapp.com/us-en/interoperability-matrix-tool/["Descripción general de la herramienta Matriz de interoperabilidad"^]
 * link:../faq-ontap-afx.html["Preguntas frecuentes sobre los sistemas de almacenamiento AFX"]
 
