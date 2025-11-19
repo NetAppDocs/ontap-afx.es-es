@@ -38,14 +38,14 @@ Los componentes del conector son delicados y se debe tener cuidado al encajarlos
 * Al realizar el cableado a una conexión de fibra óptica, inserte el transceptor óptico en el puerto del controlador antes de realizar el cableado al puerto del conmutador.
 * El sistema de almacenamiento AFX 1K utiliza cuatro cables de conexión de 100 GbE en el clúster y la red de almacenamiento.  Las conexiones de 400 GbE se realizan a los puertos del conmutador y las conexiones de 100 GbE se realizan a los puertos del controlador y del estante de la unidad.  Se pueden realizar conexiones de almacenamiento y HA/clúster a cualquier puerto que no sea ISL en el conmutador.
 +
-Para una conexión determinada con un cable de conexión de 4 x 100 GbE al puerto del conmutador específico, se conectan los 4 puertos que van al conmutador a través de este único cable de conexión.
+Para una conexión de cable breakout 4x100GbE determinada a un puerto de conmutador específico, se conectan los cuatro puertos de un controlador determinado al conmutador a través de este único cable breakout.
 
 +
 ** 1 puerto HA (ranura 1)
 ** 1 x puerto de clúster (ranura 7)
-** 2 puertos de almacenamiento (ranuras 10, 11)
+** 2 puertos de almacenamiento (ranuras 10 y 11)
 +
-Todos los puertos 'a' se conectan al conmutador A y todos los puertos 'b' se conectan al conmutador B.
+Todos los puertos "a" se conectan al switch A, y todos los puertos "b" se conectan al switch B.
 
 
 
@@ -148,14 +148,14 @@ Utilice el cable de interconexión de clúster y HA para conectar los puertos e1
 +
 ** Controlador A
 +
-*** e1a
-*** e7a
+*** e1a (HA)
+*** e7a (Clúster)
 
 
 ** Controlador B
 +
-*** e1a
-*** e7a
+*** e1a (HA)
+*** e7a (Clúster)
 +
 *Cables de 100 GbE*
 
@@ -173,14 +173,14 @@ image::../media/drw_afx_switched_cluster_cabling_a_ieops-2352.svg[Conexiones de 
 +
 ** Controlador A
 +
-*** e1b
-*** e7b
+*** e1b (HA)
+*** e7b (Clúster)
 
 
 ** Controlador B
 +
-*** e1b
-*** e7b
+*** e1b (HA)
+*** e7b (Clúster)
 +
 *Cables de 100 GbE*
 
