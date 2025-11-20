@@ -14,7 +14,7 @@ summary: Antes de administrar sus datos AFX, debe familiarizarse con los concept
 Antes de administrar sus datos AFX, debe familiarizarse con los conceptos y capacidades básicos.
 
 
-TIP: Dado que muchos de los conceptos y procedimientos de administración disponibles en los sistemas AFF y FAS son los mismos que los de los sistemas de almacenamiento AFX, revisar la documentación de Unified ONTAP puede resultar útil.
+TIP: Dado que muchos de los conceptos y procedimientos de administración disponibles en los sistemas AFF y FAS son los mismos que los de los sistemas de almacenamiento AFX, revisar la documentación de Unified ONTAP puede resultar útil. Consulte los enlaces en <<Información relacionada>> Para obtener más información.
 
 
 
@@ -89,6 +89,7 @@ Puede acceder a todos los volúmenes y depósitos definidos para el clúster AFX
 
 == Información relacionada
 
+* https://docs.netapp.com/us-en/ontap/concept_nas_file_system_analytics_overview.html["Obtenga información sobre el análisis del sistema de archivos ONTAP."^]
 * link:../administer/additional-ontap-svm.html["Administración adicional de AFX SVM"]
 * link:../get-started/prepare-cluster-admin.html["Prepárese para administrar su sistema AFX"]
 * link:../administer/migrate-svm.html["Migrar un SVM del sistema AFX"]
