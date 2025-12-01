@@ -60,9 +60,21 @@ Puede proteger sus archivos convirtiéndolos a un estado de escritura única y l
 
 
 
+== Seguridad
+
+Hay varias funciones de seguridad opcionales que puede configurar y usar con su implementación de AFX.
+
+
+
+=== Política
+
+FPolicy es un marco de notificación de acceso a archivos que se utiliza para monitorear y administrar eventos de acceso a archivos en máquinas virtuales de almacenamiento (SVM).  Puede utilizar FPolicy para crear políticas que definan qué operaciones de archivos supervisar y, opcionalmente, bloquear, según los criterios que usted defina.  FPolicy se utiliza comúnmente para auditoría de seguridad, cumplimiento y gobernanza de datos. Referirse a https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["Obtenga más información sobre las soluciones ONTAP FPolicy."^] Para más información.
+
+
+
 == Monitoreo de eventos y rendimiento de ONTAP
 
-Puede supervisar la salud y el rendimiento de un clúster.  Esto incluye la configuración de alertas para eventos y la gestión de notificaciones para alertas de salud del sistema.  Referirse a https://docs.netapp.com/us-en/ontap/event-performance-monitoring/index.html["Monitoreo de eventos, rendimiento y salud"^] Para más información
+Puede supervisar la salud y el rendimiento de un clúster. Esto incluye la configuración de alertas para eventos y la gestión de notificaciones para alertas de salud del sistema. Referirse a https://docs.netapp.com/us-en/ontap/event-performance-monitoring/index.html["Monitoreo de eventos, rendimiento y salud"^] Para más información.
 
 
 
