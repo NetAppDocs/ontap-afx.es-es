@@ -46,3 +46,7 @@ Utilice el administrador de claves integrado de AFX o un administrador de claves
 . Seleccione *Cifrado de doble capa* para habilitar el cifrado de software.
 . Seleccione *Guardar*.
 
+
+.Información relacionada
+* https://docs.netapp.com/us-en/ontap/concepts/encryption-concept.html["Cifrado"^]
+

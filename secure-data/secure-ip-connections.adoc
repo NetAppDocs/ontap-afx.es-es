@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: secure-data/secure-ip-connections.html 
+keywords: netapp afx, afx, ip security, ipsec, secure data, data security, encryption, data-in-flight, secure connections, hardware offload 
+summary: 'Seguridad IP (IPsec) es un estándar de protocolo de Internet que proporciona encriptación, integridad y autenticación de datos para el tráfico que fluye entre los puntos finales de la red a nivel de IP.  Puede utilizar IPsec para mejorar la seguridad de la red front-end entre un clúster AFX y los clientes.' 
+---
+= Conexiones IP seguras en sus sistemas de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Seguridad IP (IPsec) es un estándar de protocolo de Internet que proporciona encriptación, integridad y autenticación de datos para el tráfico que fluye entre los puntos finales de la red a nivel de IP.  Puede utilizar IPsec para mejorar la seguridad de la red front-end entre un clúster AFX y los clientes.
+
+
+
+== Configuración de IPsec en un sistema AFX
+
+Los procedimientos de configuración de IPsec para los sistemas de almacenamiento AFX son los mismos que para los sistemas AFF y FAS , con la excepción de las tarjetas controladoras de interfaz de red (NIC) compatibles que se utilizan con la función de descarga de hardware. Referirse a https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html["Prepárese para configurar la seguridad IP para la red ONTAP."^] Para más información.
+
+
+
+== Función de descarga de hardware
+
+Varias de las operaciones criptográficas de IPsec, como el cifrado y las comprobaciones de integridad, se pueden descargar a una tarjeta NIC compatible en su sistema AFX.  Esto puede mejorar significativamente el rendimiento y el rendimiento del tráfico de red protegido por IPsec.
+
+
+NOTE: A partir de ONTAP 9.18.1, la función de descarga de hardware de IPsec se amplía para admitir el tráfico IPv6.
+
+Las siguientes tarjetas NIC son compatibles con la función de descarga de hardware IPsec en sistemas de almacenamiento AFX a partir de ONTAP 9.17.1:
+
+* X50130B (controlador Ethernet 2p, 40G/100G)
+* X50131B (controlador Ethernet 2p, 40G/100G/200G/400G)
+
+
+Consulte la https://hwu.netapp.com/["NetApp Hardware Universe"^] para obtener más información sobre las tarjetas compatibles con la versión ONTAP que se ejecuta en su sistema AFX.
+
+
+
+== Información relacionada
+
+* https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html["Prepárese para configurar la seguridad IP para la red ONTAP."^]
+* https://hwu.netapp.com/["NetApp Hardware Universe"^]
+

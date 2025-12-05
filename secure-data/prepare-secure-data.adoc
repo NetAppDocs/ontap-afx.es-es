@@ -14,17 +14,15 @@ summary: Antes de administrar sus datos AFX, debe familiarizarse con los princip
 Antes de administrar sus datos AFX, debe familiarizarse con los principales conceptos y capacidades.
 
 
-TIP: Dado que muchos de los conceptos y procedimientos de administración disponibles en los sistemas AFF y FAS son los mismos que los de los sistemas de almacenamiento AFX, revisar la documentación de Unified ONTAP puede resultar útil.
-
-
 
 == Terminología y opciones
 
 Hay varios términos relacionados con la seguridad de datos de AFX con los que debe estar familiarizado.
 
-Ransomware:: El ransomware es un software malicioso que cifra los archivos y los hace inaccesibles para el usuario.  Generalmente se exige algún tipo de pago para descifrar los datos.  NetApp ONTAP ofrece soluciones de protección contra ransomware a través de funciones como Autonomous Ransomware Protection (ARP).
-Cifrado:: El cifrado es el proceso de convertir datos a un formato seguro que no se puede leer fácilmente sin la autorización adecuada.  ONTAP ofrece tecnologías de cifrado basadas en software y hardware para proteger los datos en reposo.  Esto garantiza que no se pueda leer si el medio de almacenamiento se reutiliza, se devuelve, se extravía o se roba.  Estas soluciones de cifrado se pueden gestionar mediante un servidor de administración de claves externo o mediante el administrador de claves integrado proporcionado por ONTAP.
-Certificados digitales y PKI:: Un certificado digital es un documento electrónico que se utiliza para demostrar la propiedad de una clave pública.  La clave pública y la clave privada asociada se pueden utilizar de diversas maneras, incluso para establecer la identidad, generalmente como parte de un marco de seguridad más amplio, como TLS e IPsec.  Estas claves, así como los protocolos de soporte y los estándares de formato, forman la base de la infraestructura de clave pública (PKI).
+Ransomware:: El ransomware es un software malicioso que cifra los archivos y los hace inaccesibles para el usuario. Generalmente se exige algún tipo de pago para descifrar los datos.  ONTAP ofrece soluciones de protección contra ransomware a través de funciones como Autonomous Ransomware Protection (ARP).
+Cifrado:: El cifrado es el proceso de convertir datos a un formato seguro que no se puede leer fácilmente sin la autorización adecuada. ONTAP ofrece tecnologías de cifrado basadas en software y hardware para proteger los datos en reposo. Esto garantiza que no se pueda leer si el medio de almacenamiento se reutiliza, se devuelve, se extravía o se roba. Estas soluciones de cifrado se pueden gestionar mediante un servidor de administración de claves externo o mediante el administrador de claves integrado proporcionado por ONTAP. Referirse alink:../secure-data/encrypt-data-at-rest.html["Cifrar datos en reposo en un sistema de almacenamiento AFX"] Para más información.
+Certificados digitales y PKI:: Un certificado digital es un documento electrónico que se utiliza para demostrar la propiedad de una clave pública. La clave pública y la clave privada asociada se pueden utilizar de diversas maneras, incluso para establecer la identidad, generalmente como parte de un marco de seguridad más amplio, como TLS e IPsec. Estas claves, así como los protocolos de soporte y los estándares de formato, forman la base de la infraestructura de clave pública (PKI). Referirse alink:../administer/manage-certificates.html#generate-a-certificate-signing-request["Administrar certificados en un sistema de almacenamiento AFX"] Para más información.
+Seguridad del Protocolo de Internet:: IPsec es un estándar de Internet que proporciona encriptación, integridad y autenticación de datos en tránsito para el tráfico que fluye entre puntos finales de la red a nivel de IP.  Asegura todo el tráfico IP entre ONTAP y los clientes, incluidos los protocolos de nivel superior como NFS y SMB.  IPsec brinda protección contra repeticiones maliciosas y ataques del tipo "man-in-the-middle" en sus datos. Referirse alink:../secure-data/secure-ip-connections.html["Conexiones IP seguras en sus sistemas de almacenamiento AFX"] Para más información.
 
 
 

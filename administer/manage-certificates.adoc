@@ -132,5 +132,6 @@ Ha renovado o eliminado un certificado de cliente/servidor o una autoridad de ce
 
 == Información relacionada
 
+* https://docs.netapp.com/us-en/ontap/authentication/install-server-certificate-cluster-svm-ssl-server-task.html["Genere e instale un certificado de servidor firmado por CA en ONTAP"^]
 * https://docs.netapp.com/us-en/ontap/authentication/manage-certificates-sm-task.html["Administrar certificados ONTAP con el Administrador del sistema"^]
 
