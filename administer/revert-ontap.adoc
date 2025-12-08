@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: administer/revert-ontap.html 
+keywords: afx, afx system, revert, revert ontap, revert limitation 
+summary: Revertir un clúster ONTAP es el proceso de mover todos los nodos a la versión principal anterior de ONTAP . 
+---
+= La reversión de ONTAP no es compatible con los sistemas de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Revertir un clúster ONTAP es el proceso de mover todos los nodos a la versión principal anterior de ONTAP .
+
+Los sistemas de almacenamiento NetApp AFX no admiten la reversión a ONTAP . Intentar una operación de reversión con AFX puede provocar inestabilidad del clúster y pérdida de datos. No debe intentar realizar una operación de reversión en un sistema AFX.

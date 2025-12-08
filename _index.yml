@@ -33,6 +33,8 @@ indexpage:
       url: "/administer/display-svms.html"
     - title: Actualizar y mantener el clúster
       url: "/administer/expand-cluster.html"
+    - title: Limitación de reversión
+      url: "/administer/revert-ontap.html"
     - title: Administración adicional
       url: "/administer/additional-ontap-cluster.html"
   - title: Gestionar datos y acceso
