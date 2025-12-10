@@ -86,8 +86,6 @@ Una relación de replicación de instantáneas establece una conexión entre su 
 Para protegerse contra ataques de ransomware, cuando configura su relación de replicación, puede seleccionar bloquear las instantáneas de destino.  Las instantáneas bloqueadas no se pueden eliminar de forma accidental o maliciosa.  Puede utilizar instantáneas bloqueadas para recuperar datos si un volumen se ve comprometido por un ataque de ransomware.
 
 .Antes de empezar
-Si desea bloquear sus instantáneas de destino, debelink:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock["inicializar el reloj de cumplimiento de Snapshot"] antes de crear la relación de replicación.
-
 Cree una relación de replicación con o sin instantáneas de destino bloqueadas.
 
 [role="tabbed-block"]
