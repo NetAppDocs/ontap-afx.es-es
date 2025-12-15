@@ -136,7 +136,7 @@ Consulte la ayuda en línea de su computadora portátil para obtener instruccion
 .. Conecte el cable de la consola a la computadora portátil y conecte el puerto de consola serial en el controlador usando el cable de consola que viene con su sistema de almacenamiento.
 .. Conecte la computadora portátil al conmutador en la subred de administración.
 +
-image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Conexiones de consola]
+image::../media/drw_afx_1k_console_connection_ieops-2708.svg[Conexiones de consola]
 
 
 

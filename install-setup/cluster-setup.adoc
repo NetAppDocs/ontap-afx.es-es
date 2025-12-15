@@ -72,6 +72,10 @@ Define los detalles de tus servidores DNS y NTP.
 +
 Puede definir los detalles para el cifrado del clúster. Seleccione *Continuar*.
 
++
+
+NOTE: Para obtener información sobre cómo crear un clúster para un entorno que no sea Windows, consulte link:https://docs.netapp.com/us-en/ontap/software_setup/setup-cluster.html["Crear un clúster ONTAP y unir nodos"^].
+
 
 
 .¿Qué sigue?
