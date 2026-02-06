@@ -15,6 +15,12 @@ Después de cablear su sistema de almacenamiento AFX 1K, deberá encender y conf
 
 .Pasos
 . Conecte los cables de alimentación de los interruptores a las fuentes de alimentación.
+. Conecta los cables ISL entre los dos conmutadores.
++
+** Para los switches Cisco Nexus 9332D-GX2B, usa los puertos 31/32 para las conexiones ISL. Consulta el link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide/m_overview1.html["Guía de instalación del hardware del conmutador de modo NX-OS Cisco Nexus 9332D-GX2B"^] para más información.
+** Para los switches Cisco Nexus 9364D-GX2A, usa los puertos 63/64 para las conexiones ISL. Consulta el link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide/m_overview1.html["Guía de instalación del hardware del conmutador de modo NX-OS Cisco Nexus 9364D-GX2A"^] para más información.
+
+
 . Encienda cada interruptor.
 . Configure los conmutadores para admitir el sistema de almacenamiento AFX 1K.
 +
