@@ -29,7 +29,7 @@ Equilibrio de capacidad avanzado:: La función avanzada de equilibrio de capacid
 
 == Capacidades de Unified ONTAP no admitidas o restringidas
 
-NetApp AFX está optimizado para cargas de trabajo NAS y de objetos de alto rendimiento.  Debido a esto, existen diferencias con AFF y FAS , así como con los demás sistemas de almacenamiento Unified ONTAP .  Las siguientes características no están disponibles con NetApp AFX; la lista está organizada por característica principal o área funcional.  También debes revisar las actualizaciones y cambios de AFX enlink:../release-notes/whats-new-9171.html["Qué hay de nuevo"] basado en su lanzamiento.
+NetApp AFX está optimizado para cargas de trabajo NAS y de objetos de alto rendimiento. Por esto, hay diferencias con los sistemas de almacenamiento AFF y FAS. Las siguientes funciones no están disponibles con NetApp AFX; la lista está organizada por característica principal o área funcional. También deberías revisar las actualizaciones y cambios para AFX en link:../release-notes/whats-new-9171.html["Qué hay de nuevo"] según tu versión de ONTAP.
 
 
 
@@ -51,6 +51,7 @@ NetApp AFX está optimizado para cargas de trabajo NAS y de objetos de alto rend
 * Desduplicación a nivel agregado
 * SyncMirror (duplicación agregada)
 * Nivelación de FabricPool
+* Espejos de carga compartida
 
 
 
