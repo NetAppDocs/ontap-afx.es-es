@@ -139,12 +139,14 @@ image::../media/drw_afx_network_cabling_b_ieops-2351.svg[Cable a red Ethernet]
 
 
 
-== Paso 3: Conecte el clúster y las conexiones HA
+== Paso 3: conecta el clúster, la interconexión de alta disponibilidad y las conexiones de almacenamiento al switch de red A
 
-Utilice el cable de interconexión de clúster y HA para conectar los puertos e1a y e7a al conmutador A y e1b y e7b al conmutador B. Los puertos e1a/e1b se utilizan para las conexiones de HA y los puertos e7a/e7b se utilizan para las conexiones de clúster.
+Usa el cable multiconector 4x100GbE para conectar los puertos de clúster, interconexión de alta disponibilidad y almacenamiento de los controladores al switch de red A. Usa el cable de interconexión de clúster y de alta disponibilidad para conectar los puertos e1a y e7a al switch A. Los puertos e1a se usan para las conexiones de alta disponibilidad y los puertos e7a se usan para las conexiones de clúster. Para las conexiones de almacenamiento, conecta los puertos e10a y e11a al switch A.
+
+Asegúrate de tener los cables y conectores correctos para tus switches. Consulta https://hwu.netapp.com["Hardware Universe"^] para más información.
 
 .Pasos
-. Conecte los siguientes puertos de controlador a cualquier puerto que no sea ISL en el conmutador de red del clúster A.
+. Conecta los siguientes puertos del controlador a cualquier puerto que no sea ISL en el switch de red A.
 +
 ** Controlador A
 +
@@ -160,47 +162,11 @@ Utilice el cable de interconexión de clúster y HA para conectar los puertos e1
 *Cables de 100 GbE*
 
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_ieops-1069.png[Cable de alta disponibilidad del clúster]
-
-+
-image::../media/drw_afx_switched_cluster_cabling_a_ieops-2352.svg[Conexiones de clúster de cables a la red de clúster]
+image::../media/oie_cable100_gbe_qsfp28.png[Cable de 100 GB]
 
 
 
 
-
-. Conecte los siguientes puertos de controlador a cualquier puerto que no sea ISL en el conmutador de red del clúster B.
-+
-** Controlador A
-+
-*** e1b (HA)
-*** e7b (Clúster)
-
-
-** Controlador B
-+
-*** e1b (HA)
-*** e7b (Clúster)
-+
-*Cables de 100 GbE*
-
-+
-image::../media/oie_cable_25Gb_Ethernet_SFP28_ieops-1069.png[Cable de alta disponibilidad del clúster]
-
-+
-image::../media/drw_afx_switched_cluster_cabling_b_ieops-2353.svg[Conexiones de clúster de cables a la red de clúster]
-
-
-
-
-
-
-
-
-
-== Paso 4: Conecte las conexiones de almacenamiento del controlador al conmutador
-
-Conecte los puertos de almacenamiento del controlador a los conmutadores.  Asegúrese de tener los cables y conectores correctos para sus conmutadores. Ver https://hwu.netapp.com["Hardware Universe"^] Para más información.
 
 . Conecte los siguientes puertos de almacenamiento a cualquier puerto que no sea ISL en el conmutador A.
 +
@@ -221,7 +187,39 @@ Conecte los puertos de almacenamiento del controlador a los conmutadores.  Aseg�
 image::../media/oie_cable100_gbe_qsfp28.png[Cable de 100 GB]
 
 +
-image::../media/drw_afx_controller_storage_cable_a_ieops-2354.svg[Almacenamiento del controlador de cable al conmutador A]
+image::../media/drw_afx_ha_cluster_storage_a_ieops-2779.svg[Agrupa el clúster de controladores con cables,HA,and storage to switch A]
+
+
+
+
+
+
+
+
+
+== Paso 4: Conecta los cables del clúster, la interconexión de alta disponibilidad y el almacenamiento al switch de red B
+
+Usa el cable multiconector 4x100GbE para conectar los puertos de clúster, interconexión de alta disponibilidad y almacenamiento de los controladores al switch de red B. Usa el cable de interconexión de clúster y de alta disponibilidad para conectar los puertos e1b y e7b al switch B. Los puertos e1b se usan para las conexiones de alta disponibilidad y los puertos e7b se usan para las conexiones de clúster. Para las conexiones de almacenamiento, conecta los puertos e10b y e11b al switch B.
+
+Asegúrate de tener los cables y conectores correctos para tus switches. Consulta https://hwu.netapp.com["Hardware Universe"^] para más información.
+
+. Conecta los siguientes puertos del controlador a cualquier puerto que no sea ISL en el switch de red B.
++
+** Controlador A
++
+*** e1b (HA)
+*** e7b (Clúster)
+
+
+** Controlador B
++
+*** e1b (HA)
+*** e7b (Clúster)
++
+*Cables de 100 GbE*
+
++
+image::../media/oie_cable100_gbe_qsfp28.png[Cable de 100 GB]
 
 
 
@@ -246,7 +244,7 @@ image::../media/drw_afx_controller_storage_cable_a_ieops-2354.svg[Almacenamiento
 image::../media/oie_cable100_gbe_qsfp28.png[Cable de 100 GB]
 
 +
-image::../media/drw_afx_controller_storage_cable_b_ieops-2355.svg[Almacenamiento del controlador de cable al conmutador B]
+image::../media/drw_afx_ha_cluster_storage_b_ieops-2780.svg[Agrupa el clúster de controladores con cables,HA,and storage to switch B]
 
 
 
