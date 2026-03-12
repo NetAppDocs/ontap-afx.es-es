@@ -40,3 +40,6 @@ Conecte el hardware, luego encienda y configure los conmutadores para su sistema
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Siete"]link:power-on-hardware.html["Encienda su sistema de almacenamiento AFX 1K"]
 [role="quick-margin-para"]
 Encienda cada estante de almacenamiento y asígnele una identificación de estante única antes de encender los nodos del controlador para identificar claramente cada estante en la configuración.
+
+
+NOTE: Si estás desplegando AFX 1K con el AI Data Engine (AIDE), instala los nodos de cómputo de datos AIDE después de encender el sistema AFX. Consulta link:https://docs.netapp.com/us-en/ai-data-engine/install-setup/aide-hardware-requirements.html["Instala nodos de cómputo de datos AIDE"] para más información.

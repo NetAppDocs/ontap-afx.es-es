@@ -19,6 +19,9 @@ Después de instalar los conmutadores, debe instalar el hardware para su sistema
 * Comprenda que el flujo de aire a través del sistema de almacenamiento ingresa desde el frente donde están instalados el bisel o las tapas de los extremos y sale por la parte trasera donde se encuentran los puertos.
 
 
+
+CAUTION: Lleva siempre una muñequera con toma de tierra conectada a un punto de tierra verificado durante los procedimientos de instalación y mantenimiento. No seguir las precauciones ESD adecuadas puede causar daños permanentes a los nodos controladores, las estanterías de almacenamiento y los switches de red.
+
 .Pasos
 . Instale los kits de rieles para su sistema de almacenamiento y estantes de almacenamiento, según sea necesario, utilizando las instrucciones incluidas con los kits.
 . Instale y asegure su controlador en el gabinete o rack de telecomunicaciones:

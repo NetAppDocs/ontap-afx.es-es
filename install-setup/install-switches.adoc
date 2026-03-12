@@ -38,6 +38,9 @@ NOTE: Los cables puente no están incluidos con el kit de paso.  Comuníquese co
 
 NOTE: Si el flujo de aire de tus switches está configurado para la entrada por el lado del puerto (ventiladores y PSU de color burdeos), los puertos de red de los switches deben instalarse mirando hacia la parte frontal del armario y los ventiladores de escape deben mirar hacia la parte trasera del armario. Con esta configuración, tienes que asegurarte de usar cables lo suficientemente largos para que vayan desde los puertos de red en la parte frontal del armario hasta los puertos de almacenamiento en la parte trasera del armario. + Para más información detallada sobre estos switches, visita el sitio web de Cisco: https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide.html["Guía de instalación del hardware del conmutador de modo NX-OS Cisco Nexus 9332D-GX2B"^] y https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide.html["Guía de instalación del hardware del conmutador de modo NX-OS Cisco Nexus 9364D-GX2A"^].
 
+
+CAUTION: Lleva siempre una muñequera con toma de tierra conectada a un punto de tierra verificado durante los procedimientos de instalación y mantenimiento. No seguir las precauciones ESD adecuadas puede causar daños permanentes a los nodos controladores, las estanterías de almacenamiento y los switches de red.
+
 .Pasos
 . Instalar el panel ciego pasante.
 +

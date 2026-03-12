@@ -1078,8 +1078,6 @@
   <block id="eccb4d5293fe0dd408e74aab9093fb9b" category="list-text">Los LED parpadean y los ventiladores se ponen en marcha, lo que indica que los controladores se están encendiendo.</block>
   <block id="2a15831b428ec92914dd2d9b9c14a463" category="list-text">Los ventiladores pueden hacer ruido al arrancar, lo cual es normal.</block>
   <block id="d420064a5f4919f9be16d853c6d1997c" category="list-text">Asegure los cables de alimentación utilizando el dispositivo de fijación en cada fuente de alimentación.</block>
-  <block id="d86c8f4fff3fb2feed3ee9c6ab6626ed" category="inline-link-macro">configurar un clúster AFX</block>
-  <block id="4eb20ef06f12f582d4ebd27eaee89115" category="paragraph">Después de encender su sistema de almacenamiento AFX 1K,<block ref="a4e3e0c950d1563a6f1d32259f274df6" category="inline-link-macro-rx"></block> .</block>
   <block id="4037f9dba9d587023878b63255863f7d" category="summary">Prepárese para instalar el sistema de almacenamiento AFX 1K en su entorno ONTAP y registre el hardware para acceder a los beneficios de soporte.</block>
   <block id="b81fa34f137f3d44fa104594a5caaef5" category="paragraph">Prepárese para instalar su sistema de almacenamiento AFX 1K preparando el sitio, desempacando las cajas y comparando el contenido de las cajas con el comprobante de embalaje y registrando el sistema para acceder a los beneficios de soporte.</block>
   <block id="92c8397408f55d9526d554c55cde3d22" category="section-title">Paso 1: Preparar el sitio</block>
@@ -1774,4 +1772,11 @@
   <block id="c42589aeb6cdc4aab7c9ee5517ef1f84" category="section-title">Paso 4: Conecta los cables del clúster, la interconexión de alta disponibilidad y el almacenamiento al switch de red B</block>
   <block id="14aa705a8a71a02fb1b277002e0c52ed" category="paragraph">Usa el cable multiconector 4x100GbE para conectar los puertos de clúster, interconexión de alta disponibilidad y almacenamiento de los controladores al switch de red B. Usa el cable de interconexión de clúster y de alta disponibilidad para conectar los puertos e1b y e7b al switch B. Los puertos e1b se usan para las conexiones de alta disponibilidad y los puertos e7b se usan para las conexiones de clúster. Para las conexiones de almacenamiento, conecta los puertos e10b y e11b al switch B.</block>
   <block id="8cff5fa6944271f10e636cadf3153077" category="list-text">Conecta los siguientes puertos del controlador a cualquier puerto que no sea ISL en el switch de red B.</block>
+  <block id="3e43f7eeca64d5c830b0064870a6156b" category="admonition">Lleva siempre una muñequera con toma de tierra conectada a un punto de tierra verificado durante los procedimientos de instalación y mantenimiento. No seguir las precauciones ESD adecuadas puede causar daños permanentes a los nodos controladores, las estanterías de almacenamiento y los switches de red.</block>
+  <block id="1e64a8c98278cbf94fdc5e55cf23d748" category="inline-link-macro">Instala nodos de cómputo de datos AIDE</block>
+  <block id="5d16f9931acd5c0aea8659ad61ec6628" category="admonition">Si estás desplegando AFX 1K con el AI Data Engine (AIDE), instala los nodos de cómputo de datos AIDE después de encender el sistema AFX. Consulta <block ref="770e46e4a0d2400ce8dd3c354b4e69c6" category="inline-link-macro-rx"></block> para más información.</block>
+  <block id="d9af9d0a822fab56f67da32f96760bcd" category="paragraph">Después de encender tu sistema de almacenamiento AFX 1K, completa la configuración según tu opción de implementación:</block>
+  <block id="9f17a32279457eb3f0ec945352a82e96" category="inline-link-macro">Configura un clúster AFX</block>
+  <block id="65baec5e9f4a78defefb1154f095ae89" category="list-text">Para implementaciones de sistemas de almacenamiento AFX 1K dedicados, ve a <block ref="b434a61d8681e909828695f9b932fe31" category="inline-link-macro-rx"></block>.</block>
+  <block id="2958d97f86a68931454e4d5cb0f3fa2a" category="list-text">Para las implementaciones de AFX 1K con AI Data Engine (AIDE), ve a <block ref="770e46e4a0d2400ce8dd3c354b4e69c6" category="inline-link-macro-rx"></block>.</block>
 </blocks>
