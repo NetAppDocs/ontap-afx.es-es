@@ -16,6 +16,9 @@ summary: Conozca las nuevas capacidades incluidas con ONTAP 9.18.1 que están di
 [role="lead"]
 Conozca las nuevas capacidades incluidas con ONTAP 9.18.1 que están disponibles con su sistema de almacenamiento AFX.
 
+* Conoce más sobre https://docs.netapp.com/us-en/ai-data-engine/release-notes/whats-new.html["nuevo y mejorado soporte para AI Data Engine"^].
+
+
 
 
 == Mejoras en la gestión de recursos de almacenamiento

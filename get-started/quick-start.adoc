@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: get-started/quick-start.html 
 keywords: afx, afx system, quick start 
-summary: Para comenzar a utilizar su sistema AFX, debe instalar los componentes de hardware, configurar su clúster y prepararse para administrar su clúster y sus SVM. 
+summary: Para empezar a trabajar con tu sistema AFX, necesitas instalar los componentes de hardware, configurar tu cluster y prepararte para administrar tu cluster y SVMs. 
 ---
 = Inicio rápido para configurar un sistema de almacenamiento AFX
 :allow-uri-read: 
@@ -11,16 +11,20 @@ summary: Para comenzar a utilizar su sistema AFX, debe instalar los componentes 
 
 
 [role="lead"]
-Para comenzar a utilizar su sistema AFX, debe instalar los componentes de hardware, configurar su clúster y prepararse para administrar su clúster y sus SVM.
+Para empezar a trabajar con tu sistema AFX, necesitas instalar los componentes de hardware, configurar tu cluster y prepararte para administrar el cluster y los SVMs.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]Instalar y configurar su hardware
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"] ¿AI Data Engine (AIDE) también se instalará con AFX?
 [role="quick-margin-para"]
-link:../install-setup/install-setup-workflow.html["Instalar"]su sistema de almacenamiento AFX y prepárese para configurar el clúster.
+Tienes que decidir si instalar solo AFX o AFX junto con AI Data Engine. Revisa el  https://docs.netapp.com/us-en/ontap-afx/get-started/learn-about-aide.html#installation-options["Opciones de instalación de AIDE"] para ayudarte a determinar la mejor opción para tus necesidades.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]Configurar su clúster
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] Instala y configura tu hardware
 [role="quick-margin-para"]
-Siga el proceso rápido y sencillo paralink:../install-setup/cluster-setup.html["configuración"] su clúster ONTAP mediante el Administrador del sistema.
+link:../install-setup/install-setup-workflow.html["Instala tu sistema de almacenamiento AFX"] y opcionalmente https://docs.netapp.com/us-en/ai-data-engine/install-setup/install-setup-workflow.html["instala los nodos de cálculo de datos AIDE"] si también incluyes AIDE como parte de la configuración inicial.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"]Prepárese para administrar su clúster
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"] Configura tu clúster
+[role="quick-margin-para"]
+Sigue el proceso rápido y sencillo para link:../install-setup/cluster-setup.html["configuración"] tu clúster ONTAP usando System Manager. Si también estás instalando AIDE con los nodos de computación de datos junto con AFX, revisa https://docs.netapp.com/us-en/ai-data-engine/install-setup/cluster-setup-afx.html["Configura AIDE con un nuevo clúster AFX"^] para la configuración adicional necesaria.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Cuatro"] Prepárate para administrar tu clúster
 [role="quick-margin-para"]
 Antes de implementar AFX en un entorno de producción, es esenciallink:../get-started/prepare-cluster-admin.html["preparar"] Al comprender la estructura administrativa, incluidas las máquinas virtuales de almacenamiento (SVM), los usuarios, los roles y las interfaces de administración, para garantizar una administración de clúster segura, eficiente y eficaz.

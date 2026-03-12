@@ -80,6 +80,7 @@ OAuth 2.0 es el marco de autorización estándar de la industria que se utiliza 
 == Información relacionada
 
 * link:../faq-ontap-afx.html["Preguntas frecuentes sobre los sistemas de almacenamiento AFX"]
+* https://kb.netapp.com/nss/Licensing/How_to_download_NLF_licenses_from_the_NetApp_Support_Site["Cómo descargar licencias NLF desde el NetApp Support Site"^]
 * https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["Descripción general de la implementación de ONTAP OAuth 2.0"^]
 * link:../administer/additional-ontap-svm.html["Administración adicional para SVM AFX"]
 

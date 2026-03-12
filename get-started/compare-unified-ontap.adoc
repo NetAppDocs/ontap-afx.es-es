@@ -73,8 +73,7 @@ NOTE: Se admite la replicación de datos en ambas direcciones entre Unified ONTA
 * API REST para funciones no compatibles (como MetroCluster)
 * Algunas limitaciones iniciales en las API REST para las estadísticas de rendimiento
 * Soporte para AIQ Unified Manager
-* Grafana Harvest versión 25.08.1 y posteriores
-* NetApp Trident versión 25.10 y posteriores
+* Versiones de Grafana Harvest anteriores a 25.08.1
 
 
 
