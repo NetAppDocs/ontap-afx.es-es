@@ -19,7 +19,7 @@ Tienes que decidir si instalar solo AFX o AFX junto con AI Data Engine. Revisa e
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] Instala y configura tu hardware
 [role="quick-margin-para"]
-link:../install-setup/install-setup-workflow.html["Instala tu sistema de almacenamiento AFX"] y opcionalmente https://docs.netapp.com/us-en/ai-data-engine/install-setup/install-setup-workflow.html["instala los nodos de cálculo de datos AIDE"] si también incluyes AIDE como parte de la configuración inicial.
+link:../install-setup/install-setup-workflow.html["Instala tu sistema de almacenamiento AFX"] y opcionalmente https://docs.netapp.com/us-en/ai-data-engine/install-setup/aide-hardware-requirements.html["instala los nodos de cálculo de datos AIDE"] si estás incluyendo AIDE como parte de la configuración inicial.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"] Configura tu clúster
 [role="quick-margin-para"]
