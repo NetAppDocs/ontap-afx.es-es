@@ -58,9 +58,7 @@ NOTE: Las configuraciones de conmutadores Cisco Nexus 9332D-GX2B y 9364D-GX2A pa
 
 == Paso 1: Conecte los controladores a la red de administración
 
-Conecte el puerto de administración de cada conmutador a cualquiera de los conmutadores de administración (si se solicitaron) o conéctelos directamente a su red de administración.
-
-El puerto de administración es el puerto superior derecho ubicado en el lado de la fuente de alimentación del conmutador.  El cable CAT6 de cada conmutador debe pasarse a través del panel de paso después de instalar los conmutadores para conectarlos a los conmutadores de administración o a la red de administración.
+Conecta el puerto de gestión (llave inglesa) de cada controlador a cualquiera de los switches de gestión o conéctalos directamente a tu red de gestión.
 
 Utilice los cables RJ-45 1000BASE-T para conectar los puertos de administración (llave) de cada controlador a los conmutadores de red de administración.
 
@@ -68,7 +66,7 @@ image::../media/oie_cable_rj45.png[Cables RJ-45]
 
 *Cables RJ-45 1000BASE-T*
 
-image::../media/drw_afx_management_connection_ieops-2349.svg[Conéctese a su red de gestión]
+image::../media/drw_afx_management_connection_ieops-2815.svg[Conéctese a su red de gestión]
 
 
 IMPORTANT: No enchufe todavía los cables de alimentación.
@@ -87,13 +85,7 @@ Este procedimiento puede variar según la configuración del módulo de E/S.  Lo
 .Pasos
 . Conecte los siguientes puertos a su conmutador de red de datos Ethernet A.
 +
-** Controlador A (Ejemplo)
-+
-*** e2a
-*** e3a
-
-
-** Controlador B (Ejemplo)
+** Controlador (Ejemplo)
 +
 *** e2a
 *** e3a
@@ -104,7 +96,7 @@ Este procedimiento puede variar según la configuración del módulo de E/S.  Lo
 image::../media/oie_cable100_gbe_qsfp28.png[Cable Ethernet de 100 Gb]
 
 +
-image::../media/drw_afx_network_cabling_a_ieops-2350.svg[Cable a red Ethernet]
+image::../media/drw_afx_network_cabling_a_ieops-2813.svg[Cable a red Ethernet]
 
 
 
@@ -112,13 +104,7 @@ image::../media/drw_afx_network_cabling_a_ieops-2350.svg[Cable a red Ethernet]
 
 . Conecte los siguientes puertos a su conmutador de red de datos Ethernet B.
 +
-** Controlador A (Ejemplo)
-+
-*** e2b
-*** e3b
-
-
-** Controlador B (Ejemplo)
+** Controlador (Ejemplo)
 +
 *** e2b
 *** e3b
@@ -129,7 +115,7 @@ image::../media/drw_afx_network_cabling_a_ieops-2350.svg[Cable a red Ethernet]
 image::../media/oie_cable100_gbe_qsfp28.png[Cable Ethernet de 100 Gb]
 
 +
-image::../media/drw_afx_network_cabling_b_ieops-2351.svg[Cable a red Ethernet]
+image::../media/drw_afx_network_cabling_b_ieops-2814.svg[Cable a red Ethernet]
 
 
 
@@ -148,38 +134,12 @@ Asegúrate de tener los cables y conectores correctos para tus switches. Consult
 .Pasos
 . Conecta los siguientes puertos del controlador a cualquier puerto que no sea ISL en el switch de red A.
 +
-** Controlador A
+** Controladora
 +
 *** e1a (HA)
 *** e7a (Clúster)
-
-
-** Controlador B
-+
-*** e1a (HA)
-*** e7a (Clúster)
-+
-*Cables de 100 GbE*
-
-+
-image::../media/oie_cable100_gbe_qsfp28.png[Cable de 100 GB]
-
-
-
-
-
-. Conecte los siguientes puertos de almacenamiento a cualquier puerto que no sea ISL en el conmutador A.
-+
-** Controlador A
-+
-*** e10a
-*** e11a
-
-
-** Controlador B
-+
-*** e10a
-*** e11a
+*** e10a (Almacenamiento)
+*** e11a (Almacenamiento)
 +
 *Cables de 100 GbE*
 
@@ -205,38 +165,12 @@ Asegúrate de tener los cables y conectores correctos para tus switches. Consult
 
 . Conecta los siguientes puertos del controlador a cualquier puerto que no sea ISL en el switch de red B.
 +
-** Controlador A
+** Controladora
 +
 *** e1b (HA)
 *** e7b (Clúster)
-
-
-** Controlador B
-+
-*** e1b (HA)
-*** e7b (Clúster)
-+
-*Cables de 100 GbE*
-
-+
-image::../media/oie_cable100_gbe_qsfp28.png[Cable de 100 GB]
-
-
-
-
-
-. Conecte los siguientes puertos de almacenamiento a cualquier puerto que no sea ISL en el conmutador B.
-+
-** Controlador A
-+
-*** e10b
-*** e11b
-
-
-** Controlador B
-+
-*** e10b
-*** e11b
+*** e10b (Almacenamiento)
+*** e11b (Almacenamiento)
 +
 *Cables de 100 GbE*
 
