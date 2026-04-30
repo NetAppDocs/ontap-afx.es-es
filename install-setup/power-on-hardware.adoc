@@ -162,5 +162,7 @@ image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[Diagrama de conexió
 Después de encender tu sistema de almacenamiento AFX 1K, completa la configuración según tu opción de implementación:
 
 * Para implementaciones de sistemas de almacenamiento AFX 1K dedicados, ve a link:../install-setup/cluster-setup.html["Configura un clúster AFX"].
-* Para las implementaciones de AFX 1K con AI Data Engine (AIDE), ve a link:https://docs.netapp.com/us-en/ai-data-engine/install-setup/aide-hardware-requirements.html["Instala nodos de cómputo de datos AIDE"].
+* Para implementaciones de AFX 1K con AI Data Engine (AIDE), instala servidores de terceros AIDE o nodos de cómputo de datos proporcionados por NetApp:
+* Para implantaciones de servidores de terceros, completa https://docs.netapp.com/us-en/ai-data-engine/install-aide-server/aide-mde-server-hardware-requirements.html["instalación de hardware para AI Data Engine en servidores de terceros"^], luego https://docs.netapp.com/us-en/ai-data-engine/install-setup/install-aide-as-software.html["instalar el software AIDE en servidores de terceros"^].
+* Para las implantaciones de NetApp DCN, completa https://docs.netapp.com/us-en/ai-data-engine/install-dcn/aide-dcn-hardware-requirements.html["instalación de hardware para AI Data Engine en nodos de cómputo de datos proporcionados por NetApp"^].
 

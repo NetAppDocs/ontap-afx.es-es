@@ -55,10 +55,11 @@ También necesitarás la siguiente información de red relacionada:
 
 === Consideraciones adicionales de AIDE
 
-Cuando instales y configures AFX por primera vez, puedes incluir opcionalmente NetApp AI Data Engine (AIDE). Si planeas configurar AIDE, primero tienes que hacer lo siguiente:
+Al instalar y configurar AFX por primera vez, puedes incluir opcionalmente NetApp AI Data Engine (AIDE). AIDE admite dos modelos de despliegue: AIDE software en servidores de terceros o nodos de computación de datos (DCNs) proporcionados por NetApp. Si planeas configurar AIDE, primero completa los prerrequisitos para tu modelo de despliegue:
 
-* Asegúrate de https://docs.netapp.com/us-en/ai-data-engine/install-setup/aide-hardware-requirements.html["instala AIDE"^] y conecta los nodos de computación a la red de almacenamiento AFX.
-* Obtén las direcciones y cualquier configuración de red relacionada para los nodos de cálculo de datos.
+* Para implantaciones de servidores de terceros, completa https://docs.netapp.com/us-en/ai-data-engine/install-aide-server/aide-mde-server-hardware-requirements.html["instalación de hardware para AI Data Engine en servidores de terceros"^], luego https://docs.netapp.com/us-en/ai-data-engine/install-setup/install-aide-as-software.html["instalar el software AIDE en servidores de terceros"^].
+* Para las implantaciones de NetApp DCN, completa https://docs.netapp.com/us-en/ai-data-engine/install-dcn/aide-dcn-hardware-requirements.html["instalación de hardware para AI Data Engine en nodos de cómputo de datos proporcionados por NetApp"^].
+* Obtén las direcciones y cualquier configuración de red relacionada para los nodos de cómputo.
 
 
 
@@ -90,7 +91,7 @@ Proporcione y verifique la contraseña para el `admin` cuenta. Seleccione *Conti
 +
 Proporcione direcciones IP y máscaras de subred.
 
-. Si estás instalando AI Data Engine con tu sistema de almacenamiento AFX, proporciona las direcciones IP de los tres nodos AIDE DCN.
+. Si estás instalando AI Data Engine con tu sistema de almacenamiento AFX, proporciona las direcciones IP de los tres nodos de cómputo.
 . Configura los servicios de red, incluidos DNS y NIS. Selecciona *Continuar*.
 +
 Define los detalles de tus servidores DNS y NTP.
@@ -132,7 +133,7 @@ Necesitas tener la siguiente información:
 
 
 .¿Qué sigue?
-* Si has incluido AIDE como parte de la configuración del clúster AFX, tendrás que realizar pasos de configuración adicionales, incluyendo la concesión de licencias y la autenticación. Consulta https://docs.netapp.com/us-en/ai-data-engine/install-setup/cluster-setup-afx.html["Configura AI Data Engine"^] para más información.
+* Si incluiste AIDE como parte de la configuración del clúster AFX, completa los pasos adicionales de configuración de AIDE. La configuración de autenticación se aplica a todas las implementaciones de AIDE. Se requiere licencia para las implementaciones de NetApp DCN que usan funciones de AIDE con licencia; las implementaciones de servidores de terceros están enfocadas en los metadatos y no requieren una licencia de AIDE. Consulta https://docs.netapp.com/us-en/ai-data-engine/install-setup/cluster-setup-afx.html["Configura AI Data Engine"^] para más información.
 * Deberíalink:../get-started/prepare-cluster-admin.html["Prepárese para administrar AFX"] antes de utilizar su clúster AFX en un entorno de producción.
 
 
