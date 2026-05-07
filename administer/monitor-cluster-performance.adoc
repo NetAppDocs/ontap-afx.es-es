@@ -4,25 +4,42 @@ permalink: administer/monitor-cluster-performance.html
 keywords: afx, afx system, cluster performance 
 summary: Puede mostrar una descripción general de alto nivel del rendimiento de su clúster AFX. 
 ---
-= Supervisar el rendimiento del clúster del sistema de almacenamiento AFX
+= Supervisa el rendimiento del clúster del sistema de almacenamiento AFX y la utilización del almacenamiento
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Puede mostrar una descripción general de alto nivel del rendimiento de su clúster AFX.
+Puedes ver una visión general a grandes rasgos del rendimiento y la utilización del almacenamiento de tu clúster AFX.
 
 
 
 == Capacidad de almacenamiento
 
-El panel del Administrador del sistema incluye una visualización de alto nivel de la utilización del almacenamiento para el clúster.
+Supervisa la utilización del almacenamiento para asegurarte de que tienes suficiente capacidad de almacenamiento para las cargas de trabajo actuales y futuras.
+
+
+
+=== Supervisa la utilización del almacenamiento en clúster a grandes rasgos
+
+En ONTAP System Manager, puedes ver una visualización a grandes rasgos de la utilización del almacenamiento de todo el clúster.
 
 .Pasos
 . En el Administrador del sistema, seleccione *Panel de control* en el panel de navegación.
 . Localice el mosaico *Capacidad* y vea el almacenamiento físico disponible y utilizado.
 . Seleccione *Historial* para acceder a Active IQ y ver los datos históricos.
+
+
+
+
+=== Supervisa los detalles de capacidad de las zonas de disponibilidad de almacenamiento
+
+A partir de ONTAP 9.19.1, puedes ver los detalles de capacidad de tu zona de disponibilidad de almacenamiento, incluidos los umbrales de espacio, el espacio consumido por las instantáneas y la reducción de datos. También puedes establecer los umbrales de uso de espacio en el porcentaje en el que quieres que ONTAP genere alertas de advertencia y críticas.
+
+.Pasos
+. En System Manager, selecciona *Cluster > Overview* y luego selecciona *Availability zone*.
+. Para modificar los umbrales de advertencia o de espacio crítico, selecciona image:icon_edit_pencil_blue_outline.png["icono de edición con lápiz azul"] bajo el umbral que quieras editar.
 
 
 

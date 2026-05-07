@@ -13,5 +13,10 @@ summary: Hay varias tareas administrativas que puede realizar como parte de la g
 [role="lead"]
 Hay varias tareas administrativas que puede realizar como parte de la gestión de los buckets AFX S3 y el acceso del cliente.  La configuración y el soporte de S3 en AFX son los mismos que los que se proporcionan con Unified ONTAP.  Consulte la documentación de Unified ONTAP para obtener más detalles.
 
+También es importante mantenerse al día de los últimos cambios y actualizaciones de la compatibilidad de ONTAP con el almacenamiento S3. Por ejemplo, a partir de ONTAP 9.19.1 puedes generar una segunda clave de acceso para cada usuario de S3. Esto te permite mantener el acceso a los recursos de S3 si caduca la clave de acceso original. También puedes controlar la aplicación de operaciones condicionales (escritura, copia, borrado).
+
 .Información relacionada
-https://docs.netapp.com/us-en/ontap/s3-config/index.html["Obtenga más información sobre la configuración de ONTAP S3"^]
+* https://docs.netapp.com/us-en/ontap/s3-config/index.html["Obtenga más información sobre la configuración de ONTAP S3"^]
+* https://docs.netapp.com/us-en/ontap/s3-config/regenerate-access-keys.html["Regenerar claves ONTAP S3 y modificar su periodo de retención"^]
+* https://docs.netapp.com/us-en/ontap/s3-config/create-modify-bucket-policy-task.html["Añade reglas de acceso a la política predeterminada del bucket S3 de ONTAP"^]
+

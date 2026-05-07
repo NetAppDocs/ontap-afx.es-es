@@ -34,6 +34,9 @@ Las tareas administrativas de ONTAP que realiza con AFX generalmente se dividen 
 
 Es importante tener en cuenta que estos niveles describen cómo se organizan y asignan las tareas administrativas, y no necesariamente cómo se configura la seguridad asociada.  Por ejemplo, si bien se necesita una cuenta de administrador de clúster para realizar la administración a nivel de clúster, también se puede utilizar para la administración de SVM.
 
+
+NOTE: A partir de ONTAP 9.19.1, los administradores de SVM pueden supervisar y gestionar sus propias SVM mediante un panel de control dedicado de System Manager. Más información sobre el https://docs.netapp.com/us-en/ontap/concept-svm-admin-dashboard-sm.html["Panel de control del administrador de ONTAP System Manager SVM"^]
+
 Administrador de clúster:: El administrador del clúster tiene control completo del clúster AFX, incluidas todas las SVM. El nivel administrativo del clúster AFX incluye solo las tareas que un administrador del clúster puede realizar y no ninguna de las tareas de administración específicas de SVM. Verlink:../administer/view-dashboard.html["Administrar su clúster"] Para más información.
 Administrador de SVM:: Un rol de administrador de SVM tiene control de una SVM específica y, por lo tanto, está más restringido en comparación con el administrador de clúster. La administración de SVM implica realizar tareas con objetos y recursos que tienen un alcance SVM, como la creación de un volumen. Verlink:../manage-data/prepare-manage-data.html["Administre sus máquinas virtuales y datos de almacenamiento"] Para más información.
 
@@ -111,9 +114,12 @@ Con AFX, se agrega una nueva VLAN HA a los conmutadores del clúster backend par
 
 == Limitaciones de implementación del clúster AFX
 
-Existen varias limitaciones, incluidos mínimos y máximos, impuestas por AFX al configurar y usar su clúster. Estos límites se dividen en varias categorías, entre ellas:
+Hay varias limitaciones, incluyendo mínimos y máximos, impuestas por AFX al configurar y utilizar tu clúster. Estos límites se dividen en varias categorías.
 
-Nodos controladores por clúster:: Cada clúster AFX debe tener al menos cuatro nodos.  La cantidad máxima de nodos varía según la versión de ONTAP .
+
+CAUTION: Antes de aumentar un parámetro operativo de tu sistema de almacenamiento AFX, deberías evaluar cómo podría afectar a tus aplicaciones, así como al clúster en su conjunto. Por ejemplo, aunque ampliar el número de nodos controladores aumenta la capacidad global, también podría aumentar el tráfico en la red del clúster. Es importante entender la implicación de estos cambios de configuración y cómo podrían afectar a tu entorno.
+
+Nodos controladores por clúster:: Cada cluster AFX debe tener al menos cuatro nodos. El número máximo de nodos varía en función de la versión de ONTAP; por ejemplo, la versión 9.19.1 RC permite hasta 32 nodos por cluster AFX.
 Capacidad de almacenamiento:: Esta es la capacidad total de todos los discos SSD en la zona de disponibilidad de almacenamiento (SAZ) del clúster. La capacidad máxima de almacenamiento varía según la versión de ONTAP .
 Conmutadores de clúster:: Necesitas al menos dos conmutadores en tu red de almacenamiento de clúster.  El valor máximo permitido se determina en función del número total de nodos de control en el clúster.
 

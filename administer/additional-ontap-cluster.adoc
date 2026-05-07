@@ -45,6 +45,20 @@ Puede instalar archivos de licencia para activar funciones adicionales según se
 
 
 
+== Rendimiento
+
+Usa las funciones comunes de ONTAP para optimizar el rendimiento de tu clúster de almacenamiento AFX.
+
+
+
+=== Modifica la configuración predeterminada que controla los aumentos automáticos del límite de rendimiento de QoS
+
+Los grupos de políticas de QoS adaptables y no adaptables se activan automáticamente para aumentar temporalmente el límite máximo de rendimiento de una carga de trabajo en un 50% durante 1 segundo para responder a demandas elevadas de rendimiento a corto plazo de forma predeterminada. A partir de ONTAP 9.19.1, puedes modificar esta configuración predeterminada. En ONTAP 9.18.1 y versiones anteriores, esta configuración no se puede modificar.
+
+Consulta link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html["Límites de rendimiento QoS"^].
+
+
+
 == Seguridad
 
 Hay varias funciones de seguridad opcionales que puede configurar y usar con su implementación de AFX.
@@ -60,6 +74,12 @@ Es importante proteger la seguridad y la privacidad de su sistema de almacenamie
 === Autenticación y control de acceso ONTAP
 
 El sistema de almacenamiento AFX ofrece varias opciones para configurar servicios de autenticación y control de acceso. Referirse a https://docs.netapp.com/us-en/ontap/authentication-access-control/index.html["Autenticación y control de acceso"^] Para más información.
+
+
+
+=== Descarga de hardware ONTAP TLS
+
+Puedes descargar el cifrado y descifrado de Transport Layer Security (TLS) de todo tu clúster a las tarjetas Ethernet compatibles. Esto reduce la sobrecarga de la CPU y mejora el rendimiento de los sistemas que usan TLS. Consulta https://docs.netapp.com/us-en/ontap/networking/configure-tls-offload.html["Configura la descarga de hardware TLS de ONTAP"^] para más información.
 
 
 
