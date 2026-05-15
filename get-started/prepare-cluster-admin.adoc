@@ -124,7 +124,7 @@ Capacidad de almacenamiento:: Esta es la capacidad total de todos los discos SSD
 Conmutadores de clúster:: Necesitas al menos dos conmutadores en tu red de almacenamiento de clúster.  El valor máximo permitido se determina en función del número total de nodos de control en el clúster.
 
 
-Debe revisar los detalles disponibles en la herramienta NetApp Hardware Universe and Interoperability Matrix para determinar las capacidades de su clúster AFX.
+Deberías revisar los detalles disponibles en NetApp Hardware Universe and Interoperability Matrix Tool para determinar las capacidades de tu clúster AFX. También revisa link:../release-notes/changes-to-limits-defaults.html["Cambios en los límites y valores por defecto de ONTAP"] en la sección de notas de la versión de AFX.
 
 
 

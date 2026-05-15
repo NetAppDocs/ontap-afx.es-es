@@ -21,16 +21,11 @@ TIP: Más información sobre la nueva y mejorada compatibilidad con https://docs
 
 
 
-== Rendimiento y escala
+== Rendimiento
 
 [cols="2,4"]
 |===
 | Actualizar | Descripción 
-
-
-| Tamaño ampliado del clúster AFX  a| 
-ONTAP 9.19.1 admite la ampliación de un clúster AFX hasta un máximo de 32 nodos. Esto te permite escalar tu sistema de almacenamiento AFX para satisfacer las crecientes demandas de tus cargas de trabajo y aplicaciones.
-
 
 
 | Lectura secuencial de archivos cruzados (CFSR)  a| 
@@ -40,6 +35,11 @@ La lectura secuencial de archivos cruzados puede mejorar significativamente el r
 
 | Deduplicación global  a| 
 La deduplicación global amplía el ahorro de espacio de deduplicación de ONTAP a toda la zona de disponibilidad de almacenamiento (SAZ). Al eliminar los bloques de datos duplicados en todos los volúmenes de la SAZ, puede mejorar significativamente la eficiencia del almacenamiento y reducir el coste total de propiedad. La función está activada por defecto en los sistemas AFX y funciona de forma transparente sin necesidad de configuración administrativa. Consulta link:../administer/additional-ontap-svm.html["Administración adicional para un sistema de almacenamiento AFX SVM"] para más información.
+
+
+
+| Eficiencia de almacenamiento dinámica  a| 
+Dynamic Storage Efficiency optimiza de forma inteligente las operaciones de eficiencia del almacenamiento (compresión, deduplicación y compactación) para grandes cargas de trabajo que requieren un alto rendimiento y la máxima capacidad de procesamiento. Detecta automáticamente las condiciones de escritura de gran volumen y suspende temporalmente los procesos de eficiencia del almacenamiento en línea y en segundo plano para evitar la degradación del rendimiento durante los picos de carga. Cuando el rendimiento cae por debajo de un umbral definido, las operaciones de eficiencia del almacenamiento se reanudan y el ahorro se recupera sin intervención manual. La función está disponible en los sistemas de almacenamiento AFX y está activada por defecto sin necesidad de configuración.
 
 |===
 
