@@ -39,9 +39,10 @@ El controlador de almacenamiento AFX y los estantes de almacenamiento son pesado
 
 Tome las precauciones necesarias al mover o levantar su controlador de almacenamiento AFX 1K.
 
-Un controlador de almacenamiento AFX 1K puede pesar hasta 62,83 libras (28,5 kg).  Para levantar el controlador de almacenamiento, utilice dos personas o un elevador hidráulico.
+Un controlador de almacenamiento AFX 1K puede pesar hasta 62,83 lb (28,5 kg). Para levantar el controlador de almacenamiento, usa a dos personas o un elevador hidráulico.
 
-image::../media/drw_a1k_weight_caution_ieops-1698.svg[Icono de precaución de elevación de ASA A1K]
+.Precaución al levantar el controlador AFX 1K.
+image::../media/drw_a1k_weight_caution_ieops-1698.svg[Icono de precaución de elevación AFX 1K]
 
 
 
@@ -51,8 +52,9 @@ Tome las precauciones necesarias al mover o levantar su estante.
 
 .Estante NX224
 --
-Un estante NX224 puede pesar hasta 60,1 libras (27,3 kg).  Para levantar el estante se utilizan dos personas o un elevador hidráulico.  Mantenga todos los componentes en el estante (tanto delantero como trasero) para evitar desequilibrar el peso del estante.
+Un estante NX224 puede pesar hasta 60,1 lb (27,3 kg). Para levantar el estante, usa dos personas o un elevador hidráulico. Mantén todos los componentes en el estante (tanto en la parte delantera como en la trasera) para evitar que el peso del estante quede desequilibrado.
 
+.Precaución al levantar la bandeja NX224.
 image::../media/drw_nx224_lifting_weight_ieops-2437.svg[Precaución al levantar el NX224 NSM100]
 
 .Información relacionada

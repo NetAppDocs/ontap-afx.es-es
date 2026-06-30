@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: install-afx-2k/install-setup-requirements.html 
+keywords: afx, afx 2k, install, setup, requirements, cautions 
+summary: Revisa el equipo necesario y las precauciones de elevación para tus controladores de almacenamiento AFX 2K y estantes de almacenamiento. 
+---
+= Requisitos de instalación para los sistemas de almacenamiento AFX 2K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Revisa el equipo necesario y las precauciones de elevación para tu controlador de almacenamiento AFX 2K y tus estanterías de almacenamiento.
+
+
+
+== Equipo necesario para la instalación
+
+Para instalar tu sistema de almacenamiento AFX 2K, necesitas el siguiente equipo y herramientas.
+
+* Acceso a un navegador web para configurar su sistema de almacenamiento
+* Correa de descarga electrostática (ESD)
+* Flash
+* Portátil o consola con conexión USB/serie
+* Clip o bolígrafo de punta estrecha para fijar la identificación de los estantes de almacenamiento
+* Destornillador Phillips n.° 2
+
+
+
+
+== Precauciones al levantar objetos
+
+El controlador de almacenamiento AFX y los estantes de almacenamiento son pesados.  Tenga cuidado al levantar y mover estos artículos.
+
+
+
+=== Pesos del controlador de almacenamiento
+
+Toma las precauciones necesarias al mover o levantar tu controlador de almacenamiento AFX 2K.
+
+Un controlador de almacenamiento AFX 2K puede pesar hasta 64,0 lb (29,03 kg). Para levantar el controlador de almacenamiento, usa dos personas o una grúa hidráulica.
+
+.Precaución al levantar el controlador AFX 2K.
+image::../media/drw_afx_2k_weight_caution_ieops-2938.svg[Icono de precaución de elevación del controlador AFX 2K]
+
+
+
+=== Pesas para estantes de almacenamiento
+
+Tome las precauciones necesarias al mover o levantar su estante.
+
+.Estante NX224
+Un estante NX224 puede pesar hasta 60,1 lb (27,3 kg). Para levantar el estante, usa dos personas o un elevador hidráulico. Mantén todos los componentes en el estante (tanto en la parte delantera como en la trasera) para evitar que el peso del estante quede desequilibrado.
+
+.Precaución al levantar la bandeja NX224.
+image::../media/drw_nx224_lifting_weight_ieops-2437.svg[NX224 NSM100 icono de precaución para la elevación]
+
+
+
+=== Pesos de los switches
+
+Toma las precauciones necesarias al mover o levantar el switch.
+
+.Cisco Nexus 9808
+Un Cisco 9808 sin carga puede pesar hasta link:https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/nexus9800-series-switches-ds.html#Productspecifications["162 lb (73 kg) y un switch Cisco 9808 a plena carga puede llegar a pesar hasta 766 lb (347 kg)"^]. Para levantar el switch, usa una grúa hidráulica.
+
+.Precaución al levantar el Cisco Nexus 9808 sin carga.
+image::../media/drw_afx_2k_weight_icon_ieops-2939.svg[Icono de precaución de elevación de Cisco Nexus 9808]
+
+.Precaución al levantar el Cisco Nexus 9808 a plena carga.
+image::../media/drw_afx_2k_nexus9808_loaded_weight_caution_ieops-2940.svg[Icono de precaución de carga máxima de Cisco Nexus 9808]
+
+.Cisco Nexus9332D-GX2B
+Un Cisco 9332D-GX2B puede pesar hasta link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/aci/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-aci-mode-switch-hardware-installation-guide/m_n93xxx_system_specs.html["12,7 kg (28,1 lb)"^].
+
+.Cisco Nexus 9364D-GX2A
+Un switch Cisco Nexus 9364D-GX2A puede pesar hasta link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide/m_n93xxx_system_specs.html["58 lb (26,3 kg)"^]. Para levantar el switch, usa dos personas o un elevador hidráulico.
+
+.Precaución al levantar el Cisco Nexus 9364D-GX2A.
+image::../media/drw_afx_2k_9364d_weight_caution_ieops-2942.svg[Icono de precaución de elevación de Cisco Nexus 9364D-GX2A]
+
+.Información relacionada
+* https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Información de seguridad y avisos reglamentarios"^]
+
+
+.¿Que sigue?
+Después de que hayas revisado los requisitos de hardware, link:prepare-hardware.html["Prepárate para instalar tu sistema de almacenamiento AFX 2K"].

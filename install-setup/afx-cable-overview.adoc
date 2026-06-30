@@ -21,7 +21,7 @@ La configuración inicial del sistema de almacenamiento AFX 1K admite un mínimo
 
 Los nodos de controlador adicionales y los estantes de discos amplían la configuración inicial del sistema de almacenamiento AFX 1K.  Las configuraciones AFX 1K ampliadas siguen la misma metodología de cableado basada en conmutadores que el esquema que se muestra a continuación.
 
-image:../media/drw_afx_cable_overview_half_node_ieops-2358.svg["Ejemplo de cableado del sistema de almacenamiento AFK 1K"]
+image:../media/drw_afx_cable_overview_half_node_ieops-2358.svg["Ejemplo de cableado del sistema de almacenamiento AFX 1K, ancho=1000px"]
 
 
 

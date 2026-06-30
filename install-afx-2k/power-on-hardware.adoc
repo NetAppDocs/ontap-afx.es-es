@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
-permalink: install-setup/power-on-hardware.html 
-keywords: afx, afx 1k, power on 
+permalink: install-afx-2k/power-on-hardware.html 
+keywords: afx, afx 2k, power on 
 summary: Encienda cada estante para asignarle una identificación de estante única, encienda los nodos del controlador AFX y asegure los cables de alimentación. 
 ---
-= Encienda su sistema de almacenamiento AFX 1K
+= Enciende tu sistema de almacenamiento AFX 2K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Después de instalar el hardware del rack para su sistema de almacenamiento AFX 1K e instalar los cables para los nodos del controlador y los estantes de almacenamiento, debe encender los estantes de almacenamiento y los nodos del controlador.
+Después de instalar el hardware de montaje en rack de tu sistema de almacenamiento AFX 2K y de instalar los cables de los nodos controladores y los estantes de almacenamiento, debes encender los estantes de almacenamiento y los nodos controladores.
 
 
 
@@ -198,6 +198,48 @@ Eth1/17/4       1       eth  trunk  up      none                     100G(D) --
 .
 ----
 ====
++
+.Mostrar un ejemplo para los switches Cisco Nexus 9808
+[%collapsible]
+====
+[listing, subs="+quotes"]
+----
+cs1# *show interface brief*
+
+--------------------------------------------------------------------------------
+Port   VRF          Status IP Address                              Speed    MTU
+--------------------------------------------------------------------------------
+mgmt0  --           up     10.232.206.36                           1000    1500
+--------------------------------------------------------------------------------
+Ethernet        VLAN    Type Mode   Status  Reason Speed     Port
+Interface                                                                    Ch #
+--------------------------------------------------------------------------------
+Eth1/1          1       eth  trunk  up      none                     400G(D) --
+Eth1/2          1       eth  trunk  up      none                     400G(D) --
+.
+.
+.
+Eth1/17         1       eth  trunk  up      none                     400G(D) --
+Eth1/18         1       eth  trunk  down    XCVR not inserted        auto(D) --
+Eth1/19/1       1       eth  trunk  up      none                     100G(D) --
+Eth1/19/2       1       eth  trunk  up      none                     100G(D) --
+.
+.
+.
+Eth1/35/3       1       eth  trunk  down    XCVR not inserted        auto(D) --
+Eth1/35/4       1       eth  trunk  down    XCVR not inserted        auto(D) --
+Eth1/36         1       eth  trunk  down    XCVR not inserted        auto(D) 1
+
+------------------------------------------------------------------------------------------
+Port-channel VLAN    Type Mode   Status  Reason                              Speed   Protocol
+Interface
+------------------------------------------------------------------------------------------
+Po1          1       eth  trunk  down    No operational members                auto(D)  lacp
+Po998        1       eth  access down    Administratively down                 auto(I)  none
+Po999        1       eth  access down    Administratively down                 auto(I)  none
+cs1#
+----
+====
 . Comprueba que los nodos del clúster estén en las VLAN correctas del clúster usando los siguientes comandos:
 +
 `show vlan brief`
@@ -349,6 +391,168 @@ Po1           1
 ----
 ====
 +
+.Mostrar un ejemplo para los switches Cisco Nexus 9808
+[%collapsible]
+====
+[listing, subs="+quotes"]
+----
+cs1# *show vlan brief*
+
+VLAN Name                     Status    Ports
+---- ----------------------- ---------- -------- -----------------------------
+1    default                          active    Po1, Po998, Po999, Eth1/1
+                                                Eth1/2, Eth1/3, Eth1/4, Eth1/5
+                                                Eth1/6, Eth1/7, Eth1/8, Eth1/9
+.
+.
+.
+                                                Eth1/34/3, Eth1/34/4, Eth1/35/1
+                                                Eth1/35/2, Eth1/35/3, Eth1/35/4
+17   VLAN0017                         active    Eth1/1, Eth1/2, Eth1/3, Eth1/4
+                                                Eth1/5, Eth1/6, Eth1/7, Eth1/8
+.
+.
+.
+                                                Eth1/34/3, Eth1/34/4, Eth1/35/1
+                                                Eth1/35/2, Eth1/35/3, Eth1/35/4
+18   VLAN0018                         active    Eth1/1, Eth1/2, Eth1/3, Eth1/4
+                                                Eth1/5, Eth1/6, Eth1/7, Eth1/8
+.
+.
+.
+                                                Eth1/34/3, Eth1/34/4, Eth1/35/1
+                                                Eth1/35/2, Eth1/35/3, Eth1/35/4
+30   VLAN0030                         active    Eth1/1, Eth1/2, Eth1/3, Eth1/4
+                                                Eth1/5, Eth1/6, Eth1/7, Eth1/8
+.
+.
+.
+                                                Eth1/34/3, Eth1/34/4, Eth1/35/1
+                                                Eth1/35/2, Eth1/35/3, Eth1/35/4
+40   VLAN0040                         active    Po1, Eth1/1, Eth1/2, Eth1/3
+                                                Eth1/4, Eth1/5, Eth1/6, Eth1/7
+                                                Eth1/8, Eth1/9, Eth1/10, Eth1/11
+.
+.
+.
+                                                Eth1/35/1, Eth1/35/2, Eth1/35/3
+                                                Eth1/35/4
+
+cs1#
+
+
+cs1# *show interface trunk*
+
+--------------------------------------------------------------------------------
+Port          Native  Status        Port
+              Vlan                  Channel
+--------------------------------------------------------------------------------
+Eth1/1        1       trunking      --
+Eth1/2        1       trunking      --
+.
+.
+.
+Eth1/17       1       trunking      --
+Eth1/18       1       trunking      --
+Eth1/19/1     1       trunking      --
+Eth1/19/2     1       trunking      --
+.
+.
+.
+Eth1/35/4     1       trunking      --
+Eth1/36       1       trnk-bndl     Po1
+Po1           1       trunking      --
+
+--------------------------------------------------------------------------------
+Port          Vlans Allowed on Trunk
+--------------------------------------------------------------------------------
+Eth1/1        1,17-18,30,40
+Eth1/2        1,17-18,30,40
+.
+.
+.
+Eth1/17       1,17-18,30,40
+Eth1/18       1,17-18,30,40
+Eth1/19/1     1,17-18,30,40
+Eth1/19/2     1,17-18,30,40
+.
+.
+.
+Eth1/35/3     1,17-18,30,40
+Eth1/35/4     1,17-18,30,40
+Eth1/36       1,40
+Po1           1,40
+
+--------------------------------------------------------------------------------
+Port          Vlans Err-disabled on Trunk
+--------------------------------------------------------------------------------
+Eth1/1        none
+Eth1/2        none
+.
+.
+.
+Eth1/17       none
+Eth1/18       none
+Eth1/19/1     none
+Eth1/19/2     none
+.
+.
+.
+Eth1/35/4     none
+Eth1/36       none
+Po1           none
+
+--------------------------------------------------------------------------------
+Port          STP Forwarding
+--------------------------------------------------------------------------------
+Eth1/1        1,17-18,30,40
+Eth1/2        1,17-18,30,40
+.
+.
+.
+Eth1/17       1,17-18,30,40
+Eth1/18       none
+Eth1/19/1     1,17-18,30,40
+Eth1/19/2     1,17-18,30,40
+.
+.
+.
+Eth1/35/4     none
+Eth1/36       none
+Po1           none
+
+--------------------------------------------------------------------------------
+Port          Vlans in spanning tree forwarding state and not pruned
+--------------------------------------------------------------------------------
+Eth1/1        Feature VTP is not enabled
+1,17-18,30,40
+Eth1/2        Feature VTP is not enabled
+1,17-18,30,40
+.
+.
+.
+Eth1/23/3     Feature VTP is not enabled
+1,17-18,30,40
+Eth1/23/4     Feature VTP is not enabled
+1,17-18,30,40
+Eth1/24/1     Feature VTP is not enabled
+none
+Eth1/24/2     Feature VTP is not enabled
+none
+.
+.
+.
+Eth1/35/4     Feature VTP is not enabled
+none
+Eth1/36       Feature VTP is not enabled
+none
+Po1           Feature VTP is not enabled
+none
+cs1#
+
+----
+====
++
 
 NOTE: Para obtener detalles específicos sobre el uso de puertos y VLAN, consulta el banner y la sección de notas importantes en tu RCF.
 
@@ -404,16 +608,38 @@ Group Port-       Type     Protocol  Member Ports
 cs1#
 ----
 ====
++
+.Mostrar un ejemplo para los switches Cisco Nexus 9808
+[%collapsible]
+====
+
+NOTE: Dado que el conmutador Cisco Nexus 9808 es un conmutador único, el ISL está desconectado; por lo tanto, no verás los pares en la salida del comando.
+
+[listing, subs="+quotes"]
+----
+cs1# *show port-channel summary*
+Flags:  D - Down        P - Up in port-channel (members)
+        I - Individual  H - Hot-standby (LACP only)
+        s - Suspended   r - Module-removed
+        b - BFD Session Wait
+        S - Switched    R - Routed
+        U - Up (port-channel)
+        p - Up in delay-lacp mode (member)
+        M - Not in use. Min-links not met
+--------------------------------------------------------------------------------
+Group Port-       Type     Protocol  Member Ports
+      Channel
+--------------------------------------------------------------------------------
+1     Po1(SD)     Eth      LACP      Eth1/36(D)
+998   Po998(SD)   Eth      NONE      --
+999   Po999(SD)   Eth      NONE      --
+cs1#
+----
+====
 
 
 .¿Que sigue?
-Después de encender tu sistema de almacenamiento AFX 1K, completa la configuración según tu opción de implementación:
+Después de encender tu sistema de almacenamiento AFX 2K, completa la configuración según tu opción de implementación:
 
-* Para implementaciones de sistemas de almacenamiento AFX 1K dedicados, ve a link:../install-setup/cluster-setup.html["Configura un clúster AFX"].
-* Para implementaciones de AFX 1K con AI Data Engine (AIDE), instala servidores de terceros AIDE o nodos de cómputo de datos proporcionados por NetApp:
-+
-** Para implantaciones de servidores de terceros, completa https://docs.netapp.com/us-en/ai-data-engine/install-aide-server/aide-mde-server-hardware-requirements.html["instalación de hardware para AI Data Engine en servidores de terceros"^], luego https://docs.netapp.com/us-en/ai-data-engine/install-setup/install-aide-as-software.html["instalar el software AIDE en servidores de terceros"^].
-** Para las implantaciones de NetApp DCN, completa https://docs.netapp.com/us-en/ai-data-engine/install-dcn/aide-dcn-hardware-requirements.html["instalación de hardware para AI Data Engine en nodos de cómputo de datos proporcionados por NetApp"^].
-
-
+* Para implementaciones de sistemas de almacenamiento AFX 2K dedicados, ve a link:../install-setup/cluster-setup.html["Configura un clúster AFX"].
 

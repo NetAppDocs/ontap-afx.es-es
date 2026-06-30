@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: install-afx-2k/deploy-hardware.html 
+keywords: afx, afx 2k, install, setup, hardware, deploy 
+summary: Aprende a instalar los kits de rieles para el sistema de almacenamiento AFX 2K y las estanterías de almacenamiento, y a fijar el hardware AFX en el armario o en el rack de telecomunicaciones. 
+---
+= Instala tu sistema de almacenamiento AFX 2K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de instalar los switches, debes instalar el hardware para tu sistema de almacenamiento AFX 2K. Primero, instala los kits de rieles. Luego instala y asegura tu sistema de almacenamiento en un gabinete o rack de telecomunicaciones.
+
+.Antes de empezar
+* Asegúrese de tener las instrucciones incluidas con el kit de riel.
+* Comprenda las preocupaciones de seguridad relacionadas con el peso del sistema de almacenamiento y el estante de almacenamiento.
+* Comprenda que el flujo de aire a través del sistema de almacenamiento ingresa desde el frente donde están instalados el bisel o las tapas de los extremos y sale por la parte trasera donde se encuentran los puertos.
+
+
+
+CAUTION: Lleva siempre una muñequera con toma de tierra conectada a un punto de tierra verificado durante los procedimientos de instalación y mantenimiento. No seguir las precauciones ESD adecuadas puede causar daños permanentes a los nodos controladores, las estanterías de almacenamiento y los switches de red.
+
+.Pasos
+. Instale los kits de rieles para su sistema de almacenamiento y estantes de almacenamiento, según sea necesario, utilizando las instrucciones incluidas con los kits.
+. Instale y asegure su controlador en el gabinete o rack de telecomunicaciones:
++
+.. Coloque el sistema de almacenamiento sobre los rieles en el medio del gabinete o rack de telecomunicaciones y luego sostenga el sistema de almacenamiento desde abajo y deslícelo hasta su lugar.
+.. Asegure el sistema de almacenamiento al gabinete o al rack de telecomunicaciones utilizando los tornillos de montaje incluidos.
+
+
+. Coloque el bisel en la parte frontal del controlador.
+. Si tu sistema de almacenamiento AFX 2K incluye un dispositivo de organización de cables, fíjalo a la parte trasera del sistema de almacenamiento.
++
+image::../media/drw_affa1k_install_cable_mgmt_ieops-1697.svg[Instalar dispositivo de gestión de cables]
+
+. Instalar y asegurar el estante de almacenamiento:
++
+.. Coloque la parte posterior del estante de almacenamiento sobre los rieles y luego sostenga el estante desde abajo y deslícelo dentro del gabinete o rack de telecomunicaciones.
++
+En general, los estantes de almacenamiento y los controladores deben instalarse cerca de los interruptores.  Si está instalando varios estantes de almacenamiento, coloque el primer estante de almacenamiento directamente encima de los controladores.  Coloque el segundo estante de almacenamiento directamente debajo de los controladores.  Repita este patrón para cualquier estante de almacenamiento adicional.
+
+.. Asegure el estante de almacenamiento al gabinete o al rack de telecomunicaciones usando los tornillos de montaje incluidos.
+
+
+
+
+.¿Que sigue?
+Después de que hayas instalado el hardware de tu sistema AFX, revisa la link:afx-cable-overview.html["Configuraciones de cableado compatibles para tu sistema de almacenamiento AFX 2K"].

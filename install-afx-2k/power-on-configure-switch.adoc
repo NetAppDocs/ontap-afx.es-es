@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: install-afx-2k/power-on-configure-switch.html 
+keywords: afx, afx 2k, cable controllers, Cisco Nexus 9332D-GX2B, Cisco Nexus 9364D-GX2A, switches, switch, power on, configure switches, 
+summary: Descubre cómo encender y configurar los switches de tu sistema de almacenamiento AFX 2K. 
+---
+= Enciende y configura los switches de tu sistema de almacenamiento AFX 2K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una vez que hayas conectado tu sistema de almacenamiento AFX 2K, necesitas encender y configurar los switches Cisco Nexus 9808, 9332D-GX2B o 9364D-GX2A.
+
+.Pasos
+. Conecte los cables de alimentación de los interruptores a las fuentes de alimentación.
+. Conecta los cables ISL entre los dos conmutadores.
++
+** Para los switches Cisco Nexus 9808, consulta la link:https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/9800/9808/nx-os/cisco-nexus-9808-nx-os-mode-switch-hardware-installation-guide/m-8000-modular-overview-ph2.html["Guía de instalación del hardware del switch Cisco Nexus 9808 Mode"^] para más información.
+** Para los switches Cisco Nexus 9332D-GX2B, usa los puertos 31/32 para las conexiones ISL. Consulta link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide/m_overview1.html["Guía de instalación del hardware del switch Cisco Nexus 9332D-GX2B"^] para obtener más información.
+** Para los switches Cisco Nexus 9364D-GX2A, usa los puertos 63/64 para las conexiones ISL. Consulta link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide/m_overview1.html["Guía de instalación del hardware del switch Cisco Nexus 9364D-GX2A"^] para obtener más información.
+
+
+. Encienda cada interruptor.
+. Configura los switches para que sean compatibles con el sistema de almacenamiento AFX 2K.
++
+** Para obtener más información sobre la configuración de los conmutadores, consulta la link:https://docs.netapp.com/us-en/ontap-systems-switches/afx/index.html["Configura conmutadores para sistemas de almacenamiento AFX"^].
+
+
+
+
+.¿Que sigue?
+Después de configurar los conmutadores para tu sistema de almacenamiento AFX 2K, link:power-on-hardware.html["encender el sistema de almacenamiento AFX 2K"].

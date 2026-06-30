@@ -592,7 +592,6 @@
   <block id="66d537e06ce64167a2a89717123fb13a" category="paragraph">Los siguientes componentes de hardware se utilizan con clústeres AFX:</block>
   <block id="95f44be3500aa9aeb45f0071ca7649b2" category="list-text">Controladores AFX 1K</block>
   <block id="a43cc36cba3c97642118a8f1e1411d2a" category="list-text">Estantes NX224</block>
-  <block id="e89680076a38528b667f845c37798fcc" category="list-text">Conmutadores Cisco Nexus 9332D-GX2B o Nexus 9364D-GX2A</block>
   <block id="e4b73aea5fedcc9f4eb9b804ebd249aa" category="summary">Antes de implementar AFX en un entorno de producción, es esencial comprender la estructura administrativa y las opciones de configuración.  Esto garantiza una gestión segura, eficiente y eficaz de su clúster AFX.</block>
   <block id="982e02e3abfea4e77a8d9e6cb357ccc0" category="doc">Prepárese para administrar su sistema de almacenamiento AFX</block>
   <block id="1e793b1e0f039cf758071c91b073a4f1" category="paragraph">Una máquina virtual de almacenamiento (SVM) es un servidor aislado o un entorno de inquilino dentro de un clúster ONTAP .  Puede configurar una SVM para servir datos a los clientes conectados.  Debe estar familiarizado con las capacidades y características de las SVM AFX.</block>
@@ -713,8 +712,6 @@
   <block id="cef2cef14135fa0a7f8a1a1b12d33005" category="section-title">Configuración de cableado AFX 1K compatible</block>
   <block id="d68caa870c599c4f4feda00ea05204ad" category="paragraph">La configuración inicial del sistema de almacenamiento AFX 1K admite un mínimo de cuatro nodos de controlador conectados a través de conmutadores duales a los estantes de discos de almacenamiento.</block>
   <block id="8204ac96f4db60a13314fdddc8e9d0b9" category="paragraph">Los nodos de controlador adicionales y los estantes de discos amplían la configuración inicial del sistema de almacenamiento AFX 1K.  Las configuraciones AFX 1K ampliadas siguen la misma metodología de cableado basada en conmutadores que el esquema que se muestra a continuación.</block>
-  <block id="325fb005ba5ff6b41fa0892905611f15" category="inline-image-macro">Ejemplo de cableado del sistema de almacenamiento AFK 1K</block>
-  <block id="3fbfe926ceca9a55d625df8be8f9ee1b" category="paragraph"><block ref="3fbfe926ceca9a55d625df8be8f9ee1b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cf0b851cf65a2b38aa358691f2054eb4" category="section-title">Componentes de hardware compatibles</block>
   <block id="1614dfbda42baa4bbc5a3a16bcf72202" category="paragraph">Revise los estantes de discos de almacenamiento, conmutadores y tipos de cables compatibles con el sistema de almacenamiento AFX 1K.</block>
   <block id="bd5c641408f65aa18580861a6ce2400c" category="cell">*Estante del controlador*</block>
@@ -886,12 +883,9 @@
   <block id="e3eb7077125dbf096d560da8b3939c79" category="paragraph">El controlador de almacenamiento AFX y los estantes de almacenamiento son pesados.  Tenga cuidado al levantar y mover estos artículos.</block>
   <block id="8426a795d3bdc2e3b917313eb942f86a" category="section-title">Pesos del controlador de almacenamiento</block>
   <block id="7d83ce9fcec155b754d28f26c44bb2c0" category="paragraph">Tome las precauciones necesarias al mover o levantar su controlador de almacenamiento AFX 1K.</block>
-  <block id="ce697af2e18af53f8cb875724d64de00" category="paragraph">Un controlador de almacenamiento AFX 1K puede pesar hasta 62,83 libras (28,5 kg).  Para levantar el controlador de almacenamiento, utilice dos personas o un elevador hidráulico.</block>
-  <block id="ea2b428ae3132b5aa1f8abadc2dac0ec" category="image-alt">Icono de precaución de elevación de ASA A1K</block>
   <block id="336e0262f6402efd45d8cf9d7ae13e8c" category="section-title">Pesas para estantes de almacenamiento</block>
   <block id="fe464b77547b113c26b6c4a663f8d99c" category="paragraph">Tome las precauciones necesarias al mover o levantar su estante.</block>
   <block id="95431e07be1f7b49eef0ce6156cca6e1" category="open-title">Estante NX224</block>
-  <block id="1e9ac948c22c380faef83bb8dfbfecd1" category="paragraph">Un estante NX224 puede pesar hasta 60,1 libras (27,3 kg).  Para levantar el estante se utilizan dos personas o un elevador hidráulico.  Mantenga todos los componentes en el estante (tanto delantero como trasero) para evitar desequilibrar el peso del estante.</block>
   <block id="6eb6b5d3bd8847e6deb32e696bd6b006" category="image-alt">Precaución al levantar el NX224 NSM100</block>
   <block id="35c124f455f44a154eb3b514029ee58a" category="inline-link">Información de seguridad y avisos reglamentarios</block>
   <block id="fa81f583d8b6c7dcaf8e26a5fcf5de52" category="list-text"><block ref="fa81f583d8b6c7dcaf8e26a5fcf5de52" category="inline-link-rx"></block></block>
@@ -935,8 +929,6 @@
   <block id="828eeccf398aa5a5516c86cf77b98e41" category="list-text">Para cada interruptor, ocho tornillos 10-32 o 12-24 y tuercas de clip para montar los soportes y rieles deslizantes en los postes delanteros y traseros del gabinete.</block>
   <block id="19a356d6227c782e9f5da9f11a646795" category="list-text">El kit de riel estándar de Cisco para instalar el conmutador en un gabinete NetApp .</block>
   <block id="784c55256af328db72b621f19722713c" category="admonition">Los cables puente no están incluidos con el kit de paso.  Comuníquese con NetApp para solicitar los cables puente adecuados si no se envían con sus conmutadores.</block>
-  <block id="290d336236260cd4a5246beda2a977d5" category="inline-link">Guía de instalación del hardware del conmutador de modo NX-OS Cisco Nexus 9332D-GX2B</block>
-  <block id="b1ec8c60f31cf5056d372b5933be8b0b" category="inline-link">Guía de instalación del hardware del conmutador de modo NX-OS Cisco Nexus 9364D-GX2A</block>
   <block id="233f5d43fe68130332533db747eb58bf" category="list-text">Instalar el panel ciego pasante.</block>
   <block id="f6a7153bd6774aa611c605474f2c556a" category="list-text">Determine la ubicación vertical de los interruptores y el panel de obturación en el gabinete o rack.</block>
   <block id="eca4fd64fa30887cca883fb2a8f5e9b3" category="list-text">Instale dos tuercas de clip en cada lado en los orificios cuadrados correspondientes para los rieles del gabinete frontal.</block>
@@ -1040,7 +1032,6 @@
   <block id="5dc15886a7be0b02974c471249fd2702" category="image-alt">Conexiones de consola</block>
   <block id="9e7e8b48adc159107d0baf9021253c61" category="list-text">Asigne una dirección TCP/IP a la computadora portátil, utilizando una que esté en la subred de administración.</block>
   <block id="a2e521b7ad497537c9e544a50086c51b" category="list-text">Conecte los cables de alimentación a las fuentes de alimentación del controlador y luego conéctelos a fuentes de alimentación en diferentes circuitos.</block>
-  <block id="5d181ca91be1af691d1f01654691cc7b" category="image-alt">Diagrama de conexión de alimentación del sistema de almacenamiento A1K y A70 o A90</block>
   <block id="e477637685baafe9bbd353f71ef51283" category="list-text">El sistema comienza a arrancar.  El arranque inicial puede tardar hasta ocho minutos.</block>
   <block id="eccb4d5293fe0dd408e74aab9093fb9b" category="list-text">Los LED parpadean y los ventiladores se ponen en marcha, lo que indica que los controladores se están encendiendo.</block>
   <block id="2a15831b428ec92914dd2d9b9c14a463" category="list-text">Los ventiladores pueden hacer ruido al arrancar, lo cual es normal.</block>
@@ -1469,7 +1460,6 @@
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Empezar</block>
   <block id="c0531ee3830705c2acf41508b19aea16" category="sidebar">Obtenga más información sobre AFX</block>
   <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">Inicio rápido</block>
-  <block id="89ff3ce0de6b4487110c6bfb69e1cec4" category="sidebar">Instalar hardware AFX</block>
   <block id="4271b9430afa5773472f29d8cf243dc1" category="sidebar">Configurar el clúster AFX</block>
   <block id="6c0e4fd4b7e2ef11d891ac59729c5f3e" category="sidebar">Administración de clústeres</block>
   <block id="2ee20619a771993544eaaa7e388816d1" category="sidebar">Administrar máquinas virtuales de almacenamiento</block>
@@ -1719,10 +1709,7 @@
   <block id="c29e3429d133a5255487ffdb4b3cd5b3" category="paragraph">Las actualizaciones recomendadas se descargan e instalan automáticamente en su sistema ONTAP AFX según sus selecciones de actualización.</block>
   <block id="f6ea197b186340b340ddfd0eb0da559f" category="inline-link-macro">Crear un clúster ONTAP y unir nodos</block>
   <block id="46111b54a1fe09b4b0f338f84ed73d0f" category="admonition">Para obtener información sobre cómo crear un clúster para un entorno que no sea Windows, consulte <block ref="084582f867948d8226893522df8bc4b0" category="inline-link-macro-rx"></block>.</block>
-  <block id="26790bd35f75a3d2177dc5a2d5e4162f" category="admonition">Si el flujo de aire de tus switches está configurado para la entrada por el lado del puerto (ventiladores y PSU de color burdeos), los puertos de red de los switches deben instalarse mirando hacia la parte frontal del armario y los ventiladores de escape deben mirar hacia la parte trasera del armario. Con esta configuración, tienes que asegurarte de usar cables lo suficientemente largos para que vayan desde los puertos de red en la parte frontal del armario hasta los puertos de almacenamiento en la parte trasera del armario. + Para más información detallada sobre estos switches, visita el sitio web de Cisco:<block ref="41dd90940bbf956b1a1bc9743b5329d8" category="inline-link-rx"></block> y<block ref="0684e00763f44490e4a966ecd9b6db00" category="inline-link-rx"></block>.</block>
   <block id="5ba4d3956504a570f9a51b322b5f740c" category="list-text">Conecta los cables ISL entre los dos conmutadores.</block>
-  <block id="86411bbf3fc2afbe73de144737c4ff80" category="list-text">Para los switches Cisco Nexus 9332D-GX2B, usa los puertos 31/32 para las conexiones ISL. Consulta el <block ref="bab51173328bbc094a925e4a5c7604c6" category="inline-link-macro-rx"></block> para más información.</block>
-  <block id="f8979ce4e5d66f41e330415672140ef8" category="list-text">Para los switches Cisco Nexus 9364D-GX2A, usa los puertos 63/64 para las conexiones ISL. Consulta el <block ref="d3ef7ae1e3bea631e525704fa9f8906b" category="inline-link-macro-rx"></block> para más información.</block>
   <block id="35baa74f76db10604e3f71a16b4078d1" category="paragraph">NetApp AFX está optimizado para cargas de trabajo NAS y de objetos de alto rendimiento. Por esto, hay diferencias con los sistemas de almacenamiento AFF y FAS. Las siguientes funciones no están disponibles con NetApp AFX; la lista está organizada por característica principal o área funcional. También deberías revisar las actualizaciones y cambios para AFX en <block ref="e4ac4a7dd877729340e2b0880473ea1b" category="inline-link-macro-rx"></block> según tu versión de ONTAP.</block>
   <block id="86daf5160966102a39f5f3c0390bde11" category="list-text">Espejos de carga compartida</block>
   <block id="8c60e60e96c6540bd35beb72adc17cb0" category="section-title">Paso 3: conecta el clúster, la interconexión de alta disponibilidad y las conexiones de almacenamiento al switch de red A</block>
@@ -1767,7 +1754,6 @@
   <block id="5089e4b50d1f4e886a231cd5c043ad9d" category="inline-link">Opciones de instalación de AIDE</block>
   <block id="d3d9eaa68fa2acc25f51847944519bc7" category="paragraph">Tienes que decidir si instalar solo AFX o AFX junto con AI Data Engine. Revisa el <block ref="b158da038797eb3a533563ed16d340e2" category="inline-link-rx"></block> para ayudarte a determinar la mejor opción para tus necesidades.</block>
   <block id="99882077cc5150985de38b05fe43c5bf" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Instala y configura tu hardware</block>
-  <block id="1f9c2a9600aa7017fad495f671dfcc9d" category="inline-link-macro">Instala tu sistema de almacenamiento AFX</block>
   <block id="8a28e13725679cf81ae7a97f135f3151" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Configura tu clúster</block>
   <block id="67cf641733ab3c2361c8f1f769a0874b" category="inline-link">Configura AIDE con un nuevo clúster AFX</block>
   <block id="35a50ba3ebcc67e69ce937368b540ae9" category="paragraph">Sigue el proceso rápido y sencillo para <block ref="5f55a5e0ef0b631e2040a3d854a6456f" category="inline-link-macro-rx"></block> tu clúster ONTAP usando System Manager. Si también estás instalando AIDE con los nodos de computación de datos junto con AFX, revisa<block ref="ea340cdc1a42614e036446f1b104ebdd" category="inline-link-rx"></block> para la configuración adicional necesaria.</block>
@@ -1799,7 +1785,6 @@
   <block id="2f89616ef718a1cdf501f4048f79f110" category="paragraph">NetApp AI Data Engine (AIDE) es un servicio de datos de IA integrado en el almacenamiento que se ejecuta en nodos de cómputo conectados a un clúster AFX. Opcionalmente, puedes instalar e integrar AIDE con tu clúster AFX usando uno de dos modelos de implementación: nodos de cómputo de datos (DCN) proporcionados por NetApp o software AIDE en servidores de terceros. Las implementaciones de DCN de NetApp ofrecen todas las capacidades de AIDE, mientras que las implementaciones en servidores de terceros están enfocadas en los metadatos.</block>
   <block id="26bf1fb96884a6d564b885faac9346fe" category="inline-link">instalar servidores AIDE de terceros</block>
   <block id="0feacb0d94d23bf1fee14eae79e870cd" category="inline-link">instalar AIDE NetApp nodos de cálculo de datos</block>
-  <block id="d038ff5d4df9255a9c0316641b289913" category="paragraph"><block ref="a832b8bc8244484582041183718520b7" category="inline-link-macro-rx"></block> y opcionalmente<block ref="55438a0ee0065472ca14633bb4190e20" category="inline-link-rx"></block> o<block ref="2e7d33dc5887b0da93aae67b0f923c5c" category="inline-link-rx"></block> si estás incluyendo AIDE como parte de la configuración inicial.</block>
   <block id="bd9ad7be68120900030f68ff19b5b1e4" category="paragraph">Al instalar y configurar AFX por primera vez, puedes incluir opcionalmente NetApp AI Data Engine (AIDE). AIDE admite dos modelos de despliegue: AIDE software en servidores de terceros o nodos de computación de datos (DCNs) proporcionados por NetApp. Si planeas configurar AIDE, primero completa los prerrequisitos para tu modelo de despliegue:</block>
   <block id="bf53bb5aa0413b6868cea02f2c24f170" category="inline-link">instalación de hardware para AI Data Engine en servidores de terceros</block>
   <block id="1f9fa35f3b88c59775937f1382277c15" category="inline-link">instalar el software AIDE en servidores de terceros</block>
@@ -1917,4 +1902,199 @@
   <block id="f80f1ede0c7983dcab18fc7104224f56" category="cell">Eficiencia de almacenamiento dinámica</block>
   <block id="00e7d9732d9f1a308baa60f42ec78d16" category="paragraph">Dynamic Storage Efficiency optimiza de forma inteligente las operaciones de eficiencia del almacenamiento (compresión, deduplicación y compactación) para grandes cargas de trabajo que requieren un alto rendimiento y la máxima capacidad de procesamiento. Detecta automáticamente las condiciones de escritura de gran volumen y suspende temporalmente los procesos de eficiencia del almacenamiento en línea y en segundo plano para evitar la degradación del rendimiento durante los picos de carga. Cuando el rendimiento cae por debajo de un umbral definido, las operaciones de eficiencia del almacenamiento se reanudan y el ahorro se recupera sin intervención manual. La función está disponible en los sistemas de almacenamiento AFX y está activada por defecto sin necesidad de configuración.</block>
   <block id="0b6845dd2391304844b6f9578fd8c865" category="sidebar">Cambios en los valores predeterminados y límites de ONTAP</block>
+  <block id="ade0334803648df75c59492f5cdc9515" category="list-text">Controladores AFX 1K o 2K</block>
+  <block id="d93573d87e2303f62f258396da54c30a" category="list-text">Cisco Nexus 9332D-GX2B, Nexus 9364D-GX2A o Nexus 9808 switches</block>
+  <block id="23b43ede4557b73e6fa354124a73ba91" category="inline-link-macro">AFX 2K</block>
+  <block id="67f77e2b70d6947cf982bd2da150677a" category="paragraph">Instala tu <block ref="7348958905d0d24441b4869883313dcd" category="inline-link-macro-rx"></block> o <block ref="024ba43ec37d7ed62c4f2aab58b974f1" category="inline-link-macro-rx"></block> sistema de almacenamiento. Si lo deseas, puedes<block ref="55438a0ee0065472ca14633bb4190e20" category="inline-link-rx"></block> o<block ref="2e7d33dc5887b0da93aae67b0f923c5c" category="inline-link-rx"></block> si vas a incluir AIDE como parte de tu configuración inicial de AFX 1K.</block>
+  <block id="8d7460cb352c0a6b105cf65e1fa10c31" category="doc">Configuraciones compatibles para tu sistema de almacenamiento AFX 2K</block>
+  <block id="1a99ce1ec4ed0985ca29a2e328f9e4c9" category="paragraph">Infórmate sobre los componentes de hardware compatibles y las opciones de cableado para el sistema de almacenamiento AFX 2K, incluyendo las estanterías de discos de almacenamiento compatibles, los switches y los tipos de cable necesarios para una correcta configuración del sistema.</block>
+  <block id="0c6e41fac4d1679f2837b31810ad5736" category="section-title">Configuración de cableado AFX 2K compatible</block>
+  <block id="dcf9ddc90465a875b2ffe5e80d67051e" category="paragraph">La configuración inicial del sistema de almacenamiento AFX 2K admite un mínimo de cuatro nodos controladores conectados a través de dos switches a las bandejas de discos de almacenamiento.</block>
+  <block id="78f6ed6aec8bf39808f6730998cc28af" category="paragraph">Los nodos de controlador y las bandejas de discos adicionales amplían la configuración inicial del sistema de almacenamiento AFX 2K. Las configuraciones ampliadas de AFX 2K siguen la misma metodología de cableado basada en switches que el esquema que se muestra a continuación.</block>
+  <block id="32d8581495e9b5e3e83544b56bf80e78" category="inline-image-macro">Ejemplo de cableado del sistema de almacenamiento AFX 2K, ancho=1000px</block>
+  <block id="c059960fdf7d3084051bf28117228b5e" category="paragraph"><block ref="c059960fdf7d3084051bf28117228b5e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9b81f2c4d0680a7c5c28bbb9d57141fe" category="paragraph">Consulta las estanterías de discos de almacenamiento, los switches y los tipos de cable compatibles con el sistema de almacenamiento AFX 2K.</block>
+  <block id="b2311a2cf7a04db2bfe860c3fa17635c" category="cell">Componente de hardware</block>
+  <block id="01769bf0c8e5ef5209cacdb3116f2451" category="cell">Cables compatibles</block>
+  <block id="4d4abeb46ced7064cea6f8653ed03898" category="cell">AFX 2K (bandeja de controladoras)</block>
+  <block id="411e488c95ab8539adbaede3043cb31b" category="list-text">Cables de 400GbE QDD a 400GbE QSFP (conexiones entre el controlador y el switch)</block>
+  <block id="34d2248a5a5108ca5028027917e19230" category="cell">NX224 (Estante para discos)</block>
+  <block id="c61f21daf666beed13cb4995d166bf43" category="list-text">Cables breakout de 400GbE QSFP-DD a 4x100GbE QSFP breakout (conexiones de switch a disk shelf)</block>
+  <block id="0790b922a8eca7a3264b8934f8991968" category="cell">Cisco Nexus 9808 (switch)</block>
+  <block id="b557fd9426768bc84f4452915257ea41" category="cell">Cisco Nexus 9332D-GX2B (switch)</block>
+  <block id="35759d2d8d631c485934e676110bed0b" category="cell">Cisco Nexus 9364D-GX2A (switch)</block>
+  <block id="8c8650d90ea2e4c85cf6f7a261e6a88a" category="inline-link-macro">Revisa los requisitos de red para tu sistema de almacenamiento AFX 2K</block>
+  <block id="a71737a22e6e6082f84dda969583a3a8" category="paragraph">Tras revisar la configuración del sistema y los componentes de hardware compatibles, <block ref="1eed71682bbf2ef2fc9992d178fdd1e6" category="inline-link-macro-rx"></block>.</block>
+  <block id="83f3a94c9271728fcefda23571e5e329" category="summary">Aprende a conectar los cables del controlador AFX 2K a tu red y a cablear los controladores a las bandejas.</block>
+  <block id="a0ed08f2fe307d8bdc70986871965e30" category="doc">Conecta el hardware de tu sistema de almacenamiento AFX 2K</block>
+  <block id="f752c6c9dfd63493ae5fab0c6aeae9db" category="paragraph">Después de instalar el hardware de montaje en rack de tu sistema de almacenamiento AFX 2K, instala los cables de red para los controladores y conecta los cables entre los controladores y las bandejas de almacenamiento.</block>
+  <block id="f9bf2d74923113919435e379d4f8c326" category="list-text">Las ranuras de E/S de un controlador AFX 2K están numeradas del 1 al 11.</block>
+  <block id="1910382d2df1981bfd58fce3bc46f693" category="cell">Número de ranura</block>
+  <block id="e6010d0015a0057354e2f435c8258d8c" category="cell">Ranura de E/S</block>
+  <block id="594c16ca0695f6665d7cf4971707adf6" category="cell">HA</block>
+  <block id="f92f448740bddae7b25ed117dcbd39ec" category="image-alt">Llamada número 4</block>
+  <block id="140e6f3619a868d803ee4deb2e00c8d2" category="image-alt">Llamada número 5</block>
+  <block id="36a9bb76a73be848a5443273efc36dce" category="cell">NVRAM12</block>
+  <block id="6ba8ef21cd3a6e29bac6f5100625f023" category="image-alt">Llamada número 9</block>
+  <block id="eec89088ee408b80387155272b113256" category="cell">Red</block>
+  <block id="252d3b7f2054eb6f5b22182e91ecc613" category="image-alt">Llamada número 6</block>
+  <block id="07df018939a3e88fde27c12e57c601e0" category="image-alt">Llamada número 7</block>
+  <block id="3b8240959b126ef66dac73a8609d4e88" category="cell">NVRAM12-EX</block>
+  <block id="995ee42e14fa7ada296e437cafe297d0" category="image-alt">Llamada número 10</block>
+  <block id="8c4aa541ee911e8d80451ef8cc304806" category="cell">Almacenamiento</block>
+  <block id="5f695e51ae076dac62d244a3e86a2eae" category="image-alt">Llamada número 3</block>
+  <block id="8c7663c7feb0ad581220a65f1966b9b1" category="image-alt">Llamada número 8</block>
+  <block id="3f93d6296d6d3a4e6ccba7c6defe16e0" category="image-alt">Llamada número 11</block>
+  <block id="2bbc0144b4be4eb8e87f365fd41bfd2b" category="cell">(*Opcional*) Cuatro puertos SFP28 de 25GbE para conectividad de gestión adicional</block>
+  <block id="6bd9339f2f0585eab4cbb0c0d62df9e5" category="list-text">El sistema de almacenamiento AFX 2K utiliza cables de 400GbE. Las conexiones de 400GbE se hacen entre los controladores y los switches. Las conexiones entre los estantes de almacenamiento y los switches usan cables breakout de 4x100GbE, con las conexiones de 100GbE hechas a los puertos del estante de unidades.</block>
+  <block id="93396b568b9b4bf0b46ec65fc0558907" category="paragraph">Las conexiones de almacenamiento en estantería pueden realizarse en cualquier puerto de breakout de 100GbE del switch. Las conexiones de alta disponibilidad/clúster pueden realizarse en cualquier puerto de 400GbE del switch. Todos los puertos de controlador "a" se conectan al switch A, y todos los puertos de controlador "b" se conectan al switch B.</block>
+  <block id="fdc34d062b69cbcf219ffbaae6462289" category="list-text">Conéctate a la red de gestión.</block>
+  <block id="b8a432c7c652eb6366dd8feef36c1192" category="list-text">e9a</block>
+  <block id="6652bb7b257b817e0c435d5f894c4feb" category="paragraph">*cables 400GbE*</block>
+  <block id="f768c4d18da94e03e6c29967d495968f" category="image-alt">cable Ethernet de 400 Gb</block>
+  <block id="128fc4f48693ac191c662898b0719506" category="list-text">e9b</block>
+  <block id="4015e00b406d10c628519f953d69e086" category="section-title">Paso 3: Conecta los cables del clúster y de la interconexión de alta disponibilidad</block>
+  <block id="a45bc78fe2c6d80b60e2cbcea70b132c" category="paragraph">Utiliza el cable de interconexión de clúster y de alta disponibilidad para conectar los puertos e1a y e2a al switch A y los puertos e1b y e2b al switch B. Los puertos e1a/e1b se usan para las conexiones de alta disponibilidad y los puertos e2a/e2a se usan para las conexiones de clúster.</block>
+  <block id="7d1e8fb2f50320f7b5004ba0fd39055b" category="list-text">Conecta los siguientes puertos del controlador a cualquier puerto que no sea ISL en el switch de red A del clúster.</block>
+  <block id="e2aeea381e329717c42f44dba2be7dd2" category="list-text">e2a (clúster)</block>
+  <block id="29b62d617481485649ea2d5b54fca512" category="image-alt">Cable de alta disponibilidad (HA) para clúster</block>
+  <block id="f1d133e33e29362e931a34312a961d0b" category="image-alt">Conexiones de clúster de cables a la red de clúster</block>
+  <block id="ac32cb5bd4dc17916ab1ece800d39226" category="list-text">Conecta los siguientes puertos del controlador a cualquier puerto que no sea ISL en el switch de red B del clúster.</block>
+  <block id="071d2b87306e3f261a7ce8b66da93da7" category="list-text">e2b (clúster)</block>
+  <block id="c61349783073807f1993874d0e3a4a8c" category="section-title">Paso 4: Conecta el almacenamiento del controlador al switch</block>
+  <block id="7bebd570400c9d8d9796caad43fdcebd" category="paragraph">Conecta los puertos de almacenamiento del controlador a los switches. Asegúrate de que tienes los cables y conectores correctos para tus switches. Consulta<block ref="16a6d09025d51cb8dd3516798b3fee8a" category="inline-link-rx"></block> para más información.</block>
+  <block id="994d86a3ee99c20bd6e3b1c0feaa203f" category="admonition">Los puertos e10b y e8a de los controladores no se utilizan para conexiones de almacenamiento en la configuración del sistema de almacenamiento AFX 2K.</block>
+  <block id="d7434100057b78673eee73421ad29942" category="list-text">Conecta los siguientes puertos de almacenamiento a cualquier puerto que no sea ISL del switch A.</block>
+  <block id="405e469b4aa3065616ee04f4a4b2b35e" category="list-text">e10a</block>
+  <block id="56812cf9e76eb2dfaa41475474798d4b" category="image-alt">Conecta el almacenamiento del controlador al switch A</block>
+  <block id="dc1921771bb6c193442045d9a99b8c9d" category="list-text">Conecta los siguientes puertos de almacenamiento a cualquier puerto que no sea ISL del switch B.</block>
+  <block id="9c7db5f6d7644e660ab462efb6df4eb6" category="list-text">e8b</block>
+  <block id="73b33ccdc5c989a11800499004721836" category="image-alt">Conecta el almacenamiento del controlador al switch B</block>
+  <block id="db9e36945d880b9a54f22b3bab495a59" category="paragraph">Conecta las estanterías de almacenamiento NX224 a los puertos breakout de 100GbE de los switches.</block>
+  <block id="135eab8c92ccb3775b404dfdd27aa456" category="list-text">Conecta los siguientes puertos del shelf a cualquier puerto de breakout en el switch A y el switch B para el módulo A.</block>
+  <block id="3a7f101e405892ae90298d3607c48869" category="list-text">Conecta los siguientes puertos del shelf a cualquier puerto de breakout en el switch A y el switch B para el módulo B.</block>
+  <block id="9e78fee773333046040ad791b8742899" category="summary">Aprende a instalar los kits de rieles para el sistema de almacenamiento AFX 2K y las estanterías de almacenamiento, y a fijar el hardware AFX en el armario o en el rack de telecomunicaciones.</block>
+  <block id="3b2dc186f0daefb9da028ec51012f0c6" category="doc">Instala tu sistema de almacenamiento AFX 2K</block>
+  <block id="23b39f09dd672a4fdc11c4332efa1d13" category="paragraph">Después de instalar los switches, debes instalar el hardware para tu sistema de almacenamiento AFX 2K. Primero, instala los kits de rieles. Luego instala y asegura tu sistema de almacenamiento en un gabinete o rack de telecomunicaciones.</block>
+  <block id="ae0d8e847f8ab5ee560c68b32f1bbded" category="list-text">Si tu sistema de almacenamiento AFX 2K incluye un dispositivo de organización de cables, fíjalo a la parte trasera del sistema de almacenamiento.</block>
+  <block id="375fabf294ecb62aaa7fb7257a915f0f" category="inline-link-macro">Configuraciones de cableado compatibles para tu sistema de almacenamiento AFX 2K</block>
+  <block id="bb885cec98023257ba83b46bd8568bd7" category="paragraph">Después de que hayas instalado el hardware de tu sistema AFX, revisa la <block ref="644587c64becba73f3c1cc55fca7e5b4" category="inline-link-macro-rx"></block>.</block>
+  <block id="9de04133b422a45b2b4db0f6da19c6de" category="doc">Requisitos de red para tu sistema de almacenamiento AFX 2K</block>
+  <block id="9373657b437037574bdca50e8fc97e26" category="paragraph">Anota la información necesaria para cada red a la que conectes tu sistema de almacenamiento AFX 2K.</block>
+  <block id="d922d73d59b6c4f4e139c54f8514fbef" category="paragraph">Antes de comenzar la instalación de tu sistema de almacenamiento AFX 2K, recopila la información de red necesaria</block>
+  <block id="66ae8ff18d363d41b87658f9954edf91" category="paragraph">Para la instalación y el mantenimiento de los switches Cisco Nexus 9808, Cisco Nexus 9332D-GX2 y 9364D-GX2A, asegúrate de revisar los requisitos de cableado y de red.</block>
+  <block id="45e89ca8f25ad9002015ba4fa01c00b7" category="inline-link-macro">Conecta los controladores y las estanterías de almacenamiento de tu sistema de almacenamiento AFX 2K</block>
+  <block id="fb8b0fb286d0cedc5fa7dcb033bf8b01" category="paragraph">Después de revisar los requisitos de red, tú <block ref="5f4d9374056fc6c09ec104940ef99307" category="inline-link-macro-rx"></block>.</block>
+  <block id="fe1577361af26f8e4dd532050fb50109" category="summary">Revisa el equipo necesario y las precauciones de elevación para tus controladores de almacenamiento AFX 2K y estantes de almacenamiento.</block>
+  <block id="d308c28d83ec0bb0d058af4f3c2204da" category="doc">Requisitos de instalación para los sistemas de almacenamiento AFX 2K</block>
+  <block id="f5c6c7697af84dadac884b524b99bb4f" category="paragraph">Revisa el equipo necesario y las precauciones de elevación para tu controlador de almacenamiento AFX 2K y tus estanterías de almacenamiento.</block>
+  <block id="07e65db26538c9813f032d5d18ab781c" category="paragraph">Para instalar tu sistema de almacenamiento AFX 2K, necesitas el siguiente equipo y herramientas.</block>
+  <block id="a39eb1657f72fd9be67946f2084dca74" category="paragraph">Toma las precauciones necesarias al mover o levantar tu controlador de almacenamiento AFX 2K.</block>
+  <block id="f415d8d2a6618e04d44d634d47bc83a2" category="paragraph">Un controlador de almacenamiento AFX 2K puede pesar hasta 64,0 lb (29,03 kg). Para levantar el controlador de almacenamiento, usa dos personas o una grúa hidráulica.</block>
+  <block id="0a89a0c735763d3d02f511e7e0568691" category="image-title">Precaución al levantar el controlador AFX 2K.</block>
+  <block id="bc9f127189e18d043f25d56a13a3f3a6" category="image-alt">Icono de precaución de elevación del controlador AFX 2K</block>
+  <block id="49d94e9d9cc1d911477394f4f5587281" category="paragraph">Un estante NX224 puede pesar hasta 60,1 lb (27,3 kg). Para levantar el estante, usa dos personas o un elevador hidráulico. Mantén todos los componentes en el estante (tanto en la parte delantera como en la trasera) para evitar que el peso del estante quede desequilibrado.</block>
+  <block id="e3d899fe7d7d08e9d1b7af94989d0ea1" category="image-title">Precaución al levantar la bandeja NX224.</block>
+  <block id="e6f1e8dcf7e84e228388169fccef969e" category="image-alt">NX224 NSM100 icono de precaución para la elevación</block>
+  <block id="b6283ecc2875030877658d5f50509cca" category="section-title">Pesos de los switches</block>
+  <block id="1e7fc07c8d33fee1cd76c12787fb389a" category="paragraph">Toma las precauciones necesarias al mover o levantar el switch.</block>
+  <block id="2082d0b73a4a04320b20b1e6d00e06cf" category="paragraph-title">Cisco Nexus 9808</block>
+  <block id="71d0ecf29d8418c39d3a7020d9e1d139" category="inline-link-macro">162 lb (73 kg) y un switch Cisco 9808 a plena carga puede llegar a pesar hasta 766 lb (347 kg)</block>
+  <block id="0647f55e09b4cecb34907d2657dd833f" category="paragraph">Un Cisco 9808 sin carga puede pesar hasta <block ref="13f1d1617f442c7bc3aba3932c9f89e0" category="inline-link-macro-rx"></block>. Para levantar el switch, usa una grúa hidráulica.</block>
+  <block id="f688f103c3ec15271cd0271af6a60615" category="image-title">Precaución al levantar el Cisco Nexus 9808 sin carga.</block>
+  <block id="d1074c2e1d5567caec7fef210fcc6c0c" category="image-alt">Icono de precaución de elevación de Cisco Nexus 9808</block>
+  <block id="8ea52e70a593eb2b21673e9d3cf56c98" category="image-title">Precaución al levantar el Cisco Nexus 9808 a plena carga.</block>
+  <block id="85ac8bd593004fb7ff69d84ab92ddf4f" category="image-alt">Icono de precaución de carga máxima de Cisco Nexus 9808</block>
+  <block id="6e6cbd7e9384425cb0fa31a261d35522" category="paragraph-title">Cisco Nexus9332D-GX2B</block>
+  <block id="e8084d649e131c99b13eccc6351f748c" category="inline-link-macro">12,7 kg (28,1 lb)</block>
+  <block id="a66d55678c1a6c3efd062d73040bd490" category="paragraph">Un Cisco 9332D-GX2B puede pesar hasta <block ref="6f9014f572f52bb6524452d132abc2f4" category="inline-link-macro-rx"></block>.</block>
+  <block id="0e7640c65f26c9e296a33421d0fb5c5a" category="paragraph-title">Cisco Nexus 9364D-GX2A</block>
+  <block id="cf32471bf244ab09b7a83cfa57b0a59d" category="inline-link-macro">58 lb (26,3 kg)</block>
+  <block id="02366468ef122cb4ccf5c75dc007d66e" category="paragraph">Un switch Cisco Nexus 9364D-GX2A puede pesar hasta <block ref="143c757a55c009a400277dc1af60d01f" category="inline-link-macro-rx"></block>. Para levantar el switch, usa dos personas o un elevador hidráulico.</block>
+  <block id="80a48afafed4748afbb7fb8e00d4fbac" category="image-title">Precaución al levantar el Cisco Nexus 9364D-GX2A.</block>
+  <block id="9c652f92636878a413a07289fa19df8b" category="image-alt">Icono de precaución de elevación de Cisco Nexus 9364D-GX2A</block>
+  <block id="6d2e6fa4ad5c4e1d70e0049f2bb6744f" category="inline-link-macro">Prepárate para instalar tu sistema de almacenamiento AFX 2K</block>
+  <block id="ceda96a5bbb707ae04d5b2e833b8513f" category="paragraph">Después de que hayas revisado los requisitos de hardware, <block ref="df78cfc12e7986adea8b6958aea20c15" category="inline-link-macro-rx"></block>.</block>
+  <block id="14c2f5caaa33edd3d9c98d021675599a" category="summary">Comienza con la instalación y la configuración del sistema de almacenamiento AFX 2K e impleméntalo en tu entorno ONTAP.</block>
+  <block id="bb5e6a0ec35d5434a23001e4f5b7aa1c" category="doc">Flujo de instalación y configuración para los sistemas de almacenamiento AFX 2K</block>
+  <block id="748f51609c111e704a444b9474a78c25" category="paragraph">Para instalar y configurar tu sistema de almacenamiento AFX 2K, revisa los requisitos de hardware, prepara tu sitio, instala los switches, instala y cablea los componentes de hardware, enciende el sistema y configura tu clúster ONTAP AFX.</block>
+  <block id="62871ffb3e01a536fedef64c1e7e369d" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="9e214765c0ab508a9dabd5b4c0fc9d2c" category="inline-link-macro-rx"></block></block>
+  <block id="8cf07a0ccfd463d05761ad47cd2b6674" category="paragraph">Consulta los requisitos de hardware para instalar tu sistema de almacenamiento AFX 2K.</block>
+  <block id="4e8e5e25feb54728bbdf5f233f6f6deb" category="inline-link-macro">Prepárate para instalar tu sistema de almacenamiento AFX 2K</block>
+  <block id="692d921a1a212daf707f21af1597565f" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="2fb89b8f2c297a83f899bf1a209a7f04" category="inline-link-macro-rx"></block></block>
+  <block id="b071c0df87fd86ef958c06a3a3081417" category="paragraph">Prepárate para instalar tu sistema de almacenamiento AFX 2K preparando el sitio, comprobando los requisitos ambientales y eléctricos, asegurando suficiente espacio en rack, desempaquetando el equipo, verificando el contenido con el albarán de entrega y registrando el hardware para soporte.</block>
+  <block id="9798a67def0b529180e57f6634c50e86" category="inline-link-macro">Instala los switches de tu sistema de almacenamiento AFX 2K</block>
+  <block id="e020a50d66335697eec9135a7be5ff38" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block><block ref="dc3f7314737cc8aa039ac5d145cd875b" category="inline-link-macro-rx"></block></block>
+  <block id="e0932c1a37a4c035802585cf946bb5c5" category="paragraph">Instala los switches Cisco Nexus 9808, 9332D-GX2B o 9364D-GX2A en el armario o en el rack. Instala un kit de panel de paso si usas el switch Cisco Nexus 9364D-GX2A.</block>
+  <block id="f1db20f2a6ea67281b280039ed23e84b" category="inline-link-macro">Instala el hardware de tu sistema de almacenamiento AFX 2K</block>
+  <block id="174ba30a4adb6eef22be0ec2ba4f2bbb" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="29c414a2b34b20c38b54cd0b7cbe50f0" category="inline-link-macro-rx"></block></block>
+  <block id="0339b38c5e536ce5872c1e1f4a7277bc" category="inline-link-macro">Conecta los controladores y las estanterías de tu sistema de almacenamiento AFX 2K</block>
+  <block id="cc6a36795b2fc813a47ae09ef8a58b8b" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="177fa42f91004bf8418c9d0abe33728e" category="inline-link-macro-rx"></block></block>
+  <block id="03e1dec6cc3a9116adc8943ea0059cd6" category="inline-link-macro">Enciende y configura los switches de tu sistema de almacenamiento AFX 2K</block>
+  <block id="1b96854974d5f4ffd9f2dcc8a009acc3" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block><block ref="beaa88dc5bf8500bb31077215f00658c" category="inline-link-macro-rx"></block></block>
+  <block id="c5e937dffaba36411bcbdd3eb4791ea6" category="paragraph">Enciende y configura los switches de tu sistema de almacenamiento AFX 2K. Consulta las instrucciones de configuración para los switches Cisco Nexus 9808, 9332D-GX2B y 9364D-GX2A.</block>
+  <block id="c5468f271ce4f817142b4ba7b7e32a93" category="inline-link-macro">Enciende tu sistema de almacenamiento AFX 2K</block>
+  <block id="ae11ea589792bd6df4cefbf4beb129f3" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block><block ref="e44d41ea69a939c847404b9f191abb00" category="inline-link-macro-rx"></block></block>
+  <block id="9304d8e6349135f4f1b0131240ab5a26" category="summary">Aprende cómo instalar los switches para el sistema de almacenamiento AFX 2K y las estanterías de almacenamiento.</block>
+  <block id="07e73c47ab45b375fd0ccd199b3b74bb" category="paragraph">Una vez que completes los preparativos para la instalación del sistema de almacenamiento AFX 2K, debes instalar los switches en el armario o en el rack de telecomunicaciones.</block>
+  <block id="abbd69be44276666819991687fb0f350" category="inline-link-macro">Guía de instalación del hardware del switch Cisco Nexus 9808 Mode</block>
+  <block id="2abff668059e41efff161539a8bd3a5d" category="inline-link-macro">Guía de instalación del hardware del switch Cisco Nexus 9332D-GX2B</block>
+  <block id="9ff9fb2231633f869e228568f0b014a0" category="inline-link-macro">Guía de instalación del hardware del switch Cisco Nexus 9364D-GX2A</block>
+  <block id="1155f06a0efc47f87895fe1d43b1308b" category="admonition">Si el flujo de aire de tus switches está configurado para entrada por el lado de los puertos (ventiladores y fuentes de alimentación de color burdeos), los puertos de red de los switches deben instalarse orientados hacia la parte delantera del armario y los ventiladores de extracción deben quedar orientados hacia la parte trasera del armario. Con esta configuración, debes asegurarte de usar cables lo suficientemente largos para llegar desde los puertos de red en la parte delantera del armario hasta los puertos de almacenamiento en la parte trasera del armario. + Para obtener información más detallada sobre estos switches, por favor visita el sitio web de Cisco: <block ref="b1e3c6adefcb656038c1e4e161770597" category="inline-link-macro-rx"></block>, <block ref="3148b19c0d24aa893b9a673ab43c93f2" category="inline-link-macro-rx"></block> y <block ref="ada068d3b68a48c78244497c91bbab0b" category="inline-link-macro-rx"></block>.</block>
+  <block id="634537c38f042132e8fd2f46f0570ece" category="section-title">Instalación del switch Cisco Nexus 9808</block>
+  <block id="98e35c1e75a2c08c1f49e829579e9817" category="paragraph">Si vas a instalar el switch Cisco Nexus 9808, consulta la <block ref="9d897c09acfda023b7ac88c3caedc148" category="inline-link-macro-rx"></block> para obtener instrucciones detalladas sobre cómo instalar los switches en el gabinete o rack.</block>
+  <block id="b30efe348aad9b1fd465cf0c2c1f78e7" category="section-title">Instalación de los switches Cisco Nexus 9332D-GX2B y 9364D-GX2A</block>
+  <block id="22f4977d08b7fc3ab6d1301c0f1669d8" category="paragraph">Si vas a instalar un Cisco Nexus 9332D-GX2B o un 9364D, sigue estos pasos para instalar los switches en el armario o rack.</block>
+  <block id="f73884780799db5b46f3b756e9cbc3b9" category="list-text">Pasa los conectores hembra de ambos cables de puente desde la parte trasera del panel a través del conjunto de escobillas.</block>
+  <block id="a522609cadcb30fbb8ce2ab61205935c" category="paragraph">Instala los dos conmutadores en lugares del armario que permitan un acceso eficiente a los controladores y a las bandejas, como las filas centrales.</block>
+  <block id="3c44162e4d90b6e64a452898e30b09c1" category="inline-link-macro">Instala el sistema de almacenamiento AFX 2K y las estanterías en el armario o rack</block>
+  <block id="3acd5cce42e7b34cb81528cf7752716c" category="paragraph">Después de instalar los conmutadores en el armario o rack, <block ref="aa2c652314319031e5bb331412a6d709" category="inline-link-macro-rx"></block>.</block>
+  <block id="20b605f2c9500a07e9e58525fa298af8" category="summary">Descubre cómo encender y configurar los switches de tu sistema de almacenamiento AFX 2K.</block>
+  <block id="b89899cc68b1c7a6d28cb399bc72cff3" category="paragraph">Una vez que hayas conectado tu sistema de almacenamiento AFX 2K, necesitas encender y configurar los switches Cisco Nexus 9808, 9332D-GX2B o 9364D-GX2A.</block>
+  <block id="a401dc7d868b438d53e932d19bbe29c1" category="list-text">Para los switches Cisco Nexus 9808, consulta la <block ref="b1e3c6adefcb656038c1e4e161770597" category="inline-link-macro-rx"></block> para más información.</block>
+  <block id="5a5c4176551fe6dd6fe6ee11995ce220" category="list-text">Para los switches Cisco Nexus 9332D-GX2B, usa los puertos 31/32 para las conexiones ISL. Consulta <block ref="2fc588ea5e031befba9fe0b0a6466061" category="inline-link-macro-rx"></block> para obtener más información.</block>
+  <block id="1f87cb3b672fcebc0f3e8c027541a0f4" category="list-text">Para los switches Cisco Nexus 9364D-GX2A, usa los puertos 63/64 para las conexiones ISL. Consulta <block ref="9a6587d5653529e56536e1d546440a92" category="inline-link-macro-rx"></block> para obtener más información.</block>
+  <block id="3f09832565123d546de503a179a2a73a" category="list-text">Configura los switches para que sean compatibles con el sistema de almacenamiento AFX 2K.</block>
+  <block id="6643d25175cee9ed135211156448f273" category="inline-link-macro">Configura conmutadores para sistemas de almacenamiento AFX</block>
+  <block id="658d597bb59c7324b20aa493f0ff0299" category="list-text">Para obtener más información sobre la configuración de los conmutadores, consulta la <block ref="c680c8d03caae4efc1e016b731ff8649" category="inline-link-macro-rx"></block>.</block>
+  <block id="708b74e6831efbdefff002e1e0fa8f36" category="inline-link-macro">encender el sistema de almacenamiento AFX 2K</block>
+  <block id="bdd33111aa5c5ee954d515d83c1a9731" category="paragraph">Después de configurar los conmutadores para tu sistema de almacenamiento AFX 2K, <block ref="50a620d565af3ded921cd2d40d21ce59" category="inline-link-macro-rx"></block>.</block>
+  <block id="e9cff4d9b0d60850bd0c9246eb98b0bc" category="paragraph">Después de instalar el hardware de montaje en rack de tu sistema de almacenamiento AFX 2K y de instalar los cables de los nodos controladores y los estantes de almacenamiento, debes encender los estantes de almacenamiento y los nodos controladores.</block>
+  <block id="756031cf2e8f6f44dd7976fb219e5e77" category="image-alt">Esquema de conexión eléctrica del sistema de almacenamiento AFX</block>
+  <block id="676acf548f3628aecf9dda22c2fbb15f" category="section-title">Paso 3: Verifica las conexiones del conmutador</block>
+  <block id="c0b7f24cd31d467c7ed81224bec89d8c" category="paragraph">Desde la interfaz de línea de comandos (CLI) del switch, verifica que los puertos del switch conectados a los puertos del clúster estén activos, que los nodos del clúster estén en sus VLAN de clúster correctas y que la conexión ISL entre los dos switches funcione.</block>
+  <block id="0097fca24c28b6259e494bccda3ea5ac" category="list-text">Comprueba que los puertos del switch conectados a los puertos del clúster estén activos:</block>
+  <block id="44ff10d140597f1cb51bd7445d226660" category="paragraph"><block ref="9bacb249b0368cefba275373cd07ba98" prefix="" category="inline-code"></block></block>
+  <block id="850ac0959fb08d131db400ce32ac1260" category="paragraph">Puedes utilizar <block ref="067b42f7046950ac29ec16c1ee1f3a25" prefix=" " category="inline-code"></block> para filtrar el resultado y que solo se muestren los puertos que están activos.</block>
+  <block id="4cf6c071b062edfe390393becef4ddb8" category="example-title">Mostrar un ejemplo para los switches Cisco Nexus 9332D-GX2B y 9364D-GX2A</block>
+  <block id="df1a0104b3b10c280d3eb4a8b64408b5" category="example-title">Mostrar un ejemplo para los switches Cisco Nexus 9808</block>
+  <block id="2672a0c9ba5986c403c26e013c160859" category="list-text">Comprueba que los nodos del clúster estén en las VLAN correctas del clúster usando los siguientes comandos:</block>
+  <block id="89706bbdab62cd83048f38305d846f95" category="paragraph"><block ref="7d4adecb4116bbfb7ed1130103f872a7" prefix="" category="inline-code"></block></block>
+  <block id="12bc122b0d9a4c902fdf52bfcc13ddc2" category="paragraph"><block ref="c01eca2c804c6a35b8aa8d87eceefe5d" prefix="" category="inline-code"></block></block>
+  <block id="67be433ec0e6f696ebdaeb0fc0c7c17d" category="example-title">Mostrar un ejemplo para los switches Cisco Nexus 9332D-GX2B</block>
+  <block id="7357894129543c2e60263a258bb54ce3" category="example-title">Mostrar un ejemplo para los switches Cisco Nexus 9364D-GX2A</block>
+  <block id="422d547a919ce56042b89a80c5d53dc8" category="admonition">Para obtener detalles específicos sobre el uso de puertos y VLAN, consulta el banner y la sección de notas importantes en tu RCF.</block>
+  <block id="30cf20765052250ba29f76c2b9e4fee6" category="list-text">Comprueba que el enlace ISL entre el primer conmutador (cs1) y el segundo conmutador (cs2) funcione correctamente:</block>
+  <block id="a8dce9ba2c375a697682cb30d4bd3f7a" category="paragraph"><block ref="2f9f4462a41014889ceaf0991f774466" prefix="" category="inline-code"></block></block>
+  <block id="9217dd0e439535a316153915b1269ee5" category="admonition">Dado que el conmutador Cisco Nexus 9808 es un conmutador único, el ISL está desconectado; por lo tanto, no verás los pares en la salida del comando.</block>
+  <block id="e489edfb772eb917fcfdf241301b7148" category="paragraph">Después de encender tu sistema de almacenamiento AFX 2K, completa la configuración según tu opción de implementación:</block>
+  <block id="90a434a515ece3b128a45b7317851ca2" category="list-text">Para implementaciones de sistemas de almacenamiento AFX 2K dedicados, ve a <block ref="b434a61d8681e909828695f9b932fe31" category="inline-link-macro-rx"></block>.</block>
+  <block id="c324eabd50a9696c22e3b2bbcb852087" category="summary">Prepárate para instalar el sistema de almacenamiento AFX 2K en tu entorno ONTAP y registrar el hardware para acceder a los beneficios de soporte.</block>
+  <block id="f4aa0fcc2422372f2166e5b045d1f496" category="paragraph">Prepárate para instalar tu sistema de almacenamiento AFX 2K acondicionando el sitio, desempaquetando las cajas y comparando el contenido de las cajas con el albarán de empaque, y registrando el sistema para acceder a los beneficios de soporte.</block>
+  <block id="4ad7b5c48c502f39bfd8b09fbcca74ad" category="paragraph">Para instalar tu sistema de almacenamiento AFX 2K, asegúrate de que el sitio y el armario o rack que planeas usar cumplan con las especificaciones para tu configuración.</block>
+  <block id="c48d746f4e2949a6e8b2cff970781dd9" category="list-text">1U para el switch Cisco Nexus 9332D-GX2B.</block>
+  <block id="5464b20ffc22b4fad80fe63190fc78f2" category="list-text">2U para el switch Cisco Nexus 9364D-GX2A.</block>
+  <block id="51921b7f60ec1ecae6ad35b585f36760" category="list-text">16U para el conmutador Cisco Nexus 9808.</block>
+  <block id="6054c582ca07fd4aea4c2ef89af00491" category="list-text">Cisco Nexus 9808, 9332D-GX2B o 9364D-GX2A switch</block>
+  <block id="d633bcd1ddfd076b687e4dd6dfdcaad6" category="paragraph">Una vez que te hayas asegurado de que tu sitio cumple los requisitos de las especificaciones de tu sistema de almacenamiento AFX 2K y hayas comprobado que tienes todas las piezas que pediste, registra tu sistema de almacenamiento.</block>
+  <block id="6ad695199dd1267c394e1b5e8918c099" category="inline-link-macro">Instala los conmutadores de tu sistema de almacenamiento AFX 2K</block>
+  <block id="64f0f32053db18eaa823db38747a60f5" category="paragraph">Después de que hayas preparado todo para instalar tu hardware AFX 2K, <block ref="841c968c6845aaa96391977b14dd30de" category="inline-link-macro-rx"></block>.</block>
+  <block id="24f867588084fea793ec7e904d0fe6bc" category="inline-image-macro">Ejemplo de cableado del sistema de almacenamiento AFX 1K, ancho=1000px</block>
+  <block id="ac53f8ceaf3de2a14d4130e5c80476fc" category="paragraph"><block ref="ac53f8ceaf3de2a14d4130e5c80476fc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a7f2e82dc420248ac6b5bb4612abfd3b" category="paragraph">Un controlador de almacenamiento AFX 1K puede pesar hasta 62,83 lb (28,5 kg). Para levantar el controlador de almacenamiento, usa a dos personas o un elevador hidráulico.</block>
+  <block id="46faf4c338a5ad7f7a91f9b2519d784f" category="image-title">Precaución al levantar el controlador AFX 1K.</block>
+  <block id="f5d3c91e099d33ba30a8c9acd3937c30" category="image-alt">Icono de precaución de elevación AFX 1K</block>
+  <block id="fbaadf625a1c5ac027179dc6e2a281b6" category="admonition">Si el flujo de aire de tus switches está configurado para la entrada por el lado del puerto (ventiladores y PSU de color burdeos), los puertos de red de los switches deben instalarse mirando hacia la parte frontal del armario y los ventiladores de escape deben mirar hacia la parte trasera del armario. Con esta configuración, tienes que asegurarte de usar cables lo suficientemente largos para que vayan desde los puertos de red en la parte frontal del armario hasta los puertos de almacenamiento en la parte trasera del armario. + Para más información detallada sobre estos switches, visita el sitio web de Cisco:<block ref="5de327010a827538dae114b632be0b56" category="inline-link-rx"></block> y<block ref="95c8681536a10cd34cb9abaa027869ff" category="inline-link-rx"></block>.</block>
+  <block id="e6b43d44e837c88835a24eed44fe337e" category="sidebar">Instala el hardware AFX 1K</block>
+  <block id="22b501d3873dc125bd1324e3e003ec6c" category="sidebar">Instala el hardware AFX 2K</block>
 </blocks>
