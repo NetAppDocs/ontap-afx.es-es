@@ -25,7 +25,7 @@ Una vez que hayas conectado tu sistema de almacenamiento AFX 2K, necesitas encen
 . Encienda cada interruptor.
 . Configura los switches para que sean compatibles con el sistema de almacenamiento AFX 2K.
 +
-** Para obtener más información sobre la configuración de los conmutadores, consulta la link:https://docs.netapp.com/us-en/ontap-systems-switches/afx/index.html["Configura conmutadores para sistemas de almacenamiento AFX"^].
+** Para obtener más información sobre la configuración de los conmutadores, consulta link:https://docs.netapp.com/us-en/ontap-systems-switches/afx/index.html["Configura conmutadores para sistemas de almacenamiento AFX"^].
 
 
 

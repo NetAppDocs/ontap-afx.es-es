@@ -21,6 +21,7 @@ TIP: Más información sobre la nueva y mejorada compatibilidad con https://docs
 
 
 
+[[storage-resource-management-enhancements]]
 == Mejoras en la gestión de recursos de almacenamiento
 
 [cols="2,4"]

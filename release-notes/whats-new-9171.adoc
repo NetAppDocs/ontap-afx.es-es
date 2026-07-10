@@ -18,6 +18,7 @@ Conozca las nuevas capacidades incluidas con ONTAP 9.17.1 que están disponibles
 
 
 
+[[platforms]]
 == Plataformas
 
 [cols="2,4"]

@@ -18,6 +18,7 @@ NOTE: Crear un recurso de red es un primer paso importante.  También deberá re
 
 
 
+[[create-a-broadcast-domain]]
 == Crear un dominio de difusión
 
 Un dominio de difusión simplifica la administración de su red de clúster al agrupar los puertos que forman parte de la misma red de capa dos.  Luego, a las máquinas virtuales de almacenamiento (SVM) se les pueden asignar puertos en el grupo para el tráfico de datos o de administración.
@@ -49,6 +50,7 @@ La MTU es el paquete de datos más grande que se puede aceptar en el dominio de 
 
 
 
+[[create-an-ipspace]]
 == Crear un espacio IP
 
 Un espacio IP es un dominio administrativo para direcciones IP y configuración de red relacionada.  Estos espacios se pueden utilizar para respaldar sus SVM a través de enrutamiento y administración aislados.  Por ejemplo, son útiles cuando los clientes tienen direcciones IP superpuestas del mismo rango de dirección IP y subred.
@@ -71,6 +73,7 @@ Puede utilizar el espacio IP para crear una subred.
 
 
 
+[[create-a-subnet]]
 == Crear una subred
 
 Una subred o subred impone una división lógica del espacio de direcciones IP en su red.  Permite asignar bloques dedicados de direcciones IP para la creación de una interfaz de red (LIF).  Las subredes simplifican la creación de LIF al permitirle utilizar el nombre de la subred en lugar de una combinación específica de dirección IP y máscara de red.
@@ -94,6 +97,7 @@ La nueva subred simplificará la creación de sus interfaces de red.
 
 
 
+[[create-a-network-interface]]
 == Crear una interfaz de red
 
 Una interfaz de red lógica (LIF) consta de una dirección IP y parámetros de configuración de red relacionados.  Puede asociarse a un puerto físico o lógico y normalmente lo utilizan los clientes para acceder a los datos proporcionados por una SVM.  Los LIF proporcionan resiliencia en caso de falla y pueden migrar entre los puertos del nodo para que la comunicación no se interrumpa.
@@ -107,6 +111,7 @@ Una interfaz de red lógica (LIF) consta de una dirección IP y parámetros de c
 
 
 
+[[related-information]]
 == Información relacionada
 
 * link:../administer/manage-ethernet-ports.html["Administrar puertos Ethernet AFX"]

@@ -21,6 +21,7 @@ TIP: Más información sobre la nueva y mejorada compatibilidad con https://docs
 
 
 
+[[performance]]
 == Rendimiento
 
 [cols="2,4"]
@@ -44,6 +45,7 @@ Dynamic Storage Efficiency optimiza de forma inteligente las operaciones de efic
 |===
 
 
+[[rest-api]]
 == API REST
 
 [cols="2,4"]
@@ -57,6 +59,7 @@ ONTAP 9.19.1 añade seis parámetros actualmente disponibles en el `/storage/v
 |===
 
 
+[[security]]
 == Seguridad
 
 [cols="2,4"]
@@ -75,6 +78,7 @@ Puedes descargar el cifrado y descifrado de Transport Layer Security (TLS) de to
 |===
 
 
+[[storage-resource-management]]
 == Gestión de recursos de almacenamiento
 
 [cols="2,4"]
@@ -93,6 +97,7 @@ Puedes modificar la configuración predeterminada que controla cómo los grupos 
 |===
 
 
+[[upgrade]]
 == Actualizar
 
 [cols="2,4"]

@@ -18,6 +18,7 @@ Registre la información requerida para cada red que conecte a su sistema de alm
 
 
 
+[[gather-network-information]]
 == Recopilar información de la red
 
 Antes de comenzar la instalación de su sistema de almacenamiento AFX 1K, recopile la información de red necesaria
@@ -48,12 +49,14 @@ Durante la configuración del clúster, ONTAP recomienda un conjunto de interfac
 
 
 
+[[network-requirements-for-cisco-switches]]
 == Requisitos de red para conmutadores Cisco
 
 Para la instalación y el mantenimiento de los conmutadores Cisco Nexus 9332D-GX2B y 9364D-GX2A, asegúrese de revisar los requisitos de cableado y red.
 
 
 
+[[network-requirements]]
 === Requisitos de red
 
 Necesita la siguiente información de red para todas las configuraciones del conmutador.
@@ -65,6 +68,7 @@ Necesita la siguiente información de red para todas las configuraciones del con
 
 
 
+[[cabling-requirements]]
 === Requisitos de cableado
 
 * Tiene la cantidad y el tipo de cables y conectores de cables adecuados para sus conmutadores. Ver el https://hwu.netapp.com["Hardware Universe"^] .

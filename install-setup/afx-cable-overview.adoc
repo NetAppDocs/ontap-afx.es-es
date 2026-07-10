@@ -15,6 +15,7 @@ Obtenga información sobre los componentes de hardware compatibles y las opcione
 
 
 
+[[supported-afx-1k-cabling-configuration]]
 == Configuración de cableado AFX 1K compatible
 
 La configuración inicial del sistema de almacenamiento AFX 1K admite un mínimo de cuatro nodos de controlador conectados a través de conmutadores duales a los estantes de discos de almacenamiento.
@@ -25,6 +26,7 @@ image:../media/drw_afx_cable_overview_half_node_ieops-2358.svg["Ejemplo de cable
 
 
 
+[[supported-hardware-components]]
 == Componentes de hardware compatibles
 
 Revise los estantes de discos de almacenamiento, conmutadores y tipos de cables compatibles con el sistema de almacenamiento AFX 1K.

@@ -54,8 +54,19 @@ Todos los puertos "a" se conectan al switch A, y todos los puertos "b" se conect
 
 NOTE: Las configuraciones de conmutadores Cisco Nexus 9332D-GX2B y 9364D-GX2A para el sistema de almacenamiento AFX 1K requieren conexiones de cable de conexión 4x100GbE.
 
+* Los adaptadores de red NVIDIA C6X-DX y CX7 (100GbE) no admiten el uso combinado de conexiones de cobre y conexiones ópticas (cables). Debes utilizar exclusivamente conexiones de cobre o ópticas y evitar combinar diferentes tipos de conexión. La combinación de tipos puede provocar la saturación del enlace tras un uso prolongado.
++
+Asegúrate de que dispones de los cables adecuados para tu tipo de conexión antes de realizar el cableado de los conmutadores.
+
++
+
+NOTE: Para obtener más información sobre cómo combinar distintos tipos de conexión, consulta el artículo de base de conocimientos de NetApp link:https://kb.netapp.com/on-prem/ontap/OHW/OHW-Issues/CHW-3504["Se han detectado errores de enlace CRC en la NIC CX6-DX con cables breakout mixtos de cobre y fibra en los puertos"^].
 
 
+
+
+
+[[step-1-connect-the-controllers-to-the-management-network]]
 == Paso 1: Conecte los controladores a la red de administración
 
 Conecta el puerto de gestión (llave inglesa) de cada controlador a cualquiera de los switches de gestión o conéctalos directamente a tu red de gestión.
@@ -76,6 +87,7 @@ IMPORTANT: No enchufe todavía los cables de alimentación.
 
 
 
+[[step-2-connect-the-controllers-to-the-host-network]]
 == Paso 2: Conecte los controladores a la red del host
 
 Conecte los puertos del módulo Ethernet a su red host.
@@ -125,6 +137,7 @@ image::../media/drw_afx_network_cabling_b_ieops-2814.svg[Cable a red Ethernet]
 
 
 
+[[step-3-cable-the-cluster-ha-and-storage-connections-to-switch-a]]
 == Paso 3: conecta el clúster, la interconexión de alta disponibilidad y las conexiones de almacenamiento al switch de red A
 
 Usa el cable multiconector 4x100GbE para conectar los puertos de clúster, interconexión de alta disponibilidad y almacenamiento de los controladores al switch de red A. Usa el cable de interconexión de clúster y de alta disponibilidad para conectar los puertos e1a y e7a al switch A. Los puertos e1a se usan para las conexiones de alta disponibilidad y los puertos e7a se usan para las conexiones de clúster. Para las conexiones de almacenamiento, conecta los puertos e10a y e11a al switch A.
@@ -157,6 +170,7 @@ image::../media/drw_afx_ha_cluster_storage_a_ieops-2779.svg[Agrupa el clúster d
 
 
 
+[[step-4-cable-the-cluster-ha-and-storage-connections-to-switch-b]]
 == Paso 4: Conecta los cables del clúster, la interconexión de alta disponibilidad y el almacenamiento al switch de red B
 
 Usa el cable multiconector 4x100GbE para conectar los puertos de clúster, interconexión de alta disponibilidad y almacenamiento de los controladores al switch de red B. Usa el cable de interconexión de clúster y de alta disponibilidad para conectar los puertos e1b y e7b al switch B. Los puertos e1b se usan para las conexiones de alta disponibilidad y los puertos e7b se usan para las conexiones de clúster. Para las conexiones de almacenamiento, conecta los puertos e10b y e11b al switch B.
@@ -188,6 +202,7 @@ image::../media/drw_afx_ha_cluster_storage_b_ieops-2780.svg[Agrupa el clúster d
 
 
 
+[[step-5-cable-the-shelf-to-switch-connections]]
 == Paso 5: Conecte las conexiones del estante al conmutador
 
 Conecte los estantes de almacenamiento NX224 a los conmutadores.

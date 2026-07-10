@@ -15,6 +15,7 @@ Infórmate sobre los componentes de hardware compatibles y las opciones de cable
 
 
 
+[[supported-afx-2k-cabling-configuration]]
 == Configuración de cableado AFX 2K compatible
 
 La configuración inicial del sistema de almacenamiento AFX 2K admite un mínimo de cuatro nodos controladores conectados a través de dos switches a las bandejas de discos de almacenamiento.
@@ -25,6 +26,7 @@ image:../media/drw_afx_2k_cable_overview_half_node_ieops-2871.svg["Ejemplo de ca
 
 
 
+[[supported-hardware-components]]
 == Componentes de hardware compatibles
 
 Consulta las estanterías de discos de almacenamiento, los switches y los tipos de cable compatibles con el sistema de almacenamiento AFX 2K.

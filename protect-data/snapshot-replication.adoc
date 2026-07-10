@@ -17,6 +17,7 @@ Para configurar la replicación de instantáneas, debe establecer una relación 
 
 
 
+[[step-1-create-a-cluster-peer-relationship]]
 == Paso 1: Crear una relación de pares de clúster
 
 Antes de poder proteger sus datos replicándolos en un clúster remoto, debe crear una relación de pares de clúster entre el clúster local y el remoto.
@@ -38,6 +39,7 @@ Ha emparejado un clúster AFX local con un clúster remoto.  Ahora puede crear u
 
 
 
+[[step-2-optionally-create-a-replication-policy]]
 == Paso 2: Opcionalmente, cree una política de replicación
 
 La política de replicación de instantáneas define cuándo se replican en el sitio remoto las actualizaciones realizadas en el clúster AFX.
@@ -79,6 +81,7 @@ Ha creado una política de replicación y ahora está listo para crear una relac
 
 
 
+[[step-3-create-a-replication-relationship]]
 == Paso 3: Crear una relación de replicación
 
 Una relación de replicación de instantáneas establece una conexión entre su sistema AFX y una ubicación remota para que pueda replicar grupos de consistencia en un clúster remoto.  Los grupos de consistencia replicados se pueden utilizar para la recuperación ante desastres o para la migración de datos.
@@ -166,6 +169,7 @@ Ahora que ha creado una política y una relación de replicación, su transferen
 
 
 
+[[step-4-test-replication-failover]]
 == Paso 4: Pruebe la conmutación por error de replicación
 
 De manera opcional, valide que pueda servir con éxito datos desde volúmenes replicados en un clúster remoto si el clúster de origen está fuera de línea.

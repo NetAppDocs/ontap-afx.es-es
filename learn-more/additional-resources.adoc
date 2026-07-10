@@ -15,6 +15,7 @@ Hay recursos adicionales a los que puede acceder para ayudar a administrar y res
 
 
 
+[[ontap-documentation]]
 == Documentación de ONTAP
 
 * https://docs.netapp.com/us-en/ontap/["ONTAP unificado"^]
@@ -24,6 +25,7 @@ Hay recursos adicionales a los que puede acceder para ayudar a administrar y res
 
 
 
+[[netapp-support]]
 == Soporte de NetApp
 
 * https://mysupport.netapp.com/["Sitio de soporte de NetApp"^]

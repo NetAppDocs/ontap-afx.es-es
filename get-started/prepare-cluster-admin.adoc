@@ -15,6 +15,7 @@ Antes de implementar AFX en un entorno de producción, es esencial comprender la
 
 
 
+[[understand-storage-virtual-machines]]
 == Comprender las máquinas virtuales de almacenamiento
 
 Una máquina virtual de almacenamiento (SVM) es un servidor aislado o un entorno de inquilino dentro de un clúster ONTAP .  Puede configurar una SVM para servir datos a los clientes conectados.  Debe estar familiarizado con las capacidades y características de las SVM AFX.
@@ -28,6 +29,7 @@ Interfaces de red dedicadas:: Cada SVM tiene su propio conjunto dedicado de inte
 
 
 
+[[two-afx-administrative-levels]]
 == Dos niveles administrativos de AFX
 
 Las tareas administrativas de ONTAP que realiza con AFX generalmente se dividen en dos categorías diferentes.  Algunas tareas se aplican al clúster ONTAP en su totalidad, mientras que otras se aplican a una SVM específica.  Esto da como resultado un modelo administrativo de dos niveles.
@@ -43,6 +45,7 @@ Administrador de SVM:: Un rol de administrador de SVM tiene control de una SVM e
 
 
 
+[[three-administrative-interfaces]]
 == Tres interfaces administrativas
 
 Al igual que los sistemas AFF y FAS , AFX tiene tres interfaces administrativas.  La LIF (o dirección IP) que necesita utilizar varía según la interfaz administrativa y su entorno.
@@ -65,12 +68,14 @@ NOTE: La interfaz de usuario del Administrador del sistema es la preferida para 
 |===
 
 
+[[learn-to-search-filter-and-sort-information-in-system-manager]]
 == Aprenda a buscar, filtrar y ordenar información en el Administrador del sistema
 
 La interfaz de usuario del Administrador del sistema incluye un sólido conjunto de funciones que le permiten acceder y mostrar la información que necesita.  Aprender a utilizar estas capacidades le ayudará a administrar mejor el sistema de almacenamiento AFX. Ver https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html["Buscar, filtrar y ordenar información en el Administrador del sistema"^] Para más información.
 
 
 
+[[access-the-ontap-cli]]
 == Acceder a la CLI de ONTAP
 
 Si bien puede utilizar el Administrador del sistema para la mayor parte de la administración de AFX, hay algunas tareas que solo puede realizar mediante la interfaz de línea de comandos de ONTAP .
@@ -104,6 +109,7 @@ Necesitarás lo siguiente:
 
 
 
+[[working-with-ontap-ha-pairs]]
 == Trabajar con pares ONTAP HA
 
 Al igual que con Unified ONTAP, los nodos del clúster AFX están configurados en pares de alta disponibilidad (HA) para tolerancia a fallas y operaciones sin interrupciones.  El emparejamiento de alta disponibilidad proporciona la capacidad de que las operaciones de almacenamiento permanezcan en línea en caso de una falla del nodo, como una conmutación por error de almacenamiento.  Cada nodo se asocia con otro nodo para formar un solo par.  Generalmente, esto se hace mediante una conexión directa entre los módulos NVRAM de los dos nodos.
@@ -112,6 +118,7 @@ Con AFX, se agrega una nueva VLAN HA a los conmutadores del clúster backend par
 
 
 
+[[afx-cluster-deployment-limitations]]
 == Limitaciones de implementación del clúster AFX
 
 Hay varias limitaciones, incluyendo mínimos y máximos, impuestas por AFX al configurar y utilizar tu clúster. Estos límites se dividen en varias categorías.
@@ -128,6 +135,7 @@ Deberías revisar los detalles disponibles en NetApp Hardware Universe and Inter
 
 
 
+[[confirm-afx-system-health]]
 == Confirmar el estado del sistema AFX
 
 Antes de realizar cualquier tarea de administración de AFX, debe verificar el estado del clúster.
@@ -170,6 +178,7 @@ link:../administer/view-insights.html["Utilice Insights para optimizar el rendim
 
 
 
+[[quick-start-for-creating-and-using-an-svm]]
 == Inicio rápido para crear y utilizar una SVM
 
 Después de instalar y configurar el clúster AFX, puede comenzar a realizar las tareas de administración típicas de la mayoría de las implementaciones de AFX.  Estos son los pasos de alto nivel necesarios para comenzar a compartir datos con los clientes.
@@ -192,6 +201,7 @@ link:../manage-data/prepare-manage-data.html["Preparar"]para asignar y gestionar
 
 
 
+[[related-information]]
 == Información relacionada
 
 * https://hwu.netapp.com/["NetApp Hardware Universe"^]

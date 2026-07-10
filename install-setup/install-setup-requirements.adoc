@@ -15,6 +15,7 @@ Revise el equipo necesario y las precauciones de elevación para su controlador 
 
 
 
+[[equipment-needed-for-install]]
 == Equipo necesario para la instalación
 
 Para instalar su sistema de almacenamiento AFX 1K, necesita el siguiente equipo y herramientas.
@@ -29,12 +30,14 @@ Para instalar su sistema de almacenamiento AFX 1K, necesita el siguiente equipo 
 
 
 
+[[lifting-precautions]]
 == Precauciones al levantar objetos
 
 El controlador de almacenamiento AFX y los estantes de almacenamiento son pesados.  Tenga cuidado al levantar y mover estos artículos.
 
 
 
+[[storage-controller-weights]]
 === Pesos del controlador de almacenamiento
 
 Tome las precauciones necesarias al mover o levantar su controlador de almacenamiento AFX 1K.
@@ -46,6 +49,7 @@ image::../media/drw_a1k_weight_caution_ieops-1698.svg[Icono de precaución de el
 
 
 
+[[storage-shelf-weights]]
 === Pesas para estantes de almacenamiento
 
 Tome las precauciones necesarias al mover o levantar su estante.

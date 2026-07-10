@@ -15,6 +15,7 @@ Para realizar una copia de seguridad de los datos de su sistema AFX, debe crear 
 
 
 
+[[before-you-begin]]
 == Antes de empezar
 
 Una instantánea es una copia local, de solo lectura, de sus datos que puede usar para restaurar volúmenes a puntos específicos en el tiempo.  Las instantáneas se pueden crear manualmente a pedido o automáticamente a intervalos regulares según unlink:policies-schedules.html["Política y programación de instantáneas"] .
@@ -36,6 +37,7 @@ Se crean instantáneas automatizadas según las definiciones de políticas de in
 
 
 
+[[create-a-snapshot]]
 == Crear una instantánea
 
 Crear una instantánea de un volumen o grupo de consistencia.
@@ -149,6 +151,7 @@ La transferencia de datos inicial para la replicación comienza inmediatamente d
 ====
 
 
+[[related-information]]
 == Información relacionada
 
 * https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["Crear una política de instantáneas de ONTAP"^]

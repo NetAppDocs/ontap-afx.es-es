@@ -15,6 +15,7 @@ Los puertos utilizados por el sistema AFX proporcionan una base para la conectiv
 
 
 
+[[create-a-vlan]]
 == Crear un VLAN
 
 Una VLAN consta de puertos de conmutación agrupados en un dominio de difusión.  Las VLAN le permiten aumentar la seguridad, aislar problemas potenciales y limitar las rutas disponibles dentro de su infraestructura de red IP.
@@ -45,6 +46,7 @@ Ha creado una VLAN para aumentar la seguridad, aislar problemas y limitar las ru
 
 
 
+[[create-a-lag]]
 == Crear un LAG
 
 Un grupo de agregado de enlaces (LAG) es una técnica que combina múltiples conexiones de red físicas en una única conexión lógica.  Puede usarlo para aumentar el ancho de banda y proporcionar redundancia entre nodos.
@@ -58,6 +60,7 @@ Un grupo de agregado de enlaces (LAG) es una técnica que combina múltiples con
 
 
 
+[[related-information]]
 == Información relacionada
 
 * link:../administer/manage-cluster-networking.html["Administrar la red del clúster AFX"]

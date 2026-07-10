@@ -15,6 +15,7 @@ Dependiendo de su entorno, necesitará crear y administrar certificados digitale
 
 
 
+[[generate-a-certificate-signing-request]]
 == Generar una solicitud de firma de certificado
 
 Para comenzar a utilizar un certificado digital, debe generar una solicitud de firma de certificado (CSR).  Una CSR se utiliza para solicitar un certificado firmado a una autoridad de certificación (CA). Como parte de esto, ONTAP crea un par de claves pública/privada e incluye la clave pública en la CSR.
@@ -33,6 +34,7 @@ Ha generado una CSR que puede utilizarse para solicitar un certificado de clave 
 
 
 
+[[add-a-trusted-certificate-authority]]
 == Agregar una autoridad de certificación de confianza
 
 ONTAP proporciona un conjunto predeterminado de certificados raíz confiables para usar con Seguridad de la capa de transporte (TLS) y otros protocolos.  Puede agregar autoridades de certificación confiables adicionales según sea necesario.
@@ -50,6 +52,7 @@ Ha agregado una autoridad de certificación confiable a su sistema AFX.
 
 
 
+[[renew-or-delete-a-trusted-certificate-authority]]
 == Renovar o eliminar una autoridad de certificación de confianza
 
 Las autoridades de certificación de confianza deben renovarse anualmente.  Si no desea renovar un certificado vencido, debe eliminarlo.
@@ -83,6 +86,7 @@ Ha renovado o eliminado una autoridad de certificación de confianza existente e
 
 
 
+[[add-a-clientserver-certificate-or-local-certificate-authority]]
 == Agregar un certificado de cliente/servidor o una autoridad de certificación local
 
 Puede agregar un certificado de cliente/servidor o una autoridad de certificación local como parte de la habilitación de servicios web seguros.
@@ -99,6 +103,7 @@ Ha agregado un nuevo certificado de cliente/servidor o autoridades locales a su 
 
 
 
+[[renew-or-delete-a-clientserver-certificate-or-local-certificate-authorities]]
 == Renovar o eliminar un certificado de cliente/servidor o autoridades de certificación locales
 
 Los certificados de cliente/servidor y las autoridades de certificación locales deben renovarse anualmente.  Si no desea renovar un certificado vencido o las autoridades de certificación locales, debe eliminarlos.
@@ -130,6 +135,7 @@ Ha renovado o eliminado un certificado de cliente/servidor o una autoridad de ce
 
 
 
+[[related-information]]
 == Información relacionada
 
 * https://docs.netapp.com/us-en/ontap/authentication/install-server-certificate-cluster-svm-ssl-server-task.html["Genere e instale un certificado de servidor firmado por CA en ONTAP"^]

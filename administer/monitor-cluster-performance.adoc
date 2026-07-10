@@ -15,12 +15,14 @@ Puedes ver una visión general a grandes rasgos del rendimiento y la utilizació
 
 
 
+[[storage-capacity]]
 == Capacidad de almacenamiento
 
 Supervisa la utilización del almacenamiento para asegurarte de que tienes suficiente capacidad de almacenamiento para las cargas de trabajo actuales y futuras.
 
 
 
+[[monitor-high-level-cluster-storage-utilization]]
 === Supervisa la utilización del almacenamiento en clúster a grandes rasgos
 
 En ONTAP System Manager, puedes ver una visualización a grandes rasgos de la utilización del almacenamiento de todo el clúster.
@@ -33,6 +35,7 @@ En ONTAP System Manager, puedes ver una visualización a grandes rasgos de la ut
 
 
 
+[[monitor-storage-availability-zone-capacity-details]]
 === Supervisa los detalles de capacidad de las zonas de disponibilidad de almacenamiento
 
 A partir de ONTAP 9.19.1, puedes ver los detalles de capacidad de tu zona de disponibilidad de almacenamiento, incluidos los umbrales de espacio, el espacio consumido por las instantáneas y la reducción de datos. También puedes establecer los umbrales de uso de espacio en el porcentaje en el que quieres que ONTAP genere alertas de advertencia y críticas.
@@ -44,6 +47,7 @@ A partir de ONTAP 9.19.1, puedes ver los detalles de capacidad de tu zona de dis
 
 
 
+[[cluster-performance]]
 == Rendimiento del clúster
 
 El Administrador del sistema proporciona una descripción detallada del rendimiento del clúster AFX.
@@ -57,6 +61,7 @@ El Administrador del sistema proporciona una descripción detallada del rendimie
 
 
 
+[[related-information]]
 == Información relacionada
 
 * link:../administer/additional-ontap-cluster.html["Administración adicional del clúster AFX"]

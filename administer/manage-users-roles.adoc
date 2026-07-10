@@ -18,6 +18,7 @@ NOTE: Cada usuario de ONTAP debe tener un rol asignado.  Un rol incluye privileg
 
 
 
+[[create-an-account-role]]
 == Crear un rol de cuenta
 
 Los roles para administradores de clúster y administradores de máquinas virtuales de almacenamiento se crean automáticamente cuando se configura e inicializa su clúster AFX.  Puede crear roles de cuenta de usuario adicionales para definir funciones específicas que los usuarios asignados a los roles pueden realizar en su clúster.
@@ -32,6 +33,7 @@ Los roles para administradores de clúster y administradores de máquinas virtua
 
 
 
+[[create-a-cluster-account]]
 == Crear una cuenta de clúster
 
 Puede crear una cuenta a nivel de clúster para usarla al realizar la administración del clúster o de SVM.
@@ -54,6 +56,7 @@ Se crea una nueva cuenta y está disponible para usarla con su clúster AFX.
 
 
 
+[[related-information]]
 == Información relacionada
 
 * link:../administer/prepare-authentication.html["Preparar servicios de autenticación"]

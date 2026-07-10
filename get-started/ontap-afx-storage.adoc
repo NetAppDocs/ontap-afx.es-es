@@ -15,6 +15,7 @@ El sistema de almacenamiento AFX de NetApp se basa en una arquitectura de almace
 
 
 
+[[typical-application-workloads]]
 == Cargas de trabajo de aplicaciones típicas
 
 El sistema de almacenamiento NetApp AFX satisface las demandas únicas de las cargas de trabajo de objetos NAS y S3 que requieren alto rendimiento y escalabilidad independiente.  Estas aplicaciones se benefician de un diseño avanzado basado en alta concurrencia y E/S paralelas.  AFX es ideal para organizaciones que implementan y administran varios tipos diferentes de cargas de trabajo de aplicaciones, incluyendo:
@@ -27,6 +28,7 @@ El sistema de almacenamiento NetApp AFX satisface las demandas únicas de las ca
 
 
 
+[[system-design-characteristics]]
 == Características del diseño del sistema
 
 El sistema AFX tiene varias características de diseño que le permiten funcionar como una plataforma NAS de alto rendimiento.
@@ -42,6 +44,7 @@ Funcionalidad HA mejorada:: NetApp AFX ofrece una serie de mejoras para la confi
 
 
 
+[[hardware-infrastructure]]
 == Infraestructura de hardware
 
 El sistema de almacenamiento NetApp AFX ofrece una solución unificada de hardware y software que crea una experiencia simplificada específica para las necesidades de los clientes de NAS de alto rendimiento.
@@ -58,6 +61,7 @@ Los siguientes componentes de hardware se utilizan con clústeres AFX:
 
 
 
+[[related-information]]
 == Información relacionada
 
 * https://hwu.netapp.com/["NetApp Hardware Universe"^]

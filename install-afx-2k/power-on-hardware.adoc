@@ -15,6 +15,7 @@ Después de instalar el hardware de montaje en rack de tu sistema de almacenamie
 
 
 
+[[step-1-power-on-the-shelf-and-assign-shelf-id]]
 == Paso 1: Encienda el estante y asígnele un ID
 
 Cada estante tiene un ID de estante único, lo que garantiza su distinción en la configuración de su sistema de almacenamiento.
@@ -122,6 +123,7 @@ La fuente de alimentación se enciende tan pronto como se conecta el cable de al
 
 
 
+[[step-2-power-on-the-controller-nodes]]
 == Paso 2: Encienda los nodos del controlador
 
 Después de haber encendido los estantes de almacenamiento y haberles asignado identificaciones únicas, encienda los nodos del controlador de almacenamiento.
@@ -160,6 +162,7 @@ image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[Esquema de conexión
 
 
 
+[[step-3-verify-the-switch-connections]]
 == Paso 3: Verifica las conexiones del conmutador
 
 Desde la interfaz de línea de comandos (CLI) del switch, verifica que los puertos del switch conectados a los puertos del clúster estén activos, que los nodos del clúster estén en sus VLAN de clúster correctas y que la conexión ISL entre los dos switches funcione.
@@ -639,7 +642,4 @@ cs1#
 
 
 .¿Que sigue?
-Después de encender tu sistema de almacenamiento AFX 2K, completa la configuración según tu opción de implementación:
-
-* Para implementaciones de sistemas de almacenamiento AFX 2K dedicados, ve a link:../install-setup/cluster-setup.html["Configura un clúster AFX"].
-
+Una vez que hayas encendido tu sistema de almacenamiento AFX 2K, link:../install-setup/cluster-setup.html["configurar el clúster AFX"].

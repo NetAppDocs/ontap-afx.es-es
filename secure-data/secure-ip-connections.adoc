@@ -15,12 +15,14 @@ Seguridad IP (IPsec) es un estándar de protocolo de Internet que proporciona en
 
 
 
+[[configuring-ipsec-on-an-afx-system]]
 == Configuración de IPsec en un sistema AFX
 
 Los procedimientos de configuración de IPsec para los sistemas de almacenamiento AFX son los mismos que para los sistemas AFF y FAS , con la excepción de las tarjetas controladoras de interfaz de red (NIC) compatibles que se utilizan con la función de descarga de hardware. Referirse a https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html["Prepárese para configurar la seguridad IP para la red ONTAP."^] Para más información.
 
 
 
+[[hardware-offload-feature]]
 == Función de descarga de hardware
 
 Varias de las operaciones criptográficas de IPsec, como el cifrado y las comprobaciones de integridad, se pueden descargar a una tarjeta NIC compatible en su sistema AFX.  Esto puede mejorar significativamente el rendimiento y el rendimiento del tráfico de red protegido por IPsec.
@@ -38,6 +40,7 @@ Consulte la https://hwu.netapp.com/["NetApp Hardware Universe"^] para obtener m�
 
 
 
+[[related-information]]
 == Información relacionada
 
 * https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html["Prepárese para configurar la seguridad IP para la red ONTAP."^]

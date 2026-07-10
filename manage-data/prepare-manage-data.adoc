@@ -18,6 +18,7 @@ TIP: Dado que muchos de los conceptos y procedimientos de administración dispon
 
 
 
+[[terminology-and-options]]
 == Terminología y opciones
 
 Hay varios términos relacionados con el almacenamiento AFX con los que debes estar familiarizado.
@@ -40,12 +41,14 @@ Análisis del sistema de archivos:: File System Analytics (FSA) es una función 
 
 
 
+[[data-migration-options]]
 == Opciones de migración de datos
 
 Hay varias opciones de migración de datos.  El objetivo es migrar datos externos a un clúster AFX.
 
 
 
+[[migrating-data-from-aff-or-fas-systems]]
 === Migración de datos desde sistemas AFF o FAS
 
 Está disponible una ruta de migración totalmente integrada de los sistemas AFF o FAS (que ejecutan la personalidad Unified ONTAP ) a AFX mediante las siguientes tecnologías:
@@ -59,18 +62,21 @@ Además, los volúmenes FlexCache se pueden conectar entre sistemas AFX y AFF o 
 
 
 
+[[migrating-data-from-a-non-ontap-source]]
 === Migración de datos desde una fuente que no es ONTAP
 
 La migración de datos desde sistemas que no sean ONTAP se puede realizar mediante operaciones de copia a nivel de archivo. utilidades de copia rápida como https://docs.netapp.com/us-en/xcp/["XCP"^] o https://docs.netapp.com/us-en/data-services-copy-sync/["Copiar y sincronizar"^] Puede utilizarse junto con utilidades estándar como RoboCopy (para SMB) y rsync (para NFS), así como con herramientas de terceros como DataDobi.
 
 
 
+[[migration-limitations]]
 === Limitaciones migratorias
 
 Puede replicar datos de sistemas AFF o FAS a AFX si el volumen de datos de origen no contiene LUN o espacios de nombres NVMe. Al replicar desde sistemas AFX a AFF o FAS , la versión mínima de ONTAP compatible con el sistema AFF o FAS es 9.16.1. Esta es la primera versión de ONTAP que admite el equilibrio de capacidad avanzado.
 
 
 
+[[display-an-overview-of-your-storage]]
 == Muestra una descripción general de tu almacenamiento
 
 Para comenzar a administrar sus datos AFX, debe mostrar una descripción general del almacenamiento.
@@ -87,6 +93,7 @@ Puede acceder a todos los volúmenes y depósitos definidos para el clúster AFX
 
 
 
+[[related-information]]
 == Información relacionada
 
 * https://docs.netapp.com/us-en/ontap/concept_nas_file_system_analytics_overview.html["Obtenga información sobre el análisis del sistema de archivos ONTAP."^]

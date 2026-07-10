@@ -15,6 +15,7 @@ Puede revisar los eventos y los mensajes de registro de auditoría generados por
 
 
 
+[[events]]
 == Events
 
 Los mensajes de eventos proporcionan un registro valioso de la actividad del sistema.  Cada evento incluye una descripción y un identificador único junto con una acción recomendada.
@@ -28,6 +29,7 @@ Los mensajes de eventos proporcionan un registro valioso de la actividad del sis
 
 
 
+[[audit-log]]
 == Registro de auditoría
 
 El registro de auditoría incluye un registro de la actividad del sistema basado en el uso de protocolos de acceso como HTTP.
@@ -39,6 +41,7 @@ El registro de auditoría incluye un registro de la actividad del sistema basado
 
 
 
+[[manage-notifications]]
 == Administrar notificaciones
 
 AFX admite varios tipos de notificaciones que puedes reenviar.
