@@ -25,7 +25,9 @@ Una vez que hayas conectado tu sistema de almacenamiento AFX 2K, necesitas encen
 . Encienda cada interruptor.
 . Configura los switches para que sean compatibles con el sistema de almacenamiento AFX 2K.
 +
-** Para obtener más información sobre la configuración de los conmutadores, consulta link:https://docs.netapp.com/us-en/ontap-systems-switches/afx/index.html["Configura conmutadores para sistemas de almacenamiento AFX"^].
+** Para los conmutadores Cisco Nexus 9808, consulta la documentación sobre conmutadores de clúster y de almacenamiento link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9808/configure-switch-workflow-9808.html["Configura el switch Cisco Nexus 9808"^].
+** Para los conmutadores Cisco Nexus 9332D-GX2B, consulta la documentación sobre conmutadores de clúster y de almacenamiento link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9332d-gx2b/configure-switch-workflow-9332d.html["Configurar el conmutador Cisco Nexus 9332D-GX2B"^].
+** Para los conmutadores Cisco Nexus 9364D-GX2A, consulta la documentación sobre conmutadores de clúster y de almacenamiento link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9364d-gx2a/configure-switch-workflow-9364d.html["Configurar el conmutador Cisco Nexus 9364D-GX2A"^].
 
 
 
