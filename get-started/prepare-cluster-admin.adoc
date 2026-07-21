@@ -126,7 +126,7 @@ Hay varias limitaciones, incluyendo mínimos y máximos, impuestas por AFX al co
 
 CAUTION: Antes de aumentar un parámetro operativo de tu sistema de almacenamiento AFX, deberías evaluar cómo podría afectar a tus aplicaciones, así como al clúster en su conjunto. Por ejemplo, aunque ampliar el número de nodos controladores aumenta la capacidad global, también podría aumentar el tráfico en la red del clúster. Es importante entender la implicación de estos cambios de configuración y cómo podrían afectar a tu entorno.
 
-Nodos controladores por clúster:: Cada cluster AFX debe tener al menos cuatro nodos. El número máximo de nodos varía en función de la versión de ONTAP; por ejemplo, la versión 9.19.1 RC permite hasta 32 nodos por cluster AFX.
+Nodos controladores por clúster:: Cada clúster AFX debe tener al menos cuatro nodos. El número máximo de nodos varía en función de la versión de ONTAP; por ejemplo, la versión 9.19.1 permite hasta 32 nodos por clúster AFX.
 Capacidad de almacenamiento:: Esta es la capacidad total de todos los discos SSD en la zona de disponibilidad de almacenamiento (SAZ) del clúster. La capacidad máxima de almacenamiento varía según la versión de ONTAP .
 Conmutadores de clúster:: Necesitas al menos dos conmutadores en tu red de almacenamiento de clúster.  El valor máximo permitido se determina en función del número total de nodos de control en el clúster.
 

@@ -18,6 +18,34 @@ Conoce las nuevas funcionalidades incluidas en ONTAP 9.19.1 que están disponibl
 
 
 
+[[data-protection]]
+== Protección de datos
+
+[cols="2,4"]
+|===
+| Actualizar | Descripción 
+
+
+| link:../administer/additional-ontap-svm.html["Protege con ONTAP SnapMirror active sync para NAS"]  a| 
+SnapMirror active sync admite cargas de trabajo NAS a nivel de SVM usando NFS y SMB en clústeres AFX (solo de 4 nodos) y acceso de solo lectura y escritura únicamente en el clúster principal.
+
+|===
+
+
+[[networking]]
+== Redes
+
+[cols="2,4"]
+|===
+| Actualizar | Descripción 
+
+
+| link:../administer/additional-ontap-cluster.html#performance["Mejoras en el rendimiento de TCP"]  a| 
+A partir de ONTAP 9.19.1, ONTAP mejora el rendimiento de la transferencia de datos TCP en enlaces WAN con pérdidas y alta latencia mediante la integración de dos funciones de recuperación de pérdidas, PRR y RACK, en la pila TCP de ONTAP.
+
+|===
+
+
 [[performance]]
 == Rendimiento
 
@@ -64,13 +92,18 @@ ONTAP 9.19.1 añade seis parámetros actualmente disponibles en el `/storage/v
 | Actualizar | Descripción 
 
 
-| Soporte ARP/AI para volúmenes primarios elegibles SnapMirror  a| 
+| https://docs.netapp.com/us-en/ontap/anti-ransomware/use-cases-restrictions-concept.html#snapmirroreligible["Compatibilidad con ARP/AI para volúmenes primarios de SnapMirror"^]  a| 
 ARP/AI admite volúmenes primarios elegibles en relaciones síncronas SnapMirror con sistemas AFX. ARP/AI se ejecuta en el volumen primario activo de lectura/escritura, crea instantáneas ARP solo primarias y proporciona detección de ransomware basada en aprendizaje automático.
 
 
 
 | link:../administer/additional-ontap-cluster.html["Soporte para la descarga de hardware TLS"]  a| 
 Puedes descargar el cifrado y descifrado de Transport Layer Security (TLS) de todo tu clúster a las tarjetas Ethernet compatibles. Esto reduce la sobrecarga de la CPU y mejora el rendimiento de los sistemas que usan TLS.
+
+
+
+| link:../administer/additional-ontap-svm.html["NFS sobre TLS v3"]  a| 
+A partir de ONTAP 9.19.1, ONTAP añade soporte local para NFS sobre TLS con TLS 1.3 para cifrar el tráfico NFS en tránsito en SVMs habilitadas para NFS. Esta versión también admite la autenticación mutua de host mediante TLS opcional por LIF y controles de política de exportación para denegar el acceso TCP sin TLS a los clientes que cumplan los criterios.
 
 |===
 
