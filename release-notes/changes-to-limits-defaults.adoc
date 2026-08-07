@@ -37,6 +37,11 @@ Puedes ampliar tu clúster AFX hasta un máximo de 32 nodos. Esto te permite esc
 | Volúmenes por FlexGroup  a| 
 El número máximo de volúmenes en un FlexGroup se ha aumentado a 512 con 32 nodos. Esto permite que el sistema de almacenamiento AFX aproveche al máximo las capacidades de rendimiento para clústeres más grandes.
 | ONTAP 9.19.1 
+
+
+| SnapMirror soporte en la nube  a| 
+El número máximo de buckets de S3 que admite SnapMirror cloud se ha aumentado a 100. Esto te permite crear más buckets de S3 para tus cargas de trabajo y aplicaciones.
+| ONTAP 9.19.1 
 |===
 
 

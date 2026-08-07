@@ -25,3 +25,7 @@ Debe configurar el servicio S3 para la SVM para que los clientes puedan acceder 
 . Opcionalmente, seleccione *Más opciones* para realizar configuraciones adicionales relacionadas con la protección de datos, el bloqueo y los permisos.
 . Seleccione *Guardar* para agregar el depósito.
 
+
+.Información relacionada
+* https://docs.netapp.com/us-en/ontap/data-protection/cloud-backup-with-snapmirror-task.html["Realiza copias de seguridad de los datos en la nube mediante ONTAP SnapMirror Cloud"^]
+
