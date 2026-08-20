@@ -2,7 +2,6 @@
 <blocks>
   <block id="9300fda436a5cc421811b04dc04badf8" category="summary">Además de la administración típica del clúster AFX, es posible que haya otras tareas que deba realizar según su entorno.  La mayoría de las tareas adicionales se pueden realizar mediante el Administrador del sistema, aunque en algunos casos es posible que sea necesario utilizar la CLI.</block>
   <block id="faede213fca7a18a345d45f0d29088a6" category="doc">Administración adicional para un clúster de sistema de almacenamiento AFX</block>
-  <block id="7d36f828619651b0ec19095f0f25dfc8" category="admonition">Las características y la administración de ONTAP descritas son comunes a los sistemas de almacenamiento AFX y a los sistemas AFF o FAS que ejecutan Unified ONTAP.  Se incluyen enlaces a la documentación relevante de Unified ONTAP según corresponda.</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">Licencias</block>
   <block id="92ff5239ce1b1631936446319c85a178" category="paragraph">Los sistemas AFX tienen licencia de manera similar a los sistemas Unified ONTAP AFF y FAS .  Un clúster AFX incluye la mayoría de las funciones de forma predeterminada para los protocolos compatibles.</block>
   <block id="b378946fe8453b6639548e16e14e8d27" category="section-title">Gestión de licencias de ONTAP</block>
@@ -2092,4 +2091,22 @@
   <block id="6b10f0340ee90e881f251f6a6c1c50e5" category="paragraph"><block ref="6b10f0340ee90e881f251f6a6c1c50e5" category="inline-xref-macro-rx"></block></block>
   <block id="980de945038567285acd832eeffc81db" category="paragraph">Puedes usar condiciones para imponer escrituras condicionales en cargas de objetos y eliminaciones condicionales en eliminaciones de objetos. Las escrituras y eliminaciones condicionales proporcionan una forma de evitar sobrescrituras o eliminaciones involuntarias de objetos.</block>
   <block id="2f3fb7b10644dc3204e82bf0a20ccfe1" category="paragraph">Para mantener el acceso de los usuarios a los recursos de S3 si la clave de acceso original caduca, los administradores del clúster de ONTAP pueden generar una segunda clave de acceso para cada usuario de S3.</block>
+  <block id="11ba5c1727548057c68ac606191a008a" category="paragraph">Además de la administración habitual de un clúster AFX, es posible que tengas que realizar otras tareas en función de tu entorno. La mayoría de las tareas adicionales se pueden realizar mediante System Manager, aunque en algunos casos puede que tengas que utilizar la CLI. Las funciones y la administración de ONTAP descritas son comunes a los sistemas de almacenamiento AFX y a los sistemas AFF o FAS que ejecutan Unified ONTAP. Se incluyen enlaces a la documentación pertinente de Unified ONTAP según corresponda.</block>
+  <block id="95e6e1659bc28dbb709323a6e8ad256f" category="admonition">Consulta las breves descripciones de las funciones y la configuración adicionales de ONTAP AFX. Si no encuentras la opción que buscas, asegúrate de consultar también los enlaces al final para recursos adicionales.</block>
+  <block id="8f1df3d891a92d7cf641c00a5d10a5e1" category="inline-link">Prepárate para utilizar la seguridad IP en la red ONTAP</block>
+  <block id="66a386fe45902150e921567e6268eea8" category="list-text"><block ref="66a386fe45902150e921567e6268eea8" category="inline-link-rx"></block></block>
+  <block id="0e39b789f7717bc975ea58eaf0db4905" category="inline-link">Configura la seguridad de red de ONTAP usando FIPS para todas las conexiones SSL</block>
+  <block id="9c40aa856fab06d435d3012a0852a8b9" category="list-text"><block ref="9c40aa856fab06d435d3012a0852a8b9" category="inline-link-rx"></block></block>
+  <block id="f94158b9ac425f46f5e560391d7810ea" category="paragraph">Además de la administración habitual de AFX SVM, es posible que tengas que realizar otras tareas en función de tu entorno. La mayoría de las tareas adicionales se pueden realizar mediante System Manager, aunque en algunos casos puede que tengas que utilizar la CLI. Las funciones y la administración de ONTAP descritas son comunes a los sistemas de almacenamiento AFX y a los sistemas AFF o FAS que ejecutan Unified ONTAP. Se incluyen enlaces a la documentación pertinente de Unified ONTAP según corresponda.</block>
+  <block id="8a13505dd6946f762d484d5548520dad" category="inline-link">Grupos de políticas de calidad de servicio adaptativa</block>
+  <block id="cb0922a55eba1a82e50cf71c18ebe232" category="list-text"><block ref="cb0922a55eba1a82e50cf71c18ebe232" category="inline-link-rx"></block></block>
+  <block id="8e02fbebde6eda602f04ad6be7872598" category="inline-xref-macro">Administrador adicional: descarga de IPsec en hardware</block>
+  <block id="5b3998aa47cfda7a64ed6ff67b670846" category="paragraph"><block ref="5b3998aa47cfda7a64ed6ff67b670846" category="inline-xref-macro-rx"></block></block>
+  <block id="0e512d1b0e0eec22d9c82690b21dc8e3" category="paragraph">La compatibilidad con la descarga de IPsec en hardware se amplía a IPv6.</block>
+  <block id="dbdd0c87a08f7da829b770094938ec4f" category="inline-xref-macro">Administrador adicional: algoritmos PQC de OpenSSL</block>
+  <block id="5a9a17f2a80f4bf17ebd21e4bd62d32c" category="paragraph"><block ref="5a9a17f2a80f4bf17ebd21e4bd62d32c" category="inline-xref-macro-rx"></block></block>
+  <block id="4f6ab42dbc66c329bdc56764d3561476" category="paragraph">ONTAP es compatible con algoritmos criptográficos de computación poscuántica para SSL. Estos algoritmos proporcionan una protección adicional frente a posibles ataques futuros de computación cuántica y están disponibles cuando el modo FIPS de SSL está desactivado.</block>
+  <block id="8e2c307ef6e54871dce87c1828dc21fd" category="inline-xref-macro">Compatibilidad con grupos de políticas de calidad de servicio (QoS) anidados en dos niveles en SVM y volúmenes</block>
+  <block id="e08db9e8d24efaf5a7190ce782b11af3" category="paragraph"><block ref="e08db9e8d24efaf5a7190ce782b11af3" category="inline-xref-macro-rx"></block></block>
+  <block id="0d42fe34cb867538d9d93ccdd8b15ac7" category="paragraph">Puedes asignar una política de calidad de servicio (QoS) a una SVM y a los volúmenes bajo la SVM al mismo tiempo.</block>
 </blocks>

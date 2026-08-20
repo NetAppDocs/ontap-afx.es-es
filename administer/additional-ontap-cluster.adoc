@@ -11,10 +11,10 @@ summary: Además de la administración típica del clúster AFX, es posible que 
 
 
 [role="lead"]
-Además de la administración típica del clúster AFX, es posible que haya otras tareas que deba realizar según su entorno.  La mayoría de las tareas adicionales se pueden realizar mediante el Administrador del sistema, aunque en algunos casos es posible que sea necesario utilizar la CLI.
+Además de la administración habitual de un clúster AFX, es posible que tengas que realizar otras tareas en función de tu entorno. La mayoría de las tareas adicionales se pueden realizar mediante System Manager, aunque en algunos casos puede que tengas que utilizar la CLI. Las funciones y la administración de ONTAP descritas son comunes a los sistemas de almacenamiento AFX y a los sistemas AFF o FAS que ejecutan Unified ONTAP. Se incluyen enlaces a la documentación pertinente de Unified ONTAP según corresponda.
 
 
-NOTE: Las características y la administración de ONTAP descritas son comunes a los sistemas de almacenamiento AFX y a los sistemas AFF o FAS que ejecutan Unified ONTAP.  Se incluyen enlaces a la documentación relevante de Unified ONTAP según corresponda.
+TIP: Consulta las breves descripciones de las funciones y la configuración adicionales de ONTAP AFX. Si no encuentras la opción que buscas, asegúrate de consultar también los enlaces al final para recursos adicionales.
 
 
 
@@ -140,4 +140,6 @@ Con ONTAP, un espejo de reparto de carga (LSM) es una réplica de SnapMirror del
 * https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["Descripción general de la implementación de ONTAP OAuth 2.0"^]
 * link:../administer/additional-ontap-svm.html["Administración adicional para SVM AFX"]
 * https://docs.netapp.com/us-en/ontap/data-protection/manage-snapmirror-root-volume-replication-concept.html["Conoce la replicación del volumen raíz de ONTAP SnapMirror"^]
+* https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html["Prepárate para utilizar la seguridad IP en la red ONTAP"^]
+* https://docs.netapp.com/us-en/ontap/networking/configure_network_security_using_federal_information_processing_standards_fips.html["Configura la seguridad de red de ONTAP usando FIPS para todas las conexiones SSL"^]
 
