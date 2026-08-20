@@ -17,6 +17,9 @@ summary: Conoce las nuevas funcionalidades incluidas en ONTAP 9.19.1 que están 
 Conoce las nuevas funcionalidades incluidas en ONTAP 9.19.1 que están disponibles con tu sistema de almacenamiento AFX.
 
 
+NOTE: Hay varias funciones nuevas disponibles para AFX con ONTAP 9.19.1. Algunas de estas son específicas de AFX, mientras que muchas otras se derivan de una base de producto común compartida. Además de revisar las funciones de AFX que se describen a continuación, también deberías consultar https://docs.netapp.com/us-en/ontap/release-notes/whats-new-9191.html["Novedades en ONTAP 9.19.1"^].
+
+
 
 [[data-protection]]
 == Protección de datos
@@ -85,6 +88,29 @@ Dynamic Storage Efficiency optimiza de forma inteligente las operaciones de efic
 
 | Mejora de la colocación equilibrada para la orquestación del almacenamiento de Kubernetes  a| 
 ONTAP 9.19.1 añade seis parámetros actualmente disponibles en el `/storage/volumes` endpoint de la API de REST al `/applications/containers` endpoint. Esta mejora permite a los clientes que utilizan NetApp Trident para la orquestación del almacenamiento de Kubernetes crear volúmenes con la capacidad de colocación equilibrada nativa de ONTAP.
+
+|===
+
+
+[[s3-object-storage]]
+== Almacenamiento de objetos S3
+
+[cols="30%,70%"]
+|===
+| Actualizar | Descripción 
+
+
+ a| 
+xref:../manage-data/manage-buckets.html[Administrar los depósitos del sistema de almacenamiento AFX]
+ a| 
+Puedes usar condiciones para imponer escrituras condicionales en cargas de objetos y eliminaciones condicionales en eliminaciones de objetos. Las escrituras y eliminaciones condicionales proporcionan una forma de evitar sobrescrituras o eliminaciones involuntarias de objetos.
+
+
+
+ a| 
+xref:../manage-data/manage-buckets.html[Administrar los depósitos del sistema de almacenamiento AFX]
+ a| 
+Para mantener el acceso de los usuarios a los recursos de S3 si la clave de acceso original caduca, los administradores del clúster de ONTAP pueden generar una segunda clave de acceso para cada usuario de S3.
 
 |===
 
