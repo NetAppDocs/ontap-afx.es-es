@@ -2109,4 +2109,8 @@
   <block id="8e2c307ef6e54871dce87c1828dc21fd" category="inline-xref-macro">Compatibilidad con grupos de políticas de calidad de servicio (QoS) anidados en dos niveles en SVM y volúmenes</block>
   <block id="e08db9e8d24efaf5a7190ce782b11af3" category="paragraph"><block ref="e08db9e8d24efaf5a7190ce782b11af3" category="inline-xref-macro-rx"></block></block>
   <block id="0d42fe34cb867538d9d93ccdd8b15ac7" category="paragraph">Puedes asignar una política de calidad de servicio (QoS) a una SVM y a los volúmenes bajo la SVM al mismo tiempo.</block>
+  <block id="007a701e91cdfb37201a53977fddd2b4" category="inline-link">Habilita el análisis del sistema de archivos ONTAP</block>
+  <block id="05ac85f50d8d37906293d2e2a6c88604" category="list-text"><block ref="05ac85f50d8d37906293d2e2a6c88604" category="inline-link-rx"></block></block>
+  <block id="99a1ee6766885a2da62b660dd8ea16ac" category="paragraph"><block ref="99a1ee6766885a2da62b660dd8ea16ac" category="inline-xref-macro-rx"></block></block>
+  <block id="d71e1a06e0aeac0cc6a7a6eb58601633" category="paragraph">Los volúmenes creados en máquinas virtuales de almacenamiento (SVM) de nueva creación en clústeres ONTAP asignados a protocolos NAS tienen File System Analytics (FSA) activado de forma predeterminada. FSA se activa automáticamente en cuanto se crea un volumen, lo que proporciona capacidades de análisis inmediatas sin necesidad de configuración adicional.</block>
 </blocks>

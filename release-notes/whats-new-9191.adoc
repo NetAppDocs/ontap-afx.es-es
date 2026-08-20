@@ -170,6 +170,10 @@ Puedes modificar la configuración predeterminada que controla cómo los grupos 
 Cuando se ejecutan comprobaciones automáticas previas a la actualización, los errores y las advertencias se muestran por separado para ayudarte a identificar fácilmente los problemas que deben resolverse antes de que actualices.
 
 |===
-.Información relacionada
+
+
+[[related-information]]
+== Información relacionada
+
 * https://docs.netapp.com/us-en/ontap/release-notes/index.html["Aspectos destacados del lanzamiento de ONTAP 9"^]
 

@@ -32,4 +32,5 @@ Puede mostrar una lista de los clientes NFS y SMB/CIFS conectados actualmente al
 == Información relacionada
 
 * link:../manage-data/prepare-manage-data.html["Prepárese para administrar sus datos AFX"]
+* https://docs.netapp.com/us-en/ontap/task_nas_file_system_analytics_enable.html["Habilita el análisis del sistema de archivos ONTAP"^]
 

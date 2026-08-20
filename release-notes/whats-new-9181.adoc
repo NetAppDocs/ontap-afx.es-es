@@ -63,6 +63,10 @@ xref:../administer/configure-svm.html[Compatibilidad con grupos de políticas de
 Puedes asignar una política de calidad de servicio (QoS) a una SVM y a los volúmenes bajo la SVM al mismo tiempo.
 
 |===
-.Información relacionada
+
+
+[[related-information]]
+== Información relacionada
+
 * https://docs.netapp.com/us-en/ontap/release-notes/index.html["Aspectos destacados del lanzamiento de ONTAP 9"^]
 
