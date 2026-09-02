@@ -1,0 +1,205 @@
+---
+sidebar: sidebar 
+permalink: administer/remove-nodes.html 
+keywords: netapp afx, remove node, unjoin, cluster remove-node, evacuate volumes, zero-copy volume move 
+summary: 'Aprende a eliminar nodos de almacenamiento de un clúster AFX de NetApp, incluyendo la evacuación de volúmenes, la migración de LIF y la desvinculación del socio de alta disponibilidad (HA).' 
+---
+= Eliminar nodos de un clúster de un sistema de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible que tengas que eliminar nodos de tu clúster AFX por motivos de mantenimiento o sustitución de hardware. Solo puedes eliminar un nodo cada vez y, tras eliminar un nodo, también debes eliminar su socio de alta disponibilidad (HA).
+
+.Acerca de esta tarea
+* En los sistemas de almacenamiento AFX, todo el almacenamiento se encuentra dentro de una única Storage Availability Zone (SAZ) a la que pueden acceder todos los nodos del clúster. Como resultado, cuando se retira un nodo, no es necesario copiar los datos del nodo que se retira. En su lugar, se actualizan los punteros a los volúmenes del nodo que se retira en los nodos restantes. Esto se conoce como Zero Copy Volume Move (ZCVM) y sucede de forma instantánea, ya que en realidad no se copian ni se mueven datos.
++
+[NOTE]
+====
+Antes de eliminar el nodo, gestiona manualmente cualquier volumen que ZCVM no pueda mover. Entre ellos se incluyen los clones de volúmenes, los volúmenes sin conexión, los volúmenes cifrados cuya clave de cifrado original se haya cambiado o regenerado, y los volúmenes restaurados usando SnapMirror cloud. Los volúmenes de auditoría staging y los volúmenes raíz son movidos por ZCVM durante el proceso de separación del nodo.
+
+** Más información sobre link:https://docs.netapp.com/us-en/ontap/nas-audit/basic-auditing-concept.html["volúmenes de preparación de auditoría"^].
+** Más información sobre link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/rekey-encrypted-volume-task.html["volúmenes cifrados con claves regeneradas"^].
+
+
+====
+* Al separar correctamente un nodo del clúster, se produce lo siguiente:
++
+** Marca el nodo como no apto y fuera del quórum de CLAM.
+** Apaga el nodo de forma ordenada y transfiere la propiedad a un nodo que siga operativo.
+** Limpia el estado de alta disponibilidad (HA) del RAID en el nodo y lo elimina de la base de datos del clúster.
+
+
+
+
+
+
+[[step-1-prepare-to-remove-nodes-from-an-afx-cluster]]
+== Paso 1: prepárate para eliminar nodos de un clúster AFX
+
+Antes de eliminar nodos de tu clúster AFX, debes comprobar que el clúster esté en buen estado y que no haya LIF de datos en el nodo que se va a eliminar.
+
+.Pasos
+. Confirma que el clúster funcione correctamente:
++
+[source, cli]
+----
+cluster show
+----
+. Confirma que el nodo que quieres eliminar está en línea y en buen estado:
++
+[source, cli]
+----
+system node show -node <node> -health -epsilon
+----
+. Ver los LIF del nodo:
++
+[source, cli]
+----
+network interface show -curr-node <node>
+----
+. Migra las LIF de datos del nodo:
++
+[source, cli]
+----
+network interface migrate -vserver <SVM> -lif <LIF> -dest-node <destination_node> -dest-port <destination_port>
+----
++
+Repite este comando para todos los LIF de datos. Solo deben quedar en el nodo los LIF de clúster y los LIF de gestión de nodos.
+
+. Comprueba que se hayan eliminado todos los LIF de datos y que solo queden en el nodo los LIF de clúster y los LIF de gestión de nodos:
++
+[source, cli]
+----
+network interface show -curr-node <node>
+----
+
+
+.¿Y ahora qué?
+Después de completar los pasos de preparación, puedes eliminar el primer nodo del par de alta disponibilidad del clúster y luego eliminar su nodo asociado de alta disponibilidad.
+
+
+
+[[step-2-unjoin-a-single-node-from-an-afx-cluster]]
+== Paso 2: separar un único nodo de un clúster AFX
+
+Elimina un nodo de un clúster AFX solo después de haber completado los pasos necesarios para preparar el nodo para su eliminación. Después de eliminar un nodo del clúster, también debes eliminar su pareja de alta disponibilidad.
+
+.Antes de empezar
+Se recomienda que link:manage-autosupport.html["emitir un mensaje de AutoSupport"] notifiques al soporte técnico de NetApp que vas a eliminar un nodo de tu clúster.
+
+.Pasos
+. Vacía los volúmenes de los nodos:
++
+[source, cli]
+----
+system node evacuate-volumes start -node <node_to_remove>
+----
+. Comprueba que se hayan vaciado los volúmenes de los nodos:
++
+[source, cli]
+----
+system node evacuate-volumes show -node <node_to_remove>
+----
++
+Espera a que el *recuento pendiente* sea 0 antes de continuar. No muevas el épsilon ni la elegibilidad hasta que los volúmenes se hayan evacuado por completo.
+
++
+Si es necesario, puedes usar el comando  `system node evacuate-volumes abort -node <node>` para abortar el proceso de evacuación.
+
+. Identifica el nodo que contiene epsilon:
++
+[source, cli]
+----
+cluster show -epsilon true
+----
++
+.. Si el nodo que quieres eliminar contiene epsilon, traslada epsilon a otro nodo:
++
+[source, cli]
+----
+cluster modify -node <surviving_node> -epsilon true
+----
+
+
+. Identifica el nodo principal actual:
++
+[source, cli]
+----
+cluster ring show
+----
++
+.. Si el nodo que vas a eliminar es el nodo primario actual, haz que deje de ser elegible:
++
+[source, cli]
+----
+cluster modify -node <node_to_remove> -eligibility false
+----
+
+
+. Muestra el nodo de origen de las LIF de datos restantes:
++
+[source, cli]
+----
+network interface show -home-node <node_to_remove>
+----
+. Cambia el nodo de inicio de los LIF de datos restantes a otro nodo:
++
+[source, cli]
+----
+network interface modify -vserver <SVM> -lif <LIF> -home-node <surviving_node>
+----
++
+Deja los LIF del clúster y los LIF de gestión de nodos en el nodo de salida.
+
+. Desactivar la toma de control del nodo que se va a eliminar:
++
+[source, cli]
+----
+storage failover modify -node <node_to_remove> -enable-takeover-of false
+----
+. Comprueba que la función de toma de control esté desactivada en el nodo que se va a eliminar:
++
+[source, cli]
+----
+storage failover show
+----
++
+No es posible realizar una toma de control en el par HA mientras la conmutación por error está desactivada.
+
+. En un nodo operativo y en buen estado, configura el nivel de privilegio en avanzado:
++
+[source, cli]
+----
+privilege set -level advanced
+----
+. Separa el nodo del clúster:
++
+[source, cli]
+----
+cluster remove-node -node <node_to_remove>
+----
++
+Confirma las advertencias. El proceso debería finalizar con el mensaje "*Node remove succeeded*".
+
+
+
+.¿Que sigue?
+Repite los pasos anteriores para eliminar el socio de alta disponibilidad del clúster. No puedes eliminar nodos adicionales hasta que se haya eliminado el socio de alta disponibilidad del nodo que no forma parte del clúster.
+
+
+
+[[step-3-optionally-clean-the-removed-hardware]]
+== Paso 3: si lo deseas, limpia los componentes que has desmontado
+
+Si vas a reutilizar un nodo que has eliminado de un clúster, debes borrar la configuración del nodo e inicializar todos los discos antes de que pueda volver a incorporarse al clúster.
+
+.Pasos
+. Durante el proceso de arranque, cuando se te solicite, pulsa Ctrl-C para mostrar el menú de arranque.
+. Selecciona la opción del menú de arranque *(4) Clean configuration and initialize all disks*.
+
+
+.¿Que sigue?
+Puedes usar el comando  `cluster add-node` para reutilizar el par HA en el mismo clúster.

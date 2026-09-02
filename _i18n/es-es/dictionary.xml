@@ -2113,4 +2113,55 @@
   <block id="05ac85f50d8d37906293d2e2a6c88604" category="list-text"><block ref="05ac85f50d8d37906293d2e2a6c88604" category="inline-link-rx"></block></block>
   <block id="99a1ee6766885a2da62b660dd8ea16ac" category="paragraph"><block ref="99a1ee6766885a2da62b660dd8ea16ac" category="inline-xref-macro-rx"></block></block>
   <block id="d71e1a06e0aeac0cc6a7a6eb58601633" category="paragraph">Los volúmenes creados en máquinas virtuales de almacenamiento (SVM) de nueva creación en clústeres ONTAP asignados a protocolos NAS tienen File System Analytics (FSA) activado de forma predeterminada. FSA se activa automáticamente en cuanto se crea un volumen, lo que proporciona capacidades de análisis inmediatas sin necesidad de configuración adicional.</block>
+  <block id="7a5cd40812fc4b3d065db77f8ad471a2" category="summary">Aprende a eliminar nodos de almacenamiento de un clúster AFX de NetApp, incluyendo la evacuación de volúmenes, la migración de LIF y la desvinculación del socio de alta disponibilidad (HA).</block>
+  <block id="4e5ba73143016dcff33719a396a6a145" category="doc">Eliminar nodos de un clúster de un sistema de almacenamiento AFX</block>
+  <block id="6f0c0dcb367b5c75b40798fbe71ce6cf" category="paragraph">Es posible que tengas que eliminar nodos de tu clúster AFX por motivos de mantenimiento o sustitución de hardware. Solo puedes eliminar un nodo cada vez y, tras eliminar un nodo, también debes eliminar su socio de alta disponibilidad (HA).</block>
+  <block id="4dc248d72f6d53f41520e119f1f1df61" category="list-text">En los sistemas de almacenamiento AFX, todo el almacenamiento se encuentra dentro de una única Storage Availability Zone (SAZ) a la que pueden acceder todos los nodos del clúster. Como resultado, cuando se retira un nodo, no es necesario copiar los datos del nodo que se retira. En su lugar, se actualizan los punteros a los volúmenes del nodo que se retira en los nodos restantes. Esto se conoce como Zero Copy Volume Move (ZCVM) y sucede de forma instantánea, ya que en realidad no se copian ni se mueven datos.</block>
+  <block id="2dbbd7a8acfe4ab40ac6e02f5b4365bd" category="paragraph">Antes de eliminar el nodo, gestiona manualmente cualquier volumen que ZCVM no pueda mover. Entre ellos se incluyen los clones de volúmenes, los volúmenes sin conexión, los volúmenes cifrados cuya clave de cifrado original se haya cambiado o regenerado, y los volúmenes restaurados usando SnapMirror cloud. Los volúmenes de auditoría staging y los volúmenes raíz son movidos por ZCVM durante el proceso de separación del nodo.</block>
+  <block id="7b556ab7df79413da0cc234f3e94ae5c" category="inline-link-macro">volúmenes de preparación de auditoría</block>
+  <block id="b94fbeba18cc08b1ba75cabcbc2e50a0" category="list-text">Más información sobre <block ref="9fec2c3b1c6739fae6e26aee450a7911" category="inline-link-macro-rx"></block>.</block>
+  <block id="791417c8f8a45d10a1481c1cdb8725eb" category="inline-link-macro">volúmenes cifrados con claves regeneradas</block>
+  <block id="1ddf84f2c214ffe15e58979d29d13e7e" category="list-text">Más información sobre <block ref="c62dc8115ddd949100052ee500f4ed05" category="inline-link-macro-rx"></block>.</block>
+  <block id="03f868c6a771736d2ede498b24db10fd" category="list-text">Al separar correctamente un nodo del clúster, se produce lo siguiente:</block>
+  <block id="da83a680025062a416e893d926036b59" category="list-text">Marca el nodo como no apto y fuera del quórum de CLAM.</block>
+  <block id="1d6d051efd8278e7af988bc240035964" category="list-text">Apaga el nodo de forma ordenada y transfiere la propiedad a un nodo que siga operativo.</block>
+  <block id="81969b995904bbc6ec383d70d109fe78" category="list-text">Limpia el estado de alta disponibilidad (HA) del RAID en el nodo y lo elimina de la base de datos del clúster.</block>
+  <block id="ee564f7d2a41885a7b7c447302897684" category="section-title">Paso 1: prepárate para eliminar nodos de un clúster AFX</block>
+  <block id="20f6fea895a9042d4cb497b9b561472f" category="paragraph">Antes de eliminar nodos de tu clúster AFX, debes comprobar que el clúster esté en buen estado y que no haya LIF de datos en el nodo que se va a eliminar.</block>
+  <block id="50ab3243fc412f508feaf2651e35de5a" category="list-text">Confirma que el clúster funcione correctamente:</block>
+  <block id="6ed6db99070eb594c7294b2758336a36" category="list-text">Confirma que el nodo que quieres eliminar está en línea y en buen estado:</block>
+  <block id="c8bd62f17e39fb32ef39057543588fff" category="list-text">Ver los LIF del nodo:</block>
+  <block id="b296f30bfe1b8d15961aace982c88ede" category="list-text">Migra las LIF de datos del nodo:</block>
+  <block id="b7fb269285f339c28cc4295e470228ce" category="paragraph">Repite este comando para todos los LIF de datos. Solo deben quedar en el nodo los LIF de clúster y los LIF de gestión de nodos.</block>
+  <block id="67ad2de6e0aebb768d64f688a26f3263" category="list-text">Comprueba que se hayan eliminado todos los LIF de datos y que solo queden en el nodo los LIF de clúster y los LIF de gestión de nodos:</block>
+  <block id="3f297ef15cde0668e93b35f2752fd4fd" category="paragraph-title">¿Y ahora qué?</block>
+  <block id="af7028a97133d9d6579e0120e4d2ac54" category="paragraph">Después de completar los pasos de preparación, puedes eliminar el primer nodo del par de alta disponibilidad del clúster y luego eliminar su nodo asociado de alta disponibilidad.</block>
+  <block id="129a0f9dbb25cd859dc8156de126758f" category="section-title">Paso 2: separar un único nodo de un clúster AFX</block>
+  <block id="9e84e50094430ea932ef692f2de2fd8d" category="paragraph">Elimina un nodo de un clúster AFX solo después de haber completado los pasos necesarios para preparar el nodo para su eliminación. Después de eliminar un nodo del clúster, también debes eliminar su pareja de alta disponibilidad.</block>
+  <block id="ff13cd92e9c877582383685ad84e1408" category="inline-link-macro">emitir un mensaje de AutoSupport</block>
+  <block id="e1e010021551213000f9a5ad8268a504" category="paragraph">Se recomienda que <block ref="389d719ba9fa696dc8807adb3c915714" category="inline-link-macro-rx"></block> notifiques al soporte técnico de NetApp que vas a eliminar un nodo de tu clúster.</block>
+  <block id="61ef46349dc8aeb8c96f3f89d14d2e3b" category="list-text">Vacía los volúmenes de los nodos:</block>
+  <block id="4352398a52fe792d0d9bc8cd2e093100" category="list-text">Comprueba que se hayan vaciado los volúmenes de los nodos:</block>
+  <block id="4fa4b393f4bd68dcb2697caa0d486054" category="paragraph">Espera a que el *recuento pendiente* sea 0 antes de continuar. No muevas el épsilon ni la elegibilidad hasta que los volúmenes se hayan evacuado por completo.</block>
+  <block id="073a5eccc26b37d386010ab2297fb4ad" category="paragraph">Si es necesario, puedes usar el comando <block ref="1800c917431345cdd794d19f800ce56a" prefix=" " category="inline-code"></block> para abortar el proceso de evacuación.</block>
+  <block id="2cca63e4c1d7ec175a21377faff9a6ec" category="list-text">Identifica el nodo que contiene epsilon:</block>
+  <block id="e23022fe3595885bf954a01c22683bad" category="list-text">Si el nodo que quieres eliminar contiene epsilon, traslada epsilon a otro nodo:</block>
+  <block id="49e8d819c7a12b23ca983a3bc99e1bdf" category="list-text">Identifica el nodo principal actual:</block>
+  <block id="14029d6b9a69926c796b630bd649fe4a" category="list-text">Si el nodo que vas a eliminar es el nodo primario actual, haz que deje de ser elegible:</block>
+  <block id="7f6abdd99160e3d3527591b98c573c7f" category="list-text">Muestra el nodo de origen de las LIF de datos restantes:</block>
+  <block id="b77fc9ce12284fe9cb0ed31c9a1f86d5" category="list-text">Cambia el nodo de inicio de los LIF de datos restantes a otro nodo:</block>
+  <block id="c9b5aae4621661ad2ffccfee6c9b3874" category="paragraph">Deja los LIF del clúster y los LIF de gestión de nodos en el nodo de salida.</block>
+  <block id="f73e9b92493b90c37101390646ee7ff4" category="list-text">Desactivar la toma de control del nodo que se va a eliminar:</block>
+  <block id="2f6504307623c74dfa94926c73a36268" category="list-text">Comprueba que la función de toma de control esté desactivada en el nodo que se va a eliminar:</block>
+  <block id="398e3c6027c9ad5a579ba201dbdf1422" category="paragraph">No es posible realizar una toma de control en el par HA mientras la conmutación por error está desactivada.</block>
+  <block id="e66ad8765eff08cc92ad6062c3b5484e" category="list-text">En un nodo operativo y en buen estado, configura el nivel de privilegio en avanzado:</block>
+  <block id="8e9c4f7e32d6d0c0b5026f9b1bd4cb0e" category="list-text">Separa el nodo del clúster:</block>
+  <block id="248d96fc2d0062d179e38ec920bbc9a6" category="paragraph">Confirma las advertencias. El proceso debería finalizar con el mensaje "*Node remove succeeded*".</block>
+  <block id="fd7d664fcabce9a7163ddf544905c254" category="paragraph">Repite los pasos anteriores para eliminar el socio de alta disponibilidad del clúster. No puedes eliminar nodos adicionales hasta que se haya eliminado el socio de alta disponibilidad del nodo que no forma parte del clúster.</block>
+  <block id="ebe7c0cf5ca9d4767514a83c4598b75c" category="section-title">Paso 3: si lo deseas, limpia los componentes que has desmontado</block>
+  <block id="3212383e8d23d729b6cb21418a172111" category="paragraph">Si vas a reutilizar un nodo que has eliminado de un clúster, debes borrar la configuración del nodo e inicializar todos los discos antes de que pueda volver a incorporarse al clúster.</block>
+  <block id="9e870c65221f5c544b31efc1da95daeb" category="list-text">Durante el proceso de arranque, cuando se te solicite, pulsa Ctrl-C para mostrar el menú de arranque.</block>
+  <block id="5b43d3aa91abf75fd24c44f1341b2f06" category="list-text">Selecciona la opción del menú de arranque *(4) Clean configuration and initialize all disks*.</block>
+  <block id="e482842fa3fe9110a14b09a7990fc7e3" category="paragraph">Puedes usar el comando <block ref="5fc60967dddffb3c388156e897d54aad" prefix=" " category="inline-code"></block> para reutilizar el par HA en el mismo clúster.</block>
+  <block id="92157b9dae17603751a4d60f0f94bf8c" category="sidebar">Eliminar nodos del clúster</block>
 </blocks>
