@@ -1,0 +1,104 @@
+---
+permalink: administer/fabricpool-configure.html 
+sidebar: sidebar 
+keywords: afx, fabricpool, object store, cluster object-store, tiering policy, attach, capacity tier 
+summary: A grandes rasgos, configurar y activar FabricPool en un sistema de almacenamiento AFX implica procesos en dos niveles diferentes. Primero, debes definir un nivel en la nube a nivel de clúster para tus datos. Luego, puedes activar la organización en niveles en volúmenes específicos mediante una de varias políticas de organización en niveles. 
+---
+= Configura FabricPool para los sistemas de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A grandes rasgos, configurar y activar FabricPool en un sistema de almacenamiento AFX implica procesos en dos niveles diferentes. Primero, debes definir un nivel en la nube a nivel de clúster para tus datos. Luego, puedes activar la organización en niveles en volúmenes específicos mediante una de varias políticas de organización en niveles.
+
+
+
+[[configure-fabricpool-at-the-ontap-cluster-level]]
+== Configura FabricPool a nivel del clúster de ONTAP
+
+Debes definir un único bucket de objetos que esté disponible para todo el clúster ONTAP. Todos los volúmenes habilitados para el almacenamiento en niveles de datos de FabricPool usan el mismo bucket.
+
+.Acerca de esta tarea
+A diferencia del proceso de dos pasos de ONTAP, que incluye una conexión por agregado, AFX se basa en un único proceso de ámbito de clúster para configurar el almacén de objetos y conectar todos los nodos al bucket. También se confirma la conectividad y la asociación con el almacén de objetos es permanente.
+
+La configuración del nivel de nube se describe mediante System Manager, aunque hay otras opciones disponibles. Por ejemplo, puedes usar el comando `cluster object-store config create` con la CLI. Consulta link:../administer/fabricpool-additional.html["Consideraciones adicionales sobre el uso de FabricPool en los sistemas de almacenamiento AFX"] para obtener más información.
+
+.Antes de empezar
+* Revisa los requisitos previos de AFX FabricPool. Por ejemplo, comprueba que el clúster esté en la versión 9.19.1 o posterior y que no se haya actualizado desde una versión anterior. Consulta link:../administer/fabricpool-prepare.html["Prepárate para implementar FabricPool en un sistema de almacenamiento AFX"] para obtener más detalles.
+* Aprovisiona un bucket de almacén de objetos. Crea un bucket en NetApp StorageGRID o ONTAP S3 con la capacidad adecuada para tus datos. Si lo deseas, puedes instalar un certificado de CA para el almacén de objetos para proporcionar una conexión más segura.
+* Crea las LIF entre clústeres y comprueba la conectividad con el almacén de objetos. Debes definir un par de LIF entre clústeres para llegar al almacén de objetos en cada nodo del clúster AFX. Comprueba que todos los nodos puedan acceder al endpoint del almacén de objetos y que la resolución de nombres funcione correctamente.
+
+
+.Pasos
+. En System Manager, selecciona la opción de menú *Cloud Tiers* en el panel de navegación izquierdo.
++
+Si no has configurado ningún nivel de nube, se muestra una página de estado vacía con un botón «Add».
+
+. Selecciona *Add* para iniciar la creación del nivel de cloud; aparecerá un cuadro de diálogo con dos opciones.
+. Selecciona StorageGRID o ONTAP S3 como tu proveedor. Se abre el formulario correspondiente *Add Cloud Tier*.
+. Facilita la información necesaria sobre el almacén de objetos, incluida:
++
+.. Nombre del almacén de objetos (identificador de configuración)
+.. Nombre del servidor (FQDN o dirección IP del endpoint del almacén de objetos)
+.. Nombre del contenedor (nombre del bucket)
+.. Clave de acceso y clave secreta (credenciales del almacén de objetos)
+.. Configuración de la validación de certificados (recomendado: activarla con un certificado de CA adecuado)
+
+
+. Selecciona las LIF entre clústeres que transportarán el tráfico del nivel de cloud.
++
+Si no existen interfaces adecuadas, se ofrece la opción de crear nuevas interfaces.
+
+. Seleccione *Guardar*.
++
+System Manager crea la configuración del almacén de objetos a nivel de clúster y la asocia automáticamente a todos los nodos del clúster tras verificar la conectividad de red.
+
+. Comprueba los detalles del nivel de cloud en la ficha de la página «Cloud Tiers».
+
+
+.Después de que termines
+Comprueba que la tarjeta de capacidad de Cluster Dashboard muestre el uso del nivel en la nube. Ten en cuenta que el bucket que hayas asignado no se puede cambiar de nombre después de que se haya identificado para que lo use FabricPool. Puedes habilitar la organización en niveles en los volúmenes de datos individuales según sea necesario.
+
+
+
+[[enable-tiering-with-volume-level-policies]]
+== Habilita la organización por niveles con políticas a nivel de volumen
+
+Una vez configurado FabricPool a nivel de clúster, puedes habilitar la organización por niveles en los volúmenes individuales estableciendo la política de organización por niveles adecuada. En general, las políticas funcionan igual con AFX que con ONTAP.
+
+* *Clasificación por niveles a nivel de volumen.* La clasificación por niveles se activa para cada volumen individualmente. Puedes establecer una política de clasificación por niveles diferente para cada volumen. Los datos del volumen pueden moverse al nivel en la nube según la política.
+* *Políticas de organización en niveles.* Hay cuatro políticas de organización en niveles que puedes definir para un volumen:
++
+** `snapshot-only`
+** `auto`
+** `all`
+** `none`
+
+
+* *Política de almacenamiento por niveles predeterminada.* La política predeterminada es  `none`, lo que significa que ningún dato puede moverse al nivel de nube. En comparación, los volúmenes de ONTAP en un agregado recién conectado usan de forma predeterminada  `snapshot-only` en sistemas AFF y FAS.
+* *Condición de activación de la política.* Configurar una política distinta de  `none` activa una conexión a la nube y el almacenamiento en niveles de datos.
+* *Período de enfriamiento.* El período de enfriamiento determina cuánto tiempo deben permanecer inactivos los datos antes de poder organizarse en niveles. Cuando usas la CLI, esto normalmente se configura con el parámetro `-tiering-minimum-cooling-days`. El período de enfriamiento predeterminado es de 31 días para la política auto y, en la práctica, de ~2 días para snapshot-only. Puedes ajustar esto para cada volumen según la carga de trabajo.
+* *Seguimiento de la temperatura.* Con AFX, el seguimiento de la temperatura se realiza por volumen, en lugar de a nivel del agregado.
+
+
+Para obtener más información sobre las políticas de organización en niveles de FabricPool, consulta https://docs.netapp.com/us-en/ontap/fabricpool/tiering-policies-concept.html["Organiza los datos de forma eficiente con las políticas de ONTAP FabricPool"^].
+
+
+
+[[activate-volume-level-tiering-and-next-steps]]
+=== Activa la organización en niveles a nivel de volumen y siguientes pasos
+
+Para habilitar la organización en niveles en un volumen, en System Manager ve a la página *Volúmenes* y selecciona *Editar* y luego *Cloud Tier Settings* para configurar una política de organización en niveles y un periodo de enfriamiento para cada volumen según sea necesario. La política predeterminada es none, por lo que debes habilitar explícitamente la organización en niveles en cada volumen. Puedes usar los comandos de volumen existentes en la CLI.
+
+Una vez que comience la organización por niveles, debes supervisar dicha organización y el uso de la capacidad. Comprueba también el estado de la organización por niveles del volumen y vigila el uso del espacio en el nivel de rendimiento y el nivel de capacidad. Ten en cuenta que Inactive Data Reporting (IDR/AutoIDR) está desactivado en AFX, por lo que debes planificar cómo evaluar los datos aptos para la organización por niveles o fríos de forma diferente a como lo harías en los sistemas AFF o FAS.
+
+
+
+[[related-information]]
+== Información relacionada
+
+* link:../administer/fabricpool-prepare.html["Prepárate para implementar FabricPool en un sistema de almacenamiento AFX"]
+* link:../administer/fabricpool.html["Más información sobre FabricPool para los sistemas de almacenamiento AFX"]
+

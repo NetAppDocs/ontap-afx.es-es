@@ -1,0 +1,41 @@
+---
+permalink: administer/fabricpool-manage.html 
+sidebar: sidebar 
+keywords: afx, oam, fabricpool, manage, monitor, space, tiering policy, zcvm, volume move, node join, node unjoin, flexaggr 
+summary: La gestión continua de FabricPool en los sistemas AFX es similar a la de los sistemas AFF y FAS. Necesitas supervisar el uso del espacio, gestionar los volúmenes y ajustar las políticas de organización en niveles. Hay algunas incorporaciones destacadas para el entorno AFX, entre ellas el comportamiento cuando los nodos se unen al clúster AFX o lo abandonan. 
+---
+= Gestiona FabricPool para los sistemas de almacenamiento AFX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La gestión continua de FabricPool en los sistemas AFX es similar a la de los sistemas AFF y FAS. Necesitas supervisar el uso del espacio, gestionar los volúmenes y ajustar las políticas de organización en niveles. Hay algunas incorporaciones destacadas para el entorno AFX, entre ellas el comportamiento cuando los nodos se unen al clúster AFX o lo abandonan.
+
+
+
+[[monitor-space-and-manage-volumes]]
+== Supervisa el espacio y gestiona los volúmenes
+
+Los procedimientos utilizados con AFX para supervisar el uso de los niveles de capacidad y de rendimiento, así como la gestión rutinaria del volumen, son en general los mismos que los utilizados con ONTAP. Ten en cuenta que, en AFX, los informes de espacio tienen en cuenta la arquitectura desagregada. La información sobre el espacio del nivel de capacidad está disponible a través de informes a nivel de clúster y de zona de disponibilidad, en lugar de a través de un agregado visible para el administrador.
+
+
+
+[[node-join-and-node-unjoin]]
+== Unión y separación de nodos
+
+Las operaciones de nodo tienen en cuenta FabricPool en los sistemas AFX, lo que supone una diferencia significativa con respecto a ONTAP. Ten en cuenta los siguientes comportamientos:
+
+* *Incorporación del nodo.* Cuando un nodo se une al clúster AFX y ya existe una configuración de almacén de objetos del clúster, la conexión al almacén de objetos se activa automáticamente. Si la conexión falla, la operación de incorporación del nodo también falla.
+* *Separación de un nodo.* Cuando un nodo se separa o se elimina del clúster, los datos se marcan como "inactivos". Los volúmenes asociados se reubican mediante ZCVM. Los metarchivos de los objetos inactivos se conservan para que sus objetos en la nube sigan siendo accesibles y puedan eliminarse mediante el proceso de recolección de basura.
+
+
+
+
+[[related-information]]
+== Información relacionada
+
+* https://docs.netapp.com/us-en/ontap/fabricpool/determine-data-inactive-reporting-task.html["Administra FabricPool"^]
+* link:../administer/expand-cluster.html["Expandir un clúster de sistema de almacenamiento AFX"]
+
