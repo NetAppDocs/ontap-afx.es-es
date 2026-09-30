@@ -39,7 +39,7 @@ Aunque el comportamiento de FabricPool es muy similar en todas las personalidade
 | Ámbito del almacén de objetos | Se configura por agregado en dos pasos: «config create» y luego «attach» | Se configura a nivel de clúster con un único comando; se define un bucket por clúster 
 
 
-| Política de organización en niveles predeterminada | La política predeterminada es `none`; debes establecer explícitamente una política de volumen para iniciar la organización en niveles | La política predeterminada es `none`; debes establecer explícitamente una política de volumen para iniciar la organización en niveles 
+| Política de organización en niveles predeterminada | La política predeterminada es `none` excepto en los agregados habilitados para FabricPool, donde la predeterminada es `snapshot` | La política predeterminada es `none` 
 
 
 | Seguimiento de la temperatura | Granularidad por volumen | Granularidad por volumen 

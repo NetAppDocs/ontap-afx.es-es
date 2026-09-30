@@ -4,7 +4,7 @@ permalink: manage-data/prepare-manage-data.html
 keywords: afx, afx system, prepare, prepare manage, prepare manage data 
 summary: Antes de administrar sus datos AFX, debe familiarizarse con los conceptos y capacidades básicos. 
 ---
-= Prepárese para administrar los datos de su sistema de almacenamiento AFX
+= Más información sobre la gestión de los datos del sistema de almacenamiento AFX
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
