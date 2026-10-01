@@ -4,7 +4,7 @@ permalink: protect-data/snapshot-replication.html
 keywords: afx, afx system, manage replication, manage snapshot replication 
 summary: La replicación de instantáneas es un proceso en el que los grupos de consistencia de su sistema AFX se copian a una ubicación geográficamente remota.  Después de la replicación inicial, los cambios en los grupos de consistencia se copian a la ubicación remota según una política de replicación.  Los grupos de consistencia replicados se pueden utilizar para la recuperación ante desastres o la migración de datos. 
 ---
-= Administrar la replicación de instantáneas en un sistema de almacenamiento AFX
+= Flujo de trabajo de replicación de Snapshot para sistemas de almacenamiento AFX
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
