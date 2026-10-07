@@ -22,6 +22,9 @@ Después de instalar los switches, debes instalar el hardware para tu sistema de
 
 CAUTION: Lleva siempre una muñequera con toma de tierra conectada a un punto de tierra verificado durante los procedimientos de instalación y mantenimiento. No seguir las precauciones ESD adecuadas puede causar daños permanentes a los nodos controladores, las estanterías de almacenamiento y los switches de red.
 
+
+NOTE: AFX no admite unidades de diferentes tamaños en una misma bandeja de almacenamiento. Todas las unidades de una misma bandeja deben ser del mismo tamaño. Para obtener información completa sobre la compatibilidad de las configuraciones del sistema de almacenamiento AFX, consulta https://hwu.netapp.com["NetApp Hardware Universe"^].
+
 .Pasos
 . Instale los kits de rieles para su sistema de almacenamiento y estantes de almacenamiento, según sea necesario, utilizando las instrucciones incluidas con los kits.
 . Instale y asegure su controlador en el gabinete o rack de telecomunicaciones:
