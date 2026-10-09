@@ -117,3 +117,6 @@ En la versión inicial 9.17.1 de AFX, los volúmenes se moverán solo en escenar
 
 .¿AFX es compatible con FabricPool?
 Sí. A partir de ONTAP 9.19.1 P3, los sistemas de almacenamiento AFX son compatibles con FabricPool para organizar datos por niveles en un almacén de objetos de capacidad. La implementación de AFX presenta varias diferencias arquitectónicas con respecto a ONTAP. Por ejemplo, el nivel de nube se conecta a todo el clúster (o SAZ) en lugar de a agregados individuales; y solo se pueden usar buckets de ONTAP S3 o StorageGRID. Para obtener más información, consulta link:./administer/fabricpool.html["Más información sobre FabricPool para los sistemas de almacenamiento AFX"].
+
+.¿Puedo usar unidades de distintos tamaños en mis bandejas de almacenamiento AFX?
+No. AFX no admite unidades de distintos tamaños en una misma bandeja de almacenamiento. Todas las unidades de una misma bandeja deben ser del mismo tamaño. Consulta https://hwu.netapp.com/["NetApp Hardware Universe"^] para obtener información completa sobre la compatibilidad de las configuraciones del sistema de almacenamiento AFX.
