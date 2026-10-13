@@ -100,6 +100,6 @@ MetroCluster:: El sistema de almacenamiento AFX no es compatible con NetApp Metr
 == Información relacionada
 
 * https://docs.netapp.com/us-en/ontap/svm-migrate/index.html["Movilidad de datos de ONTAP SVM"^]
-* link:../get-started/compare-unified-ontap.html["Compare el sistema de almacenamiento AFX con los sistemas AFF y FAS"]
+* link:../get-started/compare-unified-ontap.html["En qué se diferencia AFX de los sistemas de almacenamiento AFF y FAS"]
 * link:../faq-ontap-afx.html["Preguntas frecuentes sobre los sistemas de almacenamiento AFX"]
 

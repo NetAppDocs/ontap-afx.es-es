@@ -4,7 +4,7 @@ permalink: get-started/quick-start.html
 keywords: afx, afx system, quick start 
 summary: Para empezar a trabajar con tu sistema AFX, necesitas instalar los componentes de hardware, configurar tu cluster y prepararte para administrar tu cluster y SVMs. 
 ---
-= Inicio rápido para configurar un sistema de almacenamiento AFX
+= Guía de inicio rápido para los sistemas de almacenamiento AFX
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
