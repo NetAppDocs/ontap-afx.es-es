@@ -1,0 +1,340 @@
+---
+sidebar: sidebar 
+permalink: release-notes/whats-new-9201.html 
+keywords: 'afx, release notes, what"s new, 9.20.1' 
+summary: Conoce las nuevas funcionalidades incluidas en ONTAP 9.20.1 que están disponibles con tu sistema de almacenamiento AFX. 
+---
+= Novedades de ONTAP 9.20.1 para sistemas de almacenamiento AFX
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Conoce las nuevas funcionalidades incluidas en ONTAP 9.20.1 que están disponibles con tu sistema de almacenamiento AFX.
+
+
+NOTE: Hay varias funciones nuevas disponibles para AFX con ONTAP 9.20.1. Algunas de estas son específicas de AFX, mientras que muchas otras se derivan de una base de producto común compartida. Además de revisar las funciones de AFX que se describen a continuación, también deberías consultar https://docs.netapp.com/us-en/ontap/release-notes/whats-new-9201.html["Novedades en ONTAP 9.20.1"^].
+
+
+
+[[data-protection]]
+== Protección de datos
+
+[cols="30%,70%"]
+|===
+| Actualizar | Descripción 
+
+
+ a| 
+Replicación desde un grupo de consistencia de origen que no es SnapLock a un grupo de consistencia de destino SnapLock para SnapVault
+ a| 
+Puedes replicar desde un grupo de consistencia de origen que no sea SnapLock a un grupo de consistencia de destino de SnapLock para SnapVault. SnapLock para SnapVault protege los grupos de consistencia replicados frente a eliminaciones accidentales o malintencionadas.
+
+
+
+ a| 
+Límites de objetos para la sincronización activa de SnapMirror para NAS
+ a| 
+SnapMirror active sync para NAS aumenta el número de volúmenes compatibles a 600 para las plataformas AFX (4 x 4).
+
+
+
+ a| 
+Obtén más información sobre la recuperación ante desastres sincrónica de SnapMirror
+ a| 
+SnapMirror synchronous aumenta el número de operaciones de replicación a 600 para las plataformas AFX.
+
+
+
+ a| 
+Recuperación ante desastres de SVM mejorada
+ a| 
+ONTAP 9.20.1 mejora la recuperación ante desastres de SVM al permitir modificar atributos seleccionados de volúmenes en los volúmenes de destino de SVM-DR mediante flujos de trabajo estándar de modificación de volúmenes con privilegios de administrador, lo que reduce la necesidad de procedimientos asistidos por Support. Esta versión también amplía la compatibilidad opcional con la resincronización rápida de SVM-DR a los constituyentes de FlexGroup, lo que ayuda a las SVM de gran tamaño con FlexGroup a volver a un estado protegido más rápido después de los flujos de trabajo de ensayo de DR, resincronización o flip-resync.
+
+
+
+ a| 
+SnapMirror cloud restaurar sin movimiento al volumen de origen original
+ a| 
+SnapMirror cloud admite operaciones de restaurar sin movimiento para volúmenes FlexVol, lo que te permite realizar una operación de restauración de instantáneas en la nube directamente en el volumen de origen original. ONTAP selecciona la instantánea común más reciente y realiza una transferencia incremental, lo que reduce el tiempo de restauración.
+
+|===
+
+
+[[nas]]
+== NAS
+
+[cols="30%,70%"]
+|===
+| Actualizar | Descripción 
+
+
+ a| 
+Implementar la compatibilidad con NormaliseNameInfo en el protocolo SMB de ONTAP de NetApp para garantizar la compatibilidad y el rendimiento con los clientes de Windows
+ a| 
+Los clientes de Windows pueden recuperar los nombres canónicos de archivos y directorios en una sola solicitud, lo que reduce la latencia de apertura de archivos y mejora la compatibilidad con SMB para equipos de escritorio, aplicaciones y servidores de archivos empresariales. ONTAP devuelve automáticamente las rutas canónicas de los archivos y directorios abiertos, evitando las búsquedas por componente en clientes con Windows 11 24H2 y versiones posteriores sin necesidad de configuración adicional.
+
+
+
+ a| 
+Compatibilidad con UNMAP automático con VAAI-NAS para permitir la reclamación de espacio
+ a| 
+ONTAP admite la reclamación automática de espacio para los almacenes de datos NFS a través del complemento NFS de NetApp para VMware VAAI. Esto ayuda a reclamar espacio de los rangos de bloques VMDK con Thin-Provisioning cuando los hosts de VMware ESXi 9.0 o posterior realizan operaciones UNMAP.
+
+
+
+ a| 
+Tamaño máximo de directorio para volúmenes ONTAP FlexVol
+ a| 
+ONTAP mejora el rendimiento de los directorios muy grandes que contienen hasta aproximadamente 25 millones de archivos al admitir tamaños de directorio de hasta 4 GB. Los clientes que ejecutan cargas de trabajo que generan un número extremadamente alto de archivos en un solo directorio, como el entrenamiento de IA, pueden beneficiarse al evitar las pérdidas de rendimiento que antes se observaban con directorios grandes. También mejora la resiliencia al garantizar que los directorios permanezcan totalmente indexados tras una conmutación por error de protección de datos, de modo que las copias replicadas funcionen bien incluso cuando se interrumpe una relación de SnapMirror. Esta función está disponible con los sistemas de almacenamiento AFX y puede activarse en cada volumen según sea necesario.
+
+
+
+ a| 
+Compatibilidad con la conversión automática de SID a ID de UNIX
+ a| 
+ONTAP introduce compatibilidad con la conversión automática de SID a ID de UNIX para las SVM conectadas a LDAP para generar e invertir UID/GID de POSIX a partir de SID de Windows. Esto elimina la necesidad de mantener manualmente los atributos uidNumber/gidNumber en Active Directory, lo que reduce la carga administrativa y ayuda a garantizar un acceso coherente a los archivos en NFS y SMB. Esta función, alineada con los estándares del sector, es especialmente valiosa para los clientes que migran redes grandes desde plataformas NAS basadas en SSSD y quieren preservar la coherencia de la asignación de identidades. La función está desactivada de forma predeterminada y se configura por SVM.
+
+|===
+
+
+[[networking]]
+== Redes
+
+[cols="30%,70%"]
+|===
+| Actualizar | Descripción 
+
+
+| link:../administer/additional-ontap-svm.html["Ampliar FPolicy a NFS 4.2"]  a| 
+FPolicy se amplía a NFS 4.2 para ofrecer supervisión de la actividad de archivos y aplicación de políticas en la última versión del protocolo NFS compatible con ONTAP. FPolicy supervisa los eventos de acceso a archivos de NFSv4.2 para dar respuesta a casos de uso relacionados con la auditoría, el cumplimiento normativo y la ciberresiliencia. La supervisión avanzada de atributos de seguridad proporciona una mayor protección y clasificación de los datos. La compatibilidad con NFS etiquetado permite respuestas condicionadas por políticas ante cambios en las etiquetas de seguridad para entornos de datos clasificados y sensibles en materia de cumplimiento normativo. Usa esta función para reforzar la auditoría, el cumplimiento normativo y la protección contra el ransomware.
+
+|===
+
+
+[[s3-object-storage]]
+== Almacenamiento de objetos S3
+
+[cols="30%,70%"]
+|===
+| Actualizar | Descripción 
+
+
+| link:../administer/additional-ontap-svm.html["FPolicy para el almacenamiento de objetos S3"]  a| 
+FPolicy ofrece supervisión de seguridad para los flujos de trabajo de objetos de S3. Esto proporciona un marco unificado de FPolicy para el almacenamiento de archivos y objetos, lo que simplifica las operaciones de seguridad en entornos de datos híbridos. FPolicy para objetos S3 ofrece visibilidad del ciclo de vida de los objetos para supervisar la creación, la eliminación y los cambios en las etiquetas de metadatos de los mismos, con el fin de cumplir los requisitos de seguridad, cumplimiento normativo y auditoría. Esta función proporciona supervisión no disruptiva sin afectar al rendimiento.
+
+
+
+ a| 
+Dimensionamiento flexible de buckets de S3
+ a| 
+ONTAP admite un tamaño predeterminado configurable para los nuevos buckets de S3. Esto ayuda a reducir la necesidad de ajustar manualmente el tamaño cuando las aplicaciones crean buckets a través de la API de S3 sin especificar la capacidad. Si no se configura ningún tamaño predeterminado, el comportamiento de creación de buckets no cambia.
+
+
+
+ a| 
+Permitir los buckets NAS de OnTAP S3 en FlexCache con origen FlexVol
+ a| 
+Se admiten los buckets S3 NAS en volúmenes FlexCache con orígenes FlexVol a partir de ONTAP 9.20.1. Se admiten las operaciones S3 de un solo objeto (PUT, GET, DELETE, HEAD, LIST). No se admiten las cargas multiparte porque los volúmenes FlexVol subyacentes no admiten Granular Data Distribution.
+
+
+
+ a| 
+Compatibilidad con COPY Object para buckets NAS de S3 en volúmenes FC con origen FG
+ a| 
+A partir de ONTAP 9.20.1, los buckets NAS de S3 en volúmenes de FlexCache admiten operaciones de copia de objetos del lado del servidor mediante las API de S3 CopyObject y UploadPartCopy. Puedes copiar objetos dentro del mismo bucket NAS de FlexCache o desde un bucket NAS de S3 respaldado por un volumen de FlexGroup a un bucket NAS de FlexCache.
+
+
+
+ a| 
+Compatibilidad inicial con la suma de comprobación de S3
+ a| 
+ONTAP S3 admite sumas de comprobación CRC-64NVME compatibles con AWS para los buckets NAS de S3. Cuando un cliente S3 proporciona información de suma de comprobación para operaciones de carga y multiparte compatibles, ONTAP valida y almacena dicha suma de comprobación y devuelve información de suma de comprobación para las solicitudes GET y HEAD compatibles.
+
+|===
+
+
+[[san]]
+== SAN
+
+[cols="30%,70%"]
+|===
+| Actualizar | Descripción 
+
+
+ a| 
+Compatibilidad con un rendimiento mejorado después de migrar datos de un sistema AFF o FAS a un sistema AFX
+ a| 
+A partir de ONTAP 9.20.1, ONTAP reduce la latencia de lectura adicional y el consumo de CPU que pueden producirse tras la migración de datos desde un sistema AFF o FAS a un sistema AFX.
+
+|===
+
+
+[[security]]
+== Seguridad
+
+[cols="30%,70%"]
+|===
+| Actualizar | Descripción 
+
+
+ a| 
+Controles mejorados para las políticas de respuesta de instantáneas de ARP/AI
+ a| 
+Puedes configurar la política de respuesta de instantáneas de ARP/AI a nivel de SVM o de volumen para controlar si ARP/AI crea instantáneas cuando detecta actividad anómala. Hay tres políticas disponibles: `alert-with-proactive-and-periodic-snapshot` (predeterminada, mantiene el comportamiento actual), `alert-with-proactive-snapshot` (solo instantáneas de ataque, sin instantáneas periódicas) y `alert-only` (solo alertas y registros de eventos, no se crean instantáneas). Tras una actualización a la versión 9.20.1, el número máximo predeterminado de instantáneas periódicas cambia de 6 a 2, y el periodo de retención predeterminado cambia de 12 a 7 horas, a menos que esas opciones a nivel de nodo se hayan modificado previamente. Consulta https://docs.netapp.com/us-en/ontap/anti-ransomware/modify-snapshot-options-arpai.html["Controles mejorados para las políticas de respuesta de instantáneas de ARP/AI"^] para obtener más información.
+
+
+
+ a| 
+Mejoras del flujo de trabajo de gestión de claves para las SVM de datos
+ a| 
+Al habilitar un gestor de claves externo en una SVM de datos, ONTAP puede migrar automáticamente las claves de cifrado de volumen de esa SVM desde el gestor de claves con ámbito de administrador al nuevo gestor de claves de la SVM de datos. Esto simplifica la transición a la gestión externa de claves y elimina la necesidad de un paso de migración manual independiente en el flujo de trabajo estándar.
+
+
+
+ a| 
+Compatibilidad con grupos de IdP, AD y LDAP como aprobadores de MAV
+ a| 
+Los grupos de aprobación de MAV pueden incluir como aprobadores grupos de proveedores de identidad (IdP), de Active Directory (AD) y de LDAP (nsswitch), además de administradores individuales. Los tipos de grupo compatibles incluyen Entra ID, ADFS, grupos de dominio de AD y grupos LDAP. Añadir o eliminar usuarios en el directorio del IdP, AD o LDAP no requiere ningún cambio en la configuración de MAV. Los cambios en la pertenencia a grupos de un usuario surten efecto tras la reautenticación en el siguiente inicio de sesión del usuario. Puedes usar el comando security multi-admin-verify registered-operations show para mostrar todas las operaciones protegibles mediante MAV disponibles en el clúster actual.
+
+
+
+ a| 
+Compatibilidad con la autenticación SHA-512 de SNMPv3
+ a| 
+ONTAP admite la autenticación SHA-512 para usuarios de SNMPv3. Esta mejora te permite usar una autenticación SNMPv3 más segura para clientes SNMP externos y para la supervisión de switches, incluidos los switches que requieren autenticación SHA-512. Para obtener más información, consulta Configure SNMPv3 users in an ONTAP cluster y Configure SNMPv3 for Ethernet switch health monitoring.
+
+Consulta https://docs.netapp.com/us-en/ontap-systems-switches/switch-cshm/config-snmpv3.html["Configura SNMPv3 para el control del estado del switch de red Ethernet"^] para más información.
+
+|===
+
+
+[[storage-efficiency]]
+== Eficiencia del almacenamiento
+
+[cols="30%,70%"]
+|===
+| Actualizar | Descripción 
+
+
+ a| 
+Optimización del programador automático de deduplicación (ADS)
+ a| 
+ONTAP mejora el rendimiento de ADS (Automatic Dedupe Scheduler), lo que permite más sesiones de deduplicación simultáneas por nodo, así como una limitación más inteligente y específica para equilibrar mejor la E/S de los clientes. La actividad de deduplicación en los volúmenes DP (procedente de transferencias de SnapMirror) y las sesiones de deduplicación global se gestionan junto con la deduplicación habitual de volúmenes, lo que reduce la contención y el crecimiento de los metadatos. Puedes beneficiarte del ahorro en eficiencia del almacenamiento, especialmente con cargas de trabajo mixtas, sin necesidad de hacer cambios en la configuración. Esta función está habilitada de forma predeterminada y está disponible en los sistemas de almacenamiento AFX.
+
+|===
+
+
+[[storage-resource-management]]
+== Gestión de recursos de almacenamiento
+
+[cols="30%,70%"]
+|===
+| Actualizar | Descripción 
+
+
+ a| 
+Soporte empresarial para AFX de 32 nodos
+ a| 
+Puedes implementar clústeres ONTAP AFX a escala completa de 32 nodos con compatibilidad total con las funciones empresariales, igualando las capacidades que antes solo estaban disponibles en implementaciones AFX más pequeñas. Esto permite a los clientes empresariales, en concreto a quienes ejecutan entrenamiento de IA/ML y canalizaciones de datos, crear clústeres de almacenamiento más grandes y más densos sin sacrificar servicios de datos empresariales como la organización en niveles, la protección de datos, las instantáneas y la resiliencia. La compatibilidad total con los protocolos NAS y de objetos, incluidos NFS, SMB, S3, FlexGroup y FlexCache, se ha validado a esta escala, junto con los flujos de trabajo de HA y recuperación, para garantizar un funcionamiento fiable a medida que crecen tus implementaciones de AFX.
+
+
+
+ a| 
+Nivelación de FabricPool
+ a| 
+FabricPool es una función de ONTAP que traslada datos entre un nivel local de alto rendimiento y un nivel remoto en la nube o de capacidad de menor coste, en función de la actividad de los datos. FabricPool se ha ampliado oficialmente al sistema de almacenamiento AFX a partir de ONTAP 9.20.1 y también está disponible con 9.19.1 P3. Permite una escala de datos mucho mayor para dar soporte a cargas de trabajo con gran volumen de datos. Aunque la implementación de AFX introduce varios cambios arquitectónicos, las características principales de la función de ONTAP siguen siendo las mismas.
+
+
+
+ a| 
+FSA - tiempos de acceso precisos al directorio
+ a| 
+File System Analytics y la exploración de System Manager File System Explorer conservan los metadatos de tiempo de acceso al directorio (atime). Esto ayuda a mantener valores de atime precisos para los flujos de trabajo de archivado, almacenamiento por niveles, cumplimiento normativo y ciclo de vida de los datos.
+
+
+
+ a| 
+FlexCache Métricas de volumen
+ a| 
+FlexCache Las métricas de volumen informan de la cantidad de datos y metadatos intercambiados entre un volumen FlexCache y su volumen de origen. Se han añadido dos nuevas propiedades a los extremos existentes de la API de REST de ONTAP para estadísticas y métricas de volúmenes que proporcionan visibilidad sobre la transferencia de datos de FlexCache al origen y del origen a FlexCache. Los contadores se recopilan automáticamente sin necesidad de configuración; son útiles para la planificación de capacidad, el análisis del rendimiento, la solución de problemas de red y el análisis de imputación de costes. Esta función requiere ONTAP 9.20 o una versión posterior tanto en los nodos FlexCache como en los nodos de origen. Consulta la documentación de automatización de ONTAP para obtener más información.
+
+
+
+ a| 
+Reequilibrado dentro del clúster
+ a| 
+ONTAP presenta dos nuevas funcionalidades de Balanced Placement para ayudar a que los clústeres funcionen de forma óptima, con un esfuerzo administrativo mínimo, a medida que evolucionan tus cargas de trabajo y la capacidad del clúster. El control de ubicación en el momento del aprovisionamiento permite a los clientes indicar si se deben priorizar el rendimiento o los requisitos de espacio cuando se coloca un volumen nuevo a través de la API de REST. Space Performance Rebalance (SPR) es un proceso en segundo plano que busca continuamente puntos críticos de rendimiento en desarrollo o presión de espacio en los agregados de todo el clúster. Según el modo configurado, SPR recomienda movimientos correctivos de volúmenes mediante notificaciones de EMS o realiza automáticamente los movimientos mediante operaciones estándar y no disruptivas de movimiento de volúmenes de ONTAP. Consulta la documentación de automatización de ONTAP para obtener más información.
+
+
+
+ a| 
+Compatibilidad con la eliminación de buckets de ONTAP S3 que contienen objetos
+ a| 
+Los administradores pueden programar la eliminación de buckets que contienen objetos cuando se utiliza una ventana de recuperación configurable basada en la retención. Esto permite recuperar el bucket antes de que caduque la ventana de retención. Esta función reduce el retraso en la caducidad y permite reutilizar la capacidad más rápido para cargas de trabajo con alta rotación.
+
+
+
+ a| 
+Compatibilidad con la migración de SVM de buckets NAS de S3
+ a| 
+ONTAP 9.20.1 admite la migración de SVM para las SVM que alojan buckets de S3 NAS en volúmenes FlexVol, lo que permite a los administradores migrar las SVM sin eliminar primero la configuración de S3 NAS.
+
+
+
+ a| 
+Calcular el espacio reclamable en los volúmenes de FlexGroup
+ a| 
+ONTAP permite calcular el espacio reclamable antes de eliminar instantáneas en volúmenes FlexGroup.
+
+
+
+ a| 
+Mejora del rendimiento para la eliminación asíncrona
+ a| 
+ONTAP mejora el rendimiento de la eliminación asíncrona y acelera la reclamación de espacio para los clientes NAS/SMB. Ponte en contacto con tu representante de NetApp para obtener detalles.
+
+
+
+ a| 
+Aprovisionamiento automático de volúmenes FlexGroup de alto rendimiento
+ a| 
+ONTAP simplifica el aprovisionamiento de FlexGroup con perfiles de almacenamiento que permiten a los clientes elegir un contenedor de datos equilibrado o de alto rendimiento para sus cargas de trabajo, lo que reduce la necesidad de que los administradores configuren y dimensionen manualmente los volúmenes constituyentes para cumplir los requisitos de rendimiento.
+
+
+
+ a| 
+Compatibilidad con NVFAIL con FlexCache
+ a| 
+Puedes crear relaciones de FlexCache con orígenes con NVFAIL habilitado. También puedes habilitar NVFAIL en volúmenes de caché, independientemente de los volúmenes de origen. En los volúmenes de origen o de caché donde se haya producido NVFAIL, ONTAP bloquea las lecturas o modificaciones de datos mientras preserva la escritura diferida de los datos en caché modificados, y la E/S normal se reanuda después de la recuperación.
+
+|===
+
+
+[[system-manager]]
+== System Manager
+
+[cols="30%,70%"]
+|===
+| Actualizar | Descripción 
+
+
+ a| 
+Compatibilidad con alertas de caducidad de certificados y contraseñas de usuario
+ a| 
+System Manager muestra una alerta de estado en el panel de control 30 días antes de que caduque el certificado de un clúster o de una máquina virtual de almacenamiento (SVM) y la actualiza a diario con los días que quedan hasta la caducidad.
+
+Además, si el rol asociado a una cuenta de usuario está configurado para alertas de caducidad de contraseña, el usuario recibe una alerta de banner en la parte superior de la página de System Manager inmediatamente después de iniciar sesión, a partir de 14 días antes de que caduque la contraseña. La alerta se actualiza cada vez que el usuario inicia sesión para mostrar el número de días que quedan hasta que caduque la contraseña. Puedes configurar las alertas de caducidad al añadir o editar un rol de administrador.
+
+
+
+ a| 
+Compatibilidad con alertas adicionales de AutoSupport
+ a| 
+System Manager muestra nuevas alertas de AutoSupport que pueden ayudarte a resolver problemas de configuración de AutoSupport.
+
+|===

@@ -29,6 +29,23 @@ TIP: Debe revisar los detalles disponibles en la herramienta NetApp Hardware Uni
 | Característica | Cambio de límite | Cambiado en la versión 
 
 
+| SnapMirror active sync para NAS  a| 
+SnapMirror active sync para NAS aumenta el número de volúmenes compatibles a 600 para las plataformas AFX (4 x 4).
+| ONTAP 9.20.1 
+
+
+| SnapMirror sincrónico  a| 
+SnapMirror synchronous aumenta el número de volúmenes admitidos de 400 a 600 para las plataformas AFX.
+| ONTAP 9.20.1 
+
+
+| FlexCache volúmenes  a| 
+El número de volúmenes FlexCache admitidos aumenta a 2.500 por nodo y 5.000 por par de HA cuando se usa un constituyente por volumen.
+
+El número de volúmenes FlexCache que puedes crear a partir de un volumen de origen aumenta a 200, y el número de cachés de writeback por origen aumenta a 50.
+| ONTAP 9.20.1 
+
+
 | Nodos por clúster  a| 
 Puedes ampliar tu clúster AFX hasta un máximo de 32 nodos. Esto te permite escalar tu sistema de almacenamiento AFX para satisfacer las crecientes demandas de tus cargas de trabajo y aplicaciones. Ten en cuenta que el soporte para 32 nodos está disponible con un conjunto limitado de funciones; consulta a tu equipo de cuentas de NetApp para más detalles.
 | ONTAP 9.19.1 
