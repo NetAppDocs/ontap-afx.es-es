@@ -17,7 +17,7 @@ summary: Conoce las nuevas funcionalidades incluidas en ONTAP 9.20.1 que están 
 Conoce las nuevas funcionalidades incluidas en ONTAP 9.20.1 que están disponibles con tu sistema de almacenamiento AFX.
 
 
-NOTE: Hay varias funciones nuevas disponibles para AFX con ONTAP 9.20.1. Algunas de estas son específicas de AFX, mientras que muchas otras se derivan de una base de producto común compartida. Además de revisar las funciones de AFX que se describen a continuación, también deberías consultar https://docs.netapp.com/us-en/ontap/release-notes/whats-new-9201.html["Novedades en ONTAP 9.20.1"^].
+NOTE: Hay varias funciones nuevas disponibles para AFX con ONTAP 9.20.1. Algunas de estas son específicas de AFX, mientras que muchas otras se derivan de una base de producto común compartida. Además de revisar las funciones de AFX que se describen a continuación, también deberías consultar https://docs.netapp.com/us-en/ontap/release-notes/index.html["Novedades en ONTAP 9.20.1"^].
 
 
 
