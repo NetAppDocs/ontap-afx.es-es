@@ -132,7 +132,7 @@ FPolicy es un marco de notificación de acceso a archivos que se utiliza para su
 
 Más información sobre https://docs.netapp.com/us-en/ontap/nas-audit/supported-file-operation-filter-fpolicy-nfsv4-concept.html["operaciones con archivos y combinaciones de filtros compatibles que ONTAP FPolicy supervisa para NFSv4"^].
 
-Más información sobre https://docs.netapp.com/us-en/ontap/nas-audit/supported-file-operation-filter-fpolicy-s3-concept.html["operaciones de archivo y combinaciones de filtros compatibles que FPolicy puede supervisar en S3"^].
+Más información sobre https://docs.netapp.com/us-en/ontap/nas-audit/supported-file-operation-filter-fpolicy-s3.html["operaciones de archivo y combinaciones de filtros compatibles que FPolicy puede supervisar en S3"^].
 
 
 
